@@ -1,5 +1,5 @@
-import { Project } from "../projects/model/project";
-import { Category } from "../projects/model/category";
+import { Project } from "../model/project";
+import { Category } from "../model/category";
 import { CATEGORY_DATABASE, EMPTY_CATEGORY } from "./category-list";
 
 

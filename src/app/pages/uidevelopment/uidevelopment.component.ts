@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 // import { ProjectService } from 'src/app/services/project/project.service';
-import { CATEGORY_DATABASE } from 'src/app/mocks/category-list';
+import { CATEGORY_DATABASE } from 'src/app/projects/mocks/category-list';
 
 @Component({
   selector: 'app-uidevelopment',

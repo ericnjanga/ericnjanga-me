@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Project } from '../../model/project';
-import { PROJECTS_DATABASE } from 'src/app/mocks/project-list';
+import { PROJECTS_DATABASE } from 'src/app/projects/mocks/project-list';
 
 @Injectable({
   providedIn: 'root'

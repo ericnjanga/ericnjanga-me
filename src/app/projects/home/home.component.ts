@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Project } from '../model/project';
 import { ProjectService } from '../services/project.service';
-import { CATEGORY_DATABASE } from 'src/app/mocks/category-list';
+import { CATEGORY_DATABASE } from 'src/app/projects/mocks/category-list';
 
 @Component({
   selector: 'app-home',

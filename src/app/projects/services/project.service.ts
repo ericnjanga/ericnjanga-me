@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Project } from '../model/project';
 import { Observable, of } from 'rxjs';
-import { EMPTY_PROJECT } from 'src/app/mocks/project-list';
+import { EMPTY_PROJECT } from 'src/app/projects/mocks/project-list';
 
 @Injectable({
   providedIn: 'root'
