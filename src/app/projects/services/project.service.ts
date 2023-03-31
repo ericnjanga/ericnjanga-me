@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, map, tap, shareReplay } from 'rxjs/operators';
 import { Project } from '../model/project';
 import { Observable, of } from 'rxjs';
 import { EMPTY_PROJECT } from 'src/app/projects/mocks/project-list';
@@ -17,18 +17,27 @@ export class ProjectService {
   }
 
 
-  loadProjectByUrl(projectUrl: string) {
-
-  }
-
-
   generateDatabase(): Observable<Project[]> {
+
+    console.log(' gen DB');
+
     return this.http.get<Project[]>(this.ProjectsUrl)
       .pipe(
         // [E.NJANGA] - TO DO: Repalce the "log" function by a "message service" that displays messages via a snack bar
         // tap(_ => this.log('fetched Projects')),
         catchError(this.handleError<Project[]>('generateDatabase', []))
       );
+  }
+
+
+  loadProjectByUrl(projectUrl: string) {
+
+    console.log('>>>>');
+
+    return this.http.get<Project>(`/${this.ProjectsUrl}/${projectUrl}`)
+    .pipe(
+      shareReplay()
+    );
   }
 
 

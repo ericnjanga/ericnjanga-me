@@ -3,40 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProjectsCardListComponent } from './projects-card-list/projects-card-list.component';
 import { ProjectComponent } from './project/project.component';
+import { ProjectResolver } from './services/project.resolver';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'projects', component: HomeComponent },
     {
         path: ':projectUrl',
-        component: ProjectComponent
+        component: ProjectComponent, 
+        resolve: { // before fetching the component, first fetch the project property using ProjectResolver
+            project: ProjectResolver
+        }
     }
-    // {
-    //     path: ":projectUrl",
-    //     component: ProjectComponent,
-    //     // canActivate: [AuthGuard],
-    //     // canActivateChild: [AuthGuard],
-    //     // canDeactivate: [ConfirmExitGuard],
-    //     children: [
-    //         {
-    //           path: "",
-    //           component: ProjectsCardListComponent,
-    //           resolve: {
-    //               projects: LessonsResolver
-    //           }
-    //         },
-    //         {
-    //             path: "projects/:projectSeqNo",
-    //             component: LessonDetailComponent,
-    //             resolve: {
-    //                 project: LessonDetailResolver
-    //             }
-    //         }
-    //     ],
-    //     resolve: {
-    //         course: CourseResolver
-    //     }
-    // }
 ];
 
 @NgModule({
@@ -45,11 +23,7 @@ const routes: Routes = [
     ],
     exports: [RouterModule],
     providers: [
-        // CourseResolver,
-        // LessonsResolver,
-        // LessonDetailResolver,
-        // AuthGuard,
-        // ConfirmExitGuard
+        ProjectResolver
     ]
 })
 export class ProjectsRoutingModule {

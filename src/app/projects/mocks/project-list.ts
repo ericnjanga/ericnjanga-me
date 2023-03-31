@@ -6,7 +6,7 @@ import { CATEGORY_DATABASE, EMPTY_CATEGORY } from "./category-list";
 export const PROJECTS_DATABASE: Project[] = [
     {
         id: 2,
-        url: '',
+        url: 'loblaws-marketplace',
         title: 'Loblaws Marketplace', 
         excerpt: '...',
         thumbnail: './../../../assets/img/loblaws-marketplace.png',
@@ -21,7 +21,7 @@ export const PROJECTS_DATABASE: Project[] = [
 
     {
         id: 10,
-        url: '',
+        url: 'finafrik-uk',
         title: 'Finafrik UK', 
         excerpt: '...',
         thumbnail: './../../../assets/img/finafrik-uk.png',
