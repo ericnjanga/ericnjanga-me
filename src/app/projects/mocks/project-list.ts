@@ -4,6 +4,8 @@ import { CATEGORY_DATABASE, EMPTY_CATEGORY } from "./category-list";
 
 
 export const PROJECTS_DATABASE: Project[] = [
+
+
     {
         id: 2,
         name: 'loblaws-marketplace',
@@ -11,11 +13,37 @@ export const PROJECTS_DATABASE: Project[] = [
         title: 'Loblaws Marketplace', 
         excerpt: 'Helped creating an online market place for the largest supermarket chain in Canada.',
         thumbnail: './../../../assets/img/loblaws-marketplace.png',
-        dateCreated: '4/06/2022',
+        dateCreated: '4/04/2020',
         category: CATEGORY_DATABASE[0],
         subCategory: CATEGORY_DATABASE[5],
         published: true,
         liveUrl: '',
+    }, 
+    {
+        id: 10,
+        name: 'meroe-global',
+        url: 'meroe-global',
+        title: 'Corporate website design', 
+        excerpt: 'Design of a corporate website for a French communication agency.',
+        thumbnail: './../../../assets/img/meroe-global.png',
+        dateCreated: '08/27/2020',
+        category: CATEGORY_DATABASE[0],
+        subCategory: CATEGORY_DATABASE[3],
+        published: true,
+        liveUrl: 'https://finafrik.co.uk/',
+    }, 
+    {
+        id: 10,
+        name: 'ppcb-website',
+        url: 'ppcb-website',
+        title: 'ppcb-website', 
+        excerpt: 'Design of a corporate website for a French communication agency.',
+        thumbnail: './../../../assets/img/ppcb-website.png',
+        dateCreated: '10/23/2020',
+        category: CATEGORY_DATABASE[0],
+        subCategory: CATEGORY_DATABASE[3],
+        published: true,
+        liveUrl: 'https://finafrik.co.uk/',
     }, 
     {
         id: 10,
