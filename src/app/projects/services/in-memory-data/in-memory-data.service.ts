@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { InMemoryDbService, RequestInfo, RequestInfoUtilities } from 'angular-in-memory-web-api';
+import { Observable, of, delay } from 'rxjs';
 import { Project } from '../../model/project';
 import { PROJECTS_DATABASE } from 'src/app/projects/mocks/project-list';
 
@@ -11,114 +12,61 @@ export class InMemoryDataService implements InMemoryDbService {
   projects = PROJECTS_DATABASE;
   
   // Generate an array of random projects
-  createDb() {
-    // let projects = PROJECTS_DATABASE;
+  createDb(reqInfo?: RequestInfo) {
 
-    console.log('.....');
+    console.log('createDb().....');
+
+
+
+
+    // const id = reqInfo?.id;
+
+    // if (id) {
+    //   const item = this.projects.find(d => d.url === id);
+    //   const result = { projects: item }; // item ? { projects: item } : undefined;
+
+
+    //   console.log('result.....', result);
+
+    //   return of(item).pipe(delay(500));
+    // }
+
+
+
 
     // return {projects}; // product endpoint
     return { projects: this.projects };
   }
 
-/*
-  get(reqInfo: any) {
-    const projects = this.createDb().projects;
-    const collectionName = reqInfo.collectionName;
-
-    if (collectionName === 'projects') {
-      const id = reqInfo.id;
-
-      if (id) {
-        const item = projects.find(x => x.url === id);
-        return item ? { body: item } : { status: 404 };
-      } else {
-        return { data: this.data };
-        // const query = reqInfo.query;
-        // let items = projects;
-
-        // if (query) {
-        //   console.log('.....', query);
-
-        //   items = projects.filter(x => {
-        //     for (const key in query) {
-        //       if (query.hasOwnProperty(key) && x[key] !== query[key]) {
-        //         return false;
-        //       }
-        //     }
-        //     return true;
-        //   });
-        // }
-
-        // return { body: items };
-      }
-
-    }
+ 
 
 
-    console.log('...', reqInfo);
-
-    return undefined;
-  }
-  */
-  
-  /*
-
-  get(reqInfo: any) {
-
-    const id = reqInfo.id; // parseInt(reqInfo.id, 10);
+  // parseRequestUrl(url: string, utils: RequestInfoUtilities): ParsedRequestUrl {
+  //   const newUrl = url.replace(/\/foo\/heroes/, '/heroes');
+  //   // console.log('newUrl', newUrl);
+  //   const parsed = utils.parseRequestUrl(newUrl);
+  //   console.log(`parseRequestUrl override of '${url}':`, parsed);
+  //   return parsed;
+  // }
 
 
-    console.log('.....', reqInfo);
-
-
-    if (id) {
-      const item = this.projects.find(d => d.url === id);
-      return item ? { projects: item } : undefined;
-    } else {
-
-
-    console.log('...00', this.projects);
-
-
-      return { projects: this.projects };
-    }
+  // parseRequestUrl(reqInfo: RequestInfo,utils: RequestInfoUtilities): ParsedRequestUrl {
+  //   // If the request is a GET request with a "url" query parameter,
+  //   // use the "url" property to filter the data.
+  //   if (reqInfo.method === 'GET' && reqInfo.query.has('url')) {
+  //     const url = reqInfo.query.get('url');
+  //     return {
+  //       collectionName: 'projects',
+  //       id: null,
+  //       query: (item: Project) => item.url === url,
+  //     };
+  //   }
+  //   // Otherwise, use the default behavior.
+  //   return utils.parseRequestUrl(reqInfo);
+  // }
 
 
 
-    // const projects = this.createDb().projects;
-    // const collectionName = reqInfo.collectionName;
-
-    // if (collectionName === 'projects') {
-    //   const id = reqInfo.id;
-
-    //   if (id) {
-    //     const item = projects.find(x => x.url === id);
-    //     return item ? { body: item } : { status: 404 };
-    //   } else {
-    //     return { data: this.data };
-    //     // const query = reqInfo.query;
-    //     // let items = projects;
-
-    //     // if (query) {
-    //     //   console.log('.....', query);
-
-    //     //   items = projects.filter(x => {
-    //     //     for (const key in query) {
-    //     //       if (query.hasOwnProperty(key) && x[key] !== query[key]) {
-    //     //         return false;
-    //     //       }
-    //     //     }
-    //     //     return true;
-    //     //   });
-    //     // }
-
-    //     // return { body: items };
-    //   }
-
-    // }
-  }
-  
-  */
 
   constructor() { }
 }

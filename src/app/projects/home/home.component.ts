@@ -19,6 +19,14 @@ export class HomeComponent {
     this.projectService.generateDatabase().subscribe(
       projects => {
         let tempData = projects;
+
+
+
+
+        console.log('.....==>>>', tempData);
+
+
+
         this.data = this.projectService.findMatchByCategory(tempData, { hash: this.pageCategory });
       }
     );

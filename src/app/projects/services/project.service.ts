@@ -26,15 +26,16 @@ export class ProjectService {
         // [E.NJANGA] - TO DO: Repalce the "log" function by a "message service" that displays messages via a snack bar
         // tap(_ => this.log('fetched Projects')),
         catchError(this.handleError<Project[]>('generateDatabase', []))
-      );
+      )
   }
 
 
-  loadProjectByUrl(projectUrl: string) {
+  loadProjectByUrl(projectUrl: string): Observable<Project> {
 
-    console.log('>>>>');
+    console.log(`>>>> /${this.ProjectsUrl}?url=${projectUrl}`);
 
-    return this.http.get<Project>(`/${this.ProjectsUrl}/${projectUrl}`)
+    // return this.http.get<Project>(`/${this.ProjectsUrl}/${projectUrl}`)
+    return this.http.get<Project>(`/${this.ProjectsUrl}?id=${projectUrl}`)
     .pipe(
       shareReplay()
     );
