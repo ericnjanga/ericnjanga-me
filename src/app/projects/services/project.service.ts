@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
-import { Project } from '../../interfaces/project';
+import { Project } from '../model/project';
 import { Observable, of } from 'rxjs';
 import { EMPTY_PROJECT } from 'src/app/mocks/project-list';
 

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Project } from 'src/app/interfaces/project';
 
 @Component({
   selector: 'app-home',

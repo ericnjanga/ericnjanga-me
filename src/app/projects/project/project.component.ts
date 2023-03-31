@@ -1,5 +1,5 @@
 import { Component, Input  } from '@angular/core';
-import { Project } from 'src/app/interfaces/project';
+import { Project } from '../model/project';
 import { ProjectService } from '../services/project.service';
 
 @Component({
@@ -11,7 +11,7 @@ export class ProjectComponent {
   @Input() project: Project;
 
   ngOnInit() {
-    
+
   }
 
   constructor(private projectService: ProjectService) {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CATEGORY_DATABASE } from 'src/app/mocks/category-list';
-import { Category } from 'src/app/interfaces/category';
+import { Category } from 'src/app/projects/model/category';
 
 @Component({
   selector: 'app-appbar',

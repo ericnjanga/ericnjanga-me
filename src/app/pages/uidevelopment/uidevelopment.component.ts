@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Project } from 'src/app/interfaces/project';
 // import { ProjectService } from 'src/app/services/project/project.service';
 import { CATEGORY_DATABASE } from 'src/app/mocks/category-list';
 

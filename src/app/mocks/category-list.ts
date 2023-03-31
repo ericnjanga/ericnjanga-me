@@ -1,4 +1,4 @@
-import { Category } from "../interfaces/category";
+import { Category } from "../projects/model/category";
 
 export const CATEGORY_DATABASE: Category[] = [
     {
