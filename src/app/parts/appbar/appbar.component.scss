@@ -12,6 +12,7 @@ a {
     width: 100%;
     height: map-get($gap, appBar);
     background-color: map-get($colors, gray1);
+    z-index: 3;
 }
 
 .btn-info {
