@@ -16,7 +16,7 @@ export class HomeComponent {
     /**
      * Return all project of this category
      */
-    this.projectService.generateProjectDatabase().subscribe(
+    this.projectService.generateDatabase().subscribe(
       projects => {
         let tempData = projects;
         this.data = this.projectService.findMatchByCategory(tempData, { hash: this.pageCategory });

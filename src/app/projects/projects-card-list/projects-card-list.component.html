@@ -6,7 +6,7 @@
         </div>
         <h3>{{item.title}}</h3>
         <p>{{item.excerpt}}</p>
-        <a class="thumbnail-wrap" [routerLink]=""> <!-- projects/{{item.id}} -->
+        <a class="thumbnail-wrap" [routerLink]="[item.url]"> <!-- projects/{{item.id}} -->
             <span class="read-more text-uppercase text-center">
                 Read more
                 <app-icon name="arrowRight"></app-icon>

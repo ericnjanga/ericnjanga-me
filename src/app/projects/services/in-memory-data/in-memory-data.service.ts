@@ -11,6 +11,9 @@ export class InMemoryDataService implements InMemoryDbService {
   // Generate an array of random projects
   createDb() {
     let projects = PROJECTS_DATABASE;
+
+
+    console.log('.....');
     // const max = 200;
 
     // for (let i = 0; i < max; i++) {

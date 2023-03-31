@@ -6,6 +6,7 @@ import { CATEGORY_DATABASE, EMPTY_CATEGORY } from "./category-list";
 export const PROJECTS_DATABASE: Project[] = [
     {
         id: 2,
+        url: '',
         title: 'Loblaws Marketplace', 
         excerpt: '...',
         thumbnail: './../../../assets/img/loblaws-marketplace.png',
@@ -20,6 +21,7 @@ export const PROJECTS_DATABASE: Project[] = [
 
     {
         id: 10,
+        url: '',
         title: 'Finafrik UK', 
         excerpt: '...',
         thumbnail: './../../../assets/img/finafrik-uk.png',
@@ -34,6 +36,7 @@ export const PROJECTS_DATABASE: Project[] = [
 
     {
         id: 16,
+        url: '',
         title: 'Bains 33', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -45,6 +48,7 @@ export const PROJECTS_DATABASE: Project[] = [
     }, 
     {
         id: 16,
+        url: '',
         title: 'Canadian Congress Diversity website', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -56,6 +60,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },  
     {
         id: 17,
+        url: '',
         title: 'Moy Fung website', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -67,6 +72,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },  
     {
         id: 18,
+        url: '',
         title: 'Comoros Government website', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -78,6 +84,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },  
     {
         id: 19,
+        url: '',
         title: 'Zoabiss Chicks website', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -89,6 +96,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },  
     {
         id: 20,
+        url: '',
         title: 'SCEC company website', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -100,6 +108,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },  
     {
         id: 21,
+        url: '',
         title: 'Smobilpay company website', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -111,6 +120,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },  
     {
         id: 22,
+        url: '',
         title: 'Smobilpay payment process', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -122,6 +132,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },  
     {
         id: 23,
+        url: '',
         title: 'KT House', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -133,6 +144,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },  
     {
         id: 24,
+        url: '',
         title: 'KT House wireframe', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -144,6 +156,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },  
     {
         id: 25,
+        url: '',
         title: '...', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -155,6 +168,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },   
     {
         id: 26,
+        url: '',
         title: '...', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -166,6 +180,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },   
     {
         id: 27,
+        url: '',
         title: '...', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -177,6 +192,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },   
     {
         id: 28,
+        url: '',
         title: '...', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -188,6 +204,7 @@ export const PROJECTS_DATABASE: Project[] = [
     },   
     {
         id: 29,
+        url: '',
         title: '...', 
         excerpt: '...',
         thumbnail: './../../../assets/img/3.png',
@@ -205,6 +222,7 @@ export const PROJECTS_DATABASE: Project[] = [
 
 export const EMPTY_PROJECT: Project = {
     id: 0,
+    url: '',
     title: '', 
     excerpt: '',
     thumbnail: '',

@@ -17,12 +17,17 @@ export class ProjectService {
   }
 
 
-  generateProjectDatabase(): Observable<Project[]> {
+  loadProjectByUrl(projectUrl: string) {
+
+  }
+
+
+  generateDatabase(): Observable<Project[]> {
     return this.http.get<Project[]>(this.ProjectsUrl)
       .pipe(
         // [E.NJANGA] - TO DO: Repalce the "log" function by a "message service" that displays messages via a snack bar
         // tap(_ => this.log('fetched Projects')),
-        catchError(this.handleError<Project[]>('generateProjectDatabase', []))
+        catchError(this.handleError<Project[]>('generateDatabase', []))
       );
   }
 
