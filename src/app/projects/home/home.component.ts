@@ -18,16 +18,16 @@ export class HomeComponent {
      */
     this.projectService.generateDatabase().subscribe(
       projects => {
-        let tempData = projects;
+        // let tempData = projects.splice(-10); //.slice(196);
+
+        this.data = projects;
 
 
 
 
-        console.log('.....==>>>', tempData);
-
-
-
-        this.data = this.projectService.findMatchByCategory(tempData, { hash: this.pageCategory });
+        // console.log('.....==>>>', tempData);
+        // // Get only elements of this category ...
+        // this.data = this.projectService.findMatchByCategory(tempData, { hash: this.pageCategory });
       }
     );
   }

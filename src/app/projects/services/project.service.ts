@@ -34,8 +34,13 @@ export class ProjectService {
 
     console.log(`>>>> /${this.ProjectsUrl}?url=${projectUrl}`);
 
+    // http://localhost:4200/projects/loblaws-marketplace
+    // http://localhost:4200/projects/2
+    // http://localhost:4200/api/projects/2
+
     // return this.http.get<Project>(`/${this.ProjectsUrl}/${projectUrl}`)
-    return this.http.get<Project>(`/${this.ProjectsUrl}?id=${projectUrl}`)
+    // return this.http.get<Project>(`/${this.ProjectsUrl}/${projectUrl}`)
+    return this.http.get<Project>(`/${this.ProjectsUrl}?url=${projectUrl}`)
     .pipe(
       shareReplay()
     );
