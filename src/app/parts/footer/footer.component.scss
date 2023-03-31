@@ -1,0 +1,6 @@
+@import './../../../assets/styles/variables';
+
+
+.footer {
+    height: map-get($gap, appFooter);
+}

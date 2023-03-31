@@ -1,0 +1,18 @@
+
+<section class="row row-cols-3">
+    <div class="cart" *ngFor="let item of source">
+        <div>
+            <a href="" class="text-uppercase">{{item.category}}</a> | <span>{{item.dateCreated | date}}</span>
+        </div>
+        <h3>{{item.title}}</h3>
+        <p>{{item.excerpt}}</p>
+        <a class="thumbnail-wrap" [routerLink]=""> <!-- projects/{{item.id}} -->
+            <span class="read-more text-uppercase text-center">
+                Read more
+                <app-icon name="arrowRight"></app-icon>
+            </span>
+            <img class="img-thumbnail" src={{item.thumbnail}} alt="">
+        </a>
+    </div>
+</section>
+

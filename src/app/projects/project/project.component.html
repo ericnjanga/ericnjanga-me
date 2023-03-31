@@ -1,0 +1,14 @@
+<div class="cart">
+    <div>
+        <a href="" class="text-uppercase">{{project.category}}</a> | <span>{{project.dateCreated | date}}</span>
+    </div>
+    <h3>{{project.title}}</h3>
+    <p>{{project.excerpt}}</p>
+    <a class="thumbnail-wrap" routerLink="projects/{{project.id}}">
+        <span class="read-more text-uppercase text-center">
+            Read more
+            <app-icon name="arrowRight"></app-icon>
+        </span>
+        <img class="img-thumbnail" src={{project.thumbnail}} alt="">
+    </a>
+</div>

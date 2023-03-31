@@ -1,0 +1,23 @@
+<nav class="bar">
+    <div class="container d-flex align-items-center">
+        <a href="/" class="text-uppercase">Pixel Design & Development</a>
+        <ul class="menu list-inline">
+            <li  class="list-inline-item text-uppercase">
+                <a routerLink="/projects" routerLinkActive="menu-item-active">projects</a>
+            </li>
+            <li  class="list-inline-item text-uppercase" *ngFor="let item of categories; ">
+                <a routerLink="/{{item.hash}}" routerLinkActive="menu-item-active">{{item.label}}</a>
+            </li>
+            <li  class="list-inline-item">
+                <button class="btn-info" mat-button [matMenuTriggerFor]="menu">
+                    <app-icon class="icon" name="info"></app-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <a href="mailto:npdd@gmail.com">npdd@gmail.com</a>
+                    </button>
+                </mat-menu>
+            </li>
+        </ul>
+    </div>
+</nav>

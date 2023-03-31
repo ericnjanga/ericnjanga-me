@@ -1,0 +1,44 @@
+@import './../../../assets/styles/variables';
+
+a {
+    text-decoration: none;
+    color: map-get($colors, dark1);
+}
+
+.bar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: map-get($gap, appBar);
+    background-color: map-get($colors, gray1);
+}
+
+.btn-info {
+    border-width: 0;
+    background-color: transparent;
+}
+
+.menu {
+    margin-left: auto;
+
+    .menu-item-active {
+        text-decoration: underline;
+        color: map-get($colors, primary1);
+    }
+    a, button {
+        padding: 20px;
+    }
+}
+.menu.list-inline {
+    margin-bottom: 0;
+}
+
+button[aria-expanded="true"] {
+    background-color: map-get($colors, gray2);
+    border-radius: map-get($border, radius);
+
+    // ::ng-deep .bi {
+    //     color: map-get($colors, primary1);
+    // }
+}

@@ -1,0 +1,33 @@
+@import './variables';
+
+
+body {
+    padding-top: map-get($gap, appBar);
+}
+
+.subpage {
+    margin-top: map-get($gap, lg);
+}
+
+.pagination-wrapper {
+    margin-bottom: 30px;
+    border-bottom: 1px solid map-get($colors, gray1);
+}
+
+
+
+/**
+ *
+ * Bootstrap grid
+ * --------------------------------------------------
+*/
+
+// Increasing columnb gutter
+.row {    
+    margin-right: calc(-1 * map-get($gap, lg));
+    margin-left: calc(-1 * map-get($gap, lg));
+}
+.row > * { 
+    padding-right: map-get($gap, lg);
+    padding-left: map-get($gap, lg);
+}
