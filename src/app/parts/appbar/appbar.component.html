@@ -9,6 +9,14 @@
                 <a routerLink="/{{item.hash}}" routerLinkActive="menu-item-active">{{item.label}}</a>
             </li>
             <li  class="list-inline-item">
+                <button class="btn-info" mat-button [matMenuTriggerFor]="staticPagesMenu">
+                    Static pages
+                </button>
+                <mat-menu #staticPagesMenu="matMenu">
+                    <a routerLink="/static-richy-group" mat-menu-item>Richy group</a>
+                </mat-menu>
+            </li>
+            <li  class="list-inline-item">
                 <button class="btn-info" mat-button [matMenuTriggerFor]="menu">
                     <app-icon class="icon" name="info"></app-icon>
                 </button>

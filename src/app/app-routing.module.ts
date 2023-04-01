@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { UidevelopmentComponent } from './pages/uidevelopment/uidevelopment.component';
+import { RichyGroupComponent } from './pages-static/richy-group/richy-group.component';
 // import { UxdesignComponent } from './pages/uxdesign/uxdesign.component';
 
 const routes: Routes = [
@@ -21,6 +22,11 @@ const routes: Routes = [
   { path: 'ui-development', component: UidevelopmentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'about', component: AboutComponent },
+
+
+  { path: 'static-richy-group', component: RichyGroupComponent },
+
+
   // Matches anything typed in the browser
   // (must always be the last route)
   { path: '**', component: PageNotFoundComponent },
