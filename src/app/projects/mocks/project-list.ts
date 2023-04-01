@@ -318,6 +318,32 @@ export const PROJECTS_DATABASE: Project[] = [
         published: false,
         liveUrl: '',
     },   
+    {
+        id: 29,
+        name: 'herve-momo-loan-tracking-business',
+        url: 'herve-momo-loan-tracking-busines',
+        title: 'herve-momo-loan-tracking-business', 
+        excerpt: 'Design of an African mobile app that track payment installments',
+        thumbnail: './../../../assets/img/3.png',
+        dateCreated: '3/20/2017',
+        category: CATEGORY_DATABASE[1],
+        subCategory: CATEGORY_DATABASE[4],
+        published: false,
+        liveUrl: '',
+    },  
+    {
+        id: 29,
+        name: 'herver-djoumbi-ui-design-for-health-trackin-AI',
+        url: 'herver-djoumbi-ui-design-for-health-trackin-AI',
+        title: 'herver-djoumbi-ui-design-for-health-trackin-AI', 
+        excerpt: 'Design of an African mobile app that track payment installments',
+        thumbnail: './../../../assets/img/3.png',
+        dateCreated: '3/20/2017',
+        category: CATEGORY_DATABASE[1],
+        subCategory: CATEGORY_DATABASE[4],
+        published: false,
+        liveUrl: '',
+    },    
 ];
 
 
