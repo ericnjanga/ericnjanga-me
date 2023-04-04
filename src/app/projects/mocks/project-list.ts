@@ -16,7 +16,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/04/2020',
         category: CATEGORY_DATABASE[0],
         subCategory: CATEGORY_DATABASE[5],
-        published: true,
+        status: 'published',
         liveUrl: '',
     }, 
     {
@@ -29,7 +29,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '08/27/2020',
         category: CATEGORY_DATABASE[0],
         subCategory: CATEGORY_DATABASE[3],
-        published: true,
+        status: 'published',
         liveUrl: 'https://finafrik.co.uk/',
     }, 
     {
@@ -42,7 +42,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '10/23/2020',
         category: CATEGORY_DATABASE[0],
         subCategory: CATEGORY_DATABASE[3],
-        published: true,
+        status: 'published',
         liveUrl: 'https://finafrik.co.uk/',
     }, 
     {
@@ -55,7 +55,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[0],
         subCategory: CATEGORY_DATABASE[3],
-        published: true,
+        status: 'published',
         liveUrl: 'https://finafrik.co.uk/',
     }, 
     {
@@ -68,7 +68,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[0],
         subCategory: CATEGORY_DATABASE[3],
-        published: true,
+        status: 'published',
         liveUrl: 'https://finafrik.co.uk/',
     }, 
     {
@@ -81,7 +81,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[0],
         subCategory: CATEGORY_DATABASE[3],
-        published: true,
+        status: 'published',
         liveUrl: 'https://finafrik.co.uk/',
     }, 
     {
@@ -94,7 +94,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[0],
         subCategory: CATEGORY_DATABASE[3],
-        published: true,
+        status: 'published',
         liveUrl: 'https://finafrik.co.uk/',
     }, 
     {
@@ -107,7 +107,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[0],
         subCategory: CATEGORY_DATABASE[3],
-        published: true,
+        status: 'published',
         liveUrl: 'https://finafrik.co.uk/',
     }, 
     {
@@ -120,7 +120,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[0],
         subCategory: CATEGORY_DATABASE[3],
-        published: true,
+        status: 'published',
         liveUrl: 'https://finafrik.co.uk/',
     }, 
     {
@@ -133,7 +133,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[0],
         subCategory: CATEGORY_DATABASE[3],
-        published: true,
+        status: 'published',
         liveUrl: 'https://finafrik.co.uk/',
     }, 
     {
@@ -146,7 +146,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[2],
-        published: true,
+        status: 'published',
         liveUrl: '',
     }, 
     {
@@ -159,7 +159,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[2],
-        published: true,
+        status: 'published',
         liveUrl: '',
     },  
     {
@@ -172,7 +172,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[2],
-        published: true,
+        status: 'published',
         liveUrl: '',
     },  
     {
@@ -185,7 +185,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[2],
-        published: true,
+        status: 'published',
         liveUrl: '',
     },  
     {
@@ -198,7 +198,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[2],
-        published: true,
+        status: 'published',
         liveUrl: '',
     },  
     {
@@ -211,7 +211,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[2],
-        published: true,
+        status: 'published',
         liveUrl: 'https://www.scecsa.com/',
     },  
     {
@@ -224,7 +224,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[2],
-        published: true,
+        status: 'published',
         liveUrl: '',
     },  
     {
@@ -237,7 +237,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[2],
-        published: true,
+        status: 'published',
         liveUrl: '',
     },  
     {
@@ -250,7 +250,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '4/06/2022',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[4],
-        published: true,
+        status: 'published',
         liveUrl: '',
     },   
     {
@@ -263,7 +263,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '3/20/2017',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[4],
-        published: true,
+        status: 'published',
         liveUrl: '',
     },   
     {
@@ -276,7 +276,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '3/20/2017',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[4],
-        published: true,
+        status: 'published',
         liveUrl: '',
     },   
     {
@@ -289,7 +289,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '3/20/2017',
         category: CATEGORY_DATABASE[0],
         subCategory: EMPTY_CATEGORY,
-        published: false,
+        status: 'draft',
         liveUrl: '',
     },   
     {
@@ -302,7 +302,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '3/20/2017',
         category: CATEGORY_DATABASE[0],
         subCategory: EMPTY_CATEGORY,
-        published: false,
+        status: 'draft',
         liveUrl: '',
     },   
     {
@@ -315,7 +315,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '3/20/2017',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[4],
-        published: false,
+        status: 'draft',
         liveUrl: '',
     },   
     {
@@ -328,7 +328,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '3/20/2017',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[4],
-        published: false,
+        status: 'draft',
         liveUrl: '',
     },  
     {
@@ -341,7 +341,7 @@ export const PROJECTS_DATABASE: Project[] = [
         dateCreated: '3/20/2017',
         category: CATEGORY_DATABASE[1],
         subCategory: CATEGORY_DATABASE[4],
-        published: false,
+        status: 'draft',
         liveUrl: '',
     },    
 ];
@@ -360,6 +360,6 @@ export const EMPTY_PROJECT: Project = {
     dateCreated: '',
     category: EMPTY_CATEGORY,
     subCategory: EMPTY_CATEGORY,
-    published: false,
+    status: 'draft',
     liveUrl: '',
 };

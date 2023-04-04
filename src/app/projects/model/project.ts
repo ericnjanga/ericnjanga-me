@@ -1,4 +1,6 @@
 import { Category } from "./category";
+import { projectStatus } from "./status";
+
 
 
 export interface Project {
@@ -11,6 +13,6 @@ export interface Project {
     dateCreated: string;
     category: Category;
     subCategory: Category;
-    published: boolean;
+    status: projectStatus;
     liveUrl: string;
 }
