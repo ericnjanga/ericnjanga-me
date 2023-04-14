@@ -1,4 +1,9 @@
-# Npdd3
+# ericnjanga.me
+
+## Introduction
+Eric Njanga's online portfolio (Created in April 2023). Front-end built with Angular, REST-API built with Express and typeorm, database built with Heroku (postgreSQL).
+
+---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
