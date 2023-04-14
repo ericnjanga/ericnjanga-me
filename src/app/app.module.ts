@@ -43,18 +43,6 @@ import { RichyGroupComponent } from './pages-static/richy-group/richy-group.comp
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-
-
-    /**
-     * [E.NJANGA] - TO DO:
-     * - Remove it when a real server is ready to receive requests.
-     * (The HttpClientInMemoryWebApiModule module intercepts HTTP requests and returns simulated server responses.)
-     */
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
-
-
     MatMenuModule,
     SharedModule
   ],
