@@ -72,6 +72,9 @@
               "browserTarget": "npdd-3:build:development"
             }
           },
+          "options": {
+            "proxyConfig": "./proxy.json"
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
