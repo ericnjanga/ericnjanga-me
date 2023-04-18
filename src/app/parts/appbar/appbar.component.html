@@ -1,11 +1,17 @@
 <nav class="bar">
     <div class="container d-flex align-items-center">
-        <a href="/" class="text-uppercase">Pixel Design & Development</a>
+        <a href="/" class="text-uppercase">Eric Njanga</a>
         <ul class="menu list-inline">
             <li  class="list-inline-item text-uppercase">
-                <a routerLink="/projects" routerLinkActive="menu-item-active">projects</a>
+                <a routerLink="/" routerLinkActive="menu-item-active">Home</a>
             </li>
-            <li  class="list-inline-item text-uppercase" *ngFor="let item of categories; ">
+            <li  class="list-inline-item text-uppercase">
+                <a routerLink="/about" routerLinkActive="menu-item-active">About</a>
+            </li>
+            <li  class="list-inline-item text-uppercase">
+                <a routerLink="/portfolio" routerLinkActive="menu-item-active">Portfolio</a>
+            </li>
+            <!-- <li  class="list-inline-item text-uppercase" *ngFor="let item of categories; ">
                 <a routerLink="/{{item.hash}}" routerLinkActive="menu-item-active">{{item.label}}</a>
             </li>
             <li  class="list-inline-item">
@@ -24,7 +30,7 @@
                     <a routerLink="/about" mat-menu-item>About</a>
                     <a href="mailto:npdd@gmail.com" mat-menu-item>npdd@gmail.com</a>
                 </mat-menu>
-            </li>
+            </li> -->
         </ul>
     </div>
 </nav>
