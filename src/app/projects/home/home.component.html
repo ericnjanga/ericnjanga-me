@@ -7,5 +7,10 @@
 </div>
 
 
-<app-projects-card-list [source]="data"></app-projects-card-list>
+<div *ngFor="let item of projects$ | async">
+    <p>{{ item.title }}</p>
+</div>
+
+
+<!-- <app-projects-card-list [source]="data"></app-projects-card-list> -->
 

@@ -10,7 +10,7 @@ export const PROJECTS_DATABASE: Project[] = [
         id: 2,
         name: 'loblaws-marketplace',
         url: 'loblaws-marketplace',
-        title: 'Loblaws Marketplace', 
+        title: '***Loblaws Marketplace', 
         excerpt: 'Helped creating an online market place for the largest supermarket chain in Canada.',
         thumbnail: './../../../assets/img/loblaws-marketplace.png',
         dateCreated: '4/04/2020',

@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
 import { catchError, map, tap, shareReplay } from 'rxjs/operators';
 import { Project } from '../model/project';
-import { Observable, of } from 'rxjs';
 import { EMPTY_PROJECT } from 'src/app/projects/mocks/project-list';
 
 @Injectable({
   providedIn: 'root'
 })
+// @Injectable()
 export class ProjectService {
   private ProjectsUrl = 'api/projects';  // URL to web api
 
@@ -15,6 +16,21 @@ export class ProjectService {
   getEmptyProject(): Project {
     return EMPTY_PROJECT;
   }
+
+
+
+
+  loadAll(): Observable<Project[]> {
+
+    const url = '/api/projects';
+    const headers = { 'Content-Type': 'application/json' }; 
+
+    return this.http.get<Project[]>(url, { headers })
+        .pipe(
+            map(res => res),
+            shareReplay()
+        );
+}
 
 
   generateDatabase(): Observable<Project[]> {
