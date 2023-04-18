@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Project } from '../model/project';
 import { ProjectService } from '../services/project.service';
-import { CATEGORY_DATABASE } from 'src/app/projects/mocks/category-list';
+// import { CATEGORY_DATABASE } from 'src/app/projects/mocks/category-list';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -10,8 +10,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  data: Project[] = [];
-  pageCategory = CATEGORY_DATABASE[0].hash;
+  // pageCategory = CATEGORY_DATABASE[0].hash;
 
   projects$: Observable<Project[]> | undefined;
 

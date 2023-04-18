@@ -23,6 +23,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { SharedModule } from './shared/shared.module';
+import { ProjectsModule } from './projects/projects.module';
 import { RichyGroupComponent } from './pages-static/richy-group/richy-group.component';
 
 @NgModule({
@@ -44,7 +45,8 @@ import { RichyGroupComponent } from './pages-static/richy-group/richy-group.comp
     HttpClientModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    SharedModule
+    SharedModule,
+    ProjectsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

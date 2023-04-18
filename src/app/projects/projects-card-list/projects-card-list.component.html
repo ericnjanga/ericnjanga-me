@@ -1,6 +1,6 @@
 
 <section class="row row-cols-3">
-    <div class="cart" *ngFor="let item of source">
+    <div class="cart" *ngFor="let item of source$ | async">
         <div>
             <a href="" class="text-uppercase">{{item.category}}</a> | <span>{{item.dateCreated | date}}</span>
         </div>
@@ -15,4 +15,3 @@
         </a>
     </div>
 </section>
-

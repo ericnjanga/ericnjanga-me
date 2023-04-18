@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Project } from '../model/project';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-projects-card-list',
@@ -7,5 +8,6 @@ import { Project } from '../model/project';
   styleUrls: ['./projects-card-list.component.scss']
 })
 export class ProjectsCardListComponent {
-  @Input() source: Project[] = [];
+  // @Input() source: Project[] = [];
+  @Input() source$: Observable<Project[]> | undefined;
 }

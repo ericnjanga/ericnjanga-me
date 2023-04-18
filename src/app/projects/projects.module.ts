@@ -18,7 +18,10 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     ProjectsRoutingModule,
-    SharedModule
+    SharedModule,
+  ],
+  exports: [
+    ProjectsCardListComponent,
   ],
   providers: []
 })
