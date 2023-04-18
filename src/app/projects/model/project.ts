@@ -8,11 +8,11 @@ export interface Project {
     name: string;
     url: string;
     title: string; 
-    excerpt: string;
+    shortDescription: string;
     thumbnail: string;
-    dateCreated: string;
-    category: Category;
-    subCategory: Category;
+    createdAt: string;
+    categories: Category[];
+    subcategories: Category;
     status: projectStatus;
     liveUrl: string;
 }

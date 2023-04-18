@@ -8,9 +8,9 @@ import { Category } from 'src/app/projects/model/category';
   styleUrls: ['./appbar.component.scss']
 })
 export class AppbarComponent {
-  categories: Category[];
+  // categories: Category[];
 
   constructor() {
-    this.categories = CATEGORY_DATABASE.filter(item => item.parentId === null);
+    // this.categories = CATEGORY_DATABASE.filter(item => item.parentId === null);
   }
 }

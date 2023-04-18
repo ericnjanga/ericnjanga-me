@@ -1,17 +1,19 @@
 
 <section class="row row-cols-3">
-    <div class="cart" *ngFor="let item of source$ | async">
-        <div>
-            <a href="" class="text-uppercase">{{item.category}}</a> | <span>{{item.dateCreated | date}}</span>
+    <div *ngFor="let item of source$ | async">
+        <div class="cart">
+            <a class="thumbnail-wrap" [routerLink]="[item.url]">
+                <h4 class="title">{{item.title}}</h4>
+                <div class="subtitle">
+                    <a href="" class="text-uppercase">{{item.categories[0].title}}</a> | <span>{{item.createdAt | date}}</span>
+                </div>
+                <!-- <span class="read-more text-uppercase text-center">
+                    Read more
+                    <app-icon name="arrowRight"></app-icon>
+                </span> -->
+                <img class="img-thumbnail" src={{item.thumbnail}} alt="">
+                <p>{{item.shortDescription}}</p>
+            </a>
         </div>
-        <h3>{{item.title}}</h3>
-        <p>{{item.excerpt}}</p>
-        <a class="thumbnail-wrap" [routerLink]="[item.url]"> <!-- projects/{{item.id}} -->
-            <span class="read-more text-uppercase text-center">
-                Read more
-                <app-icon name="arrowRight"></app-icon>
-            </span>
-            <img class="img-thumbnail" src={{item.thumbnail}} alt="">
-        </a>
     </div>
 </section>

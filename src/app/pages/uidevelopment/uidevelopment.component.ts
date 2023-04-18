@@ -9,7 +9,7 @@ import { CATEGORY_DATABASE } from 'src/app/projects/mocks/category-list';
 })
 export class UidevelopmentComponent {
   // data: Project[];
-  pageCategory = CATEGORY_DATABASE[0].hash;
+  // pageCategory = CATEGORY_DATABASE[0].hash;
 
   ngOnInit(): void {
     /**

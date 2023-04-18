@@ -168,4 +168,9 @@ for button of "normal" and "thin" sizes
   line-height: 26px;
   font-weight: 500;
 }
+@mixin caption() {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
 

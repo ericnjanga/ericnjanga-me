@@ -63,14 +63,14 @@ export class ProjectService {
   }
 
 
-  findMatchByCategory(objects: Project[], criteria: { hash?: string; }): Project[] {
-    return objects.filter(obj => {
-      if (criteria.hash && obj.category.hash !== criteria.hash) {
-        return false;
-      }
-      return true;
-    });
-  }
+  // findMatchByCategory(objects: Project[], criteria: { hash?: string; }): Project[] {
+  //   return objects.filter(obj => {
+  //     if (criteria.hash && obj.category.hash !== criteria.hash) {
+  //       return false;
+  //     }
+  //     return true;
+  //   });
+  // }
 
 
 
