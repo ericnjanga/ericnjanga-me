@@ -13,8 +13,6 @@
     position: relative;
 }
 
-
-
 .content__item::before {
     color: var(--color-number);
     position: absolute;
@@ -35,7 +33,6 @@
 
 .link {
     cursor: pointer;
-    // font-size: 18px;
     position: relative;
     white-space: nowrap;
     color: var(--color-text);
@@ -54,7 +51,6 @@
 
 .link::before {
     content: '';
-    /* show by default */
 }
 
 

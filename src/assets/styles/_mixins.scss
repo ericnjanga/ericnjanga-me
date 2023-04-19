@@ -168,6 +168,11 @@ for button of "normal" and "thin" sizes
   line-height: 26px;
   font-weight: 500;
 }
+@mixin logo() {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 900;
+}
 @mixin navLink() {
   font-size: 16px;
   line-height: 16px;

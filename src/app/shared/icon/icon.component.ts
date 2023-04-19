@@ -15,6 +15,8 @@ export class IconComponent {
   isInfo: boolean = false;
   isArrowRight: boolean = false;
   isCTAarrow: boolean = false;
+  isLogoOn: boolean = false;
+  isLogoOff: boolean = false;
 
   ngOnInit() {
     /** Will display help icon if no value is received */
@@ -42,6 +44,14 @@ export class IconComponent {
 
       case "ctaArrow":
         this.isCTAarrow = true;
+        break;
+
+      case "logoOn":
+        this.isLogoOn = true;
+        break;
+
+      case "logoOff":
+        this.isLogoOff = true;
         break;
     }
   }

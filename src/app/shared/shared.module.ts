@@ -7,6 +7,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { TopClientsListComponent } from './top-clients-list/top-clients-list.component';
 import { TwoSkillsComponent } from './two-skills/two-skills.component';
 import { CallToActionComponent } from './call-to-action/call-to-action.component';
+import { LogoComponent } from './logo/logo.component';
 
 
 
@@ -17,7 +18,8 @@ import { CallToActionComponent } from './call-to-action/call-to-action.component
     CarouselComponent,
     TopClientsListComponent,
     TwoSkillsComponent,
-    CallToActionComponent
+    CallToActionComponent,
+    LogoComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { CallToActionComponent } from './call-to-action/call-to-action.component
     CarouselComponent,
     TopClientsListComponent,
     TwoSkillsComponent,
-    CallToActionComponent
+    CallToActionComponent,
+    LogoComponent
   ]
 })
 export class SharedModule { }

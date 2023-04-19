@@ -1,0 +1,84 @@
+@import './../../../assets/styles/variables';
+@import './../../../assets/styles/mixins';
+
+
+$img-dim: 49px;
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    color: var(--color-text);
+    text-decoration: none;
+
+    &--vertical {
+        flex-direction: column;
+    }
+    &--horizontal {
+        flex-direction: row;
+    }
+}
+
+.logo--horizontal {
+    .text-wrapper {
+        margin-left: 7px;
+    }
+}
+
+.image-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    width: $img-dim;
+    height: $img-dim;
+    border-radius: $img-dim;
+
+    .img {
+        display: inline-block;
+        transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+    }
+}
+
+.text-wrapper {
+    @include logo();
+}
+
+
+
+
+
+.logo--leda {
+    text-transform: uppercase;
+    @include setFontFamily('body');
+    overflow: hidden;
+    line-height: 2;
+}
+
+
+@mixin showHoverText() {
+    transform: translate3d(0, 0, 0);
+}
+@mixin showUnderlineBar() {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+@mixin hideDefaultImg() {
+    transform: translate3d(-100%, 0, 0);
+}
+@mixin hoverMode() {
+    &::before {
+        @include showUnderlineBar();
+    }
+    .image-wrapper {
+        .on, .off {
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+}
+
+.logo--leda {
+    &:hover:not(.logo-active) {
+        color: map-get($colors, state1);
+        @include hoverMode();
+    }
+}
