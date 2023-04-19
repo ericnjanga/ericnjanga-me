@@ -20,8 +20,8 @@ export class LogoComponent {
 
   directionClasses() {
     return {
-      'logo--vertical': (this.direction == 'vertical'),
-      'logo--horizontal': (this.direction == 'horizontal')
+      'logo--vertical': this.isVertical(),
+      'logo--horizontal': this.isHorizontal()
     }
   }
 }

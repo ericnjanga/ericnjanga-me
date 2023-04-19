@@ -9,10 +9,31 @@
     height: map-get($gap, appFooter);
 }
 
+.spacer {
+    display: block;
+    margin-bottom: 30px;
+}
+
 .wrapper {
     width: 323px;
 }
 
 .caption {
     @include caption();
+}
+
+::ng-deep app-icon {
+    color: map-get($colors, primary2);
+}
+
+
+
+
+/**
+ * TODO: Footer link hover
+ * ------
+ * It needs to be done
+*/
+.list-inline-item:not(:last-child) {
+    margin-right: 1.875rem;
 }

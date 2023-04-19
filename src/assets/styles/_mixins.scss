@@ -148,37 +148,37 @@ for button of "normal" and "thin" sizes
  * Typography
  * ------------------------------------
 */
-@mixin h1() {
+@mixin typo-h1() {
   font-size: 44px;
   line-height: 46px;
   font-weight: 600;
 }
-@mixin h2() {
+@mixin typo-h2() {
   font-size: 36px;
   line-height: 40px;
   font-weight: 600;
 }
-@mixin h3() {
+@mixin typo-h3() {
   font-size: 32px;
   line-height: 38px;
   font-weight: 500;
 }
-@mixin h4() {
+@mixin typo-h4() {
   font-size: 24px;
   line-height: 26px;
   font-weight: 500;
 }
-@mixin logo() {
+@mixin typo-logo() {
   font-size: 16px;
   line-height: 16px;
   font-weight: 900;
 }
-@mixin navLink() {
+@mixin typo-navLink() {
   font-size: 16px;
   line-height: 16px;
   font-weight: 600;
 }
-@mixin buttonLink() {
+@mixin typo-buttonLink() {
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;

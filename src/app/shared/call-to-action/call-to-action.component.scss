@@ -22,10 +22,10 @@
 
 
 .nav-link {
-    @include navLink();
+    @include typo-navLink();
 }
 .button-link {
-    @include buttonLink();
+    @include typo-buttonLink();
 }
 
 

@@ -23,8 +23,8 @@ export class CallToActionComponent {
 
   statusClasses() {
     return {
-      'nav-link': (this.status == 'Nav link'),
-      'button-link': (this.status == 'button')
+      'nav-link': this.isNavLink(),
+      'button-link': this.isButton()
     }
   }
 

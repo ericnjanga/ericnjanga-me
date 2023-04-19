@@ -2,6 +2,17 @@
 @import './../../../assets/styles/mixins';
 
 
+
+@mixin hoverMode() {
+    .image-wrapper {
+        .on, .off {
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+}
+
+
+
 $img-dim: 49px;
 
 .logo {
@@ -26,6 +37,12 @@ $img-dim: 49px;
     }
 }
 
+.logo--vertical {
+    .text-wrapper {
+        margin-top: 7px;
+    }
+}
+
 .image-wrapper {
     display: inline-block;
     overflow: hidden;
@@ -36,49 +53,28 @@ $img-dim: 49px;
     .img {
         display: inline-block;
         transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+
+        &.off {
+            color: map-get($colors, accent1);
+        }
+
+        &.on {
+            color: map-get($colors, state2);
+        }
     }
 }
 
 .text-wrapper {
-    @include logo();
+    @include typo-logo();
 }
-
-
-
-
 
 .logo--leda {
     text-transform: uppercase;
     @include setFontFamily('body');
     overflow: hidden;
     line-height: 2;
-}
 
-
-@mixin showHoverText() {
-    transform: translate3d(0, 0, 0);
-}
-@mixin showUnderlineBar() {
-    transform-origin: 0% 50%;
-    transform: scale3d(1, 1, 1);
-}
-@mixin hideDefaultImg() {
-    transform: translate3d(-100%, 0, 0);
-}
-@mixin hoverMode() {
-    &::before {
-        @include showUnderlineBar();
-    }
-    .image-wrapper {
-        .on, .off {
-            transform: translate3d(-100%, 0, 0);
-        }
-    }
-}
-
-.logo--leda {
-    &:hover:not(.logo-active) {
-        color: map-get($colors, state1);
+    &:hover {
         @include hoverMode();
     }
 }
