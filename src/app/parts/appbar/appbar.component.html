@@ -3,13 +3,16 @@
         <a href="/" class="text-uppercase">Eric Njanga</a>
         <ul class="menu list-inline">
             <li  class="list-inline-item text-uppercase">
-                <a routerLink="/" routerLinkActive="menu-item-active">Home</a>
+                <app-call-to-action link="/home" label="Home" status="Nav link"></app-call-to-action>
+                <!-- <a routerLink="/" routerLinkActive="menu-item-active">Home</a> -->
             </li>
             <li  class="list-inline-item text-uppercase">
-                <a routerLink="/about" routerLinkActive="menu-item-active">About</a>
+                <app-call-to-action link="/about" label="About" status="Nav link"></app-call-to-action>
+                <!-- <a routerLink="/about" routerLinkActive="menu-item-active">About</a> -->
             </li>
             <li  class="list-inline-item text-uppercase">
-                <a routerLink="/portfolio" routerLinkActive="menu-item-active">Portfolio</a>
+                <app-call-to-action link="/portfolio" label="Portfolio" status="Nav link"></app-call-to-action>
+                <!-- <a routerLink="/portfolio" routerLinkActive="menu-item-active">Portfolio</a> -->
             </li>
             <!-- <li  class="list-inline-item text-uppercase" *ngFor="let item of categories; ">
                 <a routerLink="/{{item.hash}}" routerLinkActive="menu-item-active">{{item.label}}</a>

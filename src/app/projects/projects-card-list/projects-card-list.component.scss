@@ -1,14 +1,24 @@
 @import './../../../assets/styles/variables';
 @import './../../../assets/styles/mixins';
 
+$max-height: 450px;
 
 .cart {
     position: relative;
+    min-height: $max-height;
     z-index: 1;
     margin-bottom: 100px;
     background-color: map-get($colors, accent4_white);
 
+    .icon {
+        position: absolute;
+        top: 36px;
+        right: 36px;
+        z-index: 1;
+    }
+
     a.thumbnail-wrap {
+        min-height: $max-height;
         padding: 46px;
         text-decoration: none;
         &:hover {
@@ -16,6 +26,7 @@
         }
     }
     .title {
+        margin-right: 30px;
         margin-bottom: 15px;
         color: map-get($colors, accent1);
     }

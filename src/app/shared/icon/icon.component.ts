@@ -14,6 +14,7 @@ export class IconComponent {
   isIXDF: boolean = false;
   isInfo: boolean = false;
   isArrowRight: boolean = false;
+  isCTAarrow: boolean = false;
 
   ngOnInit() {
     /** Will display help icon if no value is received */
@@ -37,6 +38,10 @@ export class IconComponent {
 
       case "arrowRight":
         this.isArrowRight = true;
+        break;
+
+      case "ctaArrow":
+        this.isCTAarrow = true;
         break;
     }
   }

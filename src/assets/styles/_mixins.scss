@@ -168,9 +168,33 @@ for button of "normal" and "thin" sizes
   line-height: 26px;
   font-weight: 500;
 }
+@mixin navLink() {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+}
+@mixin buttonLink() {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+
+
+
+
 @mixin caption() {
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
 }
 
+
+@mixin setFontFamily($type) {
+  @if ($type == 'heading') {
+    font-family: 'Kanit', sans-serif;
+  }
+  @else {
+    font-family: 'Montserrat', sans-serif;
+  }
+}

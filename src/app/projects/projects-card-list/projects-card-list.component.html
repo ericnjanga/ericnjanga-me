@@ -2,6 +2,9 @@
 <section class="row row-cols-3">
     <div *ngFor="let item of source$ | async">
         <div class="cart">
+
+            <app-icon class="icon" name="ctaArrow"></app-icon>
+
             <a class="thumbnail-wrap" [routerLink]="[item.url]">
                 <h4 class="title">{{item.title}}</h4>
                 <div class="subtitle">
