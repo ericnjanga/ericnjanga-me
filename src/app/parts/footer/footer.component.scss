@@ -1,6 +1,18 @@
 @import './../../../assets/styles/variables';
+@import './../../../assets/styles/mixins';
 
 
 .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: map-get($gap, appFooter);
+}
+
+.wrapper {
+    width: 323px;
+}
+
+.caption {
+    @include caption();
 }

@@ -1,0 +1,36 @@
+@import './../../../assets/styles/variables';
+
+.box-wrapper {
+    margin-bottom: 25px;
+}
+.box-wrapper.one {
+    padding-right: 0;
+}
+.box-wrapper.two,
+.text-wrapper.two {
+    padding-left: 0;
+}
+.text-wrapper {
+    padding-right: 150px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 486px;
+}
+
+.box1 {
+    img {
+        width: 518px;
+    }
+    background-color: map-get($colors, accent2);
+}
+
+.box2 {
+    img {
+        width: 217px;
+    }
+    background-color: map-get($colors, primary2);
+}

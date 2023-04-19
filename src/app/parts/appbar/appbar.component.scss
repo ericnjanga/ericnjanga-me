@@ -32,7 +32,11 @@ a {
 
     .menu-item-active {
         text-decoration: underline;
-        color: map-get($colors, primary1);
+        color: map-get($colors, state2);
+    }
+    a:hover {
+        color: map-get($colors, state1);
+        text-decoration: underline;
     }
     a, button {
         padding: 20px;

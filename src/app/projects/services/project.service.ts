@@ -22,7 +22,7 @@ export class ProjectService {
 
   loadAll(): Observable<Project[]> {
 
-    const url = '/api/projects';
+    const url = '/api/projects?pageNumber=0&pageSize=3';
     const headers = { 'Content-Type': 'application/json' }; 
 
     return this.http.get<Project[]>(url, { headers })

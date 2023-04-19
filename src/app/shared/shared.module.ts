@@ -4,6 +4,8 @@ import { IconComponent } from "./icon/icon.component";
 import { Test1Component } from './test1/test1.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TopClientsListComponent } from './top-clients-list/top-clients-list.component';
+import { TwoSkillsComponent } from './two-skills/two-skills.component';
+import { CallToActionComponent } from './call-to-action/call-to-action.component';
 
 
 
@@ -12,7 +14,9 @@ import { TopClientsListComponent } from './top-clients-list/top-clients-list.com
     IconComponent,
     Test1Component,
     CarouselComponent,
-    TopClientsListComponent
+    TopClientsListComponent,
+    TwoSkillsComponent,
+    CallToActionComponent
   ],
   imports: [
     CommonModule
@@ -20,7 +24,9 @@ import { TopClientsListComponent } from './top-clients-list/top-clients-list.com
   exports: [
     IconComponent,
     CarouselComponent,
-    TopClientsListComponent
+    TopClientsListComponent,
+    TwoSkillsComponent,
+    CallToActionComponent
   ]
 })
 export class SharedModule { }
