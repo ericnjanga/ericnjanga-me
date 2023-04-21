@@ -1,0 +1,14 @@
+<div 
+    class="box box1 box-anim bg-{{bg}}" 
+    (mouseenter)="onMouseEnter()" 
+    (mouseleave)="onMouseLeave()" 
+    [ngClass]="statusClass()">
+
+    <app-call-to-action class="box-anim__counter" [link]="buttonLink" label="{{buttonLabel}}" status="button">
+        {{buttonLabel}}
+    </app-call-to-action>
+
+    <span class="box-anim__overlay"></span>
+
+    <img [src]="imgSrc" alt="">
+</div>

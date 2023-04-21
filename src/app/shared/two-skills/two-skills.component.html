@@ -1,34 +1,80 @@
 <section class="row row-cols-2">
     <div class="box-wrapper one">
-        <div class="box box1">
+        <app-box-presentation
+            bg="one"
+            buttonLink="/projects"
+            buttonLabel="9 projects"
+            imgSrc="./../../../assets/img/img-ide.png"
+        >
+        </app-box-presentation>
+        <!-- <div class="box box1 box-anim" 
+        (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"
+        [ngClass]="statusClass()">
+
+            <app-call-to-action 
+            class="box-anim__counter" 
+            link="/home" 
+            label="14 projects" 
+            status="button">14 projects</app-call-to-action>
+
+            <span class="box-anim__overlay"></span>
+
             <img src="./../../../assets/img/img-ide.png" alt="">
-        </div>
+        </div> -->
     </div>
     <div class="box-wrapper two">
-        <div class="box box2">
+        <app-box-presentation
+            bg="two"
+            buttonLink="/projects"
+            buttonLabel="11 projects"
+            imgSrc="./../../../assets/img/project-25-slide2.png"
+        >
+        </app-box-presentation>
+        <!-- <div class="box box2 box-anim" 
+        (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"
+        [ngClass]="statusClass()">
+
+            <app-call-to-action 
+            class="box-anim__counter" 
+            link="/home" 
+            label="14 projects" 
+            status="button">14 projects</app-call-to-action>
+
+            <span class="box-anim__overlay"></span>
+
             <img src="./../../../assets/img/img-slide1.png" alt="">
-        </div>
+        </div> -->
     </div>
     <div class="text-wrapper one">
         <h3>Development of user interfaces</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. </p>
-        <ul>
+        <ul class="list-align-bullets-with-left-edge">
             <li>Deep code customization</li>
             <li>Smart and scalable code</li>
             <li>...</li>
         </ul>
 
-        <app-call-to-action class="cta-button" link="/portfolio" label="See latest work" status="button"></app-call-to-action>
+        <app-call-to-action 
+        class="cta-button" 
+        link="/portfolio" 
+        label="See latest work" 
+        status="button">See latest work</app-call-to-action>
+
     </div>
     <div class="text-wrapper two">
         <h3>Design of concepts</h3>
         <p>(Proof of concepts)Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. </p>
-        <ul>
+        <ul class="list-align-bullets-with-left-edge">
             <li>Wireframes</li>
             <li>User flows</li>
             <li>Interactive prototypes</li>
         </ul>
 
-        <app-call-to-action class="cta-button" link="/portfolio" label="See latest work" status="button"></app-call-to-action>
+        <app-call-to-action 
+        class="cta-button" 
+        link="/portfolio" 
+        label="See latest work" 
+        status="button">See latest work</app-call-to-action>
+
     </div>
 </section>

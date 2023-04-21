@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class TwoSkillsComponent {
 
+  activeClass: string = '';
+
+  onMouseEnter() {
+    this.activeClass = 'moveIn';
+  }
+  
+  onMouseLeave() {
+    this.activeClass = 'moveOut';
+  }
+
+  statusClass() {
+    return this.activeClass;
+  }
 }

@@ -1,0 +1,79 @@
+@import './../../../assets/styles/variables';
+@import './../../../assets/styles/mixins';
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 486px;
+}
+
+.bg-one {
+    background-color: map-get($colors, accent2);
+    img {
+        width: 518px;
+    }
+}
+.bg-two {
+    background-color: map-get($colors, primary2);
+    img {
+        width: 217px;
+    }
+}
+
+// .box1 {
+// }
+
+// .box2 {
+// }
+
+.box-anim {
+    position: relative;
+
+    .box-anim__overlay {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 1;
+    }
+}
+.box-anim__counter {
+    position: absolute;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    @include typo-buttonLink();
+    z-index: 3;
+}
+
+/* Smooth animation of the content */
+.box-anim__overlay,
+.box-anim__counter {
+    opacity: 0;
+}
+.box-anim__counter {
+    transform: translateX(+100px);
+}
+
+.moveIn .box-anim__overlay {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.moveOut .box-anim__overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease 0.4s;
+}
+
+.moveIn .box-anim__counter {
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 0.3s ease 0.4s, transform 0.3s ease 0.4s;
+}
+.moveOut .box-anim__counter {
+        opacity: 0;
+      transform: translateX(+100px);
+      transition: opacity 0.3s ease, transform 0.3s;
+}

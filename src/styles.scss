@@ -51,3 +51,12 @@ h3 {
 h4 {
     @include typo-h4();
 }
+
+
+
+
+// Global helpers
+// -------------------------
+.list-align-bullets-with-left-edge {
+    padding-left: 0.9rem;
+}

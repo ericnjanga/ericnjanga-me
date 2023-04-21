@@ -8,6 +8,7 @@ import { TopClientsListComponent } from './top-clients-list/top-clients-list.com
 import { TwoSkillsComponent } from './two-skills/two-skills.component';
 import { CallToActionComponent } from './call-to-action/call-to-action.component';
 import { LogoComponent } from './logo/logo.component';
+import { BoxPresentationComponent } from './box-presentation/box-presentation.component';
 
 
 
@@ -19,7 +20,8 @@ import { LogoComponent } from './logo/logo.component';
     TopClientsListComponent,
     TwoSkillsComponent,
     CallToActionComponent,
-    LogoComponent
+    LogoComponent,
+    BoxPresentationComponent
   ],
   imports: [
     CommonModule,
