@@ -353,6 +353,7 @@ export const PROJECTS_DATABASE: Project[] = [
 export const EMPTY_PROJECT: Project = {
     id: 0,
     name: '',
+    pageUrl: '',
     url: '',
     title: '', 
     shortDescription: '',

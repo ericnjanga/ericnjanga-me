@@ -10,4 +10,8 @@ import { Observable } from 'rxjs';
 export class ProjectsCardListComponent {
   // @Input() source: Project[] = [];
   @Input() source$: Observable<Project[]> | undefined;
+
+  projectUrl(elt: Project): string {
+    return `/projects/${elt.pageUrl}`;
+  }
 }

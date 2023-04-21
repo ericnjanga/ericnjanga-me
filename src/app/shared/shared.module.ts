@@ -9,6 +9,7 @@ import { TwoSkillsComponent } from './two-skills/two-skills.component';
 import { CallToActionComponent } from './call-to-action/call-to-action.component';
 import { LogoComponent } from './logo/logo.component';
 import { BoxPresentationComponent } from './box-presentation/box-presentation.component';
+import { HeroComponent } from './hero/hero.component';
 
 
 
@@ -21,7 +22,8 @@ import { BoxPresentationComponent } from './box-presentation/box-presentation.co
     TwoSkillsComponent,
     CallToActionComponent,
     LogoComponent,
-    BoxPresentationComponent
+    BoxPresentationComponent,
+    HeroComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { BoxPresentationComponent } from './box-presentation/box-presentation.co
     TopClientsListComponent,
     TwoSkillsComponent,
     CallToActionComponent,
-    LogoComponent
+    LogoComponent,
+    HeroComponent
   ]
 })
 export class SharedModule { }

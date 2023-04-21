@@ -5,7 +5,8 @@
 
             <app-icon class="icon" name="ctaArrow"></app-icon>
 
-            <a class="thumbnail-wrap" [routerLink]="[item.url]">
+            <a class="thumbnail-wrap" [routerLink]="projectUrl(item)">
+                <!-- [routerLink]="['fffff',item.pageUrl]" -->
                 <h4 class="title">{{item.title}}</h4>
                 <div class="subtitle">
                     <a href="" class="text-uppercase">{{item.categories[0].title}}</a> | <span>{{item.createdAt | date}}</span>

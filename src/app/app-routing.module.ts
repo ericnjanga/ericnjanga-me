@@ -24,7 +24,11 @@ const routes: Routes = [
       preload: false
     }
   },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { 
+    path: '', 
+    redirectTo: '/home', 
+    pathMatch: 'full' // if the path is an exact match
+  },
   { path: 'home', component: HomeComponent },
   // { path: 'ux-design', component: UxdesignComponent },
   { path: 'ui-development', component: UidevelopmentComponent },
