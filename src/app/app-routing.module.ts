@@ -11,6 +11,14 @@ import { RichyGroupComponent } from './pages-static/richy-group/richy-group.comp
 const routes: Routes = [
   { 
     path: 'projects', 
+    /**
+     * Child routes example:
+     * - projects/uid/5 (5th project of "uid")
+     * - projects/uxd/7 (7th project of "uxd")
+     * - projects/all/32 (32th project all industries included)
+     * - projects/32-connecting-the-dots-of-a-social-business
+     * @returns 
+     */
     loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule),
     data: {
       preload: false
