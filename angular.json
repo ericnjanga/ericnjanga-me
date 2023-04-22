@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "npdd-3": {
+    "eric-njanga-me": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/npdd-3",
+            "outputPath": "dist/eric-njanga-me",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "npdd-3:build:production"
+              "browserTarget": "eric-njanga-me:build:production"
             },
             "development": {
-              "browserTarget": "npdd-3:build:development"
+              "browserTarget": "eric-njanga-me:build:development"
             }
           },
           "options": {
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "npdd-3:build"
+            "browserTarget": "eric-njanga-me:build"
           }
         },
         "test": {
