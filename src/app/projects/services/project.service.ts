@@ -48,29 +48,15 @@ export class ProjectService {
 
   loadProjectByUrl(projectUrl: string): Observable<Project> {
 
-    console.log(`>>>> /${this.ProjectsUrl}?url=${projectUrl}`);
+    //Sample API call: http://localhost:7000/api/projects/28-connecting-the-dots-of-a-social-business
 
-    // http://localhost:4200/projects/loblaws-marketplace
-    // http://localhost:4200/projects/2
-    // http://localhost:4200/api/projects/2
+    const url = `/api/projects/${projectUrl}`;
 
-    // return this.http.get<Project>(`/${this.ProjectsUrl}/${projectUrl}`)
-    // return this.http.get<Project>(`/${this.ProjectsUrl}/${projectUrl}`)
-    return this.http.get<Project>(`/${this.ProjectsUrl}?url=${projectUrl}`)
+    return this.http.get<Project>(url)
     .pipe(
       shareReplay()
     );
   }
-
-
-  // findMatchByCategory(objects: Project[], criteria: { hash?: string; }): Project[] {
-  //   return objects.filter(obj => {
-  //     if (criteria.hash && obj.category.hash !== criteria.hash) {
-  //       return false;
-  //     }
-  //     return true;
-  //   });
-  // }
 
 
 

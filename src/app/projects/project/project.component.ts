@@ -13,6 +13,8 @@ export class ProjectComponent {
 
   ngOnInit() {
     this.project = this.route.snapshot.data['project'];
+
+    console.log('----', this.route.snapshot.data['project']);
   }
 
   constructor(private route: ActivatedRoute, private projectService: ProjectService) {
