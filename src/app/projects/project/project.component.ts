@@ -1,4 +1,5 @@
 import { Component, Input  } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from '../model/project';
 import { ProjectService } from '../services/project.service';
@@ -12,12 +13,14 @@ export class ProjectComponent {
   @Input() project: Project;
 
   ngOnInit() {
+    // Get the payload
     this.project = this.route.snapshot.data['project'];
-
-    console.log('----', this.route.snapshot.data['project']);
+    
+    // Set page title
+    this.titleService.setTitle(`Eric Njanga | ${this.project.title}`);
   }
 
-  constructor(private route: ActivatedRoute, private projectService: ProjectService) {
+  constructor(private titleService: Title, private route: ActivatedRoute, private projectService: ProjectService) {
     this.project = this.projectService.getEmptyProject();
   }
 }

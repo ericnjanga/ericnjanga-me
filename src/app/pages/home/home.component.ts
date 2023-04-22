@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Project } from './../../projects/model/project';
 import { ProjectService } from './../../projects/services/project.service';
 import { Observable } from 'rxjs';
@@ -13,6 +14,10 @@ export class HomeComponent {
   projects$: Observable<Project[]> | undefined;
 
   ngOnInit(): void {
+    // Set page title
+    this.titleService.setTitle('Eric Njanga | Welcome');
+
+    // ...
     this.reloadProjects();
   }
 
@@ -20,6 +25,6 @@ export class HomeComponent {
     this.projects$ = this.projectService.loadAll();
   }
 
-  constructor(public projectService: ProjectService) {
+  constructor(private titleService: Title, public projectService: ProjectService) {
   }
 }

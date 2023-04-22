@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Project } from '../model/project';
 import { ProjectService } from '../services/project.service';
 // import { CATEGORY_DATABASE } from 'src/app/projects/mocks/category-list';
@@ -15,7 +16,10 @@ export class HomeComponent {
   projects$: Observable<Project[]> | undefined;
 
   ngOnInit(): void {
+    // Set page title
+    this.titleService.setTitle('Eric Njanga | Latest work');
 
+    // ...
     this.reloadProjects();
 
 
@@ -40,5 +44,5 @@ export class HomeComponent {
     this.projects$ = this.projectService.loadAll();
   }
 
-  constructor(public projectService: ProjectService) {}
+  constructor(private titleService: Title, public projectService: ProjectService) {}
 }

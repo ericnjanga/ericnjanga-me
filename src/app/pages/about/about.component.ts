@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  ngOnInit() {
+    // Set page title
+    this.titleService.setTitle('Eric Njanga | About');
+  }
+  
+
+  constructor(private titleService: Title) {
+
+  }
 }
