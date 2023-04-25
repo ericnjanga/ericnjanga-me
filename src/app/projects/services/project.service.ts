@@ -2,8 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap, shareReplay } from 'rxjs/operators';
-import { Project } from '../model/project';
+import { Project, CountPayload } from '../model/project';
 import { EMPTY_PROJECT } from 'src/app/projects/mocks/project-list';
+
+
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +22,6 @@ export class ProjectService {
   }
 
 
-
-
   loadAll(): Observable<Project[]> {
 
     const url = '/api/projects?pageNumber=0&pageSize=3';
@@ -30,7 +32,21 @@ export class ProjectService {
             map(res => res),
             shareReplay()
         );
-}
+  }
+
+
+
+  getCount(industry: string): Observable<CountPayload> {
+
+    const url = `/api/count/${industry}`;
+    const headers = { 'Content-Type': 'application/json' }; 
+
+    return this.http.get<CountPayload>(url, { headers })
+        .pipe(
+            map(res => res),
+            shareReplay()
+        );
+  }
 
 
   generateDatabase(): Observable<Project[]> {

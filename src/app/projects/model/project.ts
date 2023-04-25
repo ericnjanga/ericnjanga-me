@@ -17,3 +17,9 @@ export interface Project {
     status: projectStatus;
     liveUrl: string;
 }
+
+
+
+export type CountPayload = {
+    projectCount: number
+};
