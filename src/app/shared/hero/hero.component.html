@@ -1,6 +1,18 @@
-<header>
-    <h1>{{title}}</h1>
-    <img [src]="image" alt="">
-</header>
+<section class="carousel" [ngClass]="parentClassSetup()">
+    <div class="slide slide1" [ngClass]="slideClassSetup()">
+        <div class="text-wrapper">
+            <h1 class="title">{{title}}</h1>
+            <!-- <p>Eric Njanga creates hard to explain design concepts and codes hard to find user interfaces.</p>
+            <ul class="list-align-bullets-with-left-edge">
+                <li>UI Developer (since 2006)</li>
+                <li>UX Designer (since 2019)</li>
+            </ul> -->
 
-<p>hero works!</p>
+            <!-- <app-call-to-action link="/projects" label="See latest work" status="button">See latest work</app-call-to-action> -->
+        </div>
+
+        <img class="img" src={{image}} alt="">
+    </div>
+
+    <span class="background"></span>
+</section>

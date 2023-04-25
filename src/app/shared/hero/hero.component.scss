@@ -1,0 +1,98 @@
+@import './../../../assets/styles/variables';
+
+
+
+.carousel {
+    position: relative;
+    display: flex;
+}
+
+.carousel--large {
+    height: 700px;
+
+    .title {
+
+    }
+    
+    .background {
+        top: 100px;
+        height: 486px;
+    }
+}
+
+.carousel--small {
+    height: 405px;
+
+    .title {
+        margin-top: 10.625rem;
+    }
+
+    .background {
+        bottom: 0;
+        height: 300px;
+    }
+}
+
+
+.background {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: block;
+    background-color: map-get($colors, accent2);
+    z-index: 0;
+}
+
+
+.slide {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    z-index: 2;
+
+    h1, ul {
+        margin-bottom: 30px;
+    }
+
+    .text-wrapper {
+        max-width: 400px;
+        margin-left: 3.5rem;
+        margin-bottom: 3.125em;
+    }
+    .img {
+        display: block;
+        margin-top: auto;
+        margin-left: auto;
+        // max-width: 400px;
+    }
+}
+
+
+.slide1 {
+    img {
+        margin-right: 130px;
+    }
+}
+
+
+.slide--home-slide1 {
+    img {
+        width: 25em;
+    }
+}
+
+
+.slide--about {
+    .img {
+        width: 41.188rem;
+    }
+}
+
+.slide--projects {
+    .img {
+        width: 23.125rem;
+    }
+}
+
+
