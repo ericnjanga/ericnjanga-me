@@ -19,20 +19,17 @@ export class HomeComponent {
 
 
     this.route.queryParamMap.subscribe(params => {
-      const industry = params.get('industry') || 'all';
+      const industry = params.get('industry') || '';
+
       // Use the industry value to construct the API request
-
-      console.log('>>>> industry', industry);
-
-      // ...
+      // (The server won't apply the filter is the param isn't valid)
       this.reloadProjects(industry);
-
     });
   }
 
   // Present all projects of the industry in params
-  reloadProjects(filter: string) {
-    this.projectService.loadAll('published', 'all').subscribe((obj) => {
+  reloadProjects(ind: string) {
+    this.projectService.loadAll('published', ind).subscribe((obj) => {
       this.projects = obj.payload;
     });
   }
