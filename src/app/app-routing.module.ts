@@ -10,6 +10,11 @@ import { RichyGroupComponent } from './pages-static/richy-group/richy-group.comp
 
 const routes: Routes = [
   { 
+    path: '', 
+    redirectTo: '/home', 
+    pathMatch: 'full' // if the path is an exact match
+  },
+  { 
     path: 'projects', 
     /**
      * LAZY LOADED MODULE
@@ -24,11 +29,6 @@ const routes: Routes = [
     data: {
       preload: false
     }
-  },
-  { 
-    path: '', 
-    redirectTo: '/home', 
-    pathMatch: 'full' // if the path is an exact match
   },
   { path: 'home', component: HomeComponent },
   // { path: 'ux-design', component: UxdesignComponent },
