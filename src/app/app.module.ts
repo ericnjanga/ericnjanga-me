@@ -13,8 +13,6 @@ import { InMemoryDataService } from './projects/services/in-memory-data/in-memor
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { UxdesignComponent } from './pages/uxdesign/uxdesign.component';
-import { UidevelopmentComponent } from './pages/uidevelopment/uidevelopment.component';
 import { AppbarComponent } from './parts/appbar/appbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
@@ -29,8 +27,6 @@ import { RichyGroupComponent } from './pages-static/richy-group/richy-group.comp
 @NgModule({
   declarations: [
     AppComponent,
-    // UxdesignComponent,
-    UidevelopmentComponent,
     AppbarComponent,
     HomeComponent,
     FooterComponent,
