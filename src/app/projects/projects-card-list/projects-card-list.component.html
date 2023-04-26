@@ -1,20 +1,15 @@
 
 <section class="row row-cols-3">
-    <div *ngFor="let item of source">
-        <div class="cart">
+    <div class="card-wrapper" *ngFor="let item of source;">
+        <div class="card">
 
             <app-icon class="icon" name="ctaArrow"></app-icon>
 
-            <a class="thumbnail-wrap" [routerLink]="projectUrl(item)">
-                <!-- [routerLink]="['fffff',item.pageUrl]" -->
+            <a class="thumbnail-wrap" [routerLink]="projectUrl(item)"> 
                 <h4 class="title">{{item.title}}</h4>
                 <div class="subtitle">
                     <a href="" class="text-uppercase">{{item.categories[0].title}}</a> | <span>{{item.createdAt | date}}</span>
                 </div>
-                <!-- <span class="read-more text-uppercase text-center">
-                    Read more
-                    <app-icon name="arrowRight"></app-icon>
-                </span> -->
                 <img class="img-thumbnail" src={{item.thumbnail}} alt="">
                 <p>{{item.shortDescription}}</p>
             </a>

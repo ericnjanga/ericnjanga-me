@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Project } from '../model/project';
+import { fadeIn } from '../services/animations';
 
 @Component({
   selector: 'app-projects-card-list',
@@ -11,5 +12,9 @@ export class ProjectsCardListComponent {
 
   projectUrl(elt: Project): string {
     return `/projects/${elt.pageUrl}`;
+  }
+
+  trackByFn(index: number, item: Project) {
+    return item.id;
   }
 }

@@ -46,7 +46,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     LogoComponent,
     HeroComponent,
     MessagesComponent,
-    LoadingComponent
+    LoadingComponent,
   ]
 })
 export class SharedModule { }

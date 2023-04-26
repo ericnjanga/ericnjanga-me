@@ -3,12 +3,17 @@
 
 $max-height: 450px;
 
-.cart {
+// .card-wrapper {
+//     margin-bottom:
+// }
+
+.card {
     position: relative;
     min-height: $max-height;
     z-index: 1;
     margin-bottom: 100px;
     background-color: map-get($colors, accent4_white);
+    border-width: 0px;
 
     .icon {
         position: absolute;
