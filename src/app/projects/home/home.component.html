@@ -9,15 +9,19 @@
 
 <div class="subpage">
     <header class="pagination-wrapper">
-        <h1>Latest ... work</h1>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a href="">All</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="">UI Development</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="">UX Design</a>
+            </li>
+        </ul>
     </header>
 </div>
 
 
-<div *ngFor="let item of projects$ | async">
-    <p>{{ item.title }}</p>
-</div>
-
-
-<!-- <app-projects-card-list [source]="data"></app-projects-card-list> -->
-
+<app-projects-card-list class="page-section" [source$]="projects$"></app-projects-card-list>

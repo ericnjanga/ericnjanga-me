@@ -22,7 +22,7 @@ export class HomeComponent {
   }
 
   reloadProjects() {
-    this.projects$ = this.projectService.loadAll();
+    this.projects$ = this.projectService.loadAll(3);
   }
 
   constructor(private titleService: Title, public projectService: ProjectService) {
