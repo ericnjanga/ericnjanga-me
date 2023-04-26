@@ -11,6 +11,10 @@ const routes: Routes = [
     {
         path: ':projectUrl',
         component: ProjectComponent, 
+        /**
+         * Resolver will only load the component if data requested is available.
+         * (It helps prevent sooo many route-related issues|)
+         */
         resolve: { // before fetching the component, first fetch the project property using ProjectResolver
             project: ProjectResolver
         }

@@ -10,6 +10,10 @@ import { CallToActionComponent } from './call-to-action/call-to-action.component
 import { LogoComponent } from './logo/logo.component';
 import { BoxPresentationComponent } from './box-presentation/box-presentation.component';
 import { HeroComponent } from './hero/hero.component';
+import { MessagesComponent } from './messages/messages.component';
+import { LoadingComponent } from './loading/loading.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 
@@ -23,11 +27,15 @@ import { HeroComponent } from './hero/hero.component';
     CallToActionComponent,
     LogoComponent,
     BoxPresentationComponent,
-    HeroComponent
+    HeroComponent,
+    MessagesComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
   ],
   exports: [
     IconComponent,
@@ -36,7 +44,9 @@ import { HeroComponent } from './hero/hero.component';
     TwoSkillsComponent,
     CallToActionComponent,
     LogoComponent,
-    HeroComponent
+    HeroComponent,
+    MessagesComponent,
+    LoadingComponent
   ]
 })
 export class SharedModule { }

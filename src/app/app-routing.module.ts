@@ -12,6 +12,7 @@ const routes: Routes = [
   { 
     path: 'projects', 
     /**
+     * LAZY LOADED MODULE
      * Child routes example:
      * - projects/uid/5 (5th project of "uid")
      * - projects/uxd/7 (7th project of "uxd")

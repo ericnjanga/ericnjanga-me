@@ -13,7 +13,7 @@ export class ProjectComponent {
   @Input() project: Project;
 
   ngOnInit() {
-    // Get the payload
+    // Get the payload coming from the API
     this.project = this.route.snapshot.data['project'];
     
     // Set page title

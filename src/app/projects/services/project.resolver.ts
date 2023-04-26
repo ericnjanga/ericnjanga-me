@@ -16,7 +16,7 @@ export class ProjectResolver implements Resolve<Project> {
     // resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Project | Observable<Project> | Promise<Project> {
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Project> {
 
-        // http://localhost:4200/projects/name-of-the-project
+        // SAMPLE API URL: http://localhost:4200/projects/name-of-the-project
 
         const projectUrl = route.paramMap.get('projectUrl') ?? '';
 
