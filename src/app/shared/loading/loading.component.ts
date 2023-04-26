@@ -36,16 +36,21 @@ export class LoadingComponent implements OnInit {
     if (this.detectRoutingOngoing) {
       this.router.events
         .subscribe(
+          // When the router starts its transition from one route to another
           event => {
-            if (event instanceof NavigationStart
-              || event instanceof RouteConfigLoadStart) {
+            // Trun loading ON if ... 
+            if (event instanceof NavigationStart          //...  a new route has been instanciated
+              || event instanceof RouteConfigLoadStart    // ... the whole "projects" module is being loaded
+              ) {
               this.loadingService.loadingOn();
             }
+            // Trun loading OFF if ...
             else if (
-              event instanceof NavigationEnd ||
-              event instanceof NavigationError ||
-              event instanceof NavigationCancel ||
-              event instanceof RouteConfigLoadEnd) {
+              event instanceof NavigationEnd ||     // ... navigation ends successfully
+              event instanceof NavigationError ||   // ... there is a problem
+              event instanceof NavigationCancel ||  // ... there is a cancellation of the routing navigation
+              event instanceof RouteConfigLoadEnd   // ... the whole "projects" module has finished loading
+              ) {
               this.loadingService.loadingOff();
 
             }
