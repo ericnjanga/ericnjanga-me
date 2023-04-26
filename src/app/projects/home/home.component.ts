@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Project } from '../model/project';
 import { ProjectService } from '../services/project.service';
-// import { CATEGORY_DATABASE } from 'src/app/projects/mocks/category-list';
-import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,38 +10,32 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  // pageCategory = CATEGORY_DATABASE[0].hash;
 
-  projects$: Observable<Project[]> | undefined;
+  projects: Project[] = [];
 
   ngOnInit(): void {
     // Set page title
     this.titleService.setTitle('Eric Njanga | Latest work');
 
-    // ...
-    this.reloadProjects();
 
+    this.route.queryParamMap.subscribe(params => {
+      const industry = params.get('industry') || 'all';
+      // Use the industry value to construct the API request
 
-    // /**
-    //  * Return all project of this category
-    //  */
-    // this.projectService.generateDatabase().subscribe(
-    //   projects => {
-    //     // let tempData = projects.splice(-10); //.slice(196);
+      console.log('>>>> industry', industry);
 
-    //     this.data = projects;
+      // ...
+      this.reloadProjects(industry);
 
-    //     // console.log('.....==>>>', tempData);
-    //     // // Get only elements of this category ...
-    //     // this.data = this.projectService.findMatchByCategory(tempData, { hash: this.pageCategory });
-    //   }
-    // );
+    });
   }
 
-
-  reloadProjects() {
-    this.projects$ = this.projectService.loadAll(100);
+  // Present all projects of the industry in params
+  reloadProjects(filter: string) {
+    this.projectService.loadAll('published', 'all').subscribe((obj) => {
+      this.projects = obj.payload;
+    });
   }
 
-  constructor(private titleService: Title, public projectService: ProjectService) {}
+  constructor(private titleService: Title, public projectService: ProjectService, private route: ActivatedRoute) {}
 }

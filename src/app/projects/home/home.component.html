@@ -11,23 +11,23 @@
     <header class="pagination-wrapper">
         <ul class="list-inline text-center">
             <li class="list-inline-item">
-                <a routerLink="/projects">All</a>
+                <a routerLink="/projects" [queryParams]="{ industry: 'all' }">All</a>
             </li>
             <li class="list-inline-item">
                 /
             </li>
             <li class="list-inline-item">
-                <a routerLink="/projects/ui-development">UI Development</a>
+                <a routerLink="/projects" [queryParams]="{ industry: 'ui-development' }">UI Development</a>
             </li>
             <li class="list-inline-item">
                 /
             </li>
             <li class="list-inline-item">
-                <a routerLink="/projects/ux-design">UX Design</a>
+                <a routerLink="/projects" [queryParams]="{ industry: 'ux-design' }">UX Design</a>
             </li>
         </ul>
     </header>
 </div>
 
 
-<app-projects-card-list class="page-section" [source$]="projects$"></app-projects-card-list>
+<app-projects-card-list class="page-section" [source]="projects"></app-projects-card-list>

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Project } from './../../projects/model/project';
 import { ProjectService } from './../../projects/services/project.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -11,18 +10,21 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent {
 
-  projects$: Observable<Project[]> | undefined;
+  projects: Project[] = [];
 
   ngOnInit(): void {
     // Set page title
     this.titleService.setTitle('Eric Njanga | Welcome');
 
-    // ...
+    // Reload the list of projects
     this.reloadProjects();
   }
 
+  // Present the latest 3 projects of any industry
   reloadProjects() {
-    this.projects$ = this.projectService.loadAll(3);
+    this.projectService.loadAll('published', 'all', 3).subscribe((obj) => {
+      this.projects = obj.payload;
+    });
   }
 
   constructor(private titleService: Title, public projectService: ProjectService) {

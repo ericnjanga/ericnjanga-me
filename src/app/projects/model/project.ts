@@ -18,8 +18,8 @@ export interface Project {
     liveUrl: string;
 }
 
-
-
-export type CountPayload = {
-    projectCount: number
+// Describes the API payload
+export type ProjectsPayload = {
+    payload: Project[];
+    total: number;
 };

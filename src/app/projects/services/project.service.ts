@@ -2,19 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap, shareReplay } from 'rxjs/operators';
-import { Project, CountPayload } from '../model/project';
+import { Project, ProjectsPayload } from '../model/project';
 import { EMPTY_PROJECT } from 'src/app/projects/mocks/project-list';
-
-
-
 
 
 @Injectable({
   providedIn: 'root'
 })
-// @Injectable()
+
 export class ProjectService {
-  private ProjectsUrl = 'api/projects';  // URL to web api
+  private baseUrl = 'api/projects';  // URL to web api
 
 
   getEmptyProject(): Project {
@@ -22,43 +19,19 @@ export class ProjectService {
   }
 
 
-  loadAll(pageSize: number): Observable<Project[]> {
+  loadAll(stat:string, ind:string, pSize: number = 100): Observable<ProjectsPayload> {
 
-    const url = `/api/projects?pageNumber=0&pageSize=${pageSize}`;
+    // Default value for pagination
+    const pNumber = 0;
+
+    const url = `/${this.baseUrl}?status=${stat}&industry=${ind}&pageNumber=${pNumber}&pageSize=${pSize}`;
     const headers = { 'Content-Type': 'application/json' }; 
 
-    return this.http.get<Project[]>(url, { headers })
+    return this.http.get<ProjectsPayload>(url, { headers })
         .pipe(
             map(res => res),
             shareReplay()
         );
-  }
-
-
-
-  getCount(industry: string): Observable<CountPayload> {
-
-    const url = `/api/count/${industry}`;
-    const headers = { 'Content-Type': 'application/json' }; 
-
-    return this.http.get<CountPayload>(url, { headers })
-        .pipe(
-            map(res => res),
-            shareReplay()
-        );
-  }
-
-
-  generateDatabase(): Observable<Project[]> {
-
-    console.log(' gen DB');
-
-    return this.http.get<Project[]>(this.ProjectsUrl)
-      .pipe(
-        // [E.NJANGA] - TO DO: Repalce the "log" function by a "message service" that displays messages via a snack bar
-        // tap(_ => this.log('fetched Projects')),
-        catchError(this.handleError<Project[]>('generateDatabase', []))
-      )
   }
 
 
@@ -66,7 +39,7 @@ export class ProjectService {
 
     //Sample API call: http://localhost:7000/api/projects/28-connecting-the-dots-of-a-social-business
 
-    const url = `/api/projects/${projectUrl}`;
+    const url = `/${this.baseUrl}/${projectUrl}`;
 
     return this.http.get<Project>(url)
     .pipe(

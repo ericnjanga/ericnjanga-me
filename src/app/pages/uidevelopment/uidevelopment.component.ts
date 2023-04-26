@@ -8,22 +8,7 @@ import { CATEGORY_DATABASE } from 'src/app/projects/mocks/category-list';
   styleUrls: ['./uidevelopment.component.scss']
 })
 export class UidevelopmentComponent {
-  // data: Project[];
-  // pageCategory = CATEGORY_DATABASE[0].hash;
 
   ngOnInit(): void {
-    /**
-     * Return all project of this category
-     */
-    // this.projectService.generateDatabase().subscribe(
-    //   projects => {
-    //     let tempData = projects;
-    //     this.data = this.projectService.findMatchByCategory(tempData, { hash: this.pageCategory });
-    //   }
-    // );
   }
-
-  // constructor(public projectService: ProjectService) {
-  //   this.data = [];
-  // }
 }
