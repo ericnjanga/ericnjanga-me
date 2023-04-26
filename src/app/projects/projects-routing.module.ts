@@ -7,7 +7,6 @@ import { ProjectResolver } from './services/project.resolver';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'projects', component: HomeComponent },
     {
         path: ':projectUrl',
         component: ProjectComponent, 
