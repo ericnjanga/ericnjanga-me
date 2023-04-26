@@ -29,14 +29,10 @@ export class TwoSkillsComponent {
   loadCounters() {
     this.projectService.getCount('uxd').subscribe((obj) => {
       this.uxdCount = obj?.projectCount;
-      // console.log(obj?.projectCount);
     });
     this.projectService.getCount('uid').subscribe((obj) => {
       this.uidCount = obj?.projectCount;
-      // console.log(obj?.projectCount);
     });
-    // this.uxdTest$ = this.projectService.getCount('uxd');
-    // this.uidCount$ = this.projectService.getCount('uid');
   }
 
   statusClass() {

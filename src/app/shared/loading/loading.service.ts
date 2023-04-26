@@ -26,13 +26,11 @@ export class LoadingService {
     }
 
     loadingOn() {
-        console.log("Loading ON ...");
         this.loadingSubject.next(true);
 
     }
 
     loadingOff() {
-        console.log("Loading OFF ...");
         this.loadingSubject.next(false);
     }
 
