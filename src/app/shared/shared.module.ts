@@ -14,6 +14,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { LoadingComponent } from './loading/loading.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { TextTimPipe } from './pipes/text-trim/text-tim.pipe';
 
 
 
@@ -29,7 +30,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     BoxPresentationComponent,
     HeroComponent,
     MessagesComponent,
-    LoadingComponent
+    LoadingComponent,
+    TextTimPipe,
   ],
   imports: [
     CommonModule,
@@ -47,6 +49,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     HeroComponent,
     MessagesComponent,
     LoadingComponent,
+    TextTimPipe,
   ]
 })
 export class SharedModule { }
