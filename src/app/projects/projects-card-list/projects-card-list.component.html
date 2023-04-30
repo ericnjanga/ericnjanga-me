@@ -8,7 +8,7 @@
             <a class="thumbnail-wrap" [routerLink]="projectUrl(item)"> 
                 <h4 class="title">{{item.title | textTim:40 }}</h4>
                 <div class="subtitle">
-                    <a href="" class="text-uppercase">{{item.categories[0].title}}</a> | <span>{{item.createdAt | date}}</span>
+                    <a routerLink="/projects/{{item.pageUrl}}" class="text-uppercase">{{item.categories[0].title}}</a> | <span>{{getstartDate(item.reference) | date:'MMM, YYYY'}}</span>
                 </div>
                 <img class="img-thumbnail" src={{item.thumbnail}} alt="">
                 <p>{{item.shortDescription}}</p>

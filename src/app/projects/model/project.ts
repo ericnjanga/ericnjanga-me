@@ -1,6 +1,14 @@
 import { Category } from "./category";
 import { projectStatus } from "./status";
 
+export interface Reference {
+    id: number;
+    name: string;
+    startDate: string;
+    endDate: string;
+    industry: string;
+    teamCount: number;
+}
 
 
 export interface Project {
@@ -11,7 +19,8 @@ export interface Project {
     title: string; 
     shortDescription: string;
     thumbnail: string;
-    createdAt: string;
+    reference: Reference;
+    // createdAt: string;
     categories: Category[];
     subcategories: Category;
     status: projectStatus;

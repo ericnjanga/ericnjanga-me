@@ -1,4 +1,4 @@
-import { Project } from "../model/project";
+import { Project, Reference } from "../model/project";
 import { Category } from "../model/category";
 import { CATEGORY_DATABASE, EMPTY_CATEGORY } from "./category-list";
 
@@ -347,6 +347,15 @@ export const PROJECTS_DATABASE: Project[] = [
 ];
 
 
+const EMPTY_REF: Reference = {
+    id: 116,
+    name: 'Herve Djoumbi Hepatitis B (AI project)',
+    startDate: '03-2023',
+    endDate: '04-2023',
+    industry: 'Healthcare',
+    teamCount: 2,
+}
+
 
 
 
@@ -358,7 +367,8 @@ export const EMPTY_PROJECT: Project = {
     title: '', 
     shortDescription: '',
     thumbnail: '',
-    createdAt: '',
+    reference: EMPTY_REF,
+    // createdAt: '',
     categories: [EMPTY_CATEGORY],
     subcategories: EMPTY_CATEGORY,
     status: 'draft',

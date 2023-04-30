@@ -13,6 +13,10 @@
     .title {
 
     }
+
+    .text-wrapper {
+        max-width: 400px;
+    }
     
     .background {
         top: 100px;
@@ -27,10 +31,21 @@
         margin-top: 10.625rem;
     }
 
+    .text-wrapper {
+        max-width: 600px;
+    }
+
     .background {
         bottom: 0;
         height: 300px;
     }
+}
+
+
+
+.text-wrapper {
+    margin-left: 3.5rem;
+    margin-bottom: 3.125em;
 }
 
 
@@ -55,11 +70,6 @@
         margin-bottom: 30px;
     }
 
-    .text-wrapper {
-        max-width: 400px;
-        margin-left: 3.5rem;
-        margin-bottom: 3.125em;
-    }
     .img {
         display: block;
         margin-top: auto;
