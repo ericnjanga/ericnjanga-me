@@ -33,11 +33,10 @@ export interface Links {
 
 
 export interface Project {
-
     intro: Intro;
     descriptions: Descriptions;
     links: Links;
-    // categories: Category
+    categories: Category[];
     reference: Reference;
 
     id: number;
@@ -48,7 +47,6 @@ export interface Project {
     shortDescription: string;
     thumbnail: string;
     // createdAt: string;
-    categories: Category[];
     subcategories: Category;
     status: projectStatus;
     liveUrl: string;
