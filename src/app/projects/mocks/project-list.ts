@@ -1,4 +1,4 @@
-import { Project, Reference } from "../model/project";
+import { Project, Reference, Intro, Descriptions, Links } from "../model/project";
 import { Category } from "../model/category";
 import { CATEGORY_DATABASE, EMPTY_CATEGORY } from "./category-list";
 
@@ -356,10 +356,40 @@ const EMPTY_REF: Reference = {
     teamCount: 2,
 }
 
+const EMPTY_INT: Intro = {
+    pageUrl: '',
+    shortDescription: '',
+    thumbnail: '',
+    title: '',
+}
 
+
+const EMPTY_DES: Descriptions = {
+    title: '',
+    context: '',
+    contribution: '',
+    constraints: '',
+}
+const EMPTY_LIK: Links = {
+    git: '',
+    figma: '',
+    figmaJam: '',
+    prototype: '',
+    presentation: '',
+    live: '',
+}
 
 
 export const EMPTY_PROJECT: Project = {
+
+    intro: EMPTY_INT,
+    descriptions: EMPTY_DES,
+    links: EMPTY_LIK,
+    reference: EMPTY_REF,
+
+    // // categories: Category
+
+
     id: 0,
     name: '',
     pageUrl: '',
@@ -367,7 +397,6 @@ export const EMPTY_PROJECT: Project = {
     title: '', 
     shortDescription: '',
     thumbnail: '',
-    reference: EMPTY_REF,
     // createdAt: '',
     categories: [EMPTY_CATEGORY],
     subcategories: EMPTY_CATEGORY,
