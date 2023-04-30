@@ -385,9 +385,8 @@ export const EMPTY_PROJECT: Project = {
     intro: EMPTY_INT,
     descriptions: EMPTY_DES,
     links: EMPTY_LIK,
+    categories: [EMPTY_CATEGORY],
     reference: EMPTY_REF,
-
-    // // categories: Category
 
 
     id: 0,
@@ -398,7 +397,6 @@ export const EMPTY_PROJECT: Project = {
     shortDescription: '',
     thumbnail: '',
     // createdAt: '',
-    categories: [EMPTY_CATEGORY],
     subcategories: EMPTY_CATEGORY,
     status: 'draft',
     liveUrl: '',
