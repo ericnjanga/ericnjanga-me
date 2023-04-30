@@ -10,6 +10,7 @@ export class HeroComponent {
   @Input() title: string = '';
   @Input() image: string = '';
   @Input() page: string = '';
+  @Input() titleCaption: string = '';
 
 
   parentClassSetup() {
