@@ -27,7 +27,7 @@ export class ProjectsCardListComponent {
     const month = parseInt(dateParts[0], 10) - 1; // Months are zero-indexed in JavaScript
     const date = new Date(year, month);
 
-    // and retun ut
+    // and retun it
     return date;
   }
 }

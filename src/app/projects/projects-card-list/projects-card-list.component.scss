@@ -3,10 +3,6 @@
 
 $max-height: 450px;
 
-// .card-wrapper {
-//     margin-bottom:
-// }
-
 .card {
     position: relative;
     min-height: $max-height;
@@ -45,11 +41,6 @@ $max-height: 450px;
         border-width: 0;
     }
 
-    .subtitle {
-        margin-bottom: 10px;
-        @include caption();
-    }
-
     .read-more {
         opacity: 0;
     }
@@ -72,4 +63,20 @@ $max-height: 450px;
     position: relative;
     display: block;
     background-color: map-get($colors, white);
+}
+
+
+.subtitle {
+    display: flex;
+    gap: 20px;
+
+    margin-bottom: 10px;
+    @include type-caption();
+
+    .category {
+        font-size: 13.5px;
+    }
+    .startDate {
+        font-size: 15px;
+    }
 }

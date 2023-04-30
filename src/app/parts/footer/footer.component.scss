@@ -19,7 +19,7 @@
 }
 
 .caption {
-    @include caption();
+    @include type-caption();
 }
 
 ::ng-deep app-icon {
