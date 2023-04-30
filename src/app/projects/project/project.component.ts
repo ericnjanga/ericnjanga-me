@@ -17,7 +17,10 @@ export class ProjectComponent {
     this.project = this.route.snapshot.data['project'];
     
     // Set page title
-    this.titleService.setTitle(`Eric Njanga | ${this.project.title}`);
+    this.titleService.setTitle(`Eric Njanga | ${this.project.intro.title}`);
+
+
+    console.log(this.project);
   }
 
   constructor(private titleService: Title, private route: ActivatedRoute, private projectService: ProjectService) {
