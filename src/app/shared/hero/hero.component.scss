@@ -13,11 +13,9 @@
     .title {
 
     }
-
     .text-wrapper {
         max-width: 400px;
     }
-    
     .background {
         top: 100px;
         height: 486px;
@@ -27,13 +25,8 @@
 .carousel--small {
     height: 405px;
 
-    .titleCaption {
-        top: 10.625rem;
-    }
-    .title {
-        margin-top: 10.625rem;
-    }
     .text-wrapper {
+        margin-top: 10.625rem;
         max-width: 600px;
     }
     .background {
@@ -43,9 +36,6 @@
 }
 
 
-.titleCaption {
-    position: absolute;
-}
 
 .text-wrapper {
     margin-left: 3.5rem;
