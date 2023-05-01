@@ -1,4 +1,4 @@
-import { Project, Reference, Intro, Descriptions, Links } from "../model/project";
+import { Project, Reference, Intro, Description, Links, ProjImg } from "../model/project";
 import { Category } from "../model/category";
 import { CATEGORY_DATABASE, EMPTY_CATEGORY } from "./category-list";
 
@@ -364,7 +364,7 @@ const EMPTY_INT: Intro = {
 }
 
 
-const EMPTY_DES: Descriptions = {
+const EMPTY_DES: Description = {
     title: '',
     context: '',
     contribution: '',
@@ -378,26 +378,23 @@ const EMPTY_LIK: Links = {
     presentation: '',
     live: '',
 }
+const EMPTY_IMG: ProjImg = {
+    hero: '',
+    body: '',
+    type: 'phone',
+}
+
+
 
 
 export const EMPTY_PROJECT: Project = {
+    id: 0,
+    pageUrl: '',
 
     intro: EMPTY_INT,
-    descriptions: EMPTY_DES,
+    description: EMPTY_DES,
     links: EMPTY_LIK,
     categories: [EMPTY_CATEGORY],
     reference: EMPTY_REF,
-
-
-    id: 0,
-    name: '',
-    pageUrl: '',
-    url: '',
-    title: '', 
-    shortDescription: '',
-    thumbnail: '',
-    // createdAt: '',
-    subcategories: EMPTY_CATEGORY,
-    status: 'draft',
-    liveUrl: '',
+    image: EMPTY_IMG,
 };

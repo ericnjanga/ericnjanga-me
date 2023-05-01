@@ -1,11 +1,12 @@
 @import './../../../assets/styles/variables';
 @import './../../../assets/styles/mixins';
 
-$max-height: 450px;
+$card-height: 450px;
+$card-padding: 46px;
 
 .card {
     position: relative;
-    min-height: $max-height;
+    min-height: $card-height;
     z-index: 1;
     margin-bottom: 100px;
     background-color: map-get($colors, accent4_white);
@@ -19,8 +20,8 @@ $max-height: 450px;
     }
 
     a.thumbnail-wrap {
-        min-height: $max-height;
-        padding: 46px;
+        min-height: $card-height;
+        padding: $card-padding;
         text-decoration: none;
         &:hover {
             background-color: map-get($colors, accent2);
@@ -28,7 +29,6 @@ $max-height: 450px;
     }
     .title {
         margin-right: 30px;
-        margin-bottom: 15px;
         color: map-get($colors, accent1);
     }
     .subtitle,
@@ -36,10 +36,15 @@ $max-height: 450px;
     p {
         color: map-get($colors, gray1);
     }
-    .img-thumbnail {
+
+    .title,
+    .subtitle {
         margin-bottom: 20px;
-        border-width: 0;
     }
+    // .img-thumbnail {
+    //     margin-bottom: 20px;
+    //     border-width: 0;
+    // }
 
     .read-more {
         opacity: 0;
@@ -50,14 +55,32 @@ $max-height: 450px;
     margin-bottom: 0;
 }
 
-
-
-// @mixin 
-.img-thumbnail {
-    padding: 0;
-    border-radius: 0;
-    border-color: map-get($colors, gray1);
+.text-wrapper {
+    background-color: map-get($colors, white);
 }
+
+
+.img-frame {    
+    display: flex;
+    flex-direction: column;
+    height: $card-height - ($card-padding * 2);
+    background-color: map-get($colors, accent1);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-frame--laptop {    
+    background-size: 310px;
+    background-position: 30px 150px;
+}
+
+
+
+// .img-thumbnail {
+//     padding: 0;
+//     border-radius: 0;
+//     border-color: map-get($colors, gray1);
+// }
 
 .thumbnail-wrap {
     position: relative;
@@ -70,7 +93,6 @@ $max-height: 450px;
     display: flex;
     gap: 20px;
 
-    margin-bottom: 10px;
     @include type-caption();
 
     .category {

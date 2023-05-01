@@ -16,7 +16,7 @@ export interface Reference {
     industry: string;
     teamCount: number;
 }
-export interface Descriptions {
+export interface Description {
     title: string;
     context: string;
     contribution: string;
@@ -31,25 +31,35 @@ export interface Links {
     live: string;
 }
 
+export type imageType = 'phone' | 'tablet' | 'laptop' | 'monitor';
+
+export interface ProjImg {
+    hero: string;
+    body: string;
+    type: imageType;
+}
+
 
 export interface Project {
+    id: number;
+    pageUrl: string;
+    // ...
     intro: Intro;
-    descriptions: Descriptions;
+    description: Description;
     links: Links;
     categories: Category[];
     reference: Reference;
+    image: ProjImg;
 
-    id: number;
-    name: string;
-    pageUrl: string;
-    url: string;
-    title: string; 
-    shortDescription: string;
-    thumbnail: string;
-    // createdAt: string;
-    subcategories: Category;
-    status: projectStatus;
-    liveUrl: string;
+    // id: number;
+    // name: string;
+    // url: string;
+    // title: string; 
+    // shortDescription: string;
+    // thumbnail: string;
+    // subcategories: Category;
+    // status: projectStatus;
+    // liveUrl: string;
 }
 
 // Describes the API payload

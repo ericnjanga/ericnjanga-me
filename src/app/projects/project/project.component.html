@@ -1,5 +1,6 @@
 <app-hero
-    [title]="project.intro.title"
+    class="hero"
+    [title]="project.description.title"
     [titleCaption]="project.categories[0].title"
     size="small"
     page="projects"
@@ -7,8 +8,34 @@
 ></app-hero>
 
 
+<section class="d-flex">
+    <div class="block-left">
+        <div class="references">
 
-<p>----{{project.shortDescription}}</p>
+        </div>
+        <div class="description">
+            <h3>Context</h3>
+            <p>{{project.description.context}}</p>
+
+            <h3>Contribution</h3>
+            <p>{{project.description.contribution}}</p>
+
+            <h3>constraints</h3>
+            <p>{{project.description.constraints}}</p>
+        </div>
+    </div>
+    <div class="block-right"></div>
+</section>
+
+<section class="footer-cta text-center">
+    <h2>Not yet live</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.</p>
+
+    <ul class="links">
+
+    </ul>
+</section>
+
 
 
 <!-- 

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Project, Reference } from '../model/project';
+import { Project, Reference, ProjImg } from '../model/project';
 import { fadeIn } from '../services/animations';
 
 @Component({
@@ -19,7 +19,7 @@ export class ProjectsCardListComponent {
   }
 
 
-  getstartDate(ref: Reference) {
+  getstartDate(ref: Reference): Date {
     // Convert the string 'YYYY-MM' into a date
     const dateString = ref.startDate;
     const dateParts = dateString.split('-');
@@ -29,5 +29,13 @@ export class ProjectsCardListComponent {
 
     // and retun it
     return date;
+  }
+
+  thumbnailClass(item: Project) {
+    return `img-frame--laptop`;
+  }
+
+  getbackgroundImg(item: ProjImg): string {
+    return 'url(' + item.hero + ')';
   }
 }
