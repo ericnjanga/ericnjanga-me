@@ -1,4 +1,4 @@
-import { Project, ProductDetail, Reference, Intro, Description, Links, ProjImg, Tool } from "../model/project";
+import { Project, ProjectDetail, Reference, Intro, Description, Links, ProjImg, Tool } from "../model/project";
 import { Category } from "../model/category";
 import { CATEGORY_DATABASE, EMPTY_CATEGORY } from "./category-list";
 
@@ -396,14 +396,14 @@ export const EMPTY_PROJECT: Project = {
     pageUrl: '',
 
     intro: EMPTY_INT,
-    description: EMPTY_DES,
+    descriptions: EMPTY_DES,
     links: EMPTY_LIK,
     categories: [EMPTY_CATEGORY],
-    reference: EMPTY_REF,
-    image: EMPTY_IMG,
+    references: EMPTY_REF,
+    images: EMPTY_IMG,
 };
 
-export const EMPTY_PROJECT_DETAIL: ProductDetail = {
+export const EMPTY_PROJECT_DETAIL: ProjectDetail = {
     id: 0,
     pageUrl: '',
 

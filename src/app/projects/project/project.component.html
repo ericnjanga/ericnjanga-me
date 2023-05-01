@@ -1,31 +1,32 @@
 <app-hero
     class="hero"
-    [title]="project.description.title"
+    [title]="project.descriptions.title"
     [titleCaption]="project.categories[0].title"
     size="small"
     page="projects"
-    image="./../../../assets/img/projects-hero.png"
+    [imageType]="project.images.type"
+    [image]="project.images.hero"
 ></app-hero>
 
 
-<section class="d-flex">
+<section class="main-wrapper d-flex">
     <div class="block-left">
         <div class="references">
 
         </div>
         <div class="description">
             <h3>Context</h3>
-            <p>{{project.description.context}}</p>
+            <p>{{project.descriptions.context}}</p>
 
             <h3>Contribution</h3>
-            <p>{{project.description.contribution}}</p>
+            <p>{{project.descriptions.contribution}}</p>
 
             <h3>constraints</h3>
-            <p>{{project.description.constraints}}</p>
+            <p>{{project.descriptions.constraints}}</p>
         </div>
     </div>
     <div class="block-right">
-        <img [src]="project.images.body" alt="">
+        <img class="body" [src]="project.images.body" alt="">
     </div>
 </section>
 

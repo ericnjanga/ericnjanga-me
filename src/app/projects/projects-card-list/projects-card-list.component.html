@@ -8,16 +8,16 @@
             <a class="thumbnail-wrap" [routerLink]="projectUrl(item)">   <!-- 'url(' + item.thumbnail + ')' -->
                 <div class="img-frame" 
                     [ngClass]="thumbnailClass(item)" 
-                    [style.background-image]="getbackgroundImg(item.image)"
+                    [style.background-image]="getbackgroundImg(item.images)"
                     >
                     <div class="text-wrapper">
                         <div class="subtitle">
                             <a routerLink="/projects/{{item.pageUrl}}" 
                             class="category text-uppercase">{{item.categories[0].title}}</a> 
                             | 
-                            <span class="startDate">{{getstartDate(item.reference) | date:'MMM, YYYY'}}</span>
+                            <span class="startDate">{{getstartDate(item.references) | date:'MMM, YYYY'}}</span>
                         </div>
-                        <h4 class="title">{{item.description.title | textTim:95 }}</h4>
+                        <h4 class="title">{{item.descriptions.title | textTim:95 }}</h4>
                     </div>
                 </div>
                 <!-- <img class="img-thumbnail" src={{item.thumbnail}} alt=""> -->

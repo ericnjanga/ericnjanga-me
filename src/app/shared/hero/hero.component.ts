@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Project } from 'src/app/projects/model/project';
+// import projectdeta
 
 @Component({
   selector: 'app-hero',
@@ -9,6 +11,7 @@ export class HeroComponent {
   @Input() size: string = '';
   @Input() title: string = '';
   @Input() image: string = '';
+  @Input() imageType: string = '';
   @Input() page: string = '';
   @Input() titleCaption: string = '';
 
@@ -24,8 +27,11 @@ export class HeroComponent {
   slideClassSetup() {
     return `slide--${this.page}`;
   }
-}
 
+  imageClass(type: string) {
+    return `img--${type}`;
+  }
+}
 
 
 

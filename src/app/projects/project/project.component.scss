@@ -1,10 +1,17 @@
+
+$gap: 75px;
+
 .hero {
     display: block;
-    margin-bottom: 75px;
+    margin-bottom: $gap;
+}
+
+.main-wrapper {
+    margin-bottom: $gap;
 }
 
 .block-left {
-    padding-top: 75px;
+    padding-top: $gap;
     width: 600px;
     border: 1px solid purple;
 
@@ -19,7 +26,15 @@
     margin-left: auto;
     width: 590px;
     height: 790px;
-    border: 1px solid green;
+    overflow: hidden;
+    // border: 1px solid green;
+    background-color: #919171;
+
+    img.body {
+        position: relative;
+        top: 100px;
+        width: 1022.5px;
+    }
 }
 
 .references {

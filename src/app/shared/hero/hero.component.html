@@ -12,7 +12,11 @@
             <!-- <app-call-to-action link="/projects" label="See latest work" status="button">See latest work</app-call-to-action> -->
         </div>
 
-        <img class="img" src={{image}} alt="">
+        <img 
+            [ngClass]="imageClass(imageType)" 
+            class="img" 
+            src={{image}} 
+            alt="">
     </div>
 
     <span class="background"></span>

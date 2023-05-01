@@ -49,11 +49,11 @@ export interface Project {
     pageUrl: string;
     // ...
     intro: Intro;
-    description: Description;
+    descriptions: Description;
     links: Links;
     categories: Category[];
-    reference: Reference;
-    image: ProjImg;
+    references: Reference;
+    images: ProjImg;
 }
 
 // Describes the API payload
@@ -66,7 +66,7 @@ export type ProjectsPayload = {
 
 
 
-export interface ProductDetail {
+export interface ProjectDetail {
     id: number;
     pageUrl: string;
     // ...
