@@ -1,4 +1,4 @@
-import { Project, Reference, Intro, Description, Links, ProjImg } from "../model/project";
+import { Project, ProductDetail, Reference, Intro, Description, Links, ProjImg, Tool } from "../model/project";
 import { Category } from "../model/category";
 import { CATEGORY_DATABASE, EMPTY_CATEGORY } from "./category-list";
 
@@ -383,6 +383,10 @@ const EMPTY_IMG: ProjImg = {
     body: '',
     type: 'phone',
 }
+const EMPTY_TOOLS: Tool = {
+    title: '',
+    shortDescription: '',
+}
 
 
 
@@ -397,4 +401,17 @@ export const EMPTY_PROJECT: Project = {
     categories: [EMPTY_CATEGORY],
     reference: EMPTY_REF,
     image: EMPTY_IMG,
+};
+
+export const EMPTY_PROJECT_DETAIL: ProductDetail = {
+    id: 0,
+    pageUrl: '',
+
+    intro: EMPTY_INT,
+    description: EMPTY_DES,
+    links: EMPTY_LIK,
+    categories: [EMPTY_CATEGORY],
+    references: EMPTY_REF,
+    tools: [EMPTY_TOOLS],
+    images: EMPTY_IMG,
 };

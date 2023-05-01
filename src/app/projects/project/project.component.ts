@@ -1,7 +1,7 @@
 import { Component, Input  } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { Project } from '../model/project';
+import { ProductDetail } from '../model/project';
 import { ProjectService } from '../services/project.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ProjectService } from '../services/project.service';
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent {
-  @Input() project: Project;
+  @Input() project: ProductDetail;
 
   ngOnInit() {
     // Get the payload coming from the API
@@ -24,6 +24,6 @@ export class ProjectComponent {
   }
 
   constructor(private titleService: Title, private route: ActivatedRoute, private projectService: ProjectService) {
-    this.project = this.projectService.getEmptyProject();
+    this.project = this.projectService.getEmptyProjectDetail();
   }
 }

@@ -38,6 +38,10 @@ export interface ProjImg {
     body: string;
     type: imageType;
 }
+export interface Tool {
+    title: string;
+    shortDescription: string;
+}
 
 
 export interface Project {
@@ -50,20 +54,27 @@ export interface Project {
     categories: Category[];
     reference: Reference;
     image: ProjImg;
-
-    // id: number;
-    // name: string;
-    // url: string;
-    // title: string; 
-    // shortDescription: string;
-    // thumbnail: string;
-    // subcategories: Category;
-    // status: projectStatus;
-    // liveUrl: string;
 }
 
 // Describes the API payload
 export type ProjectsPayload = {
     payload: Project[];
     total: number;
+};
+
+
+
+
+
+export interface ProductDetail {
+    id: number;
+    pageUrl: string;
+    // ...
+    intro: Intro;
+    description: Description;
+    links: Links;
+    categories: Category[];
+    references: Reference;
+    tools: Tool[];
+    images: ProjImg;
 };

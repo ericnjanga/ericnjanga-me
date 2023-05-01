@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap, shareReplay } from 'rxjs/operators';
-import { Project, ProjectsPayload } from '../model/project';
-import { EMPTY_PROJECT } from 'src/app/projects/mocks/project-list';
+import { Project, ProductDetail, ProjectsPayload } from '../model/project';
+import { EMPTY_PROJECT, EMPTY_PROJECT_DETAIL } from 'src/app/projects/mocks/project-list';
 
 
 @Injectable({
@@ -16,6 +16,10 @@ export class ProjectService {
 
   getEmptyProject(): Project {
     return EMPTY_PROJECT;
+  }
+
+  getEmptyProjectDetail(): ProductDetail {
+    return EMPTY_PROJECT_DETAIL;
   }
 
 
