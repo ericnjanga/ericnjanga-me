@@ -1,7 +1,7 @@
 import { Component, Input  } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { Project } from '../model/project';
+import { Project, ProjImg } from '../model/project';
 import { ProjectService } from '../services/project.service';
 
 @Component({
@@ -21,6 +21,10 @@ export class ProjectComponent {
 
 
     console.log(this.project);
+  }
+
+  imgClass(img: ProjImg, prefix: string) {
+    return `img-${prefix}--${img.type}`;
   }
 
   constructor(private titleService: Title, private route: ActivatedRoute, private projectService: ProjectService) {

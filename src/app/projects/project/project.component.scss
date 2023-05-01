@@ -30,10 +30,16 @@ $gap: 75px;
     // border: 1px solid green;
     background-color: #919171;
 
-    img.body {
+    .img-body {
         position: relative;
-        top: 100px;
+    }
+    .img-body--laptop {
+        top: 10px;
         width: 1022.5px;
+    }
+    .img-body--phone {
+        top: 0;
+        width: 618.5px;
     }
 }
 

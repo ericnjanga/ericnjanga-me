@@ -5,9 +5,9 @@
 
             <app-icon class="icon" name="ctaArrow"></app-icon>
 
-            <a class="thumbnail-wrap" [routerLink]="projectUrl(item)">   <!-- 'url(' + item.thumbnail + ')' -->
+            <a class="thumbnail-wrap" [routerLink]="projectUrl(item)">
                 <div class="img-frame" 
-                    [ngClass]="thumbnailClass(item)" 
+                    [ngClass]="imgClass(item.images, 'frame')" 
                     [style.background-image]="getbackgroundImg(item.images)"
                     >
                     <div class="text-wrapper">
@@ -15,7 +15,7 @@
                             <a routerLink="/projects/{{item.pageUrl}}" 
                             class="category text-uppercase">{{item.categories[0].title}}</a> 
                             | 
-                            <span class="startDate">{{getstartDate(item.references) | date:'MMM, YYYY'}}</span>
+                            <span class="releaseDate">{{getEndDate(item.references) | date:'MMM, YYYY'}}</span>
                         </div>
                         <h4 class="title">{{item.descriptions.title | textTim:95 }}</h4>
                     </div>

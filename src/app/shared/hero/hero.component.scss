@@ -24,6 +24,7 @@
 
 .carousel--small {
     height: 405px;
+    overflow: hidden;
 
     .text-wrapper {
         margin-top: 10.625rem;
@@ -37,10 +38,16 @@
 
 
     .img--laptop {
-        width: 648px;
         position: absolute;
+        width: 648px;
         top: 30px;
         right: -200px;
+    }
+    .img--phone {
+        position: absolute;
+        width: 329px;
+        top: 0;
+        right: 0
     }
 }
 

@@ -12,6 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent {
 
   projects: Project[] = [];
+  heroImgType = 'phone';
+  heroImg = './../../../assets/img/project-25-hero.png';
 
   ngOnInit(): void {
     // Set page title

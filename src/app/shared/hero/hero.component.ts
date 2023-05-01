@@ -28,7 +28,7 @@ export class HeroComponent {
     return `slide--${this.page}`;
   }
 
-  imageClass(type: string) {
+  imgClass(type: string) {
     return `img--${type}`;
   }
 }

@@ -26,7 +26,12 @@
         </div>
     </div>
     <div class="block-right">
-        <img class="body" [src]="project.images.body" alt="">
+        <img 
+            class="img-body" 
+            [ngClass]="imgClass(project.images, 'body')"
+            [src]="project.images.body" 
+            alt=""
+            >
     </div>
 </section>
 

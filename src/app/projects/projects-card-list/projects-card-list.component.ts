@@ -19,9 +19,9 @@ export class ProjectsCardListComponent {
   }
 
 
-  getstartDate(ref: Reference): Date {
+  getEndDate(ref: Reference): Date {
     // Convert the string 'YYYY-MM' into a date
-    const dateString = ref.startDate;
+    const dateString = ref.endDate;
     const dateParts = dateString.split('-');
     const year = parseInt(dateParts[1], 10);
     const month = parseInt(dateParts[0], 10) - 1; // Months are zero-indexed in JavaScript
@@ -31,8 +31,8 @@ export class ProjectsCardListComponent {
     return date;
   }
 
-  thumbnailClass(item: Project) {
-    return `img-frame--laptop`;
+  imgClass(img: ProjImg, prefix: string) {
+    return `img-${prefix}--${img.type}`;
   }
 
   getbackgroundImg(item: ProjImg): string {

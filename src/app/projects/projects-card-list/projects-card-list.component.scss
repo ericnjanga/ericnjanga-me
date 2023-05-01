@@ -70,8 +70,13 @@ $card-padding: 46px;
 }
 
 .img-frame--laptop {    
-    background-size: 310px;
-    background-position: 30px 150px;
+    background-size: 409px;
+    background-position: -5px 121px;
+}
+
+.img-frame--phone {    
+    background-size: 205px;
+    background-position: 50px 120px;
 }
 
 
@@ -98,7 +103,7 @@ $card-padding: 46px;
     .category {
         font-size: 13.5px;
     }
-    .startDate {
+    .releaseDate {
         font-size: 15px;
     }
 }
