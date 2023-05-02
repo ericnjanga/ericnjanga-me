@@ -59,26 +59,59 @@
 </section>
 
 <section class="footer-cta text-center">
-    <h2>Not yet live</h2>
+    <h2 *ngIf="!project.links.live">Not yet live</h2>
+    <h2 *ngIf="project.links.live">This project is live</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.</p>
 
     <ul class="links">
-
+        <li class="xxx" *ngIf="project.links.git">
+            <a href="{{project.links.git}}" class="btn-small text-uppercase" target="_blank">
+                Git repo 
+                <app-icon name="github"></app-icon>
+            </a>
+        </li>
+        <li class="xxx" *ngIf="project.links.figma">
+            <a href="{{project.links.figma}}" class="btn-small text-uppercase" target="_blank">
+                figma files
+                <app-icon name="fileearmarkrichtext"></app-icon>
+            </a>
+        </li>
+        <li class="xxx" *ngIf="project.links.figmaJam">
+            <a href="{{project.links.figmaJam}}" class="btn-small text-uppercase" target="_blank">
+                figjam files
+                <app-icon name="fileslides"></app-icon>
+            </a>
+        </li>
+        <li class="xxx" *ngIf="project.links.prototype">
+            <a href="{{project.links.prototype}}" class="btn-small text-uppercase" target="_blank">
+                prototypes
+                <app-icon name="fileearmarkpdf"></app-icon>
+            </a>
+        </li>
+        <li class="xxx" *ngIf="project.links.presentation">
+            <a href="{{project.links.presentation}}" class="btn-small text-uppercase" target="_blank">
+                pdf presentation
+                <app-icon name="window"></app-icon>
+            </a>
+        </li>
+        <li class="xxx" *ngIf="project.links.live">
+            <a href="{{project.links.live}}" class="btn-small text-uppercase" target="_blank">
+                live project
+                <app-icon name="fileearmark"></app-icon>
+            </a>
+        </li>
     </ul>
 </section>
-
+     
 
 
 <!-- 
-id: number;
-name: string;
-pageUrl: string;
-url: string;
-title: string; 
-shortDescription: string;
-thumbnail: string;
-createdAt: string;
-categories: Category[];
-subcategories: Category;
-status: projectStatus;
-liveUrl: string; -->
+
+"git": "git...",
+"figma": "figma...",
+"figmaJam": "figmaJam...",
+"prototype": "prototype...",
+"presentation": "presentation...",
+"live": "live...",
+
+-->

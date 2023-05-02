@@ -16,6 +16,11 @@ export class IconComponent {
   isArrowRight: boolean = false;
   isCTAarrow: boolean = false;
   isLogo: boolean = false;
+  isfileearmark: boolean = false;
+  iswindow: boolean = false;
+  isfileearmarkpdf: boolean = false;
+  isfileslides: boolean = false;
+  isfileearmarkrichtext: boolean = false;
 
   ngOnInit() {
     /** Will display help icon if no value is received */
@@ -47,6 +52,26 @@ export class IconComponent {
 
       case "logo":
         this.isLogo = true;
+        break;
+
+      case "fileearmark":
+        this.isfileearmark = true;
+        break;
+
+      case "window":
+        this.iswindow = true;
+        break;
+
+      case "fileearmarkpdf":
+        this.isfileearmarkpdf = true;
+        break;
+
+      case "fileslides":
+        this.isfileslides = true;
+        break;
+
+      case "fileearmarkrichtext":
+        this.isfileearmarkrichtext = true;
         break;
     }
   }
