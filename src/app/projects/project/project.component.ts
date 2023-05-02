@@ -3,6 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Project, ProjImg } from '../model/project';
 import { ProjectService } from '../services/project.service';
+import { Category } from '../model/category';
 
 @Component({
   selector: 'app-project',

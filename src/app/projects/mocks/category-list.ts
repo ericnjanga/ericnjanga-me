@@ -53,6 +53,7 @@ export const EMPTY_CATEGORY: Category = {
     seqNo: 0,
     title: '',
     refName: '',
+    projectContribution: '',
     shortDescription: '',
 };
 

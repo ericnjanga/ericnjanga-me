@@ -42,7 +42,10 @@
             <p>{{project.descriptions.context}}</p>
 
             <h3>Contribution</h3>
-            <p>{{project.descriptions.contribution}}</p>
+            <div *ngFor="let category as category of project.categories">
+                <h4>{{category.title}}</h4>
+                <p>{{category.projectContribution}}</p>
+            </div>
 
             <h3>constraints</h3>
             <p>{{project.descriptions.constraints}}</p>
