@@ -1,3 +1,5 @@
+@import './../../../assets/styles/variables';
+@import './../../../assets/styles/mixins';
 
 $gap: 75px;
 
@@ -13,7 +15,6 @@ $gap: 75px;
 .block-left {
     padding-top: $gap;
     width: 600px;
-    border: 1px solid purple;
 
     .description {
         p {
@@ -44,12 +45,28 @@ $gap: 75px;
 }
 
 .references {
-    border: 1px solid orange;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    li {
+        padding-left: 5px;
+        width: 110px;
+        border-left: 1px solid #96B596;
+    }
+    .title {
+        margin-bottom: 0.4rem;
+        font-size: 13px;
+        color: map-get($colors, primary1);
+    }
+    p {
+        margin-bottom: 0;
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 700;
+    }
 }
 
-.references {
-    border: 1px solid orange;
-}
 
 
 .footer-cta {
