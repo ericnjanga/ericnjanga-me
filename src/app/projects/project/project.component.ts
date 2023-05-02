@@ -18,9 +18,6 @@ export class ProjectComponent {
     
     // Set page title
     this.titleService.setTitle(`Eric Njanga | ${this.project.descriptions.title}`);
-
-
-    console.log(this.project);
   }
 
   imgClass(img: ProjImg, prefix: string) {
