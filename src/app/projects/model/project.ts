@@ -29,6 +29,7 @@ export interface Links {
     prototype: string;
     presentation: string;
     live: string;
+    devProcessVideo: string;
 }
 
 export type imageType = 'phone' | 'tablet' | 'laptop' | 'monitor';

@@ -8,7 +8,12 @@ $gap: 75px;
     margin-bottom: $gap;
 }
 
+p {
+    color: #455445;
+}
+
 .main-wrapper {
+    align-items: stretch;
     margin-bottom: $gap;
 }
 
@@ -21,12 +26,25 @@ $gap: 75px;
             margin-bottom: 40px;
         }
     }
+
+    .contribution {
+        margin-top: 20px;
+        padding-left: 30px;
+        border-left: 1px solid map-get($colors, primary1);
+        h4 {
+            margin-bottom: 12px;
+            line-height: 10px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
 }
 
 .block-right {
     margin-left: auto;
     width: 590px;
-    height: 790px;
+    min-height: 790px;
     overflow: hidden;
     // border: 1px solid green;
     background-color: #919171;
@@ -50,7 +68,7 @@ $gap: 75px;
     margin-bottom: 60px;
 
     li {
-        padding-left: 5px;
+        padding-left: 10px;
         width: 110px;
         border-left: 1px solid #96B596;
     }
@@ -117,6 +135,7 @@ $gap: 75px;
     ::ng-deep app-icon {
         display: inline-block;
         width: 20px;
+        color: map-get($colors, accent1);
         svg {
             width: inherit;
         }

@@ -21,6 +21,7 @@ export class IconComponent {
   isfileearmarkpdf: boolean = false;
   isfileslides: boolean = false;
   isfileearmarkrichtext: boolean = false;
+  isfileplayfill: boolean = false;
 
   ngOnInit() {
     /** Will display help icon if no value is received */
@@ -73,6 +74,13 @@ export class IconComponent {
       case "fileearmarkrichtext":
         this.isfileearmarkrichtext = true;
         break;
+
+      case "fileplayfill":
+        this.isfileplayfill = true;
+        break;
     }
   }
 }
+
+
+

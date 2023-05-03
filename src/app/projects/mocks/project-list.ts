@@ -377,6 +377,7 @@ const EMPTY_LIK: Links = {
     prototype: '',
     presentation: '',
     live: '',
+    devProcessVideo: '',
 }
 const EMPTY_IMG: ProjImg = {
     hero: '',

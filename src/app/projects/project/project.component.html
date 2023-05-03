@@ -9,6 +9,8 @@
 ></app-hero>
 
 
+
+
 <section class="main-wrapper d-flex">
     <div class="block-left">
         <ul class="references list-inline">
@@ -19,19 +21,19 @@
                 </p>
             </li>
             <li class="list-inline-item">
-                <h5 class="title text-uppercase">people in the project</h5>
+                <h5 class="title text-uppercase">industry of focus</h5>
                 <p>
                     {{project.references.industry}}
                 </p>
             </li>
             <li class="list-inline-item">
-                <h5 class="title text-uppercase">people in the project</h5>
+                <h5 class="title text-uppercase">duration of the project</h5>
                 <p>
                     1 month
                 </p>
             </li>
             <li class="list-inline-item">
-                <h5 class="title text-uppercase">people in the project</h5>
+                <h5 class="title text-uppercase">tools & technologies</h5>
                 <p>
                     Figma + 3
                 </p>
@@ -42,7 +44,7 @@
             <p>{{project.descriptions.context}}</p>
 
             <h3>Contribution</h3>
-            <div *ngFor="let category as category of project.categories">
+            <div class="contribution" *ngFor="let category as category of project.categories">
                 <h4>{{category.title}}</h4>
                 <p>{{category.projectContribution}}</p>
             </div>
@@ -103,8 +105,17 @@
                 <app-icon name="fileearmark"></app-icon>
             </a>
         </li>
+        <li class="xxx" *ngIf="project.links.devProcessVideo">
+            <a href="{{project.links.devProcessVideo}}" class="btn-small text-uppercase" target="_blank">
+                dev process videos
+                <app-icon name="fileplayfill"></app-icon>
+            </a>
+        </li>
     </ul>
 </section>
+
+
+
      
 
 
