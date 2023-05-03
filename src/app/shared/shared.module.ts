@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TextTimPipe } from './pipes/text-trim/text-tim.pipe';
 import { CallToActionParamsComponent } from './call-to-action-params/call-to-action-params.component';
+import { MatBadgeModule } from '@angular/material/badge';
 
 
 
@@ -40,6 +41,7 @@ import { CallToActionParamsComponent } from './call-to-action-params/call-to-act
     RouterModule,
     MatIconModule,
     MatProgressSpinnerModule,
+    MatBadgeModule,
   ],
   exports: [
     IconComponent,

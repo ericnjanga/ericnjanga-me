@@ -12,16 +12,31 @@
                     >
                     <div class="text-wrapper">
                         <div class="subtitle">
-                            <a routerLink="/projects/{{item.pageUrl}}" 
-                            class="category text-uppercase">{{item.categories[0].title}}</a> 
-                            | 
-                            <span class="releaseDate">{{getEndDate(item.references) | date:'MMM, YYYY'}}</span>
+
+                            <!-- (For only 1 category) Don't render a badge -->
+                            <span
+                                *ngIf="item.categories.length == 1"
+                                class="subtitle--category text-uppercase"
+                            >
+                                {{item.categories[0].title}}
+                            </span> 
+
+                            <!-- (More than 1 category) Render a badge -->
+                            <span
+                                *ngIf="item.categories.length > 1"
+                                class="subtitle--category hasBadge text-uppercase"
+                                matBadge="+{{item.categories.length - 1}}" matBadgeOverlap="false"
+                            >
+                                {{item.categories[0].title}}
+                            </span> 
+
+                            <span>|</span>
+                        
+                            <span class="subtitle--releaseDate">{{getEndDate(item.references) | date:'MMM, YYYY'}}</span>
                         </div>
                         <h4 class="title">{{item.descriptions.title | textTim:95 }}</h4>
                     </div>
                 </div>
-                <!-- <img class="img-thumbnail" src={{item.thumbnail}} alt=""> -->
-                <!-- <p>{{item.shortDescription}}</p> -->
             </a>
         </div>
     </div>

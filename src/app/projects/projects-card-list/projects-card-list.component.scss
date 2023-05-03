@@ -98,10 +98,22 @@ $card-padding: 46px;
 
     @include type-caption();
 
-    .category {
+    .subtitle--category {
         @include rem(font-size, 13.5px);
+        &.hasBadge {
+            margin-right: 20px;
+        }
+
+        .mat-badge-content {
+            color: map-get($colors, gray1);
+            font-weight: 500;
+            background-color: #D3DAD3;
+        }
     }
-    .releaseDate {
+    .subtitle--releaseDate {
         @include rem(font-size, 15px);
     }
+
+    // border: 1px solid blue;
 }
+

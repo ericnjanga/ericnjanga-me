@@ -3,9 +3,6 @@
     (mouseenter)="onMouseEnter()" 
     (mouseleave)="onMouseLeave()" 
     [ngClass]="statusClass()">
-
-
-
     <a 
         class="box-anim__counter" 
         routerLink="/projects" 
@@ -13,13 +10,6 @@
     >
         <span>{{buttonLabel}}</span> Projects
     </a>
-
-
-
     <span class="box-anim__overlay"></span>
-
     <img [src]="imgSrc" alt="">
 </div>
-
-<!-- 
-[queryParams]="{ industry: category }" -->
