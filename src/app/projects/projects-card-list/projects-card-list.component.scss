@@ -8,27 +8,27 @@ $card-padding: 46px;
     position: relative;
     min-height: $card-height;
     z-index: 1;
-    margin-bottom: 100px;
+    @include rem(margin-bottom, 100px);
     background-color: map-get($colors, accent4_white);
     border-width: 0px;
 
     .icon {
         position: absolute;
-        top: 36px;
-        right: 36px;
+        @include rem(top, 36px);
+        @include rem(right, 36px);
         z-index: 1;
     }
 
     a.thumbnail-wrap {
-        min-height: $card-height;
-        padding: $card-padding;
+        @include rem(min-height, $card-height);
+        @include rem(padding, $card-padding);
         text-decoration: none;
         &:hover {
             background-color: map-get($colors, accent2);
         }
     }
     .title {
-        margin-right: 30px;
+        @include rem(margin-right, 30px);
         color: map-get($colors, accent1);
     }
     .subtitle,
@@ -39,12 +39,8 @@ $card-padding: 46px;
 
     .title,
     .subtitle {
-        margin-bottom: 20px;
+        @include rem(margin-bottom, 20px);
     }
-    // .img-thumbnail {
-    //     margin-bottom: 20px;
-    //     border-width: 0;
-    // }
 
     .read-more {
         opacity: 0;
@@ -81,12 +77,6 @@ $card-padding: 46px;
 
 
 
-// .img-thumbnail {
-//     padding: 0;
-//     border-radius: 0;
-//     border-color: map-get($colors, gray1);
-// }
-
 .thumbnail-wrap {
     position: relative;
     display: block;
@@ -101,9 +91,9 @@ $card-padding: 46px;
     @include type-caption();
 
     .category {
-        font-size: 13.5px;
+        @include rem(font-size, 13.5px);
     }
     .releaseDate {
-        font-size: 15px;
+        @include rem(font-size, 15px);
     }
 }
