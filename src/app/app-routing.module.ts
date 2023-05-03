@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -31,7 +32,15 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      scrollOffset: [0, 64],
+      anchorScrolling: 'enabled',
+      // scrollRestoration: 'enabled',
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

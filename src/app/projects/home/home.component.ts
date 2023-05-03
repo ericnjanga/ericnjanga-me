@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Project } from '../model/project';
 import { ProjectService } from '../services/project.service';
@@ -16,6 +16,9 @@ export class HomeComponent {
   heroImg = './../../../assets/img/project-25-hero.png';
 
   ngOnInit(): void {
+    // Set the scroll position to 0,0 when the component is initialized. 
+    window.scrollTo(0, 0);
+    
     // Set page title
     this.titleService.setTitle('Eric Njanga | Latest work');
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -9,6 +9,9 @@ import { Title } from '@angular/platform-browser';
 export class AboutComponent {
 
   ngOnInit() {
+    // Set the scroll position to 0,0 when the component is initialized. 
+    window.scrollTo(0, 0);
+
     // Set page title
     this.titleService.setTitle('Eric Njanga | About');
   }

@@ -1,4 +1,4 @@
-import { Component, Input  } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Project, ProjImg } from '../model/project';
@@ -14,6 +14,9 @@ export class ProjectComponent {
   @Input() project: Project;
 
   ngOnInit() {
+    // Set the scroll position to 0,0 when the component is initialized. 
+    window.scrollTo(0, 0);
+    
     // Get the payload coming from the API
     this.project = this.route.snapshot.data['project'];
     
