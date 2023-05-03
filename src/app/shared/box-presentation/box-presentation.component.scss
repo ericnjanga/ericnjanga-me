@@ -21,11 +21,6 @@
     }
 }
 
-// .box1 {
-// }
-
-// .box2 {
-// }
 
 .box-anim {
     position: relative;
@@ -43,10 +38,18 @@
 .box-anim__counter {
     position: absolute;
     display: inline-block;
-    padding: 10px 20px;
+    @include rem(padding-top, 15px);
+    @include rem(padding-right, 30px);
+    @include rem(padding-bottom, 15px);
+    @include rem(padding-left, 30px);
     background-color: #fff;
     @include typo-buttonLink();
+
+    text-decoration: none;
+
+    color: map-get($colors, accent1);
     z-index: 3;
+
 }
 
 /* Smooth animation of the content */
@@ -73,7 +76,7 @@
       transition: opacity 0.3s ease 0.4s, transform 0.3s ease 0.4s;
 }
 .moveOut .box-anim__counter {
-        opacity: 0;
-      transform: translateX(+100px);
-      transition: opacity 0.3s ease, transform 0.3s;
+    opacity: 0;
+    transform: translateX(+100px);
+    transition: opacity 0.3s ease, transform 0.3s;
 }

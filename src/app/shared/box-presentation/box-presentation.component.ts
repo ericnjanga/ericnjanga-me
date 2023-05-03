@@ -11,6 +11,7 @@ export class BoxPresentationComponent {
   @Input() imgSrc: string = '';
   @Input() buttonLabel: string = '';
   @Input() buttonLink: string = '';
+  @Input() category: string = '';
 
   activeClass: string = '';
 

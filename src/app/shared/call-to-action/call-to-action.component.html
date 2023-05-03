@@ -1,11 +1,14 @@
 <div class="content__item">
-    <a class="link link--leda" routerLinkActive="link-active" 
-    [ngClass]="statusClasses()"
-    [attr.data-text]="label" [routerLink]="link">
+    <a 
+        class="link link--leda" 
+        routerLinkActive="link-active" 
+        [ngClass]="statusClasses()"
+        [attr.data-text]="label" 
+        [routerLink]="link"
+    >
         <span>
             <ng-content></ng-content>
         </span>
-        <!-- <span>{{label}}</span> -->
     </a>
 
     <app-icon class="icon" name="ctaArrow" *ngIf="isButton()"></app-icon>
