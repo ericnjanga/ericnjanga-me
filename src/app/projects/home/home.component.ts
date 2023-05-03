@@ -10,6 +10,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  
+  totalCount: number | undefined;
+  uxdCount: number | undefined;
+  uidCount: number | undefined;
 
   projects: Project[] = [];
   heroImgType = 'phone';
@@ -30,12 +34,27 @@ export class HomeComponent {
       // (The server won't apply the filter is the param isn't valid)
       this.reloadProjects(industry);
     });
+
+    // ...
+    this.loadCounters();
   }
 
   // Present all projects of the industry in params
   reloadProjects(ind: string) {
     this.projectService.loadAll('published', ind).subscribe((obj) => {
       this.projects = obj.payload;
+    });
+  }
+
+  loadCounters() {
+    this.projectService.loadAll('published', 'all').subscribe((obj) => {
+      this.totalCount = obj.total;
+    });
+    this.projectService.loadAll('published', 'ux-design').subscribe((obj) => {
+      this.uxdCount = obj.total;
+    });
+    this.projectService.loadAll('published', 'ui-development').subscribe((obj) => {
+      this.uidCount = obj.total;
     });
   }
 

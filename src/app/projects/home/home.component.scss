@@ -1,0 +1,65 @@
+
+@import './../../../assets/styles/variables';
+@import './../../../assets/styles/mixins';
+
+
+app-hero {
+    display: block;
+}
+
+app-hero,
+.filter-wrapper {
+    @include rem(margin-bottom, 60px);
+}
+
+.filter-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    background-color: map-get($colors, accent3);
+
+    .list-filter {
+        margin: 0;
+    }
+}
+
+.list-filter {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    align-items: center;
+
+    li {
+        flex: 1;
+        height: 100%;
+        margin: 0;
+        a {    
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border-bottom: 3px solid transparent;
+            color: map-get($colors, primary2);
+
+            .mat-badge-content {
+                background: map-get($colors, primary2);
+            }
+
+            &:hover {
+                border-bottom: 3px solid map-get($colors, primary2);
+            }
+
+            &.link-active {
+                color: map-get($colors, accent1);
+                border-bottom: 3px solid map-get($colors, accent1);
+
+                .mat-badge-content {
+                    background: map-get($colors, accent1);
+                }
+            }
+        }
+    }
+
+}

@@ -6,6 +6,8 @@ import { ProjectComponent } from './project/project.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsCardListComponent } from './projects-card-list/projects-card-list.component';
 import { SharedModule } from '../shared/shared.module';
+import { MatIconModule } from '@angular/material/icon';
+import { MatBadgeModule } from '@angular/material/badge';
 
 
 
@@ -19,6 +21,8 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     ProjectsRoutingModule,
     SharedModule,
+    MatIconModule,
+    MatBadgeModule,
   ],
   exports: [
     ProjectsCardListComponent,

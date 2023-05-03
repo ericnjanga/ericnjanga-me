@@ -10,27 +10,39 @@
 
 
 
-<div class="subpage">
-    <header class="pagination-wrapper">
-        <ul class="list-inline text-center">
-            <li class="list-inline-item">
-                <a routerLink="/projects" [queryParams]="{ industry: 'all' }">All</a>
-            </li>
-            <li class="list-inline-item">
-                /
-            </li>
-            <li class="list-inline-item">
-                <a routerLink="/projects" [queryParams]="{ industry: 'ui-development' }">UI Development</a>
-            </li>
-            <li class="list-inline-item">
-                /
-            </li>
-            <li class="list-inline-item">
-                <a routerLink="/projects" [queryParams]="{ industry: 'ux-design' }">UX Design</a>
-            </li>
-        </ul>
-    </header>
-</div>
+
+
+<header class="filter-wrapper">
+    <ul class="list-filter list-inline text-center">
+        <li class="list-inline-item">
+            <a  
+                routerLink="/projects" 
+                routerLinkActive="link-active" 
+                [queryParams]="{ industry: 'all' }"
+            >
+                <span matBadge="{{totalCount}}" matBadgeOverlap="false">All</span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a 
+                routerLink="/projects" 
+                routerLinkActive="link-active" 
+                [queryParams]="{ industry: 'ui-development' }"
+            >
+                <span matBadge="{{uidCount}}" matBadgeOverlap="false">UI Development</span>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a 
+                routerLink="/projects" 
+                routerLinkActive="link-active" 
+                [queryParams]="{ industry: 'ux-design' }"
+            >
+                <span matBadge="{{uxdCount}}" matBadgeOverlap="false">UX Design</span>
+            </a>
+        </li>
+    </ul>
+</header>
 
 
 <app-projects-card-list class="page-section" [source]="projects"></app-projects-card-list>

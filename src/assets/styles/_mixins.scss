@@ -148,17 +148,9 @@ for button of "normal" and "thin" sizes
  * ------------------------------------
 */
 @mixin set-app-background-color() {
-  background-color: map-get($colors, accent3);
+  // background-color: map-get($colors, accent3);
+  background-color: #D0E0D1;
 }
-// @mixin layout-padding() {
-//   padding-left: map-get($gap, sm);
-//   padding-right: map-get($gap, sm);
-
-//   @include respond-to(map-get($breakpoints, screen-lg)) {
-//     padding-left: map-get($gap, lg);
-//     padding-right: map-get($gap, lg);
-//   }
-// }
 
 
 /**

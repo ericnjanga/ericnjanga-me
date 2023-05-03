@@ -16,7 +16,7 @@ $card-padding: 46px;
     position: relative;
     min-height: $card-height;
     z-index: 1;
-    @include rem(margin-bottom, 100px);
+    @include rem(margin-bottom, 60px);
     background-color: map-get($colors, accent4_white);
     border-width: 0px;
 
