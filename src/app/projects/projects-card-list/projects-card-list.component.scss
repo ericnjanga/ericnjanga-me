@@ -4,6 +4,14 @@
 $card-height: 450px;
 $card-padding: 46px;
 
+
+// No margin for the last 3 items of the row
+.card-wrapper:nth-last-child(-n+3) {
+    .card {
+        margin-bottom: 0;
+    }
+}
+
 .card {
     position: relative;
     min-height: $card-height;

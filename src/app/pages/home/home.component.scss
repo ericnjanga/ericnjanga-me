@@ -28,4 +28,8 @@ h1 {
 .page-section {
     display: block;
     @include rem(margin-bottom, 170px);
+
+    &.last {
+        margin-bottom: 0;
+    }
 }
