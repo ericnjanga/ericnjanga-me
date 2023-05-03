@@ -47,6 +47,7 @@ import { CallToActionParamsComponent } from './call-to-action-params/call-to-act
     TopClientsListComponent,
     TwoSkillsComponent,
     CallToActionComponent,
+    CallToActionParamsComponent,
     LogoComponent,
     HeroComponent,
     MessagesComponent,
