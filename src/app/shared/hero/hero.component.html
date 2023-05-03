@@ -3,13 +3,21 @@
         <div class="text-wrapper">
             <span class="titleCaption text-uppercase">{{titleCaption}}</span>
             <h1 class="title">{{title}}</h1>
-            <!-- <p>Eric Njanga creates hard to explain design concepts and codes hard to find user interfaces.</p>
-            <ul class="list-align-bullets-with-left-edge">
-                <li>UI Developer (since 2006)</li>
-                <li>UX Designer (since 2019)</li>
-            </ul> -->
 
-            <!-- <app-call-to-action link="/projects" label="See latest work" status="button">See latest work</app-call-to-action> -->
+            <!--
+                TODO: THIS SECTION SHOULD BE COMING FROM OUTSIDE
+                ----------------------------
+            -->
+            <div *ngIf="size=='large'" class="cta-wrapper">
+                <p>Eric Njanga creates hard to explain design concepts, and codes hard to find user interfaces.</p>
+                <ul class="list-align-bullets-with-left-edge">
+                    <li>UI Developer (since 2006)</li>
+                    <li>UX Designer (since 2019)</li>
+                </ul>
+
+                <app-call-to-action link="/projects" label="See latest work" status="button">See latest work</app-call-to-action>
+            </div>
+            <!-- ---------------------------- -->
         </div>
 
         <img 
