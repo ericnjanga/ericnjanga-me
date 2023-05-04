@@ -1,4 +1,5 @@
 @import './../../../assets/styles/variables';
+@import './../../../assets/styles/mixins';
 
 
 
@@ -109,10 +110,33 @@
     }
 }
 
-// .slide--projects {
-//     .img {
-//         width: 23.125rem;
-//     }
-// }
 
 
+
+
+
+
+
+
+
+
+.hero {
+    .caption {
+        display: block;
+    }
+    ::ng-deep .caption {
+        // border: 2px solid red;
+        .subtitle--category {
+            font-weight: 600;
+            color: #5A6D5B;
+            @include rem(font-size, 15px);
+    
+    
+            .mat-badge-content {
+                color: map-get($colors, accent2);
+                background-color: #5E675E;
+            }
+        }
+    }
+
+}

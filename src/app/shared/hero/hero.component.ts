@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Project } from 'src/app/projects/model/project';
+import { Category } from 'src/app/projects/model/category';
 // import projectdeta
 
 @Component({
@@ -14,6 +14,7 @@ export class HeroComponent {
   @Input() imageType: string = '';
   @Input() page: string = '';
   @Input() titleCaption: string = '';
+  @Input() captionData: Category[] = [];
 
 
   parentClassSetup() {
