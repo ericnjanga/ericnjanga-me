@@ -115,6 +115,7 @@ $card-padding: 46px;
         .subtitle--category {
             font-weight: 500;
             color: #5A6D5B;
+            text-transform: uppercase;
             @include rem(font-size, 13.5px);
         }
     }

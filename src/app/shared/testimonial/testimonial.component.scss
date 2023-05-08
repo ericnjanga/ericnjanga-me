@@ -1,0 +1,19 @@
+@import './../../../assets/styles/mixins';
+
+
+
+.testimonial {
+    width: 100%;
+    max-width: 800px;
+    @include rem(padding, 45px);
+    background-color: map-get($colors, accent4_white);
+
+    .header {
+        display: flex;
+        @include rem(gap, 12px);
+    }
+    img {
+        @include rem(width, 60px);
+        height: inherit;
+    }
+}

@@ -18,6 +18,7 @@ import { TextTimPipe } from './pipes/text-trim/text-tim.pipe';
 import { CallToActionParamsComponent } from './call-to-action-params/call-to-action-params.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import { TitleCaptionComponent } from './title-caption/title-caption.component';
+import { TestimonialComponent } from './testimonial/testimonial.component';
 
 
 
@@ -37,6 +38,7 @@ import { TitleCaptionComponent } from './title-caption/title-caption.component';
     TextTimPipe,
     CallToActionParamsComponent,
     TitleCaptionComponent,
+    TestimonialComponent,
   ],
   imports: [
     CommonModule,
@@ -58,6 +60,7 @@ import { TitleCaptionComponent } from './title-caption/title-caption.component';
     LoadingComponent,
     TextTimPipe,
     TitleCaptionComponent,
+    TestimonialComponent
   ]
 })
 export class SharedModule { }

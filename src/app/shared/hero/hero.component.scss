@@ -6,6 +6,10 @@
 .carousel {
     position: relative;
     display: flex;
+
+    .title {
+        color: map-get($colors, primary_shade1);
+    }
 }
 
 .carousel--large {
@@ -65,7 +69,7 @@
     left: 0;
     width: 100%;
     display: block;
-    background-color: map-get($colors, accent2);
+    background-color: map-get($colors, primary);
     z-index: 0;
 }
 
@@ -129,6 +133,7 @@
         .subtitle--category {
             font-weight: 600;
             color: #5A6D5B;
+            text-transform: uppercase;
             @include rem(font-size, 15px);
     
     

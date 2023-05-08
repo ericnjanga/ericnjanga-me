@@ -55,6 +55,7 @@ export interface Project {
     categories: Category[];
     references: Reference;
     images: ProjImg;
+    tools: Tool[];
 }
 
 // Describes the API payload

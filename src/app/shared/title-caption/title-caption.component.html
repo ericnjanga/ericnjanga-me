@@ -1,10 +1,10 @@
 <!-- (For only 1 category) Don't render a badge -->
-<span *ngIf="items.length == 1" class="subtitle--category text-uppercase">
+<span *ngIf="items.length == 1" class="subtitle--category">
     {{items[0].title}}
 </span>
 
 <!-- (More than 1 category) Render a badge -->
-<span *ngIf="items.length > 1" class="subtitle--category hasBadge text-uppercase"
+<span *ngIf="items.length > 1" class="subtitle--category hasBadge"
     matBadge="+{{items.length - 1}}" matBadgeOverlap="false">
     {{items[0].title}}
 </span>

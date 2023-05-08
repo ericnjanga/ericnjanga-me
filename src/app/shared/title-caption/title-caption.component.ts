@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Category } from '../../projects/model/category';
+import { Tool } from 'src/app/projects/model/project';
 
 @Component({
   selector: 'app-title-caption',
@@ -7,5 +8,5 @@ import { Category } from '../../projects/model/category';
   styleUrls: ['./title-caption.component.scss']
 })
 export class TitleCaptionComponent {
-  @Input() items: Category[] = [];
+  @Input() items: Category[] | Tool[] = [];
 }

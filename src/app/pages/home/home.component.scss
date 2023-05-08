@@ -24,12 +24,3 @@ h1 {
     margin-right: auto;
     max-width: 482px;
 }
-
-.page-section {
-    display: block;
-    @include rem(margin-bottom, 170px);
-
-    &.last {
-        margin-bottom: 0;
-    }
-}

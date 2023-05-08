@@ -26,7 +26,7 @@ html, body { height: 100%; }
 body { 
     margin: 0; 
     @include setFontFamily('body');
-    color: map-get($colors, accent1);
+    color: map-get($colors, primary_dark1);
     @include set-app-background-color();
 }
 

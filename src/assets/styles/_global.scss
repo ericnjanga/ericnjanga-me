@@ -4,6 +4,25 @@
 body {
     padding-top: map-get($gap, appBar);
 }
+img {
+    max-width: 100%;
+}
+
+
+
+.page-section {
+    display: block;
+    @include rem(margin-bottom, 170px);
+
+    &.last {
+        margin-bottom: 0;
+    }
+}
+
+.subpage-spacer {
+    display: block;
+    @include rem(margin-bottom, 100px);
+}
 
 .subpage {
     margin-top: map-get($gap, lg);
@@ -12,10 +31,26 @@ body {
         text-align: center;
     }
 }
+.title-caption {
+    margin-bottom: 0;
+    color: map-get($colors, primary_dark3);
+    @include typo-titleCaption();
+}
 
 .pagination-wrapper {
     margin-bottom: 30px;
     border-bottom: 1px solid map-get($colors, gray1);
+}
+
+.box-acccent {
+    @include rem(padding-top, 75px);
+    @include rem(padding-right, 50px);
+    @include rem(padding-bottom, 75px);
+    @include rem(padding-left, 50px);
+}
+
+.box-acccent1 {
+    background-color: map-get($colors, accent4_white);
 }
 
 

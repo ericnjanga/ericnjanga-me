@@ -1,7 +1,136 @@
 
 <app-hero
-    title="I like to do everything"
+    class="subpage-spacer"
+    title="Eric is incredibly dedicated to his work and unwavering in his focus."
     size="small"
     page="about"
     image="./../../../assets/img/about-hero.png"
 ></app-hero>
+
+
+<section class="introduction subpage-spacer">
+    <div class="row">
+        <div class="col">
+            <h5 class="title-caption">UI developer for 16 years</h5>
+            <h2>Skilled at creating responsive, accessible, and performant user interfaces.</h2>
+            <p>Eric’s deep understanding of code architecture (HTML, CSS, and TypeScript) and UI component’s anatomy allows him to create front-end applications that fulfill the organization's goals:</p>
+            <ul class="list-align-bullets-with-left-edge">
+                <li>Visually appeal: He creates responsive, and user-friendly interfaces that enhance the overall user experience</li>
+                <li>Cross-Platform Compatibility: He ensures the UI functions seamlessly across multiple devices and browsers (essential for reaching broader audiences)</li>
+                <li>Effective communication: He provides clear technical requirements, gives valuable insights, and collaborates  with other team experts for the delivery a high-quality end products that meets the organization's objectives</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h5 class="title-caption">ux designer for 4 years</h5>
+            <h2>Focused on creating intuitive and engaging digital experiences that meet user needs and business goals.</h2>
+            <p>Eric’s commitment to help organizations get higher user satisfaction, and better customer retention makes him a firm believer and evangelist of the user-centred process. He like delivering practical results:</p>
+            <ul class="list-align-bullets-with-left-edge">
+                <li>User Experience Improvement: Through user research, and  persona creation, he creates a seamless, intuitive, and delightful interfaces that meet users' needs and expectations</li>
+                <li>Enhanced Functionality: He identifies areas for improvement, suggests new features and functionalities, and create wireframes and prototypes to test new ideas</li>
+                <li>Increased Brand Loyalty: He creates a consistent brand identity across all touchpoints, including the website, mobile app, social media, and marketing materials.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section class="excellence box-acccent box-acccent1 subpage-spacer">
+    <div class="row">
+        <div class="col">
+            <img src="./../../../assets/img/project-26-hero.png" alt="">
+        </div>
+        <div class="col">
+            <h5 class="title-caption">excellence</h5>
+            <h2>Planning and execution</h2>
+            
+            <h3>Idea analysis</h3>
+            <p>Eric evaluates and refines ideas to determine their feasibility, relevance, and potential impact on the user experience (user needs, business objectives, feasibility, impact and prioritization).</p>
+
+            
+            <h3>Concept design</h3>
+            <p>Eric explores and creates high-level design concepts to visualize and communicate design ideas to stakeholders and team members before moving to the more detailed design stages.</p>
+            
+            <h3>High-fidelity implementation</h3>
+            <p>Eric converts design concepts into a fully functional and visually appealing interfaces. He uses design files (Sketch, Figma, or Adobe XD), to create pixel-perfect UI elements, incorporating animations and interactions, and ensuring that the final product meets the design requirements.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="highlights subpage-spacer">
+    <div class="row">
+        <div class="col">
+            <h3>Self-starter</h3>
+            <p>Eric is highly motivated, proactive, and is accountable for his work.  He naturally takes initiatives, sets and reaches goals, and works independently.</p>
+            <ul class="list-t1">
+                <li>
+                    <img class="img-w1" src="./../../../assets/img/Self-starter 1.png" alt="">
+                </li>
+                <li>
+                    <img class="img-w1" src="./../../../assets/img/Self-starter 2.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Career highlights</h3>
+            <p>Eric has been working in multiple industries notably: Banking, computing, health, automotive, food retailing, eCommerce, gaming and education.</p>
+            <ul class="list-t1">
+                <li>
+                    <img class="img-w1" src="./../../../assets/img/career-highlight 1.png" alt="">
+                </li>
+                <li>
+                    <img class="img-w1" src="./../../../assets/img/career-highlight 2.png" alt="">
+                </li>
+                <li>
+                    <img class="img-w1" src="./../../../assets/img/career-highlight 3.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Avid learner</h3>
+            <p>Eric is constantly seeking to expand his knowledge and skills in UX design and UI development. He loves staying up-to-date with the latest industry trends.</p>
+            <ul class="list-t1">
+                <li>
+                    <img class="img-w1" src="./../../../assets/img/education 1.png" alt="">
+                </li>
+                <li>
+                    <img class="img-w1" src="./../../../assets/img/education 2.png" alt="">
+                </li>
+                <li>
+                    <img class="img-w1" src="./../../../assets/img/education 3.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section class="mentors subpage-spacer">
+    <div class="xxx111">
+        <div class="yyy">
+            <h5 class="title-caption">friends and mentors</h5>
+            <h3>Following the footsteps of top UX experts</h3>
+            <p>During his UX Design journey, Eric was blessed to cross paths with Dave and Alex, two successful UX experts.</p>
+            <p>“Their generous advice, nurturing feedback and honest critique gave me the direction, the challenge and the push my online certifications couldn’t. “</p>
+        </div>
+        <div class="vdsvs bg-grid"></div>
+    </div>
+</section>
+
+
+<section class="testimonials subpage-spacer">
+    <div class="xxx111">
+        <div class="yyy">
+            <h5 class="title-caption">testimonials</h5>
+            <h3>What people say about Eric</h3>
+        </div>
+        <div class="vdsvs vertical-list">
+            <div class="item" *ngFor="let item of testimonialList">
+                <app-testimonial [testimonial]="item"></app-testimonial>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

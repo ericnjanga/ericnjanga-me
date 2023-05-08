@@ -402,6 +402,7 @@ export const EMPTY_PROJECT: Project = {
     categories: [EMPTY_CATEGORY],
     references: EMPTY_REF,
     images: EMPTY_IMG,
+    tools: [EMPTY_TOOLS],
 };
 
 export const EMPTY_PROJECT_DETAIL: ProjectDetail = {
