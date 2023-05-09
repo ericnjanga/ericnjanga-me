@@ -10,10 +10,38 @@
 
     .header {
         display: flex;
+        align-items: center;
         @include rem(gap, 12px);
+        @include rem(margin-bottom, 20px);
     }
     img {
         @include rem(width, 60px);
         height: inherit;
     }
+}
+
+.heading {
+    @include typo-h5();
+    margin-bottom: 0;
+    color: map-get($colors, primary_dark1);
+
+    .icon {
+        position: relative;
+        top: -5px;
+        left: 6px;
+
+        ::ng-deep app-icon {
+            svg {
+                color: map-get($colors, primary);
+            }
+        }
+    }
+}
+.subtitle {
+    color: map-get($colors, gray0);
+}
+
+p {
+    color: map-get($colors, gray1);
+    
 }

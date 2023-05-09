@@ -32,7 +32,9 @@
     overflow: hidden;
 
     .text-wrapper {
-        margin-top: 10.625rem;
+        position: absolute;
+        @include rem(top, 150px);
+        width: 100%;
         max-width: 600px;
     }
     .background {
@@ -56,11 +58,16 @@
     }
 }
 
+.testimonial {
+    ::ng-deep p {
+        color: map-get($colors, primary_shade1);
+    }
+}
+
 
 
 .text-wrapper {
-    margin-left: 3.5rem;
-    margin-bottom: 3.125em;
+    @include rem(left, 50px);
 }
 
 

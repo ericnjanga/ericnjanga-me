@@ -13,7 +13,7 @@ $colors: (
     white                   : #fff, 
 
     // ....
-    primary                         : #2A6356,
+    primary                       : #2A6356,
     primary_dark1                 : #304943,
     primary_dark2                 : #2A6356,
     primary_dark3                 : #588F83,
@@ -36,9 +36,11 @@ $colors: (
     accent2                 : #E4E4B1,
     accent3                 : #E0F6E1,
     accent4_white           : #fff,
-    gray1                   : #666666,
-    gray2                   : #9E9E9E,
-    gray3                   : #D7D7D7,
+
+    gray0                   : #3D4A47,
+    gray1                   : #5C6966,
+    // gray2                   : #9E9E9E,
+    // gray3                   : #D7D7D7,
 );
 $rgb-colors: (
     dark1                   : #202023,

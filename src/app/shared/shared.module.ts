@@ -19,6 +19,7 @@ import { CallToActionParamsComponent } from './call-to-action-params/call-to-act
 import { MatBadgeModule } from '@angular/material/badge';
 import { TitleCaptionComponent } from './title-caption/title-caption.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
+import { QuoteComponent } from './quote/quote.component';
 
 
 
@@ -39,6 +40,7 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
     CallToActionParamsComponent,
     TitleCaptionComponent,
     TestimonialComponent,
+    QuoteComponent,
   ],
   imports: [
     CommonModule,
@@ -60,7 +62,8 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
     LoadingComponent,
     TextTimPipe,
     TitleCaptionComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    QuoteComponent,
   ]
 })
 export class SharedModule { }

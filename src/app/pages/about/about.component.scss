@@ -16,11 +16,39 @@
 
 
 
+.introduction {
+    .row {
+        @include rem(gap, 100px);
+    }
+    .col {
+        @include rem(width, 600px);
+    }
+}
+
+.excellence {
+    p {
+        @include rem(margin-bottom, 35px);
+        color: map-get($colors, gray1);
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.highlights {
+    p {
+        @include rem(margin-bottom, 30px);
+    }
+}
+
+
+
 .xxx111 {
     display: flex;
     @include rem(gap, 60px);
     .yyy {
-        max-width: 374px;
+        @include rem(padding-top, 50px);
+        max-width: 380px;
     }
     .vdsvs {
         display: flex;

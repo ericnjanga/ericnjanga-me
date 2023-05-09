@@ -176,6 +176,11 @@ for button of "normal" and "thin" sizes
   line-height: 26px;
   font-weight: 500;
 }
+@mixin typo-h5() {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+}
 @mixin typo-logo() {
   font-size: 16px;
   line-height: 16px;
