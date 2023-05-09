@@ -9,7 +9,24 @@
 
     .title {
         color: map-get($colors, primary_shade1);
+
+        &.isQuote {
+            &::before {
+                content: '\201C'; /* Unicode character for left double quotation mark */
+                @include rem(font-size, 40px);
+                color: map-get($colors, primary_shade1);
+                margin-right: 5px;
+            }
+              
+            &::after {
+                content: '\201D'; /* Unicode character for right double quotation mark */
+                @include rem(font-size, 40px);
+                color: map-get($colors, primary_shade1);
+                margin-left: 5px;
+            }
+        }
     }
+
 }
 
 .carousel--large {
@@ -58,11 +75,7 @@
     }
 }
 
-.testimonial {
-    ::ng-deep p {
-        color: map-get($colors, primary_shade1);
-    }
-}
+
 
 
 
@@ -150,5 +163,20 @@
             }
         }
     }
+}
 
+.hero__quote {
+    ::ng-deep header {
+        border-left: 1px solid map-get($colors, primary_shade2);
+
+        .title-wrapper__heading a {
+            color: map-get($colors, primary_shade2);
+        }
+        .title-wrapper__subtitle {
+            color: map-get($colors, primary_shade2);
+        }
+        svg {
+            color: map-get($colors, primary_shade2);
+        }
+    }
 }

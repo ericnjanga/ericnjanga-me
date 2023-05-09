@@ -1,1 +1,15 @@
-<p>quote works!</p>
+<!-- [TODO:] Same component in "testimonial.component.html "-->
+<header class="title-wrapper">
+    <!-- <img src={{testimonial.img}} alt=""> -->
+    <div class="intro">
+        <h5 class="title-wrapper__heading">
+            <a href="{{quote?.linkedIn}}" target="_blank">
+                {{quote?.name}}
+                <app-icon class="icon" name="linkedin"></app-icon>
+            </a>
+        </h5>
+        <div class="title-wrapper__subtitle">
+            {{quote?.title}}
+        </div>
+    </div>
+</header>

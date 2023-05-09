@@ -7,5 +7,5 @@ import { Testimonial } from 'src/app/projects/model/testimonial';
   styleUrls: ['./testimonial.component.scss']
 })
 export class TestimonialComponent {
-  @Input() testimonial: Testimonial = { name:'', title: '', text:'', img:'' };
+  @Input() testimonial: Testimonial = { name:'', title: '', text:'', img:'', linkedIn: '', };
 }

@@ -3,4 +3,5 @@ export interface Testimonial {
     title: string;
     text: string;
     img: string;
+    linkedIn: string;
 }

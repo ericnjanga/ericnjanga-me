@@ -148,7 +148,7 @@ for button of "normal" and "thin" sizes
  * ------------------------------------
 */
 @mixin set-app-background-color() {
-  background-color: map-get($colors, primary_shade4);
+  background-color: map-get($colors, primary_shade1);
 }
 
 

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Testimonial } from 'src/app/projects/model/testimonial';
 
 @Component({
   selector: 'app-quote',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./quote.component.scss']
 })
 export class QuoteComponent {
-
+  @Input() quote: Testimonial | undefined;
 }

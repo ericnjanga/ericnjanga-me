@@ -4,10 +4,13 @@
 
             <app-title-caption class="caption" [items]="captionData"></app-title-caption>
             <!-- <span class="titleCaption text-uppercase">{{titleCaption}}</span> -->
-            <h1 class="title">{{title}}</h1>
+            <h1 class="title isQuote">{{title}}</h1>
 
 
-            <app-quote class="testimonial"></app-quote>
+            <app-quote 
+                class="hero__quote"
+                [quote]="quote"
+            ></app-quote>
 
             <!--
                 TODO: THIS SECTION SHOULD BE COMING FROM OUTSIDE

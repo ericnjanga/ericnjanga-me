@@ -9,30 +9,42 @@ import { Testimonial } from 'src/app/projects/model/testimonial';
 })
 export class AboutComponent {
 
+  heroQuote: Testimonial = {
+    name: 'Steve Costa',
+    title: 'Software Development Manager at Loblaws Digital',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis.',
+    img: './../../../assets/img/sample 1.png',
+    linkedIn: '',
+  };
+
   testimonialList: Testimonial[] = [
     {
       name: 'consectetur adipisc',
       title: 'Head of User Experience',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis.',
-      img: './../../../assets/img/sample 1.png'
+      img: './../../../assets/img/sample 1.png',
+      linkedIn: '',
     },
     {
       name: 'consectetur adipisc',
       title: 'Head of User Experience',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis.',
-      img: './../../../assets/img/sample 1.png'
+      img: './../../../assets/img/sample 1.png',
+      linkedIn: '',
     },
     {
       name: 'consectetur adipisc',
       title: 'Head of User Experience',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis.',
-      img: './../../../assets/img/sample 1.png'
+      img: './../../../assets/img/sample 1.png',
+      linkedIn: '',
     },
     {
       name: 'consectetur adipisc',
       title: 'Head of User Experience',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis.',
-      img: './../../../assets/img/sample 1.png'
+      img: './../../../assets/img/sample 1.png',
+      linkedIn: '',
     },
   ];
 

@@ -8,40 +8,57 @@
     @include rem(padding, 45px);
     background-color: map-get($colors, accent4_white);
 
-    .header {
-        display: flex;
-        align-items: center;
-        @include rem(gap, 12px);
-        @include rem(margin-bottom, 20px);
-    }
-    img {
-        @include rem(width, 60px);
-        height: inherit;
+
+    ::ng-deep app-icon {
+        svg {
+            color: map-get($colors, primary);
+        }
     }
 }
 
-.heading {
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    @include rem(gap, 12px);
+}
+.title-wrapper__img {
+    @include rem(width, 60px);
+    height: inherit;
+}
+
+.title-wrapper + p {
+    @include rem(margin-top, 20px);
+    color: map-get($colors, gray1);
+}
+
+
+.title-wrapper__heading {
     @include typo-h5();
     margin-bottom: 0;
-    color: map-get($colors, primary_dark1);
+
+    a {
+        color: map-get($colors, primary_dark1);
+        text-decoration: none;
+        &:hover {
+            color: map-get($colors, state4);
+            text-decoration: underline;
+
+            ::ng-deep app-icon {
+                svg {
+                    color: map-get($colors, state4);
+                }
+            }
+        }
+    }
 
     .icon {
         position: relative;
         top: -5px;
         left: 6px;
-
-        ::ng-deep app-icon {
-            svg {
-                color: map-get($colors, primary);
-            }
-        }
     }
 }
-.subtitle {
-    color: map-get($colors, gray0);
-}
 
-p {
-    color: map-get($colors, gray1);
-    
+.title-wrapper__subtitle {
+    color: map-get($colors, gray0);
+    font-weight: 500;
 }

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Category } from 'src/app/projects/model/category';
+import { Testimonial } from 'src/app/projects/model/testimonial';
 // import projectdeta
 
 @Component({
@@ -15,6 +16,7 @@ export class HeroComponent {
   @Input() page: string = '';
   @Input() titleCaption: string = '';
   @Input() captionData: Category[] = [];
+  @Input() quote: Testimonial | undefined;
 
 
   parentClassSetup() {

@@ -1,19 +1,20 @@
 <div class="testimonial">
-    <header class="header">
-        <img src={{testimonial.img}} alt="">
+
+    <!-- [TODO:] Same component in "quote.component.html "-->
+    <header class="title-wrapper">
+        <img class="title-wrapper__img" src={{testimonial.img}} alt="">
         <div class="intro">
-            <h5 class="heading">
-                {{testimonial.name}}
-                <a class="icon" href="" target="_blank">
-                    <app-icon name="linkedin"></app-icon>
+            <h5 class="title-wrapper__heading">
+                <a href="{{testimonial.linkedIn}}" target="_blank">
+                    {{testimonial.name}}
+                    <app-icon class="icon" name="linkedin"></app-icon>
                 </a>
             </h5>
-            <div class="subtitle">
+            <div class="title-wrapper__subtitle">
                 {{testimonial.title}}
             </div>
         </div>
     </header>
-
 
     <p>{{testimonial.text}}</p>
 </div>
