@@ -41,14 +41,14 @@ app-hero,
             justify-content: center;
             text-decoration: none;
             border-bottom: 3px solid transparent;
-            color: map-get($colors, primary2);
+            color: map-get($colors, primary_gray1);
 
             .mat-badge-content {
-                background: map-get($colors, primary2);
+                background: map-get($colors, primary_gray1);
             }
 
             &:hover {
-                border-bottom: 3px solid map-get($colors, primary2);
+                border-bottom: 3px solid map-get($colors, primary_gray1);
             }
 
             &.link-active {

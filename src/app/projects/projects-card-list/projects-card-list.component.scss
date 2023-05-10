@@ -1,8 +1,17 @@
 @import './../../../assets/styles/variables';
 @import './../../../assets/styles/mixins';
 
-$card-height: 450px;
+$card-width: 373px;
+$card-height: 470px;
 $card-padding: 46px;
+
+$bg-deco-width: 280px;
+$bg-deco-height: 250px;
+
+$tmb-phone-width: 133px;
+$tmb-phone-height: 286px;
+$tmb-laptop-width: 311px;
+$tmb-laptop-height: 199px;
 
 
 // No margin for the last 3 items of the row
@@ -14,7 +23,8 @@ $card-padding: 46px;
 
 .card {
     position: relative;
-    min-height: $card-height;
+    width: $card-width;
+    height: $card-height;
     z-index: 1;
     @include rem(margin-bottom, 60px);
     background-color: map-get($colors, accent4_white);
@@ -47,7 +57,8 @@ $card-padding: 46px;
 
     .title,
     .subtitle {
-        @include rem(margin-bottom, 20px);
+        @include rem(margin-bottom, 10px);
+        // border: 2px solid;
     }
 
     .read-more {
@@ -68,27 +79,42 @@ $card-padding: 46px;
     display: flex;
     flex-direction: column;
     height: $card-height - ($card-padding * 2);
-    background-color: map-get($colors, accent1);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.img-frame--laptop {    
-    background-size: 409px;
-    background-position: -5px 121px;
+.thumbnail {
+    position: absolute;
+    z-index: 1;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+}
+.thumbnail--phone {
+    position: absolute;
+    width: $tmb-phone-width;
+    height: $tmb-phone-height;
+    @include rem(bottom, 30px);
+    
+    // Horizontally center
+    @include centerAbsElt($tmb-phone-width);
+}
+.thumbnail--laptop {
+    position: absolute;
+    width: $tmb-laptop-width;
+    height: $tmb-laptop-height;
+    @include rem(bottom, 70px);
+    
+    // Horizontally center
+    @include centerAbsElt($tmb-laptop-width);
 }
 
-.img-frame--phone {    
-    background-size: 205px;
-    background-position: 50px 120px;
-}
+
 
 
 
 .thumbnail-wrap {
     position: relative;
     display: block;
-    background-color: map-get($colors, white);
+    z-index: 1;
 }
 
 
@@ -98,7 +124,15 @@ $card-padding: 46px;
 
     @include type-caption();
 
-    // border: 1px solid blue;
+    ::ng-deep .subtitle--category .mat-badge-content {
+        background-color: map-get($colors , primary_gray4);
+    }
+
+    
+
+
+
+
 }
 
 
@@ -107,6 +141,7 @@ $card-padding: 46px;
 
 
 .card {
+    position: relative;
     .caption {
         display: block;
     }
@@ -114,10 +149,23 @@ $card-padding: 46px;
         // border: 2px solid blue;
         .subtitle--category {
             font-weight: 500;
-            color: #5A6D5B;
             text-transform: uppercase;
-            @include rem(font-size, 13.5px);
         }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: $bg-deco-width;
+        height: $bg-deco-height;
+        background-color: map-get($colors, primary_gray3);
+
+        // Horizontally center
+        @include centerAbsElt($bg-deco-width);
+        
+        bottom: $card-padding;
+        z-index: 0;
     }
 }
 

@@ -35,7 +35,10 @@ export class ProjectsCardListComponent {
     return `img-${prefix}--${img.type}`;
   }
 
-  getbackgroundImg(item: ProjImg): string {
-    return 'url(' + item.hero + ')';
+  getHeroImg(item: ProjImg): string {
+    return item.hero;
+  }
+  getThumbnailClass(item: ProjImg): string {
+    return `thumbnail--${item.type}`;
   }
 }

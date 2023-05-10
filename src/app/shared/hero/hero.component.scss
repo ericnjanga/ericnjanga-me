@@ -8,20 +8,20 @@
     display: flex;
 
     .title {
-        color: map-get($colors, primary_shade1);
+        color: map-get($colors, primary_gray4);
 
         &.isQuote {
             &::before {
                 content: '\201C'; /* Unicode character for left double quotation mark */
                 @include rem(font-size, 40px);
-                color: map-get($colors, primary_shade1);
+                color: map-get($colors, primary_gray4);
                 margin-right: 5px;
             }
               
             &::after {
                 content: '\201D'; /* Unicode character for right double quotation mark */
                 @include rem(font-size, 40px);
-                color: map-get($colors, primary_shade1);
+                color: map-get($colors, primary_gray4);
                 margin-left: 5px;
             }
         }
@@ -167,12 +167,12 @@
 
 .hero__quote {
     ::ng-deep header {
-        border-left: 1px solid map-get($colors, primary_shade2);
+        border-left: 1px solid map-get($colors, primary_gray2);
 
         a {
-            color: map-get($colors, primary_shade2);
+            color: map-get($colors, primary_gray2);
             .title-wrapper__heading {
-                color: map-get($colors, primary_shade2);
+                color: map-get($colors, primary_gray2);
             }
             &:hover {
                 color: map-get($colors, state3);
@@ -187,7 +187,7 @@
         
         .title-wrapper__subtitle,
         svg {
-            color: map-get($colors, primary_shade2);
+            color: map-get($colors, primary_gray2);
         }
     }
 }

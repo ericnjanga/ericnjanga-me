@@ -3,20 +3,25 @@
     <div class="card-wrapper" *ngFor="let item of source;">
         <div class="card">
 
-            <app-icon class="icon" name="ctaArrow"></app-icon>
-
             <a class="thumbnail-wrap" [routerLink]="projectUrl(item)">
-                <div class="img-frame" 
-                    [ngClass]="imgClass(item.images, 'frame')" 
-                    [style.background-image]="getbackgroundImg(item.images)"
-                    >
+
+                <img 
+                    class="thumbnail"
+                    [ngClass]="getThumbnailClass(item.images)"
+                    [src]="getHeroImg(item.images)"
+                    alt=""
+                >
+
+                
+
+                <div class="img-frame">
                     <div class="text-wrapper">
                         <div class="subtitle">
                             <app-title-caption class="caption" [items]="item.categories"></app-title-caption>
                             <span>|</span>
                             <span class="subtitle--releaseDate">{{getEndDate(item.references) | date:'MMM, YYYY'}}</span>
                         </div>
-                        <h4 class="title">{{item.descriptions.title | textTim:95 }}</h4>
+                        <h4 class="title">{{item.descriptions.title | textTim:40 }}</h4>
                     </div>
                 </div>
             </a>
@@ -24,3 +29,4 @@
     </div>
 </section>
 
+<!-- [style.background-image]="getHeroImg(item.images)" -->

@@ -49,7 +49,7 @@
 
 
     a {
-        color: map-get($colors, primary1);
+        color: map-get($colors, primary_dark1);
         text-decoration: none;
         &:hover {
             .title-wrapper__heading {
@@ -73,7 +73,7 @@
     top: 71px;
     width: 233px;
     height: 75px;
-    background-color: map-get($colors, primary3);
+    background-color: map-get($colors, primary_light1);
 }
 .decoration2 {
     top: 30px;

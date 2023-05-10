@@ -39,7 +39,7 @@
 }
 .title-wrapper {
     a {
-        color: map-get($colors, primary1);
+        color: map-get($colors, primary_dark1);
         text-decoration: none;
         &:hover {
             .title-wrapper__heading {

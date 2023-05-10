@@ -5,7 +5,7 @@
         title="Design and coding of enterprise-level user interfaces." 
         size="large" 
         page="home-slide1"
-        image="./../../../assets/img/project-25-slide1.png"
+        image="./../../../assets/img/project-25-hero.png"
     ></app-hero>
 
     <!-- TODO:
@@ -13,14 +13,14 @@
     -->
     <!-- <app-carousel class="page-section"></app-carousel> -->
 
-
-    <p class="width1 text-center">Since 2006, Eric Njanga has contributed to fortune 500 companies’ digital development.
-    </p>
-    <app-top-clients-list class="page-section"></app-top-clients-list>
+    <h2 class="width1 text-center">Latest work</h2>
+    <app-projects-card-list class="page-section last" [source]="projects"></app-projects-card-list>
 
     <h2 class="width1 text-center">Fluency in UI Development and UX design</h2>
     <app-two-skills class="page-section"></app-two-skills>
 
-    <h2 class="width1 text-center">Latest work</h2>
-    <app-projects-card-list class="page-section last" [source]="projects"></app-projects-card-list>
+
+    <p class="width1 text-center">Since 2006, Eric Njanga has contributed to fortune 500 companies’ digital development.
+    </p>
+    <app-top-clients-list class="page-section"></app-top-clients-list>
 </div>
