@@ -1,0 +1,15 @@
+<div class="poster">
+    <div class="wrapper">
+        <a class="wrapper-container" href="{{elt?.linkedIn}}" title="{{elt?.name}}" target="_blank">
+            <img class="title-wrapper__img" src={{elt?.img}} alt="{{elt?.name}}">
+            <h5 *ngIf="elt" class="title-wrapper__heading">
+                {{elt.name | textTim : 11 }}
+                <app-icon class="icon" name="linkedin"></app-icon>
+            </h5>
+            <div class="title-wrapper__subtitle">
+                {{elt?.title}}
+            </div>
+        </a>
+    </div>
+    <span class="decoration decoration{{decType}}"></span>
+</div>

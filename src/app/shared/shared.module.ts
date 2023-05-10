@@ -20,6 +20,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { TitleCaptionComponent } from './title-caption/title-caption.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { QuoteComponent } from './quote/quote.component';
+import { NicePosterComponent } from './nice-poster/nice-poster.component';
 
 
 
@@ -41,6 +42,7 @@ import { QuoteComponent } from './quote/quote.component';
     TitleCaptionComponent,
     TestimonialComponent,
     QuoteComponent,
+    NicePosterComponent,
   ],
   imports: [
     CommonModule,
@@ -64,6 +66,7 @@ import { QuoteComponent } from './quote/quote.component';
     TitleCaptionComponent,
     TestimonialComponent,
     QuoteComponent,
+    NicePosterComponent,
   ]
 })
 export class SharedModule { }

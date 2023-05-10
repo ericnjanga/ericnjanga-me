@@ -1,15 +1,50 @@
 <!-- [TODO:] Same component in "testimonial.component.html "-->
-<header class="title-wrapper">
-    <!-- <img src={{testimonial.img}} alt=""> -->
-    <div class="intro">
-        <h5 class="title-wrapper__heading">
-            <a href="{{quote?.linkedIn}}" target="_blank">
+<header class="title-wrapper wrapper-container">
+
+    <!-- if there is a link -->
+    <a 
+        *ngIf="quote?.linkedIn"
+        href="{{quote?.linkedIn}}" 
+        target="_blank"
+    >
+        <!-- <img class="title-wrapper__img" src={{quote?.img}} alt=""> -->
+        <div class="intro">
+            <h5 class="title-wrapper__heading">
                 {{quote?.name}}
-                <app-icon class="icon" name="linkedin"></app-icon>
-            </a>
-        </h5>
-        <div class="title-wrapper__subtitle">
-            {{quote?.title}}
+                <app-icon 
+                    *ngIf="quote?.linkedIn"
+                    class="icon" 
+                    name="linkedin"
+                    ></app-icon>
+            </h5>
+            <div class="title-wrapper__subtitle">
+                {{quote?.title}}
+            </div>
+        </div>
+    </a>
+
+
+
+    <!-- No link -->
+    <div *ngIf="!quote?.linkedIn">
+        <div class="intro">
+            <h5 class="title-wrapper__heading">
+                {{quote?.name}}
+                <app-icon 
+                    *ngIf="quote?.linkedIn"
+                    class="icon" 
+                    name="linkedin"
+                    ></app-icon>
+            </h5>
+            <div 
+                class="title-wrapper__subtitle"
+                [ngClass]="titleClass()"
+            >
+                {{quote?.title}}
+            </div>
         </div>
     </div>
 </header>
+
+
+

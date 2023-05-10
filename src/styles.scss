@@ -5,7 +5,8 @@
 
 
 // Font import
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Montserrat:wght@400;500;600;700;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=Maitree&family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Maitree:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
 
 
@@ -26,7 +27,7 @@ html, body { height: 100%; }
 body { 
     margin: 0; 
     @include setFontFamily('body');
-    color: map-get($colors, primary_dark1);
+    color: map-get($colors, primary1);
     @include set-app-background-color();
 }
 

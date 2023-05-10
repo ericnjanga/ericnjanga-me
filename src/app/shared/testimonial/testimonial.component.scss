@@ -8,7 +8,6 @@
     @include rem(padding, 45px);
     background-color: map-get($colors, accent4_white);
 
-
     ::ng-deep app-icon {
         svg {
             color: map-get($colors, primary);
@@ -16,11 +15,11 @@
     }
 }
 
-.title-wrapper {
-    display: flex;
-    align-items: center;
-    @include rem(gap, 12px);
-}
+// .title-wrapper {
+//     display: flex;
+//     align-items: center;
+//     @include rem(gap, 12px);
+// }
 .title-wrapper__img {
     @include rem(width, 60px);
     height: inherit;
@@ -32,24 +31,32 @@
 }
 
 
-.title-wrapper__heading {
-    @include typo-h5();
-    margin-bottom: 0;
-
+//<!-- [TODO:] Same component in "quote.component.html "-->
+.wrapper-container {
+    display: flex;
+    align-items: center;
+    @include rem(gap, 12px);
+}
+.title-wrapper {
     a {
-        color: map-get($colors, primary_dark1);
+        color: map-get($colors, primary1);
         text-decoration: none;
         &:hover {
-            color: map-get($colors, state4);
-            text-decoration: underline;
-
-            ::ng-deep app-icon {
-                svg {
-                    color: map-get($colors, state4);
+            .title-wrapper__heading {
+                color: map-get($colors, state4);
+                text-decoration: underline;
+                ::ng-deep app-icon {
+                    svg {
+                        color: map-get($colors, state4);
+                    }
                 }
             }
         }
     }
+}
+.title-wrapper__heading {
+    @include typo-h5();
+    margin-bottom: 0;
 
     .icon {
         position: relative;
@@ -62,3 +69,4 @@
     color: map-get($colors, gray0);
     font-weight: 500;
 }
+//<!-- [TODO:] Same component in "quote.component.html "-->

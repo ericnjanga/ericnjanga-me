@@ -33,7 +33,7 @@ img {
 }
 .title-caption {
     margin-bottom: 0;
-    color: map-get($colors, primary_dark3);
+    color: map-get($colors, primary2);
     @include typo-titleCaption();
 }
 

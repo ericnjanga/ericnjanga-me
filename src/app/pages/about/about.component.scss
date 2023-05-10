@@ -47,25 +47,52 @@
     display: flex;
     @include rem(gap, 60px);
     .yyy {
-        @include rem(padding-top, 50px);
         max-width: 380px;
     }
     .vdsvs {
         display: flex;
         width: 100%;
         max-width: 700px;
-        min-height: 510px;
+        justify-content: end;
+        @include rem(gap, 30px);
     }
-    .bg-grid {
-        background: #AFD6C9 url(./../../../assets/img/bg1.png) repeat;
-        background-size: cover;
+
+    .mentors__quote {
+        display: block;
+        @include rem(margin-top, 40px);
+
+        ::ng-deep {
+            .title-wrapper {
+                border-left: 1px solid map-get($colors, state3);
+            }
+            .title-wrapper__heading,
+            .title-wrapper__subtitle {
+                font-family: 'Maitree', serif;
+                color: map-get($colors, state3);
+
+                // quotes ...
+                &::before {
+                    color: map-get($colors, state3);
+                }
+                &::after {
+                    color: map-get($colors, state3);
+                }
+            }
+            .title-wrapper__heading {
+                @include rem(margin-bottom, 10px);
+            }
+        }
     }
 
     .vertical-list {
-
         flex-direction: column;
-        .item {
-            @include rem(margin-bottom, 40px);
-        }
     }
+}
+
+.mentors {
+    .title-caption { 
+        color: map-get($colors, primary_shade2);
+    }
+    color: map-get($colors, primary_shade1);
+    background-color: map-get($colors , primary);
 }

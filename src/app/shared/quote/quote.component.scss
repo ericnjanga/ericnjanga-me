@@ -1,25 +1,35 @@
 @import './../../../assets/styles/mixins';
 
 .title-wrapper {
-    display: flex;
-    align-items: center;
-    @include rem(gap, 12px);
     @include rem(padding-left, 20px);
     border-left: 1px solid map-get($colors, gray0);
 }
 
+.title-wrapper__heading,
+.title-wrapper__subtitle {
+    font-family: 'Maitree', serif;
+}
 
+//<!-- [TODO:] Same component in "testimonial.component.html "-->
+.wrapper-container {
+    display: flex;
+    align-items: center;
+    @include rem(gap, 12px);
+}
+.title-wrapper {
+    a {
+        color: map-get($colors, primary1);
+        text-decoration: none;
+        &:hover {
+            .title-wrapper__heading {
+                text-decoration: underline;
+            }
+        }
+    }
+}
 .title-wrapper__heading {
     @include typo-h5();
     margin-bottom: 0;
-
-    a {
-        color: map-get($colors, primary_dark1);
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
 
     .icon {
         position: relative;
@@ -31,4 +41,28 @@
 .title-wrapper__subtitle {
     color: map-get($colors, gray0);
     font-weight: 500;
+
+
+    &.isQuote {
+        &::before {
+            content: '\201C'; /* Unicode character for left double quotation mark */
+            @include rem(font-size, 25px);  
+            color: map-get($colors, primary_shade1);
+            line-height: 0;
+            position: relative;
+            margin-right: 5px;
+            top: 7px;
+        }
+          
+        &::after {
+            content: '\201D'; /* Unicode character for right double quotation mark */
+            @include rem(font-size, 25px);  
+            color: map-get($colors, primary_shade1);
+            line-height: 0;
+            position: relative;
+            margin-left: 5px;
+            top: 7px;
+        }
+    }
 }
+//<!-- [TODO:] Same component in "testimonial.component.html "-->

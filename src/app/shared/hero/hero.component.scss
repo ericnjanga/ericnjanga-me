@@ -169,12 +169,23 @@
     ::ng-deep header {
         border-left: 1px solid map-get($colors, primary_shade2);
 
-        .title-wrapper__heading a {
+        a {
             color: map-get($colors, primary_shade2);
+            .title-wrapper__heading {
+                color: map-get($colors, primary_shade2);
+            }
+            &:hover {
+                color: map-get($colors, state3);
+                .title-wrapper__heading {
+                    color: map-get($colors, state3);
+                }
+                svg {
+                    color: map-get($colors, state3);
+                }
+            }
         }
-        .title-wrapper__subtitle {
-            color: map-get($colors, primary_shade2);
-        }
+        
+        .title-wrapper__subtitle,
         svg {
             color: map-get($colors, primary_shade2);
         }

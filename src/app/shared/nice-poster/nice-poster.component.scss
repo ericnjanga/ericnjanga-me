@@ -1,0 +1,83 @@
+@import './../../../assets/styles/mixins';
+
+.poster {
+    position: relative;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    width: 265px;
+    height: 380px;
+    background-color: map-get($colors, white);
+    box-shadow: 5px 5px 0px #131A18;
+    .title-wrapper__img {
+        @include rem(margin-bottom, 15px);
+    }
+    .title-wrapper__heading {
+        margin-bottom: 0;
+        @include typo-h5();
+
+        .icon {
+            position: relative;
+            top: -5px;
+            left: 6px;
+        }
+        
+
+
+
+        ::ng-deep app-icon {
+            svg {
+                color: map-get($colors, primary);
+            }    
+        }
+
+    }
+    .title-wrapper__subtitle {
+       @include typo-caption1();
+       font-weight: 500;
+       color: map-get($colors, gray1);
+    }
+}
+
+
+
+.wrapper {
+    position: relative;
+    @include rem(top, 50px);
+    width: 157px;
+    z-index: 2;
+
+
+    a {
+        color: map-get($colors, primary1);
+        text-decoration: none;
+        &:hover {
+            .title-wrapper__heading {
+                color: map-get($colors, state4);
+                text-decoration: underline;
+                ::ng-deep app-icon {
+                    svg {
+                        color: map-get($colors, state4);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.decoration {
+    position: absolute;
+    display: block;
+}
+.decoration1 {
+    top: 71px;
+    width: 233px;
+    height: 75px;
+    background-color: map-get($colors, primary3);
+}
+.decoration2 {
+    top: 30px;
+    width: 75px;
+    height: 164px;
+    background-color: map-get($colors, state3);
+}

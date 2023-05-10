@@ -8,4 +8,10 @@ import { Testimonial } from 'src/app/projects/model/testimonial';
 })
 export class QuoteComponent {
   @Input() quote: Testimonial | undefined;
+  @Input() displayQuote: boolean = false;
+
+
+  titleClass() {
+    return this.displayQuote ? 'isQuote' : '';
+  }
 }
