@@ -3,28 +3,44 @@
     <div class="card-wrapper" *ngFor="let item of source;">
         <article class="card">
 
-            <a class="thumbnail-wrap" [routerLink]="projectUrl(item)">
+            <div class="subtitle">
+                <app-title-caption class="caption" [items]="item.categories"></app-title-caption>
+                <span>|</span>
+                <span class="title-caption--releaseDate">{{getEndDate(item.references) | date:'MMM, YYYY'}}</span>
+            </div>
 
+            <h4 class="title">
+                <!-- Display tooltip only if title length is above the limit -->
+                <a 
+                    *ngIf="item.descriptions.title.length >= titleMaxLength"
+                    [routerLink]="projectUrl(item)"
+                    [matTooltip]="item.descriptions.title" 
+                    [matTooltipPosition]="position.value!"
+                >
+                    {{item.descriptions.title | textTim:titleMaxLength }}
+                </a>
+
+                <!-- Don't display tooltip otherwise -->
+                <a 
+                    *ngIf="item.descriptions.title.length < titleMaxLength"
+                    [routerLink]="projectUrl(item)"
+                >
+                    {{item.descriptions.title}}
+                </a>
+            </h4>
+
+            <a 
+                class="thumbnail-wrap" 
+                [routerLink]="projectUrl(item)"
+            >
                 <img 
                     class="thumbnail"
                     [ngClass]="getThumbnailClass(item.images)"
                     [src]="getHeroImg(item.images)"
                     alt=""
                 >
-
-                
-
-                <div class="img-frame">
-                    <div class="text-wrapper">
-                        <div class="subtitle">
-                            <app-title-caption class="caption" [items]="item.categories"></app-title-caption>
-                            <span>|</span>
-                            <span class="subtitle--releaseDate">{{getEndDate(item.references) | date:'MMM, YYYY'}}</span>
-                        </div>
-                        <h4 class="title">{{item.descriptions.title | textTim:40 }}</h4>
-                    </div>
-                </div>
             </a>
+
         </article>
     </div>
 </section>

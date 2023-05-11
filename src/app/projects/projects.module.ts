@@ -8,6 +8,7 @@ import { ProjectsCardListComponent } from './projects-card-list/projects-card-li
 import { SharedModule } from '../shared/shared.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
@@ -23,6 +24,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     SharedModule,
     MatIconModule,
     MatBadgeModule,
+    MatTooltipModule,
   ],
   exports: [
     ProjectsCardListComponent,

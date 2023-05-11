@@ -1,17 +1,27 @@
 @import './../../../assets/styles/variables';
 @import './../../../assets/styles/mixins';
 
-.subtitle--category {
-    // @include rem(font-size, 13.5px);
-    &.hasBadge {
-        margin-right: 20px;
-    }
+.title-caption {
+    display: flex;
+    align-items: center;
+    @include rem(gap, 5px);
+    @include rem(border-radius, 10px);
 
-    .mat-badge-content {
-        color: map-get($colors, gray1);
-        font-weight: 500;
+    // .mat-badge-content {
+    //     color: map-get($colors, gray1);
+    //     font-weight: 500;
+    // }
+
+    &.hasInfo {
+        font-weight: 600;
     }
 }
-.subtitle--releaseDate {
+.title-caption--releaseDate {
     @include rem(font-size, 15px);
+}
+
+.icon ::ng-deep svg {
+    @include rem(border-radius, 100px);
+    border: 3px solid transparent;
+    @include rem(width, 23px);
 }

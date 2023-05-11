@@ -1,10 +1,15 @@
 <!-- (For only 1 category) Don't render a badge -->
-<span *ngIf="items.length == 1" class="subtitle--category">
+<span *ngIf="items.length == 1" class="title-caption">
     {{items[0].title}}
 </span>
 
 <!-- (More than 1 category) Render a badge -->
-<span *ngIf="items.length > 1" class="subtitle--category hasBadge"
-    matBadge="+{{items.length - 1}}" matBadgeOverlap="false">
-    {{items[0].title}}
+<span 
+    *ngIf="items.length > 1" 
+    class="title-caption hasInfo"
+    matTooltipPosition="above"
+    matTooltip="This project contains elements of {{enumCategories(items)}}" 
+>
+    <app-icon class="icon" name="info lg"></app-icon>
+    {{items[0].title | textTim:10 }} +{{items.length - 1}}
 </span>

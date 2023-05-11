@@ -18,6 +18,9 @@ $ng-card: 5;
 }
 
 .card {
+    display: flex;
+    align-items: center;
+
     width: $card-width;
     height: $card-height;
     background-color: transparent;
@@ -25,11 +28,20 @@ $ng-card: 5;
 
    
 
-    .title {
-
+    .title-caption {
+        @include rem(margin-bottom, 10px);
+    }
+    .title-caption, .thumbnail, button {
+        z-index: 1;
+    }
+    .thumbnail {
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     &::after {
+        position: absolute;
+        bottom: 0;
         content: '';
         width: 265px;
         height: 296px;

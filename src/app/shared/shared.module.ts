@@ -17,6 +17,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TextTimPipe } from './pipes/text-trim/text-tim.pipe';
 import { CallToActionParamsComponent } from './call-to-action-params/call-to-action-params.component';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { TitleCaptionComponent } from './title-caption/title-caption.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { QuoteComponent } from './quote/quote.component';
@@ -50,6 +51,7 @@ import { NicePosterComponent } from './nice-poster/nice-poster.component';
     MatIconModule,
     MatProgressSpinnerModule,
     MatBadgeModule,
+    MatTooltipModule,
   ],
   exports: [
     IconComponent,

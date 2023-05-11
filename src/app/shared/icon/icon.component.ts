@@ -12,7 +12,8 @@ export class IconComponent {
   isGitHub: boolean = false;
   isLinkedIn: boolean = false;
   isIXDF: boolean = false;
-  isInfo: boolean = false;
+  isInfoFill: boolean = false;
+  isInfoLg: boolean = false;
   isArrowRight: boolean = false;
   isCTAarrow: boolean = false;
   isLogo: boolean = false;
@@ -39,8 +40,12 @@ export class IconComponent {
         this.isIXDF = true;
         break;
 
-      case "info":
-        this.isInfo = true;
+      case "info fill":
+        this.isInfoFill = true;
+        break;
+
+      case "info lg":
+        this.isInfoLg = true;
         break;
 
       case "arrowRight":

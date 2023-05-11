@@ -1,6 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Project, Reference, ProjImg } from '../model/project';
+import {FormControl} from '@angular/forms';
+import {TooltipPosition} from '@angular/material/tooltip';
 import { fadeIn } from '../services/animations';
+import { Category } from '../model/category';
 
 @Component({
   selector: 'app-projects-card-list',
@@ -9,6 +12,9 @@ import { fadeIn } from '../services/animations';
 })
 export class ProjectsCardListComponent {
   @Input() source: Project[] = [];
+  titleMaxLength = 40;
+  positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
+  position = new FormControl(this.positionOptions[0]);
 
   projectUrl(elt: Project): string {
     return `/projects/${elt.pageUrl}`;
