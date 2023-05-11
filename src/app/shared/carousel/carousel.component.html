@@ -1,1 +1,22 @@
-<p>Carousel</p>
+
+
+
+<dialog #myDialog>
+    <h3>Modal title</h3>
+  <p>This is the content of the modal dialog.</p>
+  <button (click)="closeDialog()">Close Dialog</button>
+</dialog>
+
+
+
+<div class="wrapper">
+    <div class="scroll-panel">
+        <div class="card" *ngFor="let elt of list">
+            <h5 class="title">Title</h5>
+            <button (click)="openDialog()" id="open-dialog">Open Dialog</button>
+            <!-- <img _ngcontent-gad-c16="" alt="" class="thumbnail" src="./../../../assets/img/project-26-hero.png">
+            <div>????</div> -->
+        </div>
+
+    </div>
+</div>

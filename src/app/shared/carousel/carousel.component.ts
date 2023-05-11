@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef  } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class CarouselComponent {
 
+  @ViewChild('myDialog', { static: true }) myDialog: any;
+
+  list: number[] = [1,2,3,4,5];
+
+ 
+
+  // constructor() { 
+  //   this.myDialog = new HTMLDialogElement();
+  // }
+
+  openDialog() {
+    this.myDialog.nativeElement.showModal();
+  }
+
+  closeDialog() {
+    this.myDialog.nativeElement.close();
+  }
 }

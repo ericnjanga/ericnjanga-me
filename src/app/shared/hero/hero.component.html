@@ -17,23 +17,39 @@
                 ----------------------------
             -->
             <div *ngIf="size=='large'" class="cta-wrapper">
-                <app-call-to-action-params 
+                <a class="btn-primary" routerLink="/projects">Latest work</a>
+                <!-- <app-call-to-action-params 
                     link="/projects" 
                     label="See latest work" 
                     status="button"
                     qParam="all"
                 >
-                    See latest work
-                </app-call-to-action-params>
+                    Latest work
+                </app-call-to-action-params> -->
             </div>
             <!-- ---------------------------- -->
         </div>
 
         <img 
+            *ngIf="size=='small'"
             [ngClass]="imgClass(imageType)" 
             class="img" 
             src={{image}} 
             alt="">
+
+
+        <div *ngIf="size=='large'">
+            <img 
+                class="img img--phone" 
+                src="./../../../assets/img/project-25-hero.png"
+                alt=""
+            >
+            <img 
+                class="img img--laptop" 
+                src="./../../../assets/img/project-26-hero.png"
+                alt=""
+            >
+        </div>
     </div>
 
     <span class="background"></span>

@@ -1,0 +1,38 @@
+@import './../../../assets/styles/mixins';
+
+$card-width: 295px;
+$card-height: 340px;
+$gap: 60px;
+$ng-card: 5;
+
+.wrapper {
+    border: 2px solid;
+    overflow-x: scroll;
+
+    .scroll-panel {
+        display: flex;
+        @include rem(gap, $gap);
+        border: 2px solid turquoise;
+        width: ($card-width * $ng-card) + ($gap * ($ng-card - 1));
+    }
+}
+
+.card {
+    width: $card-width;
+    height: $card-height;
+    background-color: transparent;
+    border: 1px solid transparent;
+
+   
+
+    .title {
+
+    }
+
+    &::after {
+        content: '';
+        width: 265px;
+        height: 296px;
+        background-color: #fff;
+    }
+}
