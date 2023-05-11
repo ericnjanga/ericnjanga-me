@@ -6,30 +6,61 @@ $gap: 60px;
 $ng-card: 5;
 
 .wrapper {
-    border: 2px solid;
+    // border: 2px solid;
     overflow-x: scroll;
 
     .scroll-panel {
         display: flex;
         @include rem(gap, $gap);
-        border: 2px solid turquoise;
+        // border: 2px solid turquoise;
         width: ($card-width * $ng-card) + ($gap * ($ng-card - 1));
     }
 }
 
 .card {
+    $vertical-gap: 13px;
+
+    // ...
     display: flex;
     align-items: center;
-
+    justify-content: center;
     width: $card-width;
     height: $card-height;
+    border: 0px solid;
     background-color: transparent;
-    border: 1px solid transparent;
+
+    // Decoration
+    &::after {
+        position: absolute;
+        @include rem(bottom, $vertical-gap);
+        content: '';
+        width: 265px;
+        height: ($card-height - ($vertical-gap * 2));
+        @include rem(border-radius, 4px);
+        background-color: #fff;
+    }
+
+    .card-top {
+        position: absolute;
+        @include rem(top, $vertical-gap * 2);
+    }
+    .card-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        border: 0px solid transparent;
+        background-color: transparent;
+
+        .MuiTooltip-tooltip {
+            background-color: #f7f7f7;
+          }
+    }
 
    
 
     .title-caption {
-        @include rem(margin-bottom, 10px);
+        margin-bottom: 0;
     }
     .title-caption, .thumbnail, button {
         z-index: 1;
@@ -37,14 +68,21 @@ $ng-card: 5;
     .thumbnail {
         margin-top: auto;
         margin-bottom: auto;
+        filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+    }
+}
+
+.card:hover {
+    // hide title
+    .card-top {
+        visibility: hidden;
     }
 
+    // change background color
+    background-color: map-get($colors, primary_gray3);
+
+    // change "decoration" background color
     &::after {
-        position: absolute;
-        bottom: 0;
-        content: '';
-        width: 265px;
-        height: 296px;
-        background-color: #fff;
+        background-color: map-get($colors, primary_gray1);
     }
 }

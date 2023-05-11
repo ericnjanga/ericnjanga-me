@@ -55,6 +55,28 @@ img {
 
 
 
+
+
+
+/**
+ *
+ * Angular Material - Toolip customization
+ * --------------------------------------------------
+*/
+.custom-tooltip-1 {
+    .mdc-tooltip__surface {
+        background-color: map-get($colors, primary_dark2)!important;
+    }
+}
+
+.custom-tooltip-2 {
+    .mdc-tooltip__surface {
+        color: map-get($colors, primary_dark2)!important;
+        background-color: map-get($colors, state3)!important;
+    }
+}
+
+
 /**
  *
  * Bootstrap grid

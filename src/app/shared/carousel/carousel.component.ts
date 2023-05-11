@@ -10,7 +10,6 @@ export class CarouselComponent {
   @ViewChild('myDialog', { static: true }) myDialog: any;
 
   list: number[] = [1,2,3,4,5];
-
  
 
   // constructor() { 

@@ -15,6 +15,7 @@
                     *ngIf="item.descriptions.title.length >= titleMaxLength"
                     [routerLink]="projectUrl(item)"
                     [matTooltip]="item.descriptions.title" 
+                    matTooltipClass="custom-tooltip-1"
                     [matTooltipPosition]="position.value!"
                 >
                     {{item.descriptions.title | textTim:titleMaxLength }}

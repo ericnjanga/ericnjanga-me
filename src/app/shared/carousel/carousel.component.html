@@ -12,9 +12,18 @@
 <div class="wrapper">
     <div class="scroll-panel">
         <div class="card" *ngFor="let elt of list">
-            <h5 class="title-caption">Title</h5>
-            <button (click)="openDialog()" id="open-dialog">Open Dialog</button>
-            <img _ngcontent-gad-c16="" alt="" class="thumbnail" src="./../../../assets/img/project-26-hero.png">
+            <h5 class="title-caption card-top text-center">Title</h5>
+            <button class="card-bottom" (click)="openDialog()">
+                <img 
+                    class="thumbnail" 
+                    src="./../../../assets/img/project-26-hero.png"
+                    matTooltip="Learn more" 
+                    matTooltipClass="custom-tooltip-2"
+                    matTooltipPosition="above"
+                    alt=""
+                >
+            </button>
+            
         </div>
 
     </div>
