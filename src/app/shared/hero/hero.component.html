@@ -17,7 +17,13 @@
                 ----------------------------
             -->
             <div *ngIf="size=='large'" class="cta-wrapper">
-                <a class="btn-primary" routerLink="/projects">Latest work</a>
+                <a 
+                    class="button-primary button-primary--{{size}}" 
+                    routerLink="/projects"
+                >
+                    Latest work
+                    <app-icon class="icon" name="arrowRight"></app-icon>
+                </a>
                 <!-- <app-call-to-action-params 
                     link="/projects" 
                     label="See latest work" 

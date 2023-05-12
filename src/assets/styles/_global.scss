@@ -92,3 +92,44 @@ img {
     padding-right: map-get($gap, lg);
     padding-left: map-get($gap, lg);
 }
+
+
+
+
+
+
+/**
+ *
+ * BUTTONS
+ * --------------------------------------------------
+*/
+.button-primary {
+    display: flex;
+    @include rem(gap, 10px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: map-get($colors, state3);
+
+    .icon {
+        display: block;
+        color: map-get($colors, state3);
+        @include rem(width, 20px);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: map-get($colors, state3);
+
+        .icon {
+            transform: translateX(10px);
+        }
+    }
+}
+.button-primary--large {
+    @include rem(font-size, 20px);
+
+    .icon {
+        @include rem(width, 30px);
+    }
+}
