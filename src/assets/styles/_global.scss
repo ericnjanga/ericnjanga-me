@@ -133,3 +133,49 @@ img {
         @include rem(width, 30px);
     }
 }
+
+
+
+
+
+
+/**
+ *
+ * BULLET LIST
+ * --------------------------------------------------
+*/
+
+
+
+
+.nice-bullet-list { 
+    // border: 1px solid #ccc;
+    list-style: none;
+
+
+    li { 
+        // border: 1px solid #a01919;
+        position: relative;
+        @include rem(margin-top, 10px);
+        margin-right: 0px;
+        @include rem(margin-bottom, 15px);
+        margin-left: 0px;
+        @include rem(padding-left, 20px);
+    }
+  
+    li::before { border: 1px solid #0e42bb;
+        content: "";
+        display: inline-block;
+        position: absolute;
+        @include rem(width, 10px);
+        @include rem(height, 10px);
+        @include rem(left, -15px);
+        @include rem(top, 6px);
+        // left: -15px;
+        // top: 6px;
+        // width: 10px;
+        // height: 10px;
+        background-color: black;
+        border-radius: 50%;
+    }
+}
