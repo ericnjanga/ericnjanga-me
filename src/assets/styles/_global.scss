@@ -136,6 +136,37 @@ img {
 
 
 
+.button-secondary {
+    padding-left: 0;
+    padding-right: 0;
+    border-width: 0px;
+    font-weight: 500;
+    text-decoration: underline;
+    background-color: transparent;
+    color: map-get($colors, gray1);
+
+    &:hover{
+        text-decoration: none;
+    }
+
+    .icon svg {
+        @include rem(width, 16px);
+    }
+}   
+
+.button-secondary--up {
+    .icon svg {
+        transform: rotate(-90deg);
+    }
+}
+
+.button-secondary--down {
+    .icon svg {
+        transform: rotate(90deg);
+    }
+}
+
+
 
 
 

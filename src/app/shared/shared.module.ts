@@ -22,6 +22,8 @@ import { TitleCaptionComponent } from './title-caption/title-caption.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { QuoteComponent } from './quote/quote.component';
 import { NicePosterComponent } from './nice-poster/nice-poster.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -52,6 +54,8 @@ import { NicePosterComponent } from './nice-poster/nice-poster.component';
     MatProgressSpinnerModule,
     MatBadgeModule,
     MatTooltipModule,
+    BrowserModule,
+    BrowserAnimationsModule,
   ],
   exports: [
     IconComponent,

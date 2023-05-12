@@ -17,24 +17,33 @@
     </header>
 
 
-    <div>
-        <p *ngIf="!showFullText">{{ trimmedText }}</p>
-        <div *ngIf="showFullText" [innerHTML]="testimonial.text"></div>
-        <button (click)="toggleText()">
-          {{ showFullText ? 'Read less' : 'Read more' }}
-        </button>
-        <!-- <p *ngIf="showFullText">{{ fullText }}</p> -->
 
-
-
-
-        <!-- <div [innerHTML]="testimonial.text"></div> -->
-
+    
+    <div class="testimonial-body">
+        <div [@slideUpDown]="showFullText ? 'hidden' : 'visible'">
+            <p>{{ trimmedText }}</p>
+        </div>
+        <div [@slideUpDown]="showFullText ? 'visible' : 'hidden'">
+            <div [innerHTML]="testimonial.text"></div>
+        </div>
     </div>
+
+
+    <button 
+        class="button-secondary" 
+        (click)="toggleText()"
+        [ngClass]="arrowDirection(showFullText)"
+    >
+        {{ showFullText ? 'Read less' : 'Read more' }}
+        <app-icon 
+            class="icon" 
+            name="arrowRight"
+        ></app-icon>
+    </button>
+
+     
 
 
 
 
 </div>
-
-

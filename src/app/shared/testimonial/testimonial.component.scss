@@ -2,10 +2,24 @@
 
 
 
+
+.open-close-container {
+    // border: 1px solid #dddddd;
+    // margin-top: 1em;
+    // padding: 20px 20px 0px 20px;
+    // color: #000000;
+    // font-weight: bold;
+    // font-size: 20px;
+  }
+
+
+
+
 .testimonial {
     width: 100%;
     max-width: 800px;
     @include rem(padding, 45px);
+    overflow: hidden;
     background-color: map-get($colors, accent4_white);
 
     ::ng-deep app-icon {
@@ -13,6 +27,10 @@
             color: map-get($colors, primary);
         }
     }
+}
+
+.testimonial-body {
+    @include rem(margin-top, 10px);
 }
 
 // .title-wrapper {
