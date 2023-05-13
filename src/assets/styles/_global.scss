@@ -63,6 +63,31 @@
 
 
 
+
+
+
+
+
+@layer components {
+    .scrallable-area--wrapper {
+        overflow-x: scroll;
+    }
+    .scrallable-area--pagination {
+        display: flex;
+        justify-content: end;
+    }
+    .scrallable-area--content {}
+}
+
+
+
+
+
+
+
+
+
+
 /**
  *
  * Angular Material - Toolip customization

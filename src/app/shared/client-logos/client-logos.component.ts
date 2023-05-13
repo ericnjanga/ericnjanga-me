@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -10,9 +10,9 @@ export class ClientLogosComponent {
   // Don't sign a specific type to the child view 
   // (it will be casted as a "nativeElement" later in the code)
   @ViewChild('scrollable', { static: true }) scrollable: any;
+  scrollValue = 0;
 
   list: number[] = [1,2,3,4,5,6,7,8,9];
-  scrollValue = 0;
 
   imgClass(index: number) {
     return {
@@ -21,6 +21,10 @@ export class ClientLogosComponent {
     }
   }
 
+  /**
+   * Make the scrollable area scroll left or right
+   * @param direction 
+   */
   scroll(direction: number) {
     const container = this.scrollable.nativeElement;
     const step = 200;

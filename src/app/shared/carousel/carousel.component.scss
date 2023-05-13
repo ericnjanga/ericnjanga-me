@@ -5,17 +5,20 @@ $card-height: 340px;
 $gap: 60px;
 $ng-card: 5;
 
-.wrapper {
-    // border: 2px solid;
-    overflow-x: scroll;
 
-    .scroll-panel {
-        display: flex;
-        @include rem(gap, $gap);
-        // border: 2px solid turquoise;
-        width: ($card-width * $ng-card) + ($gap * ($ng-card - 1));
-    }
+:host {
+    position: relative;
+    display: block;
+    padding-top: 50px;
 }
+
+.scrallable-area--content {
+    display: flex;
+    @include rem(gap, $gap);
+    // border: 2px solid turquoise;
+    width: ($card-width * $ng-card) + ($gap * ($ng-card - 1));
+}
+
 
 .card {
     $vertical-gap: 13px;
@@ -44,6 +47,7 @@ $ng-card: 5;
         position: absolute;
         @include rem(top, $vertical-gap * 2);
     }
+
     .card-bottom {
         display: flex;
         align-items: center;
@@ -54,17 +58,21 @@ $ng-card: 5;
 
         .MuiTooltip-tooltip {
             background-color: #f7f7f7;
-          }
+        }
     }
 
-   
+
 
     .title-caption {
         margin-bottom: 0;
     }
-    .title-caption, .thumbnail, button {
+
+    .title-caption,
+    .thumbnail,
+    button {
         z-index: 1;
     }
+
     .thumbnail {
         margin-top: auto;
         margin-bottom: auto;
@@ -73,6 +81,7 @@ $ng-card: 5;
 }
 
 .card:hover {
+
     // hide title
     .card-top {
         visibility: hidden;

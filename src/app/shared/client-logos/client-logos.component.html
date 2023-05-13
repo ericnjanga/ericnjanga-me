@@ -1,4 +1,4 @@
-<nav class="pagination">
+<nav class="scrallable-area--pagination">
     <button class="btn scroll-btn left" (click)="scroll(-1)">
         <app-icon class="icon" name="arrowLeft"></app-icon>
     </button>
@@ -8,8 +8,8 @@
     </button>
 </nav>
 
-<div class="client-logos parent-wrapper" #scrollable>
-    <ul class="wrapper list-inline">
+<div class="scrallable-area--wrapper" #scrollable>
+    <ul class="scrallable-area--content list-inline">
         <li *ngFor="let item of list; index as i; last as isLast" class="list-inline-item" [class.is-last]="isLast">
             <img class="company-logo" [ngClass]="imgClass(i + 1)" src="./../../../assets/img/milestone{{i + 1}}.png" />
         </li>

@@ -14,25 +14,16 @@ $total-length: $with-sm + ($with-md * 6) + $with-lg + ($gap * $ngLogos);
     padding-top: 50px;
 }
 
-.parent-wrapper {
-    overflow-x: scroll;
-}
 
 
-@layer components.buttons {
+// @layer components.buttons {
 
-}
+// }
 
 
 @layer components.company-logos {
 
-    .pagination {
-        display: flex;
-        justify-content: end;
-    }
-
-
-    .wrapper {
+    .scrallable-area--content {
         @include rem(width, $total-length);
     }
 
