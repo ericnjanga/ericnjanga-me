@@ -14,6 +14,7 @@ export class IconComponent {
   isIXDF: boolean = false;
   isInfoFill: boolean = false;
   isInfoLg: boolean = false;
+  isArrowLeft: boolean = false;
   isArrowRight: boolean = false;
   isCTAarrow: boolean = false;
   isLogo: boolean = false;
@@ -46,6 +47,10 @@ export class IconComponent {
 
       case "info lg":
         this.isInfoLg = true;
+        break;
+
+      case "arrowLeft":
+        this.isArrowLeft = true;
         break;
 
       case "arrowRight":

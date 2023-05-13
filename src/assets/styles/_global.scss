@@ -1,14 +1,17 @@
 @import './variables';
 
 
-body {
-    padding-top: map-get($gap, appBar);
-}
+@layer base {
 
-img {
-    max-width: 100%;
+    body {
+        padding-top: map-get($gap, appBar);
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
 }
-
 
 
 .page-section {

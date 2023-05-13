@@ -1,6 +1,17 @@
-<ul class="wrapper list-inline">
-    <li *ngFor="let item of list; index as i; last as isLast" 
-    class="list-inline-item" [class.is-last]="isLast">
-        <img class="company-logo" [ngClass]="imgClass(i + 1)" src="./../../../assets/img/milestone{{i + 1}}.png" />
-    </li>
-</ul>
+<nav class="pagination">
+    <button class="btn scroll-btn left" (click)="scroll(-1)">
+        <app-icon class="icon" name="arrowLeft"></app-icon>
+    </button>
+
+    <button class="btn scroll-btn right" (click)="scroll(1)">
+        <app-icon class="icon" name="arrowRight"></app-icon>
+    </button>
+</nav>
+
+<div class="client-logos parent-wrapper" #scrollable>
+    <ul class="wrapper list-inline">
+        <li *ngFor="let item of list; index as i; last as isLast" class="list-inline-item" [class.is-last]="isLast">
+            <img class="company-logo" [ngClass]="imgClass(i + 1)" src="./../../../assets/img/milestone{{i + 1}}.png" />
+        </li>
+    </ul>
+</div>
