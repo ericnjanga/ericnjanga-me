@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopClientsListComponent } from './top-clients-list.component';
+import { ClientLogosComponent } from './client-logos.component';
 
-describe('TopClientsListComponent', () => {
-  let component: TopClientsListComponent;
-  let fixture: ComponentFixture<TopClientsListComponent>;
+describe('ClientLogosComponent', () => {
+  let component: ClientLogosComponent;
+  let fixture: ComponentFixture<ClientLogosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TopClientsListComponent ]
+      declarations: [ ClientLogosComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TopClientsListComponent);
+    fixture = TestBed.createComponent(ClientLogosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

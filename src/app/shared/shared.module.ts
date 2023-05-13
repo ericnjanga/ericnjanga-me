@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { IconComponent } from "./icon/icon.component";
 import { Test1Component } from './test1/test1.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { TopClientsListComponent } from './top-clients-list/top-clients-list.component';
+import { ClientLogosComponent } from './client-logos/client-logos.component';
 import { TwoSkillsComponent } from './two-skills/two-skills.component';
 import { CallToActionComponent } from './call-to-action/call-to-action.component';
 import { LogoComponent } from './logo/logo.component';
@@ -30,7 +30,7 @@ import { NicePosterComponent } from './nice-poster/nice-poster.component';
     IconComponent,
     Test1Component,
     CarouselComponent,
-    TopClientsListComponent,
+    ClientLogosComponent,
     TwoSkillsComponent,
     CallToActionComponent,
     LogoComponent,
@@ -56,7 +56,7 @@ import { NicePosterComponent } from './nice-poster/nice-poster.component';
   exports: [
     IconComponent,
     CarouselComponent,
-    TopClientsListComponent,
+    ClientLogosComponent,
     TwoSkillsComponent,
     CallToActionComponent,
     CallToActionParamsComponent,

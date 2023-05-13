@@ -1,0 +1,28 @@
+@import './../../../assets/styles/mixins';
+
+:host {
+    display: block;
+}
+
+
+@layer components.company-logos {
+    .company-logo {
+        @include rem(border-radius, 4px);
+    }
+    .company-logo--width1 {
+        width: 135px;
+    }
+    .company-logo--width2 {
+        width: 188px;
+    }
+    img {
+        width: 113px;
+        max-width: 188px;
+    }
+    .list-inline-item {
+        margin-right: 1.375rem;
+        &.is-last {
+            margin-right: 0;
+        }
+    }
+}
