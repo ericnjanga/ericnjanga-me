@@ -8,7 +8,7 @@
     @include rem(border-radius, 10px);
 
     // .mat-badge-content {
-    //     color: map-get($colors, gray1);
+    //     @include color(gray1);
     //     font-weight: 500;
     // }
 

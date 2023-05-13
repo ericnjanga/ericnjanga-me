@@ -1,5 +1,6 @@
 @import './../../../assets/styles/mixins';
 
+
 .img-w1 {
     @include rem(width, 92.58px);
 }
@@ -28,7 +29,7 @@
 .excellence {
     p {
         @include rem(margin-bottom, 35px);
-        color: map-get($colors, gray1);
+        @include color(gray1);
         &:last-of-type {
             margin-bottom: 0;
         }
@@ -68,14 +69,14 @@
             .title-wrapper__heading,
             .title-wrapper__subtitle {
                 font-family: 'Maitree', serif;
-                color: map-get($colors, state3);
+                @include color(state3);
 
                 // quotes ...
                 &::before {
-                    color: map-get($colors, state3);
+                    @include color(state3);
                 }
                 &::after {
-                    color: map-get($colors, state3);
+                    @include color(state3);
                 }
             }
             .title-wrapper__heading {
@@ -91,8 +92,8 @@
 
 .mentors {
     .title-caption { 
-        color: map-get($colors, primary_gray2);
+        @include color(primary_gray2);
     }
-    color: map-get($colors, primary_gray4);
+    @include color(primary_gray4);
     background-color: map-get($colors , primary);
 }

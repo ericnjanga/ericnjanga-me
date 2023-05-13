@@ -55,11 +55,11 @@ $img-dim: 49px;
         transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
 
         &.off {
-            color: map-get($colors, accent1);
+            @include color(accent1);
         }
 
         &.on {
-            color: map-get($colors, state2);
+            @include color(state2);
         }
     }
 }

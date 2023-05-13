@@ -35,7 +35,7 @@ img {
 
 .title-caption {
     margin-bottom: 0;
-    color: map-get($colors, primary_gray1);
+    @include color(primary_gray1);
     @include typo-titleCaption();
 }
 
@@ -52,7 +52,7 @@ img {
 }
 
 .box-acccent1 {
-    background-color: map-get($colors, accent4_white);
+    @include bgColor(accent4_white);
 }
 
 
@@ -67,14 +67,14 @@ img {
 */
 .custom-tooltip-1 {
     .mdc-tooltip__surface {
-        background-color: map-get($colors, primary_dark2) !important;
+        @include bgColor(primary_dark2);
     }
 }
 
 .custom-tooltip-2 {
     .mdc-tooltip__surface {
-        color: map-get($colors, primary_dark2) !important;
-        background-color: map-get($colors, state3) !important;
+        @include color(primary_dark2);
+        @include bgColor(state3);
     }
 }
 
@@ -113,18 +113,18 @@ img {
         @include rem(gap, 10px);
         font-weight: 700;
         text-transform: uppercase;
-        color: map-get($colors, state3);
+        @include color(state3);
 
         .icon {
             display: block;
-            color: map-get($colors, state3);
+            @include color(state3);
             @include rem(width, 20px);
             transition: transform 0.2s ease-in-out;
         }
 
         &:hover {
             text-decoration: none;
-            color: map-get($colors, state3);
+            @include color(state3);
 
             .icon {
                 transform: translateX(10px);
@@ -148,7 +148,7 @@ img {
         font-weight: 500;
         text-decoration: underline;
         background-color: transparent;
-        color: map-get($colors, gray1);
+        @include color(gray1);
 
         &:hover {
             text-decoration: none;

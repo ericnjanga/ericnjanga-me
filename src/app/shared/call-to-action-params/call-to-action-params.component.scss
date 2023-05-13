@@ -114,12 +114,12 @@
 
 .link--leda {
     &:hover:not(.link-active) {
-        color: map-get($colors, state1);
+        @include color(state1);
         @include hoverMode();
     }
 
     &.link-active {
-        color: map-get($colors, state2);
+        @include color(state2);
         @include hoverMode();
     }
 }

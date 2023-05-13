@@ -2,195 +2,214 @@
 @import './../../../assets/styles/mixins';
 
 
+@layer components.hero {
 
-.carousel {
-    position: relative;
-    display: flex;
 
-    .title {
-        color: map-get($colors, primary_gray4);
+    .carousel {
+        position: relative;
+        display: flex;
 
-        &.isQuote {
-            &::before {
-                content: '\201C'; /* Unicode character for left double quotation mark */
-                @include rem(font-size, 40px);
-                color: map-get($colors, primary_gray4);
-                margin-right: 5px;
-            }
-              
-            &::after {
-                content: '\201D'; /* Unicode character for right double quotation mark */
-                @include rem(font-size, 40px);
-                color: map-get($colors, primary_gray4);
-                margin-left: 5px;
+        .title {
+            @include color(primary_gray4);
+
+            &.isQuote {
+                &::before {
+                    content: '\201C';
+                    /* Unicode character for left double quotation mark */
+                    @include rem(font-size, 40px);
+                    @include color(primary_gray4);
+                    margin-right: 5px;
+                }
+
+                &::after {
+                    content: '\201D';
+                    /* Unicode character for right double quotation mark */
+                    @include rem(font-size, 40px);
+                    @include color(primary_gray4);
+                    margin-left: 5px;
+                }
             }
         }
-    }
-
-}
-
-
-.img {
-    position: absolute;
-}
-
-.carousel--large {
-    height: 700px;
-
-    .title {
 
     }
-    .text-wrapper {
-        max-width: 434px;
-    }
-    .background {
-        top: 100px;
-        height: 486px;
-    }
+
 
     .img {
-        filter: drop-shadow(20px 11.4887px 33.08px rgba(0, 0, 0, 0.75));
-    }
-    .img--laptop {
-        @include rem(top, 170px);
-        @include rem(right, 220px);
-        width: 542px;
-        height: 347.91px;
-    }
-    .img--phone {
-        top: 0;
-        @include rem(right, 100px);
-        width: 302px;
-        height: 650.24px;
-        z-index: 1;
-    }
-}
-
-.carousel--small {
-    height: 405px;
-    overflow: hidden;
-
-    .text-wrapper {
         position: absolute;
-        @include rem(top, 150px);
-        width: 100%;
-        max-width: 600px;
     }
+
+    .carousel--large {
+        height: 700px;
+
+        .title {}
+
+        .text-wrapper {
+            max-width: 434px;
+        }
+
+        .background {
+            top: 100px;
+            height: 486px;
+        }
+
+        .img {
+            filter: drop-shadow(20px 11.4887px 33.08px rgba(0, 0, 0, 0.75));
+        }
+
+        .img--laptop {
+            @include rem(top, 170px);
+            @include rem(right, 220px);
+            width: 542px;
+            height: 347.91px;
+        }
+
+        .img--phone {
+            top: 0;
+            @include rem(right, 100px);
+            width: 302px;
+            height: 650.24px;
+            z-index: 1;
+        }
+    }
+
+    .carousel--small {
+        height: 405px;
+        overflow: hidden;
+
+        .text-wrapper {
+            position: absolute;
+            @include rem(top, 150px);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .background {
+            bottom: 0;
+            height: 300px;
+        }
+
+
+
+        .img--laptop {
+            width: 648px;
+            top: 30px;
+            right: -200px;
+        }
+
+        .img--phone {
+            width: 329px;
+            top: 0;
+            right: 0
+        }
+    }
+
+
+
+
+
+    .text-wrapper {
+        @include rem(left, 50px);
+    }
+
+
     .background {
-        bottom: 0;
-        height: 300px;
-    }
-
-
-
-    .img--laptop {
-        width: 648px;
-        top: 30px;
-        right: -200px;
-    }
-    .img--phone {
-        width: 329px;
-        top: 0;
-        right: 0
-    }
-}
-
-
-
-
-
-.text-wrapper {
-    @include rem(left, 50px);
-}
-
-
-.background {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    display: block;
-    background-color: map-get($colors, primary);
-    z-index: 0;
-}
-
-
-.slide {
-    position: relative;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    z-index: 2;
-
-    h1, ul {
-        margin-bottom: 30px;
-    }
-
-    @include rem(padding-left, 50px);
-    @include rem(padding-right, 50px);
-} 
-
-
-
-.slide--about {
-    .img {
-        width: 41.188rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-.hero {
-    .caption {
+        position: absolute;
+        left: 0;
+        width: 100%;
         display: block;
+        @include bgColor(primary);
+        z-index: 0;
     }
-    ::ng-deep .caption {
-        // border: 2px solid red;
-        .title-caption {
-            font-weight: 600;
-            color: #5A6D5B;
-            text-transform: uppercase;
-            @include rem(font-size, 15px);
-    
-    
-            .mat-badge-content {
-                color: map-get($colors, accent2);
-                background-color: #5E675E;
+
+
+    .slide {
+        position: relative;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        z-index: 2;
+
+        h1,
+        ul {
+            margin-bottom: 30px;
+        }
+
+        @include rem(padding-left, 50px);
+        @include rem(padding-right, 50px);
+    }
+
+
+
+    .slide--about {
+        .img {
+            width: 41.188rem;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .hero {
+        .caption {
+            display: block;
+        }
+
+        ::ng-deep .caption {
+
+            // border: 2px solid red;
+            .title-caption {
+                font-weight: 600;
+                color: #5A6D5B;
+                text-transform: uppercase;
+                @include rem(font-size, 15px);
+
+
+                .mat-badge-content {
+                    @include color(accent2);
+                    background-color: #5E675E;
+                }
             }
         }
     }
-}
 
-.hero__quote {
-    ::ng-deep header {
-        border-left: 1px solid map-get($colors, primary_gray2);
+    .hero__quote {
+        ::ng-deep header {
+            border-left: 1px solid map-get($colors, primary_gray2);
 
-        a {
-            color: map-get($colors, primary_gray2);
-            .title-wrapper__heading {
-                color: map-get($colors, primary_gray2);
-            }
-            &:hover {
-                color: map-get($colors, state3);
+            a {
+                @include color(primary_gray2);
+
                 .title-wrapper__heading {
-                    color: map-get($colors, state3);
+                    @include color(primary_gray2);
                 }
-                svg {
-                    color: map-get($colors, state3);
+
+                &:hover {
+                    @include color(state3);
+
+                    .title-wrapper__heading {
+                        @include color(state3);
+                    }
+
+                    svg {
+                        @include color(state3);
+                    }
                 }
             }
-        }
-        
-        .title-wrapper__subtitle,
-        svg {
-            color: map-get($colors, primary_gray2);
+
+            .title-wrapper__subtitle,
+            svg {
+                @include color(primary_gray2);
+            }
         }
     }
+
 }
+
+// components.hero

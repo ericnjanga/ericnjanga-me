@@ -18,7 +18,7 @@
 }
 .title-wrapper {
     a {
-        color: map-get($colors, primary_dark1);
+        @include color(primary_dark1);
         text-decoration: none;
         &:hover {
             .title-wrapper__heading {
@@ -39,7 +39,7 @@
 }
 
 .title-wrapper__subtitle {
-    color: map-get($colors, gray0);
+    @include color(gray0);
     font-weight: 500;
 
 
@@ -47,7 +47,7 @@
         &::before {
             content: '\201C'; /* Unicode character for left double quotation mark */
             @include rem(font-size, 25px);  
-            color: map-get($colors, primary_gray4);
+            @include color(primary_gray4);
             line-height: 0;
             position: relative;
             margin-right: 5px;
@@ -57,7 +57,7 @@
         &::after {
             content: '\201D'; /* Unicode character for right double quotation mark */
             @include rem(font-size, 25px);  
-            color: map-get($colors, primary_gray4);
+            @include color(primary_gray4);
             line-height: 0;
             position: relative;
             margin-left: 5px;

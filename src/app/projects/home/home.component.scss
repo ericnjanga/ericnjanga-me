@@ -17,7 +17,7 @@ app-hero,
     justify-content: center;
     align-items: center;
     height: 90px;
-    background-color: map-get($colors, accent3);
+    @include bgColor(accent3);
 
     .list-filter {
         margin: 0;
@@ -41,7 +41,7 @@ app-hero,
             justify-content: center;
             text-decoration: none;
             border-bottom: 3px solid transparent;
-            color: map-get($colors, primary_gray1);
+            @include color(primary_gray1);
 
             .mat-badge-content {
                 background: map-get($colors, primary_gray1);
@@ -52,7 +52,7 @@ app-hero,
             }
 
             &.link-active {
-                color: map-get($colors, accent1);
+                @include color(accent1);
                 border-bottom: 3px solid map-get($colors, accent1);
 
                 .mat-badge-content {

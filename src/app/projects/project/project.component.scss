@@ -75,7 +75,7 @@ p {
     .title {
         margin-bottom: 0.4rem;
         font-size: 13px;
-        color: map-get($colors, primary_dark1);
+        @include color(primary_dark1);
     }
     p {
         margin-bottom: 0;
@@ -121,12 +121,12 @@ p {
     gap: 8px;
     padding: 8px 12px;
     font-weight: 600;
-    color: map-get($colors, primary_dark1);
+    @include color(primary_dark1);
     background-color: #D0E0D1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     &:hover {
-        background-color: map-get($colors, accent2);
+        @include bgColor(accent2);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
     }
 
@@ -135,7 +135,7 @@ p {
     ::ng-deep app-icon {
         display: inline-block;
         width: 20px;
-        color: map-get($colors, accent1);
+        @include color(accent1);
         svg {
             width: inherit;
         }

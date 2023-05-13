@@ -7,7 +7,7 @@
     justify-content: center;
     width: 265px;
     height: 380px;
-    background-color: map-get($colors, white);
+    @include bgColor(white);
     box-shadow: 5px 5px 0px #131A18;
     .title-wrapper__img {
         @include rem(margin-bottom, 15px);
@@ -24,7 +24,7 @@
         
         ::ng-deep app-icon {
             svg {
-                color: map-get($colors, primary);
+                @include color(primary);
             }    
         }
 
@@ -32,7 +32,7 @@
     .title-wrapper__subtitle {
        @include typo-caption1();
        font-weight: 500;
-       color: map-get($colors, gray1);
+       @include color(gray1);
     }
 }
 
@@ -46,15 +46,15 @@
 
 
     a {
-        color: map-get($colors, primary_dark1);
+        @include color(primary_dark1);
         text-decoration: none;
         &:hover {
             .title-wrapper__heading {
-                color: map-get($colors, state4);
+                @include color(state4);
                 text-decoration: underline;
                 ::ng-deep app-icon {
                     svg {
-                        color: map-get($colors, state4);
+                        @include color(state4);
                     }
                 }
             }
@@ -70,11 +70,11 @@
     top: 71px;
     width: 233px;
     height: 75px;
-    background-color: map-get($colors, primary_light1);
+    @include bgColor(primary_light1);
 }
 .decoration2 {
     top: 30px;
     width: 75px;
     height: 164px;
-    background-color: map-get($colors, state3);
+    @include bgColor(state3);
 }

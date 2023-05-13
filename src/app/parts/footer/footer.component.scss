@@ -9,7 +9,7 @@
         align-items: center;
         justify-content: center;
         height: map-get($gap, appFooter);
-        background-color: map-get($colors, white);
+        @include bgColor(white);
     }
 
     .spacer {
@@ -26,7 +26,7 @@
     }
 
     ::ng-deep app-icon {
-        color: map-get($colors, primary_gray1);
+        @include color(primary_gray1);
     }
 
 

@@ -13,6 +13,14 @@ $base-font-size: 16px; // Set your base font size in pixels
   #{$property}: ($value / $base-font-size) * 1rem;
 }
 
+@mixin color($colorVal) {
+  color: map-get($colors, $colorVal);
+}
+
+@mixin bgColor($colorVal) {
+  background-color: map-get($colors, $colorVal);
+}
+
 
 
 @mixin centerAbsElt($width) {
@@ -40,120 +48,14 @@ $base-font-size: 16px; // Set your base font size in pixels
     @content;
   }
 }
-/**
-.rule {
-  @include respond-to(map-get($breakpoints, screen-sm)) {
-      border: 2px solid red;
-  }
-  @include respond-to(map-get($breakpoints, screen-md)) {
-      border: 2px solid green;
-  }
-  @include respond-to(map-get($breakpoints, screen-lg)) {
-      border: 2px solid purple;
-  }
-*/
 
-
-/**
- * DOM manipulations
- * ------------------------------------
-*/
-// To make an HTML element unselectable.
-// @mixin unselectable () {
-//   -webkit-user-select: none; /* Safari */
-//   -moz-user-select: none; /* Firefox */
-//   -ms-user-select: none; /* Internet Explorer/Edge */
-//   user-select: none; /* Standard syntax */
-// }
-// @mixin setVisibility ($visibility) {
-//   @if ($visibility == 'visible') {
-//     visibility: visible !important;
-//   } @else {
-//       visibility: hidden !important;
-//   }
-// }
-// @mixin setDisplay ($display) {
-//     display: $display !important;
-// }
-
-
-// @mixin pagination() {
-//   a {
-//     color: map-get($colors, gray-light100);
-//     border-radius: 5px;;
-//   }
-//   .active > .page-link {
-//     font-weight: bold;
-//     color: map-get($colors, primary-alt1);
-//     background-color: transparent;
-//   }
-// }
-// @mixin buttonReset() {
-//   border-width: 0px;
-//   background-color: transparent;
-// }
-// @mixin backgroundArrowDOwn($opacity) {
-//   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' opacity='#{$opacity}' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
-// }
-// @mixin tableContentDoesntWrap() {
-//   td, th {
-//     white-space: nowrap;
-//     overflow: hidden;
-//   }
-// }
-// @mixin setStackingOrder($zindex) {
-//   z-index: $zindex;
-// }
-// @mixin rotate($deg) {
-//   transform: rotate($deg);
-//   transform-origin: center;
-// }
-// @mixin reinitialize-list() {
-//   margin: 0;
-//   padding: 0;
-//   list-style: none;
-// }
-// @mixin set-vertical-list() {
-//   li {
-//     position: relative;
-//     display: inline-block;
-//   }
-// }
-// @mixin card-box-shadow() {
-//   box-shadow: 1px 1px 10px #00000054;
-//   border-radius: 5px;
-//   border-radius: 5px;
-// }
-// @mixin hoverPill() {
-//   position: absolute;
-//   left: map-get($sidebar, collapsed-w) - map-get($gap, xs) - $border-gap;
-//   padding: 12px 25px;
-//   font-size: 13px;
-//   color: map-get($colors, white-default);
-//   background-color: map-get($colors, gray-default);
-//   border-radius: 5px;
-//   @include setStackingOrder(1);
-// }
-
-/* 
--- (issue fixed by: html, body,* { box-sizing: border-box;)
-Correct the strange behavior that 
-svg icons tend to move down 3px 
-for button of "normal" and "thin" sizes 
--- @include correct-svg-position(relative, -3px);
-*/
-// @mixin correct-svg-position($position, $top) {
-//   position: $position;
-//   top: $top;
-// }
-
-
+ 
 /**
  * General Layout
  * ------------------------------------
 */
 @mixin set-app-background-color() {
-  background-color: map-get($colors, primary_gray4);
+  @include bgColor(primary_gray4);
 }
 
 

@@ -9,13 +9,13 @@
 }
 
 .bg-one {
-    background-color: map-get($colors, accent2);
+    @include bgColor(accent2);
     img {
         width: 518px;
     }
 }
 .bg-two {
-    background-color: map-get($colors, primary_gray1);
+    @include bgColor(primary_gray1);
     img {
         width: 217px;
     }
@@ -47,7 +47,7 @@
 
     text-decoration: none;
 
-    color: map-get($colors, accent1);
+    @include color(accent1);
     z-index: 3;
 
 }

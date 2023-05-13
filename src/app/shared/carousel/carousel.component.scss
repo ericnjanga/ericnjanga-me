@@ -79,10 +79,10 @@ $ng-card: 5;
     }
 
     // change background color
-    background-color: map-get($colors, primary_gray3);
+    @include bgColor(primary_gray3);
 
     // change "decoration" background color
     &::after {
-        background-color: map-get($colors, primary_gray1);
+        @include bgColor(primary_gray1);
     }
 }

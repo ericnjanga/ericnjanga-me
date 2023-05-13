@@ -2,124 +2,137 @@
 @import './../../../assets/styles/mixins';
 
 
-.content__item {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    counter-increment: itemcounter;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.content__item::before {
-    color: var(--color-number);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-
-.nav-link {
-    @include typo-navLink();
-}
-.button-link {
-    @include typo-buttonLink();
-}
+@layer components.buttons {
 
 
 
-
-.link {
-    cursor: pointer;
-    position: relative;
-    white-space: nowrap;
-    color: var(--color-text);
-}
-
-.link::before,
-.link::after {
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: currentColor;
-    top: 100%;
-    left: 0;
-    pointer-events: none;
-}
-
-.link::before {
-    content: '';
-}
-
-
-
-
-
-
-
-.link--leda {
-    text-transform: uppercase;
-    @include setFontFamily('body');
-    overflow: hidden;
-    line-height: 2;
-}
-
-.link--leda::before {
-    height: 2px;
-    top: calc(100% - 5px);
-    transform-origin: 100% 50%;
-    transform: scale3d(0, 1, 1);
-    transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
-}
-
-.link--leda::after {
-    content: attr(data-text);
-    height: 100%;
-    top: 0;
-    background: none;
-    transform-origin: 100% 50%;
-    transform: translate3d(150%, 0, 0);
-    transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
-}
-
-.link--leda span {
-    display: inline-block;
-    transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
-}
-
-
-@mixin showHoverText() {
-    transform: translate3d(0, 0, 0);
-}
-@mixin showUnderlineBar() {
-    transform-origin: 0% 50%;
-    transform: scale3d(1, 1, 1);
-}
-@mixin hideDefaultText() {
-    transform: translate3d(-150%, 0, 0);
-}
-@mixin hoverMode() {
-    &::before {
-        @include showUnderlineBar();
-    }
-    &::after {
-        @include showHoverText();
-    }
-    span {
-        @include hideDefaultText();
-    }
-}
-
-.link--leda {
-    &:hover:not(.link-active) {
-        color: map-get($colors, state1);
-        @include hoverMode();
+    .content__item {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        counter-increment: itemcounter;
+        display: flex;
+        align-items: center;
+        position: relative;
     }
 
-    &.link-active {
-        color: map-get($colors, state2);
-        @include hoverMode();
+    .content__item::before {
+        color: var(--color-number);
+        position: absolute;
+        top: 0;
+        left: 0;
     }
+
+
+    .nav-link {
+        @include typo-navLink();
+    }
+
+    .button-link {
+        @include typo-buttonLink();
+    }
+
+
+
+
+    .link {
+        cursor: pointer;
+        position: relative;
+        white-space: nowrap;
+        color: var(--color-text);
+    }
+
+    .link::before,
+    .link::after {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: currentColor;
+        top: 100%;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .link::before {
+        content: '';
+    }
+
+
+
+
+
+
+
+    .link--leda {
+        text-transform: uppercase;
+        @include setFontFamily('body');
+        overflow: hidden;
+        line-height: 2;
+    }
+
+    .link--leda::before {
+        height: 2px;
+        top: calc(100% - 5px);
+        transform-origin: 100% 50%;
+        transform: scale3d(0, 1, 1);
+        transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+    }
+
+    .link--leda::after {
+        content: attr(data-text);
+        height: 100%;
+        top: 0;
+        background: none;
+        transform-origin: 100% 50%;
+        transform: translate3d(150%, 0, 0);
+        transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+    }
+
+    .link--leda span {
+        display: inline-block;
+        transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+    }
+
+
+    @mixin showHoverText() {
+        transform: translate3d(0, 0, 0);
+    }
+
+    @mixin showUnderlineBar() {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+    }
+
+    @mixin hideDefaultText() {
+        transform: translate3d(-150%, 0, 0);
+    }
+
+    @mixin hoverMode() {
+        &::before {
+            @include showUnderlineBar();
+        }
+
+        &::after {
+            @include showHoverText();
+        }
+
+        span {
+            @include hideDefaultText();
+        }
+    }
+
+    .link--leda {
+        &:hover:not(.link-active) {
+            @include color(state1);
+            @include hoverMode();
+        }
+
+        &.link-active {
+            @include color(state2);
+            @include hoverMode();
+        }
+    }
+
+
 }

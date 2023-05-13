@@ -1,4 +1,6 @@
 
-:host {
-    display: inline-block;
+@layer components.icons {
+    :host {
+        display: inline-block;
+    }
 }
