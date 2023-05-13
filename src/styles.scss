@@ -1,10 +1,13 @@
-
 // Layers:
 // Definition by order of specificity (the last layer to be specified overrides the ones specified earlier)
-@layer framework, base, utilities, components;
+@layer framework,
+base,
+utilities,
+components;
 
 @layer components {
-    @layer footer, buttons;
+    @layer footer,
+    buttons;
 }
 
 // Font import
@@ -26,42 +29,61 @@
 
 
 
+@layer base {
 
-html, body { height: 100%; }
-body { 
-    margin: 0; 
-    @include setFontFamily('body');
-    color: map-get($colors, primary_dark1);
-    @include set-app-background-color();
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        @include setFontFamily('body');
+        color: map-get($colors, primary_dark1);
+        @include set-app-background-color();
+    }
 }
+
 
 
 
 
 // Typography
 // -------------------------
-h1, h2, h3, h4 {
-    @include setFontFamily('heading');
-}
-h1 {
-    @include typo-h1();
-}
-h2 {
-    margin-bottom: 25px;
-    @include typo-h2();
-}
-h3 {
-    @include typo-h3();
-}
-h4 {
-    @include typo-h4();
-}
+@layer base {
 
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        @include setFontFamily('heading');
+    }
+
+    h1 {
+        @include typo-h1();
+    }
+
+    h2 {
+        margin-bottom: 25px;
+        @include typo-h2();
+    }
+
+    h3 {
+        @include typo-h3();
+    }
+
+    h4 {
+        @include typo-h4();
+    }
+}
 
 
 
 // Global helpers
 // -------------------------
-.list-align-bullets-with-left-edge {
-    padding-left: 0.9rem;
+@layer utilities {
+    .list-align-bullets-with-left-edge {
+        padding-left: 0.9rem;
+    }
 }
