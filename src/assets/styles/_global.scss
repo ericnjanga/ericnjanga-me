@@ -4,6 +4,7 @@
 body {
     padding-top: map-get($gap, appBar);
 }
+
 img {
     max-width: 100%;
 }
@@ -31,6 +32,7 @@ img {
         text-align: center;
     }
 }
+
 .title-caption {
     margin-bottom: 0;
     color: map-get($colors, primary_gray1);
@@ -65,14 +67,14 @@ img {
 */
 .custom-tooltip-1 {
     .mdc-tooltip__surface {
-        background-color: map-get($colors, primary_dark2)!important;
+        background-color: map-get($colors, primary_dark2) !important;
     }
 }
 
 .custom-tooltip-2 {
     .mdc-tooltip__surface {
-        color: map-get($colors, primary_dark2)!important;
-        background-color: map-get($colors, state3)!important;
+        color: map-get($colors, primary_dark2) !important;
+        background-color: map-get($colors, state3) !important;
     }
 }
 
@@ -84,11 +86,12 @@ img {
 */
 
 // Increasing columnb gutter
-.row {    
+.row {
     margin-right: calc(-1 * map-get($gap, lg));
     margin-left: calc(-1 * map-get($gap, lg));
 }
-.row > * { 
+
+.row>* {
     padding-right: map-get($gap, lg);
     padding-left: map-get($gap, lg);
 }
@@ -103,68 +106,77 @@ img {
  * BUTTONS
  * --------------------------------------------------
 */
-.button-primary {
-    display: flex;
-    @include rem(gap, 10px);
-    font-weight: 700;
-    text-transform: uppercase;
-    color: map-get($colors, state3);
+@layer components.buttons {
 
-    .icon {
-        display: block;
-        color: map-get($colors, state3);
-        @include rem(width, 20px);
-        transition: transform 0.2s ease-in-out;
-    }
-
-    &:hover {
-        text-decoration: none;
+    .button-primary {
+        display: flex;
+        @include rem(gap, 10px);
+        font-weight: 700;
+        text-transform: uppercase;
         color: map-get($colors, state3);
 
         .icon {
-            transform: translateX(10px);
+            display: block;
+            color: map-get($colors, state3);
+            @include rem(width, 20px);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: map-get($colors, state3);
+
+            .icon {
+                transform: translateX(10px);
+            }
         }
     }
+
+    .button-primary--large {
+        @include rem(font-size, 20px);
+
+        .icon {
+            @include rem(width, 30px);
+        }
+    }
+
+
+    .button-secondary {
+        padding-left: 0;
+        padding-right: 0;
+        border-width: 0px;
+        font-weight: 500;
+        text-decoration: underline;
+        background-color: transparent;
+        color: map-get($colors, gray1);
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        .icon svg {
+            @include rem(width, 16px);
+        }
+    }
+
+    .button-secondary--up {
+        .icon svg {
+            transform: rotate(-90deg);
+        }
+    }
+
+    .button-secondary--down {
+        .icon svg {
+            transform: rotate(90deg);
+        }
+    }
+
 }
-.button-primary--large {
-    @include rem(font-size, 20px);
 
-    .icon {
-        @include rem(width, 30px);
-    }
-}
+// components.buttons
 
 
 
-.button-secondary {
-    padding-left: 0;
-    padding-right: 0;
-    border-width: 0px;
-    font-weight: 500;
-    text-decoration: underline;
-    background-color: transparent;
-    color: map-get($colors, gray1);
-
-    &:hover{
-        text-decoration: none;
-    }
-
-    .icon svg {
-        @include rem(width, 16px);
-    }
-}   
-
-.button-secondary--up {
-    .icon svg {
-        transform: rotate(-90deg);
-    }
-}
-
-.button-secondary--down {
-    .icon svg {
-        transform: rotate(90deg);
-    }
-}
 
 
 
@@ -175,38 +187,38 @@ img {
  * BULLET LIST
  * --------------------------------------------------
 */
+@layer utilities {
+
+    .nice-bullet-list {
+        // border: 1px solid #ccc;
+        list-style: none;
 
 
+        li {
+            // border: 1px solid #a01919;
+            position: relative;
+            @include rem(margin-top, 10px);
+            margin-right: 0px;
+            @include rem(margin-bottom, 15px);
+            margin-left: 0px;
+            @include rem(padding-left, 20px);
+        }
 
-
-.nice-bullet-list { 
-    // border: 1px solid #ccc;
-    list-style: none;
-
-
-    li { 
-        // border: 1px solid #a01919;
-        position: relative;
-        @include rem(margin-top, 10px);
-        margin-right: 0px;
-        @include rem(margin-bottom, 15px);
-        margin-left: 0px;
-        @include rem(padding-left, 20px);
-    }
-  
-    li::before { border: 1px solid #0e42bb;
-        content: "";
-        display: inline-block;
-        position: absolute;
-        @include rem(width, 10px);
-        @include rem(height, 10px);
-        @include rem(left, -15px);
-        @include rem(top, 6px);
-        // left: -15px;
-        // top: 6px;
-        // width: 10px;
-        // height: 10px;
-        background-color: black;
-        border-radius: 50%;
+        li::before {
+            border: 1px solid #0e42bb;
+            content: "";
+            display: inline-block;
+            position: absolute;
+            @include rem(width, 10px);
+            @include rem(height, 10px);
+            @include rem(left, -15px);
+            @include rem(top, 6px);
+            // left: -15px;
+            // top: 6px;
+            // width: 10px;
+            // height: 10px;
+            background-color: black;
+            border-radius: 50%;
+        }
     }
 }

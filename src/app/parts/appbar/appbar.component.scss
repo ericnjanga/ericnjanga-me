@@ -49,8 +49,4 @@ a {
 button[aria-expanded="true"] {
     background-color: map-get($colors, gray1);
     border-radius: map-get($border, radius);
-
-    // ::ng-deep .bi {
-    //     color: map-get($colors, primary_dark1);
-    // }
 }

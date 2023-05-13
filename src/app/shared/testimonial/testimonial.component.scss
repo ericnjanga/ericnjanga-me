@@ -73,6 +73,7 @@
     }
 }
 .title-wrapper__heading {
+    display: flex;
     @include typo-h5();
     margin-bottom: 0;
 

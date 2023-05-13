@@ -2,39 +2,42 @@
 @import './../../../assets/styles/mixins';
 
 
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: map-get($gap, appFooter);
-    background-color: map-get($colors, white);
-}
 
-.spacer {
-    display: block;
-    margin-bottom: 30px;
-}
+@layer components.footer {
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: map-get($gap, appFooter);
+        background-color: map-get($colors, white);
+    }
 
-.wrapper {
-    width: 323px;
-}
+    .spacer {
+        display: block;
+        margin-bottom: 30px;
+    }
 
-.caption {
-    @include type-caption();
-}
+    .wrapper {
+        width: 323px;
+    }
 
-::ng-deep app-icon {
-    color: map-get($colors, primary_gray1);
-}
+    .caption {
+        @include type-caption();
+    }
+
+    ::ng-deep app-icon {
+        color: map-get($colors, primary_gray1);
+    }
 
 
 
 
-/**
- * TODO: Footer link hover
- * ------
- * It needs to be done
-*/
-.list-inline-item:not(:last-child) {
-    margin-right: 1.875rem;
+    /**
+    * TODO: Footer link hover
+    * ------
+    * It needs to be done
+    */
+    .list-inline-item:not(:last-child) {
+        margin-right: 1.875rem;
+    }
 }
