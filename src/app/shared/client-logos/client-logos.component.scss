@@ -23,6 +23,7 @@ $total-length: $with-sm + ($with-md * 6) + $with-lg + ($gap * $ngLogos);
 
 @layer components.company-logos {
 
+    // Scroll system ..
     .scrallable-area--content {
         @include rem(width, $total-length);
     }

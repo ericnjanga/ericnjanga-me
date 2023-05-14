@@ -5,13 +5,14 @@ $card-height: 340px;
 $gap: 60px;
 $ng-card: 5;
 
-
+// By default
 :host {
     position: relative;
     display: block;
     padding-top: 50px;
 }
 
+// Scroll system ..
 .scrallable-area--content {
     display: flex;
     @include rem(gap, $gap);

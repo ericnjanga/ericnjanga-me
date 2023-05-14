@@ -25,7 +25,7 @@ export class HomeComponent {
 
   // Present the latest 3 projects of any industry
   reloadProjects() {
-    this.projectService.loadAll('published', 'all', 3).subscribe((obj) => {
+    this.projectService.loadAll('published', 'all', 6).subscribe((obj) => {
       this.projects = obj.payload;
     });
   }

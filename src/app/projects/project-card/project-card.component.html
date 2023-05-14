@@ -1,0 +1,31 @@
+<article class="card" *ngIf="project">
+
+    <div class="subtitle">
+        <app-title-caption class="caption" [items]="project.categories"></app-title-caption>
+        <span>|</span>
+        <span class="title-caption--releaseDate">{{getEndDate(project.references) | date:'MMM, YYYY'}}</span>
+    </div>
+
+    <h4 class="title">
+        <!-- Display tooltip only if title length is above the limit -->
+        <a *ngIf="project.descriptions.title.length >= titleMaxLength" [routerLink]="projectUrl(project)"
+            [matTooltip]="project.descriptions.title" matTooltipClass="custom-tooltip-1"
+            [matTooltipPosition]="position.value!">
+            {{project.descriptions.title | textTim:titleMaxLength }}
+        </a>
+
+        <!-- Don't display tooltip otherwise -->
+        <a *ngIf="project.descriptions.title.length < titleMaxLength" [routerLink]="projectUrl(project)">
+            {{project.descriptions.title}}
+        </a>
+    </h4>
+
+    <a class="thumbnail-wrap" [routerLink]="projectUrl(project)">
+        <img 
+            class="thumbnail" 
+            [ngClass]="getThumbnailClass(project.images)" 
+            [src]="getHeroImg(project.images)"
+            alt="">
+    </a>
+
+</article>

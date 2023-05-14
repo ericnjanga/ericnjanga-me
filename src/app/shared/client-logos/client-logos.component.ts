@@ -9,8 +9,9 @@ import { Component, ViewChild } from '@angular/core';
 export class ClientLogosComponent {
   // Don't sign a specific type to the child view 
   // (it will be casted as a "nativeElement" later in the code)
-  @ViewChild('scrollable', { static: true }) scrollable: any;
-  scrollValue = 0;
+  // scroll system
+  @ViewChild('scrollable', { static: true }) scrollable: any; // scrollable area ..
+  scrollValue = 0;  // scrol counter ..
 
   list: number[] = [1,2,3,4,5,6,7,8,9];
 

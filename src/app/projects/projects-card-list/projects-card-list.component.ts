@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { Project, Reference, ProjImg } from '../model/project';
 import {FormControl} from '@angular/forms';
 import {TooltipPosition} from '@angular/material/tooltip';
@@ -12,39 +12,24 @@ import { Category } from '../model/category';
 })
 export class ProjectsCardListComponent {
   @Input() source: Project[] = [];
-  titleMaxLength = 40;
-  positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
-  position = new FormControl(this.positionOptions[0]);
 
-  projectUrl(elt: Project): string {
-    return `/projects/${elt.pageUrl}`;
-  }
+  
+  // scroll system
+  @ViewChild('scrollable', { static: true }) scrollable: any; // scrollable area ..
+  scrollValue = 0;  // scrol counter ..
 
-  trackByFn(index: number, item: Project) {
-    return item.id;
-  }
-
-
-  getEndDate(ref: Reference): Date {
-    // Convert the string 'YYYY-MM' into a date
-    const dateString = ref.endDate;
-    const dateParts = dateString.split('-');
-    const year = parseInt(dateParts[1], 10);
-    const month = parseInt(dateParts[0], 10) - 1; // Months are zero-indexed in JavaScript
-    const date = new Date(year, month);
-
-    // and retun it
-    return date;
-  }
-
-  imgClass(img: ProjImg, prefix: string) {
-    return `img-${prefix}--${img.type}`;
-  }
-
-  getHeroImg(item: ProjImg): string {
-    return item.hero;
-  }
-  getThumbnailClass(item: ProjImg): string {
-    return `thumbnail--${item.type}`;
+  /**
+   * Make the scrollable area scroll left or right
+   * @param direction 
+   */
+  scroll(direction: number) {
+    const container = this.scrollable.nativeElement;
+    const step = 200;
+    const scrollAmount = container.scrollLeft + (step * direction);
+    container.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+    this.scrollValue += step * direction;
   }
 }

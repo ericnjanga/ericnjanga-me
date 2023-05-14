@@ -1,0 +1,187 @@
+@import './../../../assets/styles/variables';
+@import './../../../assets/styles/mixins';
+
+$card-width: 373px;
+$card-height: 470px;
+$card-padding: 46px;
+
+$bg-deco-width: 280px;
+$bg-deco-height: 250px;
+
+$tmb-phone-width: 133px;
+$tmb-phone-height: 286px;
+$tmb-laptop-width: 311px;
+$tmb-laptop-height: 199px;
+
+
+@layer components.project-card {
+    .card {
+        ::ng-deep .caption {
+            .title-caption {
+                text-transform: uppercase;
+                @include rem(font-size, 13px);
+            }
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: $bg-deco-width;
+            height: $bg-deco-height;
+            @include bgColor(primary_gray3);
+
+            // Horizontally center
+            @include centerAbsElt($bg-deco-width);
+
+            bottom: $card-padding;
+            z-index: 0;
+        }
+    }
+
+
+
+    .card {
+        position: relative;
+        width: $card-width;
+        height: $card-height;
+        z-index: 1;
+        @include rem(padding, $card-padding);
+        @include bgColor(accent4_white);
+        @include rem(border-radius, 4px);
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        border-width: 0px;
+
+        // On card hover
+        &:hover {
+            // change background color
+            @include bgColor(primary_gray3);
+
+            // Change colors ... if title-caption has extra info to display
+            ::ng-deep .title-caption.hasInfo {
+
+                // change "icon" color
+                svg {
+                    @include color(primary_gray4);
+                    border: 3px solid map-get($colors, primary_gray1);
+                    @include bgColor(primary_gray1);
+                }
+
+                // change "icon" color
+                svg {
+                    @include color(primary_gray4);
+                    border: 3px solid map-get($colors, primary_gray1);
+                    @include bgColor(primary_gray1);
+                }
+
+                // change "title caption" background color
+                &:hover {
+                    @include bgColor(primary_gray4);
+                }
+            }
+
+            // change "decoration" background color
+            &::after {
+                @include bgColor(primary_gray1);
+            }
+        }
+
+        .title {
+            @include rem(margin-right, 30px);
+            @include color(accent1);
+
+            a {
+                text-decoration: none;
+                @include color(primary_dark2);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .subtitle,
+        .subtitle a,
+        p {
+            @include color(gray1);
+        }
+
+        .title,
+        .subtitle {
+            @include rem(margin-bottom, 10px);
+            // border: 2px solid;
+        }
+    }
+}
+
+
+
+@layer components.project-card {
+    .thumbnail {
+        position: absolute;
+        z-index: 1;
+        filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+    }
+
+    .thumbnail--phone {
+        width: $tmb-phone-width;
+        height: $tmb-phone-height;
+        @include rem(bottom, 30px);
+
+        // Horizontally center
+        @include centerAbsElt($tmb-phone-width);
+    }
+
+    .thumbnail--tablet {
+        // top: 0;
+        // @include rem(right, 100px);
+        width: 183px;
+        height: 278.68px;
+        @include rem(bottom, 30px);
+        // z-index: 1;
+
+        // Horizontally center
+        @include centerAbsElt(183px);
+    }
+
+    .thumbnail--laptop {
+        width: $tmb-laptop-width;
+        height: $tmb-laptop-height;
+        @include rem(bottom, 70px);
+
+        // Horizontally center
+        @include centerAbsElt($tmb-laptop-width);
+    }
+
+
+
+
+    .subtitle {
+        display: flex;
+        align-items: center;
+        @include rem(gap, 20px);
+        @include type-caption();
+
+        ::ng-deep .title-caption {
+            @include color(primary);
+
+            svg {
+                @include color(primary);
+                border: 3px solid map-get($colors, primary_gray3);
+                @include bgColor(primary_gray3);
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #000;
+                }
+            }
+
+            // background-color: map-get($colors , primary_gray4);
+        }
+    }
+
+
+}

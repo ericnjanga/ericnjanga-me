@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 
 
@@ -17,6 +18,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     HomeComponent,
     ProjectComponent,
     ProjectsCardListComponent,
+    ProjectCardComponent,
   ],
   imports: [
     CommonModule,

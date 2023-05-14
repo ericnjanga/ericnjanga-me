@@ -1,6 +1,13 @@
 @import './../../../assets/styles/variables';
 @import './../../../assets/styles/mixins';
 
+
+// By default
+:host {
+    position: relative;
+    display: block;
+}
+
 .title-caption {
     display: flex;
     align-items: center;

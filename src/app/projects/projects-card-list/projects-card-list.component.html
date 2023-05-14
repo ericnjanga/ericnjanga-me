@@ -1,49 +1,30 @@
+<nav class="scrallable-area--pagination">
+    <button class="btn scroll-btn left" (click)="scroll(-1)">
+        <app-icon class="icon" name="arrowLeft"></app-icon>
+    </button>
 
-<section class="row row-cols-3">
-    <div class="card-wrapper" *ngFor="let item of source;">
-        <article class="card">
+    <button class="btn scroll-btn right" (click)="scroll(1)">
+        <app-icon class="icon" name="arrowRight"></app-icon>
+    </button>
+</nav>
 
-            <div class="subtitle">
-                <app-title-caption class="caption" [items]="item.categories"></app-title-caption>
-                <span>|</span>
-                <span class="title-caption--releaseDate">{{getEndDate(item.references) | date:'MMM, YYYY'}}</span>
-            </div>
+<h2>...title ...</h2>
 
-            <h4 class="title">
-                <!-- Display tooltip only if title length is above the limit -->
-                <a 
-                    *ngIf="item.descriptions.title.length >= titleMaxLength"
-                    [routerLink]="projectUrl(item)"
-                    [matTooltip]="item.descriptions.title" 
-                    matTooltipClass="custom-tooltip-1"
-                    [matTooltipPosition]="position.value!"
-                >
-                    {{item.descriptions.title | textTim:titleMaxLength }}
-                </a>
+<div class="scrallable-area--wrapper" #scrollable>
 
-                <!-- Don't display tooltip otherwise -->
-                <a 
-                    *ngIf="item.descriptions.title.length < titleMaxLength"
-                    [routerLink]="projectUrl(item)"
-                >
-                    {{item.descriptions.title}}
-                </a>
-            </h4>
-
-            <a 
-                class="thumbnail-wrap" 
-                [routerLink]="projectUrl(item)"
-            >
-                <img 
-                    class="thumbnail"
-                    [ngClass]="getThumbnailClass(item.images)"
-                    [src]="getHeroImg(item.images)"
-                    alt=""
-                >
-            </a>
-
-        </article>
+    <div class="scrallable-area--content">
+        <app-project-card class="item" *ngFor="let item of source;" [project]="item"></app-project-card>
     </div>
-</section>
+
+
+</div>
+
+
+
+
+
+<!-- <section class="row row-cols-3"> -->
+
+<!-- </section> -->
 
 <!-- [style.background-image]="getHeroImg(item.images)" -->
