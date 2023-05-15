@@ -1,9 +1,10 @@
 @import './../../../assets/styles/variables';
 @import './../../../assets/styles/mixins';
 
-$card-width: 373px;
+$card-width-large: map-get($components-size, p-card-w-lg);
 $card-height: 470px;
 $card-padding: 46px;
+$dropshadow-blur: map-get($gap, p-card-ds);
 
 $bg-deco-width: 280px;
 $bg-deco-height: 250px;
@@ -12,6 +13,8 @@ $tmb-phone-width: 133px;
 $tmb-phone-height: 286px;
 $tmb-laptop-width: 311px;
 $tmb-laptop-height: 199px;
+
+
 
 
 @layer components.project-card {
@@ -43,13 +46,13 @@ $tmb-laptop-height: 199px;
 
     .card {
         position: relative;
-        width: $card-width;
+        width: $card-width-large;
         height: $card-height;
         z-index: 1;
         @include rem(padding, $card-padding);
         @include bgColor(accent4_white);
         @include rem(border-radius, 4px);
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px #{$dropshadow-blur} rgba(0, 0, 0, 0.25);
         border-width: 0px;
 
         // On card hover

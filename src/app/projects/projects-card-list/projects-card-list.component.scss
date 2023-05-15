@@ -2,36 +2,47 @@
 @import './../../../assets/styles/mixins';
 
 
+$dropshadow-blur: map-get($gap, p-card-ds);
+$card-width-large: map-get($components-size, p-card-w-lg);
+$frame-padding: $dropshadow-blur; // Gap necessary to allow cards drop shadow to be visible
+
 // By default
 :host {
     position: relative;
     display: block;
     // padding-top: 50px;
-    border: 3px solid turquoise;
 }
 
 
-
 @layer components.project {
-    // Scroll system ..
-    .scrallable-area--wrapper {
-        @include rem(padding-top, 3px);
-        @include rem(padding-bottom, 3px);
+
+    .list-title {
+        position: absolute;
+        top: 0;
+        @include rem(left, $frame-padding);
+        margin: 0;
     }
+    // Scroll system ..
+    // .scrallable-area--wrapper {}
 
     .scrallable-area--content {
+        --item-width: $card-width-large;
+        // --num-children is set by the template
+
         $gap: 20px;
         display: flex;
         flex-wrap: wrap;
-        --item-width: calc((100% - (n - 1) * #{$gap}) / n);
-        width: calc(var(--item-width) * n + (n - 1) * #{$gap});
+        padding: $frame-padding;
+        width: calc(((#{$card-width-large} + #{$gap}) * var(--num-children)) + #{$frame-padding * 2});
 
+        // ...
         .item {
             width: var(--item-width);
-            margin-right: $gap;
-            margin-bottom: $gap;
+            @include rem(margin-right, $gap);
+
+            &.is-last {
+                margin-right: 0;
+            }
         }
     }
-
-
 }

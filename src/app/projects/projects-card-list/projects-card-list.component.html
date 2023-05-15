@@ -8,15 +8,17 @@
     </button>
 </nav>
 
-<h2>...title ...</h2>
+<h2 class="list-title">{{listTitle}}</h2>
 
 <div class="scrallable-area--wrapper" #scrollable>
-
-    <div class="scrallable-area--content">
-        <app-project-card class="item" *ngFor="let item of source;" [project]="item"></app-project-card>
+    <div class="scrallable-area--content" [style.--num-children]="source.length">
+        <app-project-card 
+            class="item" 
+            [class.is-last]="isLast"
+            *ngFor="let item of source; last as isLast" 
+            [project]="item"
+        ></app-project-card>
     </div>
-
-
 </div>
 
 

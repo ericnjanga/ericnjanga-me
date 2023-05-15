@@ -11,6 +11,7 @@ import { Category } from '../model/category';
   styleUrls: ['./projects-card-list.component.scss']
 })
 export class ProjectsCardListComponent {
+  @Input() listTitle = '';
   @Input() source: Project[] = [];
 
   
@@ -24,7 +25,7 @@ export class ProjectsCardListComponent {
    */
   scroll(direction: number) {
     const container = this.scrollable.nativeElement;
-    const step = 200;
+    const step = 373;
     const scrollAmount = container.scrollLeft + (step * direction);
     container.scrollTo({
       left: scrollAmount,

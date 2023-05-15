@@ -69,7 +69,13 @@ $gap: (
     xxs         : 7px, 
     xs          : 10px,
     sm          : 20px,
-    lg          : 40px
+    lg          : 40px,
+    p-card-ds   : 4px, // project card drop shadow
+);
+
+
+$components-size: (
+    p-card-w-lg     : 373px, //project card width (large size)
 );
 
 
