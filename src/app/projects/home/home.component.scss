@@ -7,12 +7,17 @@ app-hero {
     display: block;
 }
 
-app-hero,
-.filter-wrapper {
+app-hero {
     @include rem(margin-bottom, 60px);
 }
 
-.filter-wrapper {
+/**
+
+    THIS COMPONENT IS NO LONGER NECESSARY
+    [TODO]: Delete this coed three months from now (May 2023)
+    ----------
+
+    .filter-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,3 +68,5 @@ app-hero,
     }
 
 }
+
+*/

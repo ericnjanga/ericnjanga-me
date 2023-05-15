@@ -11,7 +11,10 @@
 
 
 
-
+<!-- 
+    THIS COMPONENT IS NO LONGER NECESSARY
+    [TODO]: Delete this coed three months from now (May 2023)
+    ----------
 <header class="filter-wrapper">
     <ul class="list-filter list-inline text-center">
         <li class="list-inline-item">
@@ -42,12 +45,28 @@
             </a>
         </li>
     </ul>
-</header>
+</header> -->
 
 
 
 <app-projects-card-list 
-class="page-section" 
-listTitle="???[1]"
+class="" 
+listTitle="Most recent"
+[source]="projects"
+></app-projects-card-list>
+
+
+
+<app-projects-card-list 
+class="" 
+listTitle="UX Design"
+[source]="projects"
+></app-projects-card-list>
+
+
+
+<app-projects-card-list 
+class="" 
+listTitle="UI Development"
 [source]="projects"
 ></app-projects-card-list>
