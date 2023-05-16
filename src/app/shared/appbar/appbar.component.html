@@ -1,16 +1,38 @@
+
 <nav class="small">
   <mat-toolbar class="toolbar">
-    <app-icon name="logo top"></app-icon>
-    <span class="nav-spacer"></span>
-    <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-icon" aria-label="Open menu">
-      <mat-icon>menu</mat-icon>
+
+    <app-icon 
+      *ngIf="!isChildRouteOf('about', currentRoute)"
+      name="logo top"
+    ></app-icon>
+
+    <button mat-icon-button 
+      *ngIf="isChildRouteOf('about', currentRoute)"
+      (click)="goBack()"
+    >
+      <mat-icon aria-hidden="false" aria-label="Back">arrow_back</mat-icon>
+      <label for="">Back</label>
     </button>
-    <mat-menu #menu="matMenu">
-      <button routerLink="/" mat-menu-item>Home</button>
-      <button routerLink="/about" mat-menu-item>About</button>
-      <button routerLink="/projects" [queryParams]="{ industry:'all' }" mat-menu-item>Projects</button>
-    </mat-menu>
+
+    <span class="nav-spacer"></span>
+
+    <div *ngIf="!isChildRouteOf('about', currentRoute)">
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-icon" aria-label="Open menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button routerLink="/" mat-menu-item>Home</button>
+        <button routerLink="/about" mat-menu-item>About</button>
+        <button routerLink="/projects" [queryParams]="{ industry:'all' }" mat-menu-item>Projects</button>
+      </mat-menu>
+    </div>
+
   </mat-toolbar>
+
+
+
+
 </nav>
 
 

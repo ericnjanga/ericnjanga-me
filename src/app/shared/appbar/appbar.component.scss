@@ -22,13 +22,17 @@ $sm: map-get($breakpoints, screen-sm);
             @include bgColorImp(primary_gray4);
         }
 
+        label {
+            @include color(gray0);
+        }
+
         // trigger button
-        .menu-icon {
+        // .menu-icon {
             .mat-icon {
                 // hamburger
                 @include colorIm(primary_dark2);
             }
-        }
+        // }
 
         // spacer between logo and trigger button
         .nav-spacer {
