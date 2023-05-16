@@ -1,91 +1,101 @@
 @import './../../../assets/styles/mixins';
 
 
+@layer components.testimonial {
 
+    .testimonial {
+        width: 100%;
+        max-width: 800px;
+        @include rem(padding, 20px);
+        // @include rem(padding, 45px);
+        overflow: hidden;
+        @include bgColor(accent4_white);
 
-.open-close-container {
-    // border: 1px solid #dddddd;
-    // margin-top: 1em;
-    // padding: 20px 20px 0px 20px;
-    // color: #000000;
-    // font-weight: bold;
-    // font-size: 20px;
-  }
-
-
-
-
-.testimonial {
-    width: 100%;
-    max-width: 800px;
-    @include rem(padding, 45px);
-    overflow: hidden;
-    @include bgColor(accent4_white);
-
-    ::ng-deep app-icon {
-        svg {
-            @include color(primary);
+        ::ng-deep app-icon {
+            svg {
+                @include color(primary);
+            }
         }
     }
-}
 
-.testimonial-body {
-    @include rem(margin-top, 10px);
-}
+    .testimonial-body {
+        @include rem(margin-top, 10px);
+    }
 
-// .title-wrapper {
-//     display: flex;
-//     align-items: center;
-//     @include rem(gap, 12px);
-// }
-.title-wrapper__img {
-    @include rem(width, 60px);
-    height: inherit;
-}
+    .title-wrapper__img {
+        @include rem(width, 60px);
+        height: inherit;
+    }
 
-.title-wrapper + p {
-    @include rem(margin-top, 20px);
-    @include color(gray1);
-}
+    .title-wrapper+p {
+        @include rem(margin-top, 20px);
+        @include color(gray1);
+    }
 
 
-//<!-- [TODO:] Same component in "quote.component.html "-->
-.wrapper-container {
-    display: flex;
-    align-items: center;
-    @include rem(gap, 12px);
-}
-.title-wrapper {
-    a {
-        @include color(primary_dark1);
-        text-decoration: none;
-        &:hover {
-            .title-wrapper__heading {
-                @include color(state4);
-                text-decoration: underline;
-                ::ng-deep app-icon {
-                    svg {
-                        @include color(state4);
+    //<!-- [TODO:] Same component in "quote.component.html "-->
+    .wrapper-container {
+        display: flex;
+        align-items: center;
+        @include rem(gap, 12px);
+        // flex-direction: column;
+    }
+
+    .title-wrapper {
+        a {
+            @include color(primary_dark1);
+            text-decoration: none;
+
+            &:hover {
+                .title-wrapper__heading {
+                    @include color(state4);
+                    text-decoration: underline;
+
+                    ::ng-deep app-icon {
+                        svg {
+                            @include color(state4);
+                        }
                     }
                 }
             }
         }
     }
-}
-.title-wrapper__heading {
-    display: flex;
-    @include typo-h5();
-    margin-bottom: 0;
 
-    .icon {
-        position: relative;
-        top: -5px;
-        left: 6px;
+    .title-wrapper__heading {
+        display: flex;
+        @include typo-h5();
+        margin-bottom: 0;
+
+        .icon {
+            position: relative;
+            top: -5px;
+            left: 6px;
+        }
     }
-}
 
-.title-wrapper__subtitle {
-    @include color(gray0);
-    font-weight: 500;
+    .title-wrapper__subtitle {
+        @include color(gray0);
+        font-weight: 500;
+    }
+
+
+
+
+
+    @container (max-width: 570px) {
+        .title-wrapper__subtitle {
+            // border: 3px solid red;
+            @include rem(max-width, 190px);
+            @include limit-text();
+        }
+    }
+
+
+    @container (min-width: 790px) {
+        .testimonial {
+            border: 4px solid green;
+            @include rem(padding, 40px);
+        }
+    }
+
 }
-//<!-- [TODO:] Same component in "quote.component.html "-->

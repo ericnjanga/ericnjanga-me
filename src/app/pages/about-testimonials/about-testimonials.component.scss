@@ -1,0 +1,29 @@
+@import './../../../assets/styles/mixins';
+
+::host {
+    display: block;
+}
+
+
+.list {
+    display: flex;
+    flex-direction: column;
+    @include rem(gap, 20px);
+}
+
+
+@container (min-width: 1116px) {
+    .frame {
+        border: 4px solid red;
+        display: grid;
+        grid-template-columns: auto 800px;
+        @include rem(gap, 30px);
+    }
+}
+
+
+@container (min-width: 1296px) {
+    .frame {
+        @include rem(gap, 60px);
+    }
+}

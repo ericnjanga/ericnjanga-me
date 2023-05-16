@@ -85,6 +85,10 @@ components;
     .list-align-bullets-with-left-edge {
         padding-left: 0.9rem;
     }
+
+    .bx-container {
+        container-type: inline-size;
+    }
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

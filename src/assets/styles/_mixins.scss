@@ -140,3 +140,10 @@ $base-font-size: 16px; // Set your base font size in pixels
     font-family: 'Montserrat', sans-serif;
   }
 }
+
+
+@mixin limit-text() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

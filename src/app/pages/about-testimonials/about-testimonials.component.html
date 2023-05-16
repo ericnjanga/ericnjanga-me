@@ -1,11 +1,12 @@
-<section class="testimonials subpage-spacer">
-    <div class="yyy">
+<div class="frame">
+    <div>
         <h5 class="title-caption">testimonials</h5>
         <h2>What people are saying about Eric</h2>
     </div>
-    <div class="vdsvs vertical-list">
-        <div class="item" *ngFor="let item of testimonialList">
-            <app-testimonial [testimonial]="item"></app-testimonial>
-        </div>
+    <div class="list">
+        <app-testimonial 
+            [testimonial]="item"
+            class="item" *ngFor="let item of testimonialList"
+        ></app-testimonial>
     </div>
-</section>
+</div>
