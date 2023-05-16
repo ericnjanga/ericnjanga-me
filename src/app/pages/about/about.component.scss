@@ -38,9 +38,15 @@ $md: map-get($breakpoints, screen-md);
     @include respond-to($xl) {
         @include rem(gap, 120px);
     }
-   
 }
 
+
+.excellence {
+    background-color: #fff;
+    @include respond-to($md) {
+        @include rem(padding, 30px);
+    }
+}
 
 
 .highlights {

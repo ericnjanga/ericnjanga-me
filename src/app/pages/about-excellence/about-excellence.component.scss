@@ -1,12 +1,48 @@
+@import './../../../assets/styles/mixins';
 
 
+// screen-sm: 576px,
+// screen-md: 768px,
+// screen-lg: 992px,
+// screen-xl: 1200px
 
-// .excellence {
-//     p {
-//         @include rem(margin-bottom, 35px);
-//         @include color(gray1);
-//         &:last-of-type {
-//             margin-bottom: 0;
-//         }
-//     }
-// }
+
+$sm: map-get($breakpoints, screen-sm);
+$md: map-get($breakpoints, screen-md);
+$lg: map-get($breakpoints, screen-lg);
+$xl: map-get($breakpoints, screen-xl);
+
+::host {
+    display: block;
+}
+
+
+.frame {
+    // Increase space between content and bullet if the container increases
+    @container (min-width: 768px) { //$md
+        .text, img {
+            @include rem(max-width, 600px);
+        }
+    }
+
+    @container (min-width: 992px) { //$lg
+        .text, img {
+            width: auto;
+        }
+
+        display: grid;
+        grid-template-columns: 600px auto;
+        @include rem(gap, 70px);
+
+        img {
+            grid-row: 1;
+            grid-column: 1;
+        }
+        .text {
+            grid-row: 1;
+            grid-column: 2;
+        }
+    }
+
+}
+

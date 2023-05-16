@@ -9,14 +9,6 @@ import { Location } from '@angular/common';
 export class AppbarComponent {
   @Input() currentRoute!: string;
 
-  ngOnInit() {
-    // const childRoute = this.currentRoute.split('/about/');
-    
-    console.log('---', this.currentRoute);
-    // console.log(childRoute[0]);
-    // console.log(childRoute[1]);
-  }
-
   // Navigate the user back to the previous route 
   goBack() {
     this.location.back();
@@ -29,10 +21,5 @@ export class AppbarComponent {
   }
 
   constructor(private location: Location) {
-    // this.categories = CATEGORY_DATABASE.filter(item => item.parentId === null);
-
-
-
-    console.log('---', this.currentRoute);
   }
 }
