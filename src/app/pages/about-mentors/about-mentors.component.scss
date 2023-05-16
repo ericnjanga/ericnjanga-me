@@ -1,0 +1,33 @@
+@import './../../../assets/styles/mixins';
+@import './../../../assets/styles/variables';
+
+::host {
+    display: block;
+}
+
+$mentor-w: map-get($components-size, nice-post-w);
+$gap: 30px;
+
+.frame {
+    @container (min-width: 480px) { 
+        display: grid;
+        @include rem(gap, 40px);
+        grid-template-columns: auto auto;
+
+
+    }
+
+    @container (min-width: 1024px) { 
+        @include rem(gap, 120px);
+        grid-template-columns: 480px auto;
+    }
+
+    .frame-testimonials {
+        overflow-x: scroll;
+    }
+    .frame-testimonials-scroll {
+        display: flex;
+        width: ($mentor-w * 2) + $gap;
+        gap: 30px;
+    }
+}

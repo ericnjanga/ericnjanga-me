@@ -1,11 +1,14 @@
 @import './../../../assets/styles/mixins';
+@import './../../../assets/styles/variables';
 
+
+$comp-w: map-get($components-size, nice-post-w);
+ 
 .poster {
     position: relative;
     display: flex;
-    // align-items: center;
     justify-content: center;
-    width: 265px;
+    width: $comp-w;
     height: 380px;
     @include bgColor(white);
     box-shadow: 5px 5px 0px #131A18;
@@ -40,7 +43,7 @@
 
 .wrapper {
     position: relative;
-    @include rem(top, 50px);
+    @include rem(margin-top, 50px);
     width: 157px;
     z-index: 2;
 

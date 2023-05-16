@@ -1,24 +1,20 @@
-<section class="mentors box-acccent subpage-spacer">
-    <div class="xxx111">
-        <div class="yyy">
-            <h5 class="title-caption">friends and mentors</h5>
-            <h2>Following the footsteps of top UX experts</h2>
-            <p>During his UX Design journey, Eric was blessed to cross paths with Dave and Alex, two successful UX experts.</p>
+<div class="frame">
+    <div>
+        <h5 class="title-caption">friends and mentors</h5>
+        <h2>Following the footsteps of top UX experts</h2>
+        <p>During his UX Design journey, Eric was blessed to cross paths with Dave and Alex, two successful UX experts.
+        </p>
 
-            <app-quote 
-                class="mentors__quote"
-                [quote]="ericQuote"
-                [displayQuote]="true"
-            ></app-quote>
-        </div>
-        <div class="vdsvs">
-            <div *ngFor="let mentor of mentors; index as i;">
-                <app-nice-poster 
-                    [elt]="mentor" 
-                    decType="{{decorationNumber(i)}}" 
-                    class="block"
-                ></app-nice-poster>
-            </div>
+        <app-quote class="mentors__quote" [quote]="ericQuote" [displayQuote]="true"></app-quote>
+    </div>
+    <div class="frame-testimonials">
+        <div class="frame-testimonials-scroll">
+            <app-nice-poster 
+                *ngFor="let mentor of mentors; index as i;"
+                [elt]="mentor" 
+                decType="{{decorationNumber(i)}}" 
+                class="block"
+            ></app-nice-poster>
         </div>
     </div>
-</section>
+</div>

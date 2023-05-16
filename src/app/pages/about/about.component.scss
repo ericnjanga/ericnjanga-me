@@ -1,19 +1,6 @@
 @import './../../../assets/styles/mixins';
 
 
-.img-w1 {
-    @include rem(width, 92.58px);
-}
-
-.list-t1 {
-    display: flex;
-    align-items: start;
-    list-style: none;
-    padding-left: 0;
-    li {
-        @include rem(margin-right, 15px);
-    }
-}
 
 
 $xl: map-get($breakpoints, screen-xl);
@@ -43,6 +30,7 @@ $md: map-get($breakpoints, screen-md);
 
 .excellence {
     background-color: #fff;
+    @include rem(border-radius, 4px);
     @include respond-to($md) {
         @include rem(padding, 30px);
     }
@@ -55,58 +43,59 @@ $md: map-get($breakpoints, screen-md);
     }
 }
 
-
-
-.xxx111 {
-    display: flex;
-    @include rem(gap, 60px);
-    .yyy {
-        max-width: 380px;
-    }
-    .vdsvs {
-        display: flex;
-        width: 100%;
-        max-width: 700px;
-        justify-content: end;
-        @include rem(gap, 30px);
-    }
-
-    .mentors__quote {
-        display: block;
-        @include rem(margin-top, 40px);
-
-        ::ng-deep {
-            .title-wrapper {
-                border-left: 1px solid map-get($colors, state3);
-            }
-            .title-wrapper__heading,
-            .title-wrapper__subtitle {
-                font-family: 'Maitree', serif;
-                @include color(state3);
-
-                // quotes ...
-                &::before {
-                    @include color(state3);
-                }
-                &::after {
-                    @include color(state3);
-                }
-            }
-            .title-wrapper__heading {
-                @include rem(margin-bottom, 10px);
-            }
-        }
-    }
-
-    .vertical-list {
-        flex-direction: column;
-    }
-}
-
 .mentors {
-    .title-caption { 
-        @include color(primary_gray2);
+    @include rem(border-radius, 4px);
+    @include respond-to($md) {
+        @include bgColor(dark1);
+        @include rem(padding, 30px);
     }
-    @include color(primary_gray4);
-    background-color: map-get($colors , primary);
 }
+
+
+
+// .xxx111 {
+//     display: flex;
+//     @include rem(gap, 60px);
+//     .yyy {
+//         max-width: 380px;
+//     }
+//     .vdsvs {
+//         display: flex;
+//         width: 100%;
+//         max-width: 700px;
+//         justify-content: end;
+//         @include rem(gap, 30px);
+//     }
+
+//     .mentors__quote {
+//         display: block;
+//         @include rem(margin-top, 40px);
+
+//         ::ng-deep {
+//             .title-wrapper {
+//                 border-left: 1px solid map-get($colors, state3);
+//             }
+//             .title-wrapper__heading,
+//             .title-wrapper__subtitle {
+//                 font-family: 'Maitree', serif;
+//                 @include color(state3);
+
+//                 // quotes ...
+//                 &::before {
+//                     @include color(state3);
+//                 }
+//                 &::after {
+//                     @include color(state3);
+//                 }
+//             }
+//             .title-wrapper__heading {
+//                 @include rem(margin-bottom, 10px);
+//             }
+//         }
+//     }
+
+//     .vertical-list {
+//         flex-direction: column;
+//     }
+// }
+
