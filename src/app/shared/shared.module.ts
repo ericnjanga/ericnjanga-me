@@ -22,6 +22,12 @@ import { TitleCaptionComponent } from './title-caption/title-caption.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { QuoteComponent } from './quote/quote.component';
 import { NicePosterComponent } from './nice-poster/nice-poster.component';
+import { AppbarComponent } from './appbar/appbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+
+
 
 
 
@@ -44,6 +50,7 @@ import { NicePosterComponent } from './nice-poster/nice-poster.component';
     TestimonialComponent,
     QuoteComponent,
     NicePosterComponent,
+    AppbarComponent,
   ],
   imports: [
     CommonModule,
@@ -52,6 +59,9 @@ import { NicePosterComponent } from './nice-poster/nice-poster.component';
     MatProgressSpinnerModule,
     MatBadgeModule,
     MatTooltipModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatMenuModule,
   ],
   exports: [
     IconComponent,
@@ -69,6 +79,7 @@ import { NicePosterComponent } from './nice-poster/nice-poster.component';
     TestimonialComponent,
     QuoteComponent,
     NicePosterComponent,
+    AppbarComponent,
   ]
 })
 export class SharedModule { }

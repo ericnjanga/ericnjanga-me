@@ -1,7 +1,7 @@
 import { Component, Input, ViewChild } from '@angular/core';
 import { Project, Reference, ProjImg } from '../model/project';
-import {FormControl} from '@angular/forms';
-import {TooltipPosition} from '@angular/material/tooltip';
+import { FormControl } from '@angular/forms';
+import { TooltipPosition } from '@angular/material/tooltip';
 import { fadeIn } from '../services/animations';
 import { Category } from '../model/category';
 
@@ -12,7 +12,12 @@ import { Category } from '../model/category';
 })
 export class ProjectsCardListComponent {
   @Input() listTitle = '';
+  @Input() info = '';
   @Input() source: Project[] = [];
+
+  // tooltip positionning ...
+  positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
+  position = new FormControl(this.positionOptions[3]);
 
   
   // scroll system

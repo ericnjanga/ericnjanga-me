@@ -2,7 +2,7 @@
 
 
 
-
+<!-- 
 
 
 
@@ -13,7 +13,42 @@
     page="about"
     image="./../../../assets/img/about-hero.png"
     [quote]="heroQuote"
-></app-hero>
+></app-hero> -->
+
+
+
+<ul>
+    <li>
+        <a routerLink="/about/ui-developer">
+            UI developer for 16 years
+        </a>
+    </li>
+    <li>
+        <a routerLink="/about/ux-designer">
+            ux designer for 4 years
+        </a>
+    </li>
+    <li>
+        <a routerLink="/about/excellence">
+            Area of excellence
+        </a>
+    </li>
+    <li>
+        <a routerLink="/about/professional">
+            Professional qualities
+        </a>
+    </li>
+    <li>
+        <a routerLink="/about/mentors">
+            Friends and mentors
+        </a>
+    </li>
+    <li>
+        <a routerLink="/about/testimonials">
+            Testimonials
+        </a>
+    </li>
+</ul>
 
 
 
@@ -22,16 +57,11 @@
 <section class="introduction subpage-spacer">
     <div class="row">
         <div class="col">
-            <h5 class="title-caption">UI developer for 16 years</h5>
-            <h2>Skilled at creating responsive, accessible, and performant user interfaces.</h2>
-            <p>Eric’s deep understanding of code architecture (HTML, CSS, and TypeScript) and UI component’s anatomy allows him to create front-end applications that fulfill the organization's goals:</p>
-            <ul class="nice-bullet-list list-align-bullets-with-left-edge">
-                <li><b>Visually appeal:</b> He creates responsive, and user-friendly interfaces that enhance the overall user experience</li>
-                <li><b>Cross-Platform Compatibility:</b> He ensures the UI functions seamlessly across multiple devices and browsers (essential for reaching broader audiences)</li>
-                <li><b>Effective communication:</b> He provides clear technical requirements, gives valuable insights, and collaborates  with other team experts for the delivery a high-quality end products that meets the organization's objectives</li>
-            </ul>
+            <app-about-developer></app-about-developer>
+            
         </div>
         <div class="col">
+            <app-about-ux-designer></app-about-ux-designer>
             <h5 class="title-caption">ux designer for 4 years</h5>
             <h2>Focused on creating intuitive and engaging digital experiences that meet user needs and business goals.</h2>
             <p>Eric’s commitment to help organizations get higher user satisfaction, and better customer retention makes him a strong evangelist of the user-centred process. He likes delivering practical results:</p>
@@ -43,6 +73,9 @@
         </div>
     </div>
 </section>
+
+
+<app-about-excellence></app-about-excellence>
 
 
 <section class="excellence box-acccent box-acccent1 subpage-spacer">
@@ -68,6 +101,7 @@
 </section>
 
 
+<app-about-professional-qualities></app-about-professional-qualities>
 <section class="highlights subpage-spacer">
     <div class="row">
         <div class="col">
@@ -116,14 +150,13 @@
 </section>
 
 
+<app-about-mentors></app-about-mentors>
 <section class="mentors box-acccent subpage-spacer">
     <div class="xxx111">
         <div class="yyy">
             <h5 class="title-caption">friends and mentors</h5>
             <h2>Following the footsteps of top UX experts</h2>
             <p>During his UX Design journey, Eric was blessed to cross paths with Dave and Alex, two successful UX experts.</p>
-            <!-- <p>“Their generous advice, nurturing feedback and honest critique gave me the direction, the challenge and the push my online certifications couldn’t. “</p> -->
-
 
             <app-quote 
                 class="mentors__quote"
@@ -144,6 +177,7 @@
 </section>
 
 
+<app-about-testimonials></app-about-testimonials>
 <section class="testimonials subpage-spacer">
     <div class="xxx111">
         <div class="yyy">
@@ -157,6 +191,5 @@
         </div>
     </div>
 </section>
-
 
 

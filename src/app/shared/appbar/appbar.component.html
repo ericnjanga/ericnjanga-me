@@ -1,0 +1,34 @@
+<nav class="small">
+  <mat-toolbar class="toolbar">
+    <app-icon name="logo top"></app-icon>
+    <span class="nav-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-icon" aria-label="Open menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button routerLink="/" mat-menu-item>Home</button>
+      <button routerLink="/about" mat-menu-item>About</button>
+      <button routerLink="/projects" [queryParams]="{ industry:'all' }" mat-menu-item>Projects</button>
+    </mat-menu>
+  </mat-toolbar>
+</nav>
+
+
+<nav class="large">
+  <div class="container d-flex align-items-center">
+    <app-logo direction="horizontal"></app-logo>
+    <ul class="menu list-inline">
+      <li class="list-inline-item text-uppercase">
+        <app-call-to-action link="/home" label="Home" status="Nav link">Home</app-call-to-action>
+      </li>
+      <li class="list-inline-item text-uppercase">
+        <app-call-to-action link="/about" label="About" status="Nav link">About</app-call-to-action>
+      </li>
+      <li class="list-inline-item text-uppercase">
+        <app-call-to-action-params link="/projects" label="Projects" status="Nav link" qParam="all">
+          Projects
+        </app-call-to-action-params>
+      </li>
+    </ul>
+  </div>
+</nav>

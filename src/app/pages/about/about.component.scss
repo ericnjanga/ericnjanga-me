@@ -16,13 +16,23 @@
 }
 
 
-
+$xl: map-get($breakpoints, screen-xl);
+$md: map-get($breakpoints, screen-md);
 .introduction {
-    .row {
-        @include rem(gap, 100px);
+    // for extra large screens
+    @include respond-to($xl) {
+        .row {
+            @include rem(gap, 100px);
+        }
+        .col {
+            @include rem(width, 600px);
+        }
     }
-    .col {
-        @include rem(width, 600px);
+
+    @include before-to($md) {
+        .row {
+            flex-direction: column;
+        }
     }
 }
 

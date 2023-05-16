@@ -1,5 +1,6 @@
 @import './variables';
 
+$xl: map-get($breakpoints, screen-xl); //extra large screens
 
 @layer base {
 
@@ -114,15 +115,18 @@
 */
 
 // Increasing columnb gutter
-.row {
-    margin-right: calc(-1 * map-get($gap, lg));
-    margin-left: calc(-1 * map-get($gap, lg));
+@include respond-to($xl) {
+    .row {
+        margin-right: calc(-1 * map-get($gap, lg));
+        margin-left: calc(-1 * map-get($gap, lg));
+    }
+    .row>* {
+        padding-right: map-get($gap, lg);
+        padding-left: map-get($gap, lg);
+    }
 }
 
-.row>* {
-    padding-right: map-get($gap, lg);
-    padding-left: map-get($gap, lg);
-}
+
 
 
 
@@ -223,14 +227,21 @@
 
 
         li {
-            // border: 1px solid #a01919;
             position: relative;
             @include rem(margin-top, 10px);
             margin-right: 0px;
             @include rem(margin-bottom, 15px);
             margin-left: 0px;
-            @include rem(padding-left, 20px);
+            @include rem(padding-left, 10px);
+
+            // Increase gutter for extra large screens
+            @include respond-to($xl) {
+                @include rem(padding-left, 20px);
+            }
         }
+
+
+
 
         li::before {
             border: 1px solid #0e42bb;

@@ -16,9 +16,15 @@ $base-font-size: 16px; // Set your base font size in pixels
 @mixin color($colorVal) {
   color: map-get($colors, $colorVal);
 }
+@mixin colorIm($colorVal) {
+  color: map-get($colors, $colorVal)!important;
+}
 
 @mixin bgColor($colorVal) {
   background-color: map-get($colors, $colorVal);
+}
+@mixin bgColorImp($colorVal) {
+  background-color: map-get($colors, $colorVal)!important;
 }
 
 

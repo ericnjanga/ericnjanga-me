@@ -8,7 +8,14 @@
     </button>
 </nav>
 
-<h2 class="list-title">{{listTitle}}</h2>
+<h2 class="list-title">
+    {{listTitle}}
+    <app-icon 
+        name="info circle"
+        [matTooltip]="info" matTooltipClass="custom-tooltip-1"
+        [matTooltipPosition]="position.value!">
+    ></app-icon>
+</h2>
 
 <div class="scrallable-area--wrapper" #scrollable>
     <div class="scrallable-area--content" [style.--num-children]="source.length">

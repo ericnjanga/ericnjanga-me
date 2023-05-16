@@ -13,7 +13,6 @@ import { InMemoryDataService } from './projects/services/in-memory-data/in-memor
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppbarComponent } from './parts/appbar/appbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './parts/footer/footer.component';
@@ -23,17 +22,28 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { SharedModule } from './shared/shared.module';
 import { ProjectsModule } from './projects/projects.module';
 import { RichyGroupComponent } from './pages-static/richy-group/richy-group.component';
+import { AboutDeveloperComponent } from './pages/about-developer/about-developer.component';
+import { AboutUxDesignerComponent } from './pages/about-ux-designer/about-ux-designer.component';
+import { AboutExcellenceComponent } from './pages/about-excellence/about-excellence.component';
+import { AboutProfessionalQualitiesComponent } from './pages/about-professional-qualities/about-professional-qualities.component';
+import { AboutMentorsComponent } from './pages/about-mentors/about-mentors.component';
+import { AboutTestimonialsComponent } from './pages/about-testimonials/about-testimonials.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppbarComponent,
     HomeComponent,
     FooterComponent,
     LoginComponent,
     AboutComponent,
     PageNotFoundComponent,
     RichyGroupComponent,
+    AboutDeveloperComponent,
+    AboutUxDesignerComponent,
+    AboutExcellenceComponent,
+    AboutProfessionalQualitiesComponent,
+    AboutMentorsComponent,
+    AboutTestimonialsComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,10 +14,12 @@ export class IconComponent {
   isIXDF: boolean = false;
   isInfoFill: boolean = false;
   isInfoLg: boolean = false;
+  isInfoCircle = false;
   isArrowLeft: boolean = false;
   isArrowRight: boolean = false;
   isCTAarrow: boolean = false;
-  isLogo: boolean = false;
+  isLogoTop = false;
+  isLogoBottom = false;
   isfileearmark: boolean = false;
   iswindow: boolean = false;
   isfileearmarkpdf: boolean = false;
@@ -49,6 +51,10 @@ export class IconComponent {
         this.isInfoLg = true;
         break;
 
+      case "info circle":
+        this.isInfoCircle = true;
+        break;
+
       case "arrowLeft":
         this.isArrowLeft = true;
         break;
@@ -61,8 +67,12 @@ export class IconComponent {
         this.isCTAarrow = true;
         break;
 
-      case "logo":
-        this.isLogo = true;
+      case "logo top":
+        this.isLogoTop = true;
+        break;
+
+      case "logo bottom":
+        this.isLogoBottom = true;
         break;
 
       case "fileearmark":

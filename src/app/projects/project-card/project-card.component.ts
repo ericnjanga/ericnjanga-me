@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Project, Reference, ProjImg } from '../model/project';
-import {FormControl} from '@angular/forms';
-import {TooltipPosition} from '@angular/material/tooltip';
+import { FormControl } from '@angular/forms';
+import { TooltipPosition } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-project-card',
@@ -11,6 +11,8 @@ import {TooltipPosition} from '@angular/material/tooltip';
 export class ProjectCardComponent {
   @Input() project!: Project;
   titleMaxLength = 40;
+
+  // tooltip positionning ...
   positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
   position = new FormControl(this.positionOptions[0]);
 

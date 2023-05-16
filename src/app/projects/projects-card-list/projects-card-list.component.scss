@@ -5,6 +5,7 @@
 $dropshadow-blur: map-get($gap, p-card-ds);
 $card-width-large: map-get($components-size, p-card-w-lg);
 $frame-padding: $dropshadow-blur; // Gap necessary to allow cards drop shadow to be visible
+$info-iw: map-get($components-size, info-icon-w);
 
 // By default
 :host {
@@ -21,6 +22,16 @@ $frame-padding: $dropshadow-blur; // Gap necessary to allow cards drop shadow to
         top: 0;
         @include rem(left, $frame-padding);
         margin: 0;
+        display: flex;
+        @include rem(gap, 10px);
+        align-items: center;
+
+        ::ng-deep {
+            svg {
+                @include rem(width, $info-iw);
+                @include rem(height, $info-iw);
+            }
+        }
     }
     // Scroll system ..
     // .scrallable-area--wrapper {}
