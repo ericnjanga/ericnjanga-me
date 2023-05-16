@@ -18,22 +18,27 @@
 
 $xl: map-get($breakpoints, screen-xl);
 $md: map-get($breakpoints, screen-md);
-.introduction {
-    // for extra large screens
-    @include respond-to($xl) {
-        .row {
-            @include rem(gap, 100px);
-        }
-        .col {
-            @include rem(width, 600px);
-        }
-    }
 
+.mobile-hidden {
     @include before-to($md) {
-        .row {
-            flex-direction: column;
-        }
+        display: none;
     }
+}
+
+
+.bx-container {
+    container-type: inline-size;
+}
+
+
+.introduction {
+    display: grid;
+    grid-template-columns: auto auto;
+    @include rem(gap, 90px);
+    @include respond-to($xl) {
+        @include rem(gap, 120px);
+    }
+   
 }
 
 .excellence {

@@ -7,11 +7,11 @@ $xl: map-get($breakpoints, screen-xl); //extra large screens
     body {
         padding-top: map-get($gap, appBar);
     }
-    
+
     img {
         max-width: 100%;
     }
-    
+
 }
 
 
@@ -73,10 +73,12 @@ $xl: map-get($breakpoints, screen-xl); //extra large screens
     .scrallable-area--wrapper {
         overflow-x: scroll;
     }
+
     .scrallable-area--pagination {
         display: flex;
         justify-content: end;
     }
+
     .scrallable-area--content {}
 }
 
@@ -114,17 +116,17 @@ $xl: map-get($breakpoints, screen-xl); //extra large screens
  * --------------------------------------------------
 */
 
-// Increasing columnb gutter
-@include respond-to($xl) {
-    .row {
-        margin-right: calc(-1 * map-get($gap, lg));
-        margin-left: calc(-1 * map-get($gap, lg));
-    }
-    .row>* {
-        padding-right: map-get($gap, lg);
-        padding-left: map-get($gap, lg);
-    }
-}
+// // Increasing columnb gutter
+// @include respond-to($xl) {
+//     .row {
+//         margin-right: calc(-1 * map-get($gap, lg));
+//         margin-left: calc(-1 * map-get($gap, lg));
+//     }
+//     .row>* {
+//         padding-right: map-get($gap, lg);
+//         padding-left: map-get($gap, lg);
+//     }
+// }
 
 
 
@@ -221,30 +223,34 @@ $xl: map-get($breakpoints, screen-xl); //extra large screens
 */
 @layer utilities {
 
+
     .nice-bullet-list {
-        // border: 1px solid #ccc;
         list-style: none;
 
 
         li {
             position: relative;
-            @include rem(margin-top, 10px);
             margin-right: 0px;
-            @include rem(margin-bottom, 15px);
             margin-left: 0px;
+            @include rem(margin-top, 10px);
+            @include rem(margin-bottom, 15px);
             @include rem(padding-left, 10px);
 
-            // Increase gutter for extra large screens
-            @include respond-to($xl) {
+            // Increase space between content and bullet if the container increases
+            @container (min-width: 450px) {
                 @include rem(padding-left, 20px);
             }
+
+
         }
 
 
 
 
+
+
         li::before {
-            border: 1px solid #0e42bb;
+            border: 1px solid map-get($colors, primary_dark2);
             content: "";
             display: inline-block;
             position: absolute;

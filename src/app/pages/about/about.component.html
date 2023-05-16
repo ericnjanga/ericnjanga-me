@@ -2,7 +2,7 @@
 
 
 
-<!-- 
+
 
 
 
@@ -13,7 +13,7 @@
     page="about"
     image="./../../../assets/img/about-hero.png"
     [quote]="heroQuote"
-></app-hero> -->
+></app-hero>
 
 
 
@@ -54,142 +54,29 @@
 
 
 
-<section class="introduction subpage-spacer">
-    <div class="row">
-        <div class="col">
-            <app-about-developer></app-about-developer>
-            
-        </div>
-        <div class="col">
-            <app-about-ux-designer></app-about-ux-designer>
-            <h5 class="title-caption">ux designer for 4 years</h5>
-            <h2>Focused on creating intuitive and engaging digital experiences that meet user needs and business goals.</h2>
-            <p>Eric’s commitment to help organizations get higher user satisfaction, and better customer retention makes him a strong evangelist of the user-centred process. He likes delivering practical results:</p>
-            <ul class="nice-bullet-list list-align-bullets-with-left-edge">
-                <li><b>User Experience Improvement:</b> Through user research, and  persona creation, he creates a seamless, intuitive, and delightful interfaces that meet users' needs and expectations</li>
-                <li><b>Enhanced Functionality:</b> He identifies areas for improvement, suggests new features and functionalities, and create wireframes and prototypes to test new ideas</li>
-                <li><b>Increased Brand Loyalty:</b> He creates a consistent brand identity across all touchpoints, including the website, mobile app, social media, and marketing materials.</li>
-            </ul>
-        </div>
-    </div>
+<section class="introduction">
+    <app-about-developer class="bx-container mobile-hidden"></app-about-developer>
+    <app-about-ux-designer class="bx-container mobile-hidden"></app-about-ux-designer>
 </section>
 
 
-<app-about-excellence></app-about-excellence>
+<app-about-excellence class="bx-container"></app-about-excellence>
+<!-- 
 
 
-<section class="excellence box-acccent box-acccent1 subpage-spacer">
-    <div class="row">
-        <div class="col">
-            <img src="./../../../assets/img/project-26-hero.png" alt="">
-        </div>
-        <div class="col">
-            <h5 class="title-caption">excellence</h5>
-            <h2>Planning and execution</h2>
-            
-            <h3>Idea analysis</h3>
-            <p>Eric evaluates and refines ideas to determine their feasibility, relevance, and potential impact on the user experience (user needs, business objectives, feasibility, impact and prioritization).</p>
 
-            
-            <h3>Concept design</h3>
-            <p>Eric explores and creates high-level design concepts to visualize and communicate design ideas to stakeholders and team members before moving to the more detailed design stages.</p>
-            
-            <h3>High-fidelity implementation</h3>
-            <p>Eric converts design concepts into a fully functional and visually appealing interfaces. He uses design files (Sketch, Figma, or Adobe XD), to create pixel-perfect UI elements, incorporating animations and interactions, and ensuring that the final product meets the design requirements.</p>
-        </div>
-    </div>
-</section>
+
 
 
 <app-about-professional-qualities></app-about-professional-qualities>
-<section class="highlights subpage-spacer">
-    <div class="row">
-        <div class="col">
-            <h3>Self-starter</h3>
-            <p>Eric is highly motivated, proactive, and is accountable for his work.  He naturally takes initiatives, sets and reaches goals, and works independently.</p>
-            <ul class="list-t1">
-                <li>
-                    <img class="img-w1" src="./../../../assets/img/Self-starter 1.png" alt="">
-                </li>
-                <li>
-                    <img class="img-w1" src="./../../../assets/img/Self-starter 2.png" alt="">
-                </li>
-            </ul>
-        </div>
-        <div class="col">
-            <h3>Career highlights</h3>
-            <p>Eric has been working in multiple industries notably: Banking, computing, health, automotive, food retailing, eCommerce, gaming and education.</p>
-            <ul class="list-t1">
-                <li>
-                    <img class="img-w1" src="./../../../assets/img/career-highlight 1.png" alt="">
-                </li>
-                <li>
-                    <img class="img-w1" src="./../../../assets/img/career-highlight 2.png" alt="">
-                </li>
-                <li>
-                    <img class="img-w1" src="./../../../assets/img/career-highlight 3.png" alt="">
-                </li>
-            </ul>
-        </div>
-        <div class="col">
-            <h3>Avid learner</h3>
-            <p>Eric is constantly seeking to expand his knowledge and skills in UX design and UI development. He loves staying up-to-date with the latest industry trends.</p>
-            <ul class="list-t1">
-                <li>
-                    <img class="img-w1" src="./../../../assets/img/education 1.png" alt="">
-                </li>
-                <li>
-                    <img class="img-w1" src="./../../../assets/img/education 2.png" alt="">
-                </li>
-                <li>
-                    <img class="img-w1" src="./../../../assets/img/education 3.png" alt="">
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
+
 
 
 <app-about-mentors></app-about-mentors>
-<section class="mentors box-acccent subpage-spacer">
-    <div class="xxx111">
-        <div class="yyy">
-            <h5 class="title-caption">friends and mentors</h5>
-            <h2>Following the footsteps of top UX experts</h2>
-            <p>During his UX Design journey, Eric was blessed to cross paths with Dave and Alex, two successful UX experts.</p>
 
-            <app-quote 
-                class="mentors__quote"
-                [quote]="ericQuote"
-                [displayQuote]="true"
-            ></app-quote>
-        </div>
-        <div class="vdsvs">
-            <div *ngFor="let mentor of mentors; index as i;">
-                <app-nice-poster 
-                    [elt]="mentor" 
-                    decType="{{decorationNumber(i)}}" 
-                    class="block"
-                ></app-nice-poster>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 <app-about-testimonials></app-about-testimonials>
-<section class="testimonials subpage-spacer">
-    <div class="xxx111">
-        <div class="yyy">
-            <h5 class="title-caption">testimonials</h5>
-            <h2>What people are saying about Eric</h2>
-        </div>
-        <div class="vdsvs vertical-list">
-            <div class="item" *ngFor="let item of testimonialList">
-                <app-testimonial [testimonial]="item"></app-testimonial>
-            </div>
-        </div>
-    </div>
-</section>
+ -->
 
 
