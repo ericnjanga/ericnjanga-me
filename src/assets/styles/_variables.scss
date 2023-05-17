@@ -64,7 +64,8 @@ $breakpoints: (
  * General layout
 */
 $gap: (
-    appBar      : 80px,
+    appBar-sm      : 64px,
+    appBar-lg     : 80px,
     appFooter   : 300px,
     xxs         : 7px, 
     xs          : 10px,

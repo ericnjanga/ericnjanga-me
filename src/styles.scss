@@ -26,6 +26,12 @@ components;
 @import './assets/styles/global';
 
 
+$sm: map-get($breakpoints, screen-sm);
+$md: map-get($breakpoints, screen-md);
+$lg: map-get($breakpoints, screen-lg);
+$xl: map-get($breakpoints, screen-xl);
+
+
 
 
 @layer base {
@@ -60,15 +66,24 @@ components;
     }
 
     h1 {
+        @include before-to($md) {
+            @include typo-h2();
+        }
         @include typo-h1();
     }
 
     h2 {
+        @include before-to($md) {
+            @include typo-h3();
+        }
         margin-bottom: 25px;
         @include typo-h2();
     }
 
     h3 {
+        @include before-to($md) {
+            @include typo-h4();
+        }
         @include typo-h3();
     }
 

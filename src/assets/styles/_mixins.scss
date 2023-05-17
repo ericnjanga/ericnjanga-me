@@ -109,11 +109,14 @@ $base-font-size: 16px; // Set your base font size in pixels
   line-height: 16px;
   font-weight: 700;
 }
-@mixin typo-titleCaption() {
+@mixin typo-titleCaption($transform: null) {
   font-size: 15px;
   line-height: 20px;
-  text-transform: uppercase;
   font-weight: 500;
+  @if $transform != null {
+    text-transform: $transform;
+  }
+  
 }
 @mixin typo-caption1() {
   font-weight: 400;
