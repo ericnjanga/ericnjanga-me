@@ -45,21 +45,39 @@ $transition-breakpoint: 936px;
     // [visibility] ....................................................
 
 
-    // [styles] ........................................................
+    // [styling] ........................................................
+    .appbar-wrapper {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+    }
     .small {
         // the bar ...
         .mat-toolbar {
             @include bgColorImp(primary_gray4);
         }
 
-        label {
+        .small__page-indicator {
+            display: flex;
+            align-items: center;
             @include color(gray0);
+
+            .btn-back {
+                position: relative;
+                @include rem(left, -30px);
+            }
+            span {
+                @include typo-titleCaption(none);
+            }
         }
 
-        // trigger button
-        .mat-icon {
+        .btn-menu { // trigger button
             // hamburger
             @include colorIm(primary_dark2);
+        }
+        .btn-menu[aria-expanded="true"] {
+            @include bgColorImp(primary_gray2);
         }
 
         // spacer between logo and trigger button
@@ -69,12 +87,10 @@ $transition-breakpoint: 936px;
     }
 
     .large {
-        // position: fixed;
-        // top: 0;
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        height: map-get($gap, appBar);
+        height: map-get($gap, appBar-lg);
 
         @include set-app-background-color();
         z-index: 3;
@@ -83,7 +99,7 @@ $transition-breakpoint: 936px;
         a {
             text-transform: uppercase;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             @include color(dark1);
         }
 
@@ -106,20 +122,12 @@ $transition-breakpoint: 936px;
             }
 
 
-            li:not(:last-child) {
-                // margin-right: 150px;
-            }
 
-            .menu-item-active {
-                text-decoration: underline;
-                @include color(state2);
-            }
-
-            a:hover {
-                @include color(state1);
+            .menu-item-active, a:hover {
+                @include color(primary_gray1);
                 text-decoration: underline;
             }
         }
     }
-    // [styles] ........................................................
+    // [styling] ........................................................
 }

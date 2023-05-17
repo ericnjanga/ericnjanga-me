@@ -1,17 +1,20 @@
 @import './variables';
 
 $xl: map-get($breakpoints, screen-xl); //extra large screens
+$lg: map-get($breakpoints, screen-lg); //extra large screens
 
 @layer base {
-
+    // Adjust document top padding to the appbar in display
     body {
-        padding-top: map-get($gap, appBar);
+        padding-top: map-get($gap, appBar-sm); // Smaller padding for small appbar
+        @include respond-to($lg) {
+            padding-top: map-get($gap, appBar-lg); // Bigger padding for small appbar
+        }
     }
 
     img {
         max-width: 100%;
     }
-
 }
 
 
@@ -40,7 +43,7 @@ $xl: map-get($breakpoints, screen-xl); //extra large screens
 .title-caption {
     margin-bottom: 0;
     @include color(primary_gray1);
-    @include typo-titleCaption();
+    @include typo-titleCaption(uppercase);
 }
 
 .pagination-wrapper {

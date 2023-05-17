@@ -1,64 +1,75 @@
-<div class="container bx-container">
-  <div class="row">
-    <div class="col">
+<div class="appbar-wrapper">
+  <div class="container bx-container">
+    <div class="row">
+      <div class="col">
 
 
 
-      <nav class="small">
-        <mat-toolbar class="toolbar">
-
-          <app-icon *ngIf="!isChildRouteOf('about', currentRoute)" name="logo top"></app-icon>
-
-          <button mat-icon-button *ngIf="isChildRouteOf('about', currentRoute)" (click)="goBack()">
-            <mat-icon aria-hidden="false" aria-label="Back">arrow_back</mat-icon>
-            <label for="">Back</label>
-          </button>
-
-          <span class="nav-spacer"></span>
-
-          <div *ngIf="!isChildRouteOf('about', currentRoute)">
-            <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-icon" aria-label="Open menu">
-              <mat-icon>menu</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu">
-              <button routerLink="/" mat-menu-item>Home</button>
-              <button routerLink="/about" mat-menu-item>About</button>
-              <button routerLink="/projects" [queryParams]="{ industry:'all' }" mat-menu-item>Projects</button>
-            </mat-menu>
-          </div>
-
-        </mat-toolbar>
-      </nav>
+        <nav class="small">
+          <mat-toolbar class="toolbar">
+            <a routerLink="/home">
+              <app-icon *ngIf="!isChildRouteOf('about', currentRoute)" name="logo top"></app-icon>
+            </a>
 
 
-      <nav class="large">
-        <app-icon name="logo top"></app-icon>
-        <!-- <app-logo direction="horizontal"></app-logo> -->
-        <ul class="menu-list">
-          <li>
-            <a routerLink="/home">Home</a>
-            <!-- <app-call-to-action link="/home" label="Home" status="Nav link">Home</app-call-to-action> -->
-          </li>
-          <li>
-            <a routerLink="/about">About</a>
-            <!-- <app-call-to-action link="/about" label="About" status="Nav link">About</app-call-to-action> -->
-          </li>
-          <li>
-            <a routerLink="/projects" [queryParams]="{ industry: 'all' }">Projects</a>
-            <!-- <app-call-to-action-params link="/projects" label="Projects" status="Nav link" qParam="all">
-                Projects
-              </app-call-to-action-params> -->
-          </li>
-        </ul>
-      </nav>
+            <div 
+              class="small__page-indicator"
+              *ngIf="isChildRouteOf('about', currentRoute)"
+            >
+              <button 
+                class="btn-back"
+                mat-icon-button
+                (click)="goBack()"
+              >
+                <mat-icon aria-hidden="false" aria-label="Back">arrow_back</mat-icon>
+              </button>
+
+              <span >Parent / Current page</span>
+            </div>
+
+            <span class="nav-spacer"></span>
+
+            <div *ngIf="!isChildRouteOf('about', currentRoute)">
+              <button mat-icon-button [matMenuTriggerFor]="menu" class="btn-menu" aria-label="Open menu">
+                <mat-icon>menu</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button routerLink="/" mat-menu-item>Home</button>
+                <button routerLink="/about" mat-menu-item>About</button>
+                <button routerLink="/projects" [queryParams]="{ industry:'all' }" mat-menu-item>Projects</button>
+              </mat-menu>
+            </div>
+
+          </mat-toolbar>
+        </nav>
+
+
+        <nav class="large">
+          <a routerLink="/home">
+            <app-icon name="logo top"></app-icon>
+          </a>
+
+          <ul class="menu-list">
+            <li>
+              <a routerLink="/home" routerLinkActive="menu-item-active">Home</a>
+            </li>
+            <li>
+              <a routerLink="/about" routerLinkActive="menu-item-active">About</a>
+            </li>
+            <li>
+              <a routerLink="/projects" routerLinkActive="menu-item-active" [queryParams]="{ industry: 'all' }">Projects</a>
+            </li>
+          </ul>
+        </nav>
 
 
 
 
 
 
+      </div>
     </div>
+
+
   </div>
-
-
 </div>
