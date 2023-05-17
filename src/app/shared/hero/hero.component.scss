@@ -13,8 +13,15 @@
 
 // Dimensions
 $hero-height-lg: 700px;
+$hero-height-mg: 550px;
 $hero-height-sm: 405px;
 $hero-bg-lg: 486px;
+
+// Spacers 
+$spacer-sm: map-get($gap, spacer-sm);
+$spacer-md: map-get($gap, spacer-md);
+$spacer-lg: map-get($gap, spacer-lg);
+$spacer-xl: map-get($gap, spacer-xl);
 
 
 ::host {
@@ -26,37 +33,107 @@ $hero-bg-lg: 486px;
 // [visibility] ....................................................
 @layer components.hero {
     .hero {
-        
+
         border: 4px solid turquoise;
-       
-        @container (min-width: 1116px) {
+
+
+
+        // Default ....
+        border: 4px solid green;
+        @include rem(margin-bottom, $spacer-sm);
+        &.hero--large {
+            height: auto;
+        } 
+        .img { display: none; }
+        .background {
+            height: 100%;
+        }
+
+        // ...
+        @container (min-width: 516px) {
+            @include rem(margin-bottom, $spacer-sm);
+
+            border: 4px solid blue;
+
+            &.hero--large {
+                height: auto;
+                .text-wrapper {
+                    top: auto;
+                }
+            }
+        }
+
+        // ...
+        @container (min-width: 696px) {
+            @include rem(margin-bottom, $spacer-md);
+
+            border: 4px solid pink;
+
+            &.hero--large {
+                height: $hero-height-mg;
+
+                .text-wrapper {
+                    top: 30%;
+                    @include rem(max-width, 434px);
+                }
+                .img--phone {
+                    display: block;
+                    top: 5%;
+                    right: 8%;
+                    width: 28%;
+                }
+            }
+
+            .background {
+                bottom: 0;
+                height: 80%;
+            }
+        }
+
+        // ...
+        @container (min-width: 936px) { // max-width: 1116px
+            @include rem(margin-bottom, $spacer-lg);
             border: 4px solid lime;
 
-            &.hero--large { border: 10px solid;
-                height: $hero-height-lg;
+            &.hero--large {
+                .text-wrapper {
+                    @include rem(max-width, 434px);
+                }
+
                 .background {
                     top: 100px;
                     height: $hero-bg-lg;
                 }
+
+                .img--laptop {
+                    @include rem(top, 170px);
+                    @include rem(right, 220px);
+                    width: 542px;
+                    height: 347.91px;
+                }
+
+                .img--phone {
+                    top: 0;
+                    @include rem(right, 100px);
+                    width: 302px;
+                    height: 650.24px;
+                    z-index: 1;
+                }
             }
         }
-        @container (max-width: 936px) {
-            border: 4px solid pink;
-            .background {
-                height: 100%;
-            }
-        }
-        @container (max-width: 696px) {
-            border: 4px solid blue;
-            .img { display: none; }
-        }
-        @container (max-width: 516px) {
-            border: 4px solid green;
+
+
+ 
+        // ...
+        @container (min-width: 1117px) { // max-width: 1296px
+            @include rem(margin-bottom, $spacer-xl);
+            border: 4px solid orange;
+
         }
     }
 }
-// [visibility] ....................................................
 
+// [visibility] ....................................................
 
 
 
@@ -74,20 +151,26 @@ $hero-bg-lg: 486px;
             @include rem(margin-bottom, 5px);
         }
 
-        .hero__title, .hero__quote, .hero__cta {
+        .hero__title,
+        .hero__quote,
+        .hero__cta {
             margin-bottom: 0;
         }
-        .hero__quote, .hero__cta {
+
+        .hero__quote,
+        .hero__cta {
             @include rem(margin-top, 30px);
         }
+
         .hero__quote {
             display: block;
         }
 
         .hero__quote::ng-deep {
             .title-wrapper {
-                border-left: 1px solid #{map-get($colors, primary_gray1)}!important;
+                border-left: 1px solid #{map-get($colors, primary_gray1)} !important;
             }
+
             .title-wrapper .title-wrapper__heading,
             .title-wrapper .title-wrapper__subtitle,
             svg {
@@ -95,169 +178,16 @@ $hero-bg-lg: 486px;
             }
         }
     }
+
     .hero .slide {
         position: relative;
         display: flex;
         width: 100%;
         align-items: baseline;
         z-index: 2;
-        
+
         @include rem(min-height, 200px);
         @include rem(padding, 50px);
-    }
-}
-// [styling] ........................................................
-
-@layer components.hero {
-
-
-    .hero {
-
-        .hero__title {
-            @include color(primary_gray5);
-
-            &.isQuote {
-                &::before {
-                    content: '\201C';
-                    /* Unicode character for left double quotation mark */
-                    @include rem(font-size, 40px);
-                    @include color(primary_gray5);
-                    margin-right: 5px;
-                }
-
-                &::after {
-                    content: '\201D';
-                    /* Unicode character for right double quotation mark */
-                    @include rem(font-size, 40px);
-                    @include color(primary_gray5);
-                    margin-left: 5px;
-                }
-            }
-        }
-
-    }
-
-
-    .img {
-        position: absolute;
-    }
-
-    .hero--large {
-
-        .hero__title {}
-
-        .text-wrapper {
-            max-width: 434px;
-        }
-
-        .img {
-            filter: drop-shadow(20px 11.4887px 33.08px rgba(0, 0, 0, 0.75));
-        }
-
-        .img--laptop {
-            @include rem(top, 170px);
-            @include rem(right, 220px);
-            width: 542px;
-            height: 347.91px;
-        }
-
-        .img--phone {
-            top: 0;
-            @include rem(right, 100px);
-            width: 302px;
-            height: 650.24px;
-            z-index: 1;
-        }
-    }
-
-    .hero--small {
-        // height: $hero-height-sm;
-        overflow: hidden;
-
-        // .text-wrapper {
-        //     position: absolute;
-        //     @include rem(top, 150px);
-        //     width: 100%;
-        //     max-width: 600px;
-        // }
-
-        // .background {
-        //     bottom: 0;
-        //     height: 300px;
-        // }
-
-
-
-        .img--laptop {
-            width: 648px;
-            top: 30px;
-            right: -200px;
-        }
-
-        .img--phone {
-            width: 329px;
-            top: 0;
-            right: 0
-        }
-    }
-
-
-
-
-
-    .text-wrapper {
-        @include rem(left, 50px);
-    }
-
-
-    .background {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        display: block;
-        @include bgColor(primary);
-        @include rem(border-radius, 4px);
-        z-index: 0;
-    }
-
-
-    .slide--about {
-        .img {
-            width: 41.188rem;
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-    .hero {
-        .caption {
-            display: block;
-        }
-
-        ::ng-deep .caption {
-
-            // border: 2px solid red;
-            .title-caption {
-                font-weight: 600;
-                color: #5A6D5B;
-                text-transform: uppercase;
-                @include rem(font-size, 15px);
-
-
-                .mat-badge-content {
-                    @include color(accent2);
-                    background-color: #5E675E;
-                }
-            }
-        }
     }
 
     .hero__quote {
@@ -291,6 +221,103 @@ $hero-bg-lg: 486px;
         }
     }
 
+    .text-wrapper {
+        position: relative;
+    }
+
+    .hero--small {
+        // height: $hero-height-sm;
+        overflow: hidden;
+
+        .img--laptop {
+            width: 648px;
+            top: 30px;
+            right: -200px;
+        }
+
+        .img--phone {
+            width: 329px;
+            top: 0;
+            right: 0
+        }
+    }
+
+    .img {
+        position: absolute;
+        filter: drop-shadow(20px 11.4887px 33.08px rgba(0, 0, 0, 0.75));
+    }
+
+    .background {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: block;
+        @include bgColor(primary);
+        @include rem(border-radius, 4px);
+        z-index: 0;
+    }
+}
+
+// [styling] ........................................................
+
+@layer components.hero {
+    .hero {
+        .hero__title {
+            @include color(primary_gray5);
+
+            &.isQuote {
+                &::before {
+                    content: '\201C';
+                    /* Unicode character for left double quotation mark */
+                    @include rem(font-size, 40px);
+                    @include color(primary_gray5);
+                    margin-right: 5px;
+                }
+
+                &::after {
+                    content: '\201D';
+                    /* Unicode character for right double quotation mark */
+                    @include rem(font-size, 40px);
+                    @include color(primary_gray5);
+                    margin-left: 5px;
+                }
+            }
+        }
+
+    }
+
+    // .text-wrapper {
+    //     @include rem(left, 50px);
+    // }
+
+    .slide--about {
+        .img {
+            width: 41.188rem;
+        }
+    }
+
+    .hero {
+        .caption {
+            display: block;
+        }
+
+        ::ng-deep .caption {
+
+            // border: 2px solid red;
+            .title-caption {
+                font-weight: 600;
+                color: #5A6D5B;
+                text-transform: uppercase;
+                @include rem(font-size, 15px);
+
+
+                .mat-badge-content {
+                    @include color(accent2);
+                    background-color: #5E675E;
+                }
+            }
+        }
+    }
 }
 
 // components.hero

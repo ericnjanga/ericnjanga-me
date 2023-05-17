@@ -69,14 +69,42 @@ $base-font-size: 16px; // Set your base font size in pixels
  * Typography
  * ------------------------------------
 */
-@mixin typo-h1() {
-  font-size: 44px;
-  line-height: 46px;
+@mixin typo-h1($size) {
+  @if ($size=='large') {
+    @include rem(font-size, 44px);
+    @include rem(line-height, 62px);
+    color: yellow!important;
+  }
+  @else if ($size=='medium') {
+    @include rem(font-size, 40px);
+    @include rem(line-height, 46px);
+    color: red!important;
+  }
+  @else {
+    @include rem(font-size, 36px);
+    @include rem(line-height, 40px);
+    color: green!important;
+  }
+
   font-weight: 600;
 }
-@mixin typo-h2() {
-  font-size: 32px;
-  line-height: 36px;
+
+@mixin typo-h2($size) {
+  @if (size=='large') {
+    @include rem(font-size, 32px);
+    @include rem(line-height, 34px);
+    color: yellow!important;
+  }
+  @else if (size=='medium') {
+    @include rem(font-size, 28px);
+    @include rem(line-height, 30px);
+    color: red!important;
+  }
+  @else {
+    @include rem(font-size, 24px);
+    @include rem(line-height, 26px);
+    color: green!important;
+  }
   font-weight: 600;
 }
 @mixin typo-h3() {

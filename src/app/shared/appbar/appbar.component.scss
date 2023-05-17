@@ -51,6 +51,7 @@ $transition-breakpoint: 936px;
         top: 0;
         width: 100%;
         z-index: 3;
+        @include bgColorImp(primary_gray5);
     }
     .small {
         // the bar ...
