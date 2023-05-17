@@ -8,13 +8,13 @@
         <nav class="small">
           <mat-toolbar class="toolbar">
             <a routerLink="/home">
-              <app-icon *ngIf="!isChildRouteOf('about', currentRoute)" name="logo top"></app-icon>
+              <app-icon *ngIf="!isChildRouteOf(['about', 'projects'], currentRoute)" name="logo top"></app-icon>
             </a>
 
 
             <div 
               class="small__page-indicator"
-              *ngIf="isChildRouteOf('about', currentRoute)"
+              *ngIf="isChildRouteOf(['about', 'projects'], currentRoute)"
             >
               <button 
                 class="btn-back"
@@ -29,7 +29,7 @@
 
             <span class="nav-spacer"></span>
 
-            <div *ngIf="!isChildRouteOf('about', currentRoute)">
+            <div *ngIf="!isChildRouteOf(['about', 'projects'], currentRoute)">
               <button mat-icon-button [matMenuTriggerFor]="menu" class="btn-menu" aria-label="Open menu">
                 <mat-icon>menu</mat-icon>
               </button>

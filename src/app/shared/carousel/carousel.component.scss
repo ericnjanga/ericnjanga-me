@@ -89,7 +89,7 @@ $ng-card: 5;
     }
 
     // change background color
-    @include bgColor(primary_gray3);
+    @include bgColor(primary_gray4);
 
     // change "decoration" background color
     &::after {

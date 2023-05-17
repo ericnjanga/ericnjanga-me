@@ -1,13 +1,19 @@
 <app-hero
     class="hero"
     [title]="project.descriptions.title"
-    [captionData]="project.categories"
     size="small"
     page="projects"
+    [titleCaption]="project.categories[0].title"
     [imageType]="project.images.type"
     [image]="project.images.hero"
 ></app-hero>
 
+
+
+
+<br><br>
+<app-title-caption class="caption" [items]="project.categories"></app-title-caption>
+<br><br>
 
 
 <section class="main-wrapper d-flex">
@@ -65,6 +71,9 @@
     </div>
 </section>
 
+
+
+<!-- 
 <section class="footer-cta text-center">
     <h2 *ngIf="!project.links.live">Not yet live</h2>
     <h2 *ngIf="project.links.live">This project is live</h2>
@@ -114,7 +123,7 @@
             </a>
         </li>
     </ul>
-</section>
+</section> -->
 
 
 

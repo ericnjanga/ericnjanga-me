@@ -32,7 +32,7 @@ $tmb-laptop-height: 199px;
             position: absolute;
             width: $bg-deco-width;
             height: $bg-deco-height;
-            @include bgColor(primary_gray3);
+            @include bgColor(primary_gray4);
 
             // Horizontally center
             @include centerAbsElt($bg-deco-width);
@@ -58,28 +58,28 @@ $tmb-laptop-height: 199px;
         // On card hover
         &:hover {
             // change background color
-            @include bgColor(primary_gray3);
+            @include bgColor(primary_gray4);
 
             // Change colors ... if title-caption has extra info to display
             ::ng-deep .title-caption.hasInfo {
 
                 // change "icon" color
                 svg {
-                    @include color(primary_gray4);
+                    @include color(primary_gray5);
                     border: 3px solid map-get($colors, primary_gray1);
                     @include bgColor(primary_gray1);
                 }
 
                 // change "icon" color
                 svg {
-                    @include color(primary_gray4);
+                    @include color(primary_gray5);
                     border: 3px solid map-get($colors, primary_gray1);
                     @include bgColor(primary_gray1);
                 }
 
                 // change "title caption" background color
                 &:hover {
-                    @include bgColor(primary_gray4);
+                    @include bgColor(primary_gray5);
                 }
             }
 
@@ -170,8 +170,8 @@ $tmb-laptop-height: 199px;
 
             svg {
                 @include color(primary);
-                border: 3px solid map-get($colors, primary_gray3);
-                @include bgColor(primary_gray3);
+                border: 3px solid map-get($colors, primary_gray4);
+                @include bgColor(primary_gray4);
 
                 &::after {
                     content: '';
@@ -182,7 +182,7 @@ $tmb-laptop-height: 199px;
                 }
             }
 
-            // background-color: map-get($colors , primary_gray4);
+            // background-color: map-get($colors , primary_gray5);
         }
     }
 

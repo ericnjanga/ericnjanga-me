@@ -55,7 +55,7 @@ $transition-breakpoint: 936px;
     .small {
         // the bar ...
         .mat-toolbar {
-            @include bgColorImp(primary_gray4);
+            @include bgColorImp(primary_gray5);
         }
 
         .small__page-indicator {
@@ -77,7 +77,7 @@ $transition-breakpoint: 936px;
             @include colorIm(primary_dark2);
         }
         .btn-menu[aria-expanded="true"] {
-            @include bgColorImp(primary_gray2);
+            @include bgColorImp(primary_gray3);
         }
 
         // spacer between logo and trigger button

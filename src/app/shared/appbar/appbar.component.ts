@@ -15,9 +15,13 @@ export class AppbarComponent {
   }
 
 
-  isChildRouteOf(parent:string, route:string): boolean {
-    const childRoute = this.currentRoute.split(`/${parent}/`);
-    return childRoute[1] !== undefined;
+  isChildRouteOf(parents:string[], route:string): boolean {
+    let isChild = parents.filter((p) => {
+      const childRoutes = this.currentRoute.split(`/${p}/`);
+      return childRoutes[0]=='' && childRoutes[1]!==undefined;
+    });
+
+    return !!isChild[0];
   }
 
   constructor(private location: Location) {
