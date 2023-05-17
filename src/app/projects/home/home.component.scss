@@ -3,13 +3,6 @@
 @import './../../../assets/styles/mixins';
 
 
-app-hero {
-    display: block;
-}
-
-app-hero {
-    @include rem(margin-bottom, 60px);
-}
 
 /**
 
