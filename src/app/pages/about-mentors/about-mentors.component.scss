@@ -1,9 +1,14 @@
-@import './../../../assets/styles/mixins';
 @import './../../../assets/styles/variables';
+@import './../../../assets/styles/mixins';
 
 ::host {
     display: block;
 }
+
+header {
+    display: none;
+}
+
 
 $mentor-w: map-get($components-size, nice-post-w);
 $gap: 30px;

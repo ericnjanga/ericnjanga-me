@@ -1,5 +1,13 @@
+@import './../../../assets/styles/variables';
 @import './../../../assets/styles/mixins';
 
+::host {
+    display: block;
+}
+
+header {
+    display: none;
+}
 
 // screen-sm: 576px,
 // screen-md: 768px,

@@ -1,7 +1,12 @@
+<app-hero titleCaption="friends and mentors" title="Following the footsteps of top UX experts" size="small" page="..."
+    image=""></app-hero>
+
 <div class="frame">
     <div>
-        <h5 class="title-caption">friends and mentors</h5>
-        <h2>Following the footsteps of top UX experts</h2>
+        <header>
+            <h5 class="title-caption">friends and mentors</h5>
+            <h2>Following the footsteps of top UX experts</h2>
+        </header>
         <p>During his UX Design journey, Eric was blessed to cross paths with Dave and Alex, two successful UX experts.
         </p>
 
@@ -9,12 +14,8 @@
     </div>
     <div class="frame-testimonials">
         <div class="frame-testimonials-scroll">
-            <app-nice-poster 
-                *ngFor="let mentor of mentors; index as i;"
-                [elt]="mentor" 
-                decType="{{decorationNumber(i)}}" 
-                class="block"
-            ></app-nice-poster>
+            <app-nice-poster *ngFor="let mentor of mentors; index as i;" [elt]="mentor"
+                decType="{{decorationNumber(i)}}" class="block"></app-nice-poster>
         </div>
     </div>
 </div>
