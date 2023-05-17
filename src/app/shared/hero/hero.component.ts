@@ -20,10 +20,10 @@ export class HeroComponent {
 
 
   parentClassSetup() {
-    return `carousel--${this.size}`;
+    return `hero--${this.size}`;
     // return {
-    //   'carousel--small': this.size === 'small',
-    //   'carousel--large': this.size === 'large',
+    //   'hero--small': this.size === 'small',
+    //   'hero--large': this.size === 'large',
     // };
   }
 
@@ -33,6 +33,10 @@ export class HeroComponent {
 
   imgClass(type: string) {
     return `img--${type}`;
+  }
+
+  quoteClass() {
+    return this.quote ? 'isQuote' : '';
   }
 }
 

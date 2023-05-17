@@ -1,17 +1,21 @@
 <div class="bx-container">
-    <section class="hero carousel" [ngClass]="parentClassSetup()">
+    <section class="hero" [ngClass]="parentClassSetup()">
         <div class="slide slide1" [ngClass]="slideClassSetup()">
             <div class="text-wrapper">
-    
-                <app-title-caption class="caption" [items]="captionData"></app-title-caption>
+                <div 
+                    *ngIf="titleCaption"
+                    class="hero__caption">
+                    {{titleCaption}}
+                </div>
                 <!-- <span class="titleCaption text-uppercase">{{titleCaption}}</span> -->
                 <h1 
                     [ngClass]="quoteClass()"
-                    class="title"
+                    class="hero__title"
                 >{{title}}</h1>
     
     
                 <app-quote 
+                    *ngIf="quote"
                     class="hero__quote"
                     [quote]="quote"
                 ></app-quote>
@@ -20,7 +24,7 @@
                     TODO: THIS SECTION SHOULD BE COMING FROM OUTSIDE
                     ----------------------------
                 -->
-                <div *ngIf="size=='large'" class="cta-wrapper">
+                <div *ngIf="size=='large'" class="hero__cta">
                     <a 
                         class="button-primary button-primary--{{size}}" 
                         routerLink="/projects"
@@ -28,14 +32,6 @@
                         Latest work
                         <app-icon class="icon" name="arrowRight"></app-icon>
                     </a>
-                    <!-- <app-call-to-action-params 
-                        link="/projects" 
-                        label="See latest work" 
-                        status="button"
-                        qParam="all"
-                    >
-                        Latest work
-                    </app-call-to-action-params> -->
                 </div>
                 <!-- ---------------------------- -->
             </div>
