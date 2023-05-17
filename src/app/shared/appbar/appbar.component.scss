@@ -1,22 +1,52 @@
 @import './../../../assets/styles/variables';
 @import './../../../assets/styles/mixins';
 
+/**
+ *  MAIN CONTAINER BREAKPOINTS
+ * - .container's width remains fixed until the viewport space allows it to reach the next width
+ * (NOTE: @container property is not yet recognize by VSCode, so #$transition-breakpoint {} doesn't work)
+ * ---------
+     width 1: 540px 
+     width 2: 720px
+     width 3: 960px
+     width 4: 1140px
+*/
 
-$sm: map-get($breakpoints, screen-sm);
+
+$transition-breakpoint: 936px;
 
 ::host {
     display: block;
 }
 
-@layer components.appBar {
 
+
+@layer components.appBar {
+    // [visibility] ....................................................
     .small {
-        // Display small bar only between 0 and $sm ...
-        display: none;
-        @include before-to($sm) {
-            display: block;
+        // Display until the "transition breakpoint" is reached ...
+        display: block;
+
+        @container (min-width: 936px) {
+            //#{$transition-breakpoint}
+            display: none;
         }
-        
+    }
+
+    .large {
+        // Display from the "transition breakpoint" upwards
+        display: none;
+
+        @container (min-width: 936px) {
+            //#{$transition-breakpoint}
+            display: flex;
+        }
+    }
+    // [visibility] ....................................................
+
+
+    // [styles] ........................................................
+    .small {
         // the bar ...
         .mat-toolbar {
             @include bgColorImp(primary_gray4);
@@ -27,12 +57,10 @@ $sm: map-get($breakpoints, screen-sm);
         }
 
         // trigger button
-        // .menu-icon {
-            .mat-icon {
-                // hamburger
-                @include colorIm(primary_dark2);
-            }
-        // }
+        .mat-icon {
+            // hamburger
+            @include colorIm(primary_dark2);
+        }
 
         // spacer between logo and trigger button
         .nav-spacer {
@@ -40,17 +68,11 @@ $sm: map-get($breakpoints, screen-sm);
         }
     }
 
-
-
     .large {
-        // Only display large bar from ($sm + 1) up ...
-        display: none;
-        @include respond-to($sm + 1) {
-            display: flex;
-        }
-
-        position: fixed;
-        top: 0;
+        // position: fixed;
+        // top: 0;
+        align-items: center;
+        justify-content: space-between;
         width: 100%;
         height: map-get($gap, appBar);
 
@@ -59,17 +81,33 @@ $sm: map-get($breakpoints, screen-sm);
 
         //...
         a {
+            text-transform: uppercase;
             text-decoration: none;
             font-weight: 600;
             @include color(dark1);
         }
 
         //...
-        .menu {
-            margin-left: auto;
+        .menu-list {
+            list-style: none;
+            margin: 0;
+            display: grid;
+            grid-template-columns: auto auto auto;
+
+            @container (min-width: 936px) {
+                min-width: 500px;
+            }
+            @container (min-width: 1116px) {
+                min-width: 600px;
+            }
+
+            li {
+                text-align: right;
+            }
+
 
             li:not(:last-child) {
-                margin-right: 150px;
+                // margin-right: 150px;
             }
 
             .menu-item-active {
@@ -81,26 +119,7 @@ $sm: map-get($breakpoints, screen-sm);
                 @include color(state1);
                 text-decoration: underline;
             }
-
-            a,
-            button {
-                padding: 20px;
-            }
-        }
-
-        .btn-info {
-            border-width: 0;
-            background-color: transparent;
-        }
-    
-        .menu.list-inline {
-            margin-bottom: 0;
-        }
-    
-        button[aria-expanded="true"] {
-            @include bgColor(gray1);
-            border-radius: map-get($border, radius);
         }
     }
-
+    // [styles] ........................................................
 }

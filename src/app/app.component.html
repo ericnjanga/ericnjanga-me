@@ -1,17 +1,10 @@
-
-
-
-
 <app-appbar [currentRoute]="currentRoute"></app-appbar>
 
-
-<main class="main-content container">
-
+<main class="container">
   <app-messages></app-messages>
   <app-loading [detectRoutingOngoing]="true"></app-loading>
 
   <router-outlet></router-outlet>
 </main>
-
 
 <app-footer></app-footer>
