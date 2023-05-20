@@ -1,0 +1,198 @@
+
+@import './variables';
+
+
+
+
+
+
+
+$base-font-size: 16px; // Set your base font size in pixels
+
+@mixin rem($property, $value) {
+  #{$property}: ($value / $base-font-size) * 1rem;
+}
+
+@mixin color($colorVal) {
+  color: map-get($colors, $colorVal);
+}
+@mixin colorIm($colorVal) {
+  color: map-get($colors, $colorVal)!important;
+}
+
+@mixin bgColor($colorVal) {
+  background-color: map-get($colors, $colorVal);
+}
+@mixin bgColorImp($colorVal) {
+  background-color: map-get($colors, $colorVal)!important;
+}
+
+
+
+@mixin centerAbsElt($width) {
+  margin-left: 50%;
+  left: -($width/2);
+}
+
+
+
+
+
+/**
+ * Media queries 
+ * ------------------------------------
+*/
+
+// Define a mixin for a media query with a specified breakpoint
+@mixin respond-to($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin before-to($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+ 
+/**
+ * General Layout
+ * ------------------------------------
+*/
+@mixin set-app-background-color() {
+  @include bgColor(primary_gray5);
+}
+
+
+/**
+ * Typography
+ * ------------------------------------
+*/
+@mixin typo-h1($size) {
+  @if ($size=='small') {
+    @include rem(font-size, 34px);
+    @include rem(line-height, 42px);
+    // color: green!important;
+  }
+  @else if ($size=='medium') {
+    @include rem(font-size, 40px);
+    @include rem(line-height, 46px);
+    color: red!important;
+  }
+  @else if ($size=='large') {
+    @include rem(font-size, 44px);
+    @include rem(line-height, 62px);
+    color: yellow!important;
+  }
+
+  font-weight: 600;
+}
+
+@mixin typo-h2($size) {
+  @if ($size=='small') {
+    @include rem(font-size, 28px);
+    @include rem(line-height, 32px);
+    // color: green!important;
+  }
+  @else if ($size=='medium') {
+    @include rem(font-size, 28px);
+    @include rem(line-height, 30px);
+    color: red!important;
+  }
+  @else if ($size=='large') {
+    @include rem(font-size, 32px);
+    @include rem(line-height, 34px);
+    color: yellow!important;
+  }
+  font-weight: 600;
+}
+
+@mixin typo-h3($size) {
+  @if ($size=='small') {
+    @include rem(font-size, 24px);
+    @include rem(line-height, 28px);
+    // color: green!important;
+  }
+  @else if ($size=='medium') {
+
+  } @else if ($size=='large') { 
+
+  }
+  font-weight: 500;
+}
+@mixin typo-h4($size) {
+  @if ($size=='small') {
+    @include rem(font-size, 20px);
+    @include rem(line-height, 24px);
+    // color: green!important;
+  } @else if ($size=='medium') {
+
+  } @else if ($size=='large') {
+
+  }
+  // font-size: 24px;
+  // line-height: 26px;
+  font-weight: 500;
+}
+@mixin typo-h5() {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+}
+@mixin typo-logo() {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 900;
+}
+@mixin typo-navLink() {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+}
+@mixin typo-buttonLink() {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+}
+@mixin typo-titleCaption($transform: null) {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  @if $transform != null {
+    text-transform: $transform;
+  }
+  
+}
+@mixin typo-caption1() {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+
+
+
+
+@mixin type-caption() {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+
+@mixin setFontFamily($type) {
+  @if ($type == 'heading') {
+    font-family: 'Kanit', sans-serif;
+  }
+  @else {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+
+@mixin limit-text() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
