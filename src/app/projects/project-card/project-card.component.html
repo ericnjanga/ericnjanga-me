@@ -6,7 +6,7 @@
         <span class="title-caption--releaseDate">{{getEndDate(project.references) | date:'MMM, YYYY'}}</span>
     </div>
 
-    <h4 class="title">
+    <h3 class="title">
         <!-- Display tooltip only if title length is above the limit -->
         <a *ngIf="project.descriptions.title.length >= titleMaxLength" [routerLink]="projectUrl(project)"
             [matTooltip]="project.descriptions.title" matTooltipClass="custom-tooltip-1"
@@ -18,7 +18,7 @@
         <a *ngIf="project.descriptions.title.length < titleMaxLength" [routerLink]="projectUrl(project)">
             {{project.descriptions.title}}
         </a>
-    </h4>
+    </h3>
 
     <a class="thumbnail-wrap" [routerLink]="projectUrl(project)">
         <img 

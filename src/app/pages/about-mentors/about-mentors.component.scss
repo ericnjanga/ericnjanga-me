@@ -13,13 +13,11 @@ header {
 $mentor-w: map-get($components-size, nice-post-w);
 $gap: 30px;
 
-.frame {
+.component-wrapper {
     @container (min-width: 480px) { 
         display: grid;
         @include rem(gap, 40px);
         grid-template-columns: auto auto;
-
-
     }
 
     @container (min-width: 1024px) { 

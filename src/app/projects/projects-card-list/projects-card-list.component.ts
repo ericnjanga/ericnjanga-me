@@ -11,7 +11,7 @@ import { Category } from '../model/category';
   styleUrls: ['./projects-card-list.component.scss']
 })
 export class ProjectsCardListComponent {
-  @Input() listTitle = '';
+  @Input() title = '';
   @Input() info = '';
   @Input() source: Project[] = [];
 

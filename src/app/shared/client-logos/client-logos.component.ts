@@ -1,4 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { TooltipPosition } from '@angular/material/tooltip';
 
 
 @Component({
@@ -7,6 +9,13 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./client-logos.component.scss']
 })
 export class ClientLogosComponent {
+  @Input() title = '';
+  @Input() info = '';
+
+  // tooltip positionning ...
+  positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
+  position = new FormControl(this.positionOptions[3]);
+
   // Don't sign a specific type to the child view 
   // (it will be casted as a "nativeElement" later in the code)
   // scroll system

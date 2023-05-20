@@ -1,39 +1,26 @@
 <div><!-- class="page" -->
 
     <app-hero 
-        title="User interfaces that are performant, responsive, intuitive and engaging." 
+        title="User interfaces that are performant, responsive, intuitive and engaging...." 
         size="large" 
         page="home-slide1"
         image="./../../../assets/img/project-25-hero.png"
     ></app-hero>
 
-    <!-- TODO:
-        Implement carousel later
-    -->
-    <!-- <app-carousel class="page-section"></app-carousel> -->
-
-
     <app-projects-card-list 
-        class="page-section last" 
-        listTitle="Latest work"
+        class="last" 
+        title="Latest work"
         info="..info2.."
         [source]="projects"
     ></app-projects-card-list>
-
-
-    <br><br><br><br><br>
-
-
-
-    <h2 class="width1">A broad range of skills across different areas of user experience design</h2>
-    <app-carousel></app-carousel>
-
-
-    <br><br><br><br><br>
-
-
-
-    <p class="width1 text-center">Since 2006, Eric Njanga has contributed to fortune 500 companies’ digital development.
-    </p>
-    <app-client-logos class="page-section"></app-client-logos>
+    
+    <app-carousel
+        title="Top skills"
+        info="A broad range of skills across different areas of user experience design"
+    ></app-carousel>
+ 
+    <app-client-logos
+        title="Contributions"
+        info="Since 2006, Eric Njanga has contributed to fortune 500 companies’ digital development."
+    ></app-client-logos>
 </div>

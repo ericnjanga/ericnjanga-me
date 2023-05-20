@@ -18,7 +18,7 @@ header {
 
 
 @container (min-width: 1116px) {
-    .frame {
+    .component-wrapper {
         border: 4px solid red;
         display: grid;
         grid-template-columns: auto 800px;
@@ -28,7 +28,7 @@ header {
 
 
 @container (min-width: 1296px) {
-    .frame {
+    .component-wrapper {
         @include rem(gap, 60px);
     }
 }

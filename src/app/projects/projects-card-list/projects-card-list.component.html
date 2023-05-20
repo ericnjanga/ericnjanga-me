@@ -1,39 +1,31 @@
-<nav class="scrallable-area--pagination">
-    <button class="btn scroll-btn left" (click)="scroll(-1)">
-        <app-icon class="icon" name="arrowLeft"></app-icon>
-    </button>
-
-    <button class="btn scroll-btn right" (click)="scroll(1)">
-        <app-icon class="icon" name="arrowRight"></app-icon>
-    </button>
-</nav>
-
-<h2 class="list-title">
-    {{listTitle}}
-    <app-icon 
-        name="info circle"
-        [matTooltip]="info" matTooltipClass="custom-tooltip-1"
-        [matTooltipPosition]="position.value!">
-    ></app-icon>
-</h2>
-
-<div class="scrallable-area--wrapper" #scrollable>
-    <div class="scrallable-area--content" [style.--num-children]="source.length">
-        <app-project-card 
-            class="item" 
-            [class.is-last]="isLast"
-            *ngFor="let item of source; last as isLast" 
-            [project]="item"
-        ></app-project-card>
+<div class="component-wrapper">
+    <nav class="scrallable-area--pagination">
+        <button class="btn scroll-btn left" (click)="scroll(-1)">
+            <app-icon class="icon" name="arrowLeft"></app-icon>
+        </button>
+    
+        <button class="btn scroll-btn right" (click)="scroll(1)">
+            <app-icon class="icon" name="arrowRight"></app-icon>
+        </button>
+    </nav>
+    
+    <h2 class="list-title">
+        {{title}}
+        <app-icon 
+            name="info circle"
+            [matTooltip]="info" matTooltipClass="custom-tooltip-1"
+            [matTooltipPosition]="position.value!">
+        ></app-icon>
+    </h2>
+    
+    <div class="scrallable-area--wrapper" #scrollable>
+        <div class="scrallable-area--content" [style.--num-children]="source.length">
+            <app-project-card 
+                class="item" 
+                [class.is-last]="isLast"
+                *ngFor="let item of source; last as isLast" 
+                [project]="item"
+            ></app-project-card>
+        </div>
     </div>
 </div>
-
-
-
-
-
-<!-- <section class="row row-cols-3"> -->
-
-<!-- </section> -->
-
-<!-- [style.background-image]="getHeroImg(item.images)" -->

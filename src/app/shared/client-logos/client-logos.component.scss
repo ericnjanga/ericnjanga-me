@@ -1,4 +1,11 @@
 @import './../../../assets/styles/mixins';
+@import './../../../assets/styles/variables';
+
+// Spacers 
+$spacer-sm: map-get($gap, spacer-sm);
+$spacer-md: map-get($gap, spacer-md);
+$spacer-lg: map-get($gap, spacer-lg);
+$spacer-xl: map-get($gap, spacer-xl);
 
 $with-sm: 113px;
 $with-md: 135px;
@@ -6,19 +13,48 @@ $with-lg: 188px;
 $gap: 20px;
 $ngLogos: 9;
 $total-length: $with-sm + ($with-md * 6) + $with-lg + ($gap * $ngLogos);
+$info-iw: map-get($components-size, info-icon-w);
 
 
 :host {
     position: relative;
     display: block;
-    padding-top: 50px;
 }
 
 
 
-// @layer components.buttons {
+// [visibility] ....................................................
+@layer components.company-logos {
+    .component-wrapper {
+        @include rem(margin-bottom, $spacer-sm);
+    }
+}
+// [visibility] ....................................................
 
-// }
+
+// [styling] .......................................................
+@layer components.company-logos {
+    .title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        display: flex;
+        @include rem(gap, 10px);
+        align-items: center;
+
+        ::ng-deep {
+            svg {
+                @include rem(width, $info-iw);
+                @include rem(height, $info-iw);
+            }
+        }
+    }
+}
+// [styling] .......................................................
+
+
+ 
 
 
 @layer components.company-logos {

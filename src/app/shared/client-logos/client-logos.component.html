@@ -1,17 +1,28 @@
-<nav class="scrallable-area--pagination">
-    <button class="btn scroll-btn left" (click)="scroll(-1)">
-        <app-icon class="icon" name="arrowLeft"></app-icon>
-    </button>
-
-    <button class="btn scroll-btn right" (click)="scroll(1)">
-        <app-icon class="icon" name="arrowRight"></app-icon>
-    </button>
-</nav>
-
-<div class="scrallable-area--wrapper" #scrollable>
-    <ul class="scrallable-area--content list-inline">
-        <li *ngFor="let item of list; index as i; last as isLast" class="list-inline-item" [class.is-last]="isLast">
-            <img class="company-logo" [ngClass]="imgClass(i + 1)" src="./../../../assets/img/milestone{{i + 1}}.png" />
-        </li>
-    </ul>
+<div class="component-wrapper">
+    <nav class="scrallable-area--pagination">
+        <button class="btn scroll-btn left" (click)="scroll(-1)">
+            <app-icon class="icon" name="arrowLeft"></app-icon>
+        </button>
+    
+        <button class="btn scroll-btn right" (click)="scroll(1)">
+            <app-icon class="icon" name="arrowRight"></app-icon>
+        </button>
+    </nav>
+    
+    <h2 class="title">
+        {{title}}
+        <app-icon 
+            name="info circle"
+            [matTooltip]="info" matTooltipClass="custom-tooltip-1"
+            [matTooltipPosition]="position.value!">
+        ></app-icon>
+    </h2>
+    
+    <div class="scrallable-area--wrapper" #scrollable>
+        <ul class="scrallable-area--content list-inline">
+            <li *ngFor="let item of list; index as i; last as isLast" class="list-inline-item" [class.is-last]="isLast">
+                <img class="company-logo" [ngClass]="imgClass(i + 1)" src="./../../../assets/img/milestone{{i + 1}}.png" />
+            </li>
+        </ul>
+    </div>
 </div>

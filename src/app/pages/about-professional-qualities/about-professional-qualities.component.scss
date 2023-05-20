@@ -11,7 +11,7 @@ header {
 
 
 
-.frame {
+.component-wrapper {
     @container (min-width: 480px) { 
         display: grid;
         @include rem(gap, 40px);

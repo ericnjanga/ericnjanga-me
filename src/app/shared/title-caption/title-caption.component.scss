@@ -23,9 +23,6 @@
         font-weight: 600;
     }
 }
-.title-caption--releaseDate {
-    @include rem(font-size, 15px);
-}
 
 .icon ::ng-deep svg {
     @include rem(border-radius, 100px);

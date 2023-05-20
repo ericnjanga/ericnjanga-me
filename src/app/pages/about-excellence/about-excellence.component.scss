@@ -25,7 +25,7 @@ $xl: map-get($breakpoints, screen-xl);
 }
 
 
-.frame {
+.component-wrapper {
     // Increase space between content and bullet if the container increases
     @container (min-width: 768px) { //$md
         .text, img {

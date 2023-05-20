@@ -7,16 +7,31 @@ $card-width-large: map-get($components-size, p-card-w-lg);
 $frame-padding: $dropshadow-blur; // Gap necessary to allow cards drop shadow to be visible
 $info-iw: map-get($components-size, info-icon-w);
 
+// Spacers 
+$spacer-sm: map-get($gap, spacer-sm);
+$spacer-md: map-get($gap, spacer-md);
+$spacer-lg: map-get($gap, spacer-lg);
+$spacer-xl: map-get($gap, spacer-xl);
+
 // By default
 :host {
     position: relative;
     display: block;
-    // padding-top: 50px;
 }
 
 
-@layer components.project {
 
+// [visibility] ....................................................
+@layer components.project {
+    .component-wrapper {
+        @include rem(margin-bottom, $spacer-sm);
+    }
+}
+// [visibility] ....................................................
+
+
+// [styling] .......................................................
+@layer components.project {
     .list-title {
         position: absolute;
         top: 0;
@@ -57,3 +72,4 @@ $info-iw: map-get($components-size, info-icon-w);
         }
     }
 }
+// [styling] .......................................................

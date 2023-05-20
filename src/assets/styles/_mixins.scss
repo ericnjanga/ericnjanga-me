@@ -70,51 +70,69 @@ $base-font-size: 16px; // Set your base font size in pixels
  * ------------------------------------
 */
 @mixin typo-h1($size) {
-  @if ($size=='large') {
-    @include rem(font-size, 44px);
-    @include rem(line-height, 62px);
-    color: yellow!important;
+  @if ($size=='small') {
+    @include rem(font-size, 34px);
+    @include rem(line-height, 42px);
+    // color: green!important;
   }
   @else if ($size=='medium') {
     @include rem(font-size, 40px);
     @include rem(line-height, 46px);
     color: red!important;
   }
-  @else {
-    @include rem(font-size, 36px);
-    @include rem(line-height, 40px);
-    color: green!important;
+  @else if ($size=='large') {
+    @include rem(font-size, 44px);
+    @include rem(line-height, 62px);
+    color: yellow!important;
   }
 
   font-weight: 600;
 }
 
 @mixin typo-h2($size) {
-  @if (size=='large') {
-    @include rem(font-size, 32px);
-    @include rem(line-height, 34px);
-    color: yellow!important;
+  @if ($size=='small') {
+    @include rem(font-size, 28px);
+    @include rem(line-height, 32px);
+    // color: green!important;
   }
-  @else if (size=='medium') {
+  @else if ($size=='medium') {
     @include rem(font-size, 28px);
     @include rem(line-height, 30px);
     color: red!important;
   }
-  @else {
-    @include rem(font-size, 24px);
-    @include rem(line-height, 26px);
-    color: green!important;
+  @else if ($size=='large') {
+    @include rem(font-size, 32px);
+    @include rem(line-height, 34px);
+    color: yellow!important;
   }
   font-weight: 600;
 }
-@mixin typo-h3() {
-  font-size: 24px;
-  line-height: 30px;
+
+@mixin typo-h3($size) {
+  @if ($size=='small') {
+    @include rem(font-size, 24px);
+    @include rem(line-height, 28px);
+    // color: green!important;
+  }
+  @else if ($size=='medium') {
+
+  } @else if ($size=='large') { 
+
+  }
   font-weight: 500;
 }
-@mixin typo-h4() {
-  font-size: 24px;
-  line-height: 26px;
+@mixin typo-h4($size) {
+  @if ($size=='small') {
+    @include rem(font-size, 20px);
+    @include rem(line-height, 24px);
+    // color: green!important;
+  } @else if ($size=='medium') {
+
+  } @else if ($size=='large') {
+
+  }
+  // font-size: 24px;
+  // line-height: 26px;
   font-weight: 500;
 }
 @mixin typo-h5() {

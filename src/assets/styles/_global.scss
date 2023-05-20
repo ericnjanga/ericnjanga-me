@@ -18,27 +18,12 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
 }
 
 
-.page-section {
-    display: block;
-    @include rem(margin-bottom, 170px);
-
-    &.last {
-        margin-bottom: 0;
-    }
-}
-
 .subpage {
     margin-top: map-get($gap, lg);
 
     h1 {
         text-align: center;
     }
-}
-
-.title-caption {
-    margin-bottom: 0;
-    @include color(primary_gray1);
-    @include typo-titleCaption(uppercase);
 }
 
 .pagination-wrapper {
