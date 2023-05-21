@@ -63,6 +63,9 @@ $base-font-size: 16px; // Set your base font size in pixels
 @mixin set-app-background-color() {
   @include bgColor(primary_gray5);
 }
+@mixin gobalBorderRadius() {
+  @include rem(border-radius, 20px);
+}
 
 
 /**
