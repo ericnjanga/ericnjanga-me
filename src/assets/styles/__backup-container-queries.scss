@@ -1,0 +1,40 @@
+
+
+
+/**
+ *  MAIN CONTAINER BREAKPOINTS
+ * - .container's width remains fixed until the viewport space allows it to reach the next width
+ * (NOTE: @container property is not yet recognize by VSCode, so #$transition-breakpoint {} doesn't work)
+ * ---------
+     width 1: 540px 
+     width 2: 720px
+     width 3: 960px
+     width 4: 1140px
+*/
+
+.xxx-container {
+    // ...
+    @container (min-width: 1141px) { 
+        @include action5();
+    }
+
+    // ...
+    @container (max-width: 1140px) {
+        @include action4();
+    }
+
+    // ...
+    @container (max-width: 960px) {
+        @include action3();
+    }
+
+    // ...
+    @container (max-width: 720px) {
+        @include action2();
+    }
+
+    // From zero to small ...
+    @container (max-width: 540px) {
+        @include action1();
+    }
+}

@@ -1,0 +1,47 @@
+// Small navigation
+.small-nav {
+    .logo {
+        position: relative;
+        left: -16px;
+    }
+
+    .menu {
+        position: relative;
+        left: 28px;
+    }
+
+    // the bar ...
+    .mat-toolbar {
+        @include bgColorImp(primary_gray5);
+    }
+
+    .small__page-indicator {
+        display: flex;
+        align-items: center;
+        @include color(gray0);
+
+        .btn-back {
+            position: relative;
+            @include rem(left, -30px);
+        }
+
+        span {
+            @include typo-titleCaption(none);
+        }
+    }
+
+    .btn-menu {
+        // trigger button
+        // hamburger
+        @include colorIm(primary_dark2);
+    }
+
+    .btn-menu[aria-expanded="true"] {
+        @include bgColorImp(primary_gray3);
+    }
+
+    // spacer between logo and trigger button
+    .nav-spacer {
+        flex: 1 1 auto;
+    }
+}

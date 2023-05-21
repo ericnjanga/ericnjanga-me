@@ -1,0 +1,49 @@
+// Large navigation
+.large-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: map-get($gap, appBar-lg);
+
+    @include set-app-background-color();
+    z-index: 3;
+
+    //...
+    a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+        @include color(dark1);
+    }
+
+    //...
+    .menu-list {
+        list-style: none;
+        margin: 0;
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        li {
+            text-align: right;
+        }
+
+        .menu-item-active, a:hover {
+            @include color(primary_gray1);
+            text-decoration: underline;
+        }
+
+        // Menu width changes based on the parent container
+        @container (min-width: 1141px) { // larger ...
+            min-width: 700px;
+        }
+
+        @container (max-width: 1140px) { // large ...
+            min-width: 600px;
+        }
+
+        @container (max-width: 960px) { // Small ...
+            min-width: 500px;
+        }
+    }
+}

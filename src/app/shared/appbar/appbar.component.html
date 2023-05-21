@@ -1,13 +1,13 @@
 <div class="appbar-wrapper">
   <div class="container bx-container">
-    <div class="row">
+    <div class="row appbar-container">
       <div class="col">
 
 
 
-        <nav class="small">
+        <nav class="small-nav">
           <mat-toolbar class="toolbar">
-            <a routerLink="/home">
+            <a class="logo" routerLink="/home">
               <app-icon *ngIf="!isChildRouteOf(['about', 'projects'], currentRoute)" name="logo top"></app-icon>
             </a>
 
@@ -29,7 +29,7 @@
 
             <span class="nav-spacer"></span>
 
-            <div *ngIf="!isChildRouteOf(['about', 'projects'], currentRoute)">
+            <div class="menu" *ngIf="!isChildRouteOf(['about', 'projects'], currentRoute)">
               <button mat-icon-button [matMenuTriggerFor]="menu" class="btn-menu" aria-label="Open menu">
                 <mat-icon>menu</mat-icon>
               </button>
@@ -44,7 +44,7 @@
         </nav>
 
 
-        <nav class="large">
+        <nav class="large-nav">
           <a routerLink="/home">
             <app-icon name="logo top"></app-icon>
           </a>
