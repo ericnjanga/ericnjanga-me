@@ -21,18 +21,15 @@
     @container (min-width: 1141px) {
         @include smallNav_largeNav('hidden', 'visible');
     }
-
-    // ...
+ 
     @container (max-width: 1140px) {
         @include smallNav_largeNav('hidden', 'visible');
     }
-
-    // ...
+ 
     @container (max-width: 960px) {
         @include smallNav_largeNav('hidden', 'visible');
     }
-
-    // ...
+ 
     @container (max-width: 720px) {
         @include smallNav_largeNav('visible', 'hidden');
     }
