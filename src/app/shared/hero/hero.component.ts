@@ -27,9 +27,9 @@ export class HeroComponent {
     // };
   }
 
-  slideClassSetup() {
-    return `slide--${this.page}`;
-  }
+  // slideClassSetup() {
+  //   return `slide--${this.page}`;
+  // }
 
   imgClass(type: string) {
     return `img--${type}`;

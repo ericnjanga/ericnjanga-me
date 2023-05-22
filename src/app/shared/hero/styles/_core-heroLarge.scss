@@ -1,0 +1,17 @@
+
+@import './visibilityHelpers';
+
+
+// Switch visibility between small and large navigation depending 
+// on the container's size (bx-container)
+.hero--large {
+    @container (min-width: 1141px) { 
+    }
+ 
+    @container (max-width: 1140px) { 
+    }
+ 
+    @container (max-width: 960px) { 
+        // @include HL_container_L_eltStyles();
+    }
+}

@@ -1,63 +1,34 @@
 <div class="bx-container">
     <section class="hero" [ngClass]="parentClassSetup()">
-        <div class="slide slide1" [ngClass]="slideClassSetup()">
-            <div class="text-wrapper">
-                <div 
-                    *ngIf="titleCaption"
-                    class="hero__caption">
-                    {{titleCaption}}
-                </div>
-                <!-- <span class="titleCaption text-uppercase">{{titleCaption}}</span> -->
-                <h1 
-                    [ngClass]="quoteClass()"
-                    class="hero__title"
-                >{{title}}</h1>
-    
-    
-                <app-quote 
-                    *ngIf="quote"
-                    class="hero__quote"
-                    [quote]="quote"
-                ></app-quote>
-    
-                <!--
+        <div class="text-wrapper">
+            <div *ngIf="titleCaption" class="hero__caption">
+                {{titleCaption}}
+            </div>
+            <!-- <span class="titleCaption text-uppercase">{{titleCaption}}</span> -->
+            <h1 [ngClass]="quoteClass()" class="hero__title">{{title}}</h1>
+
+
+            <app-quote *ngIf="quote" class="hero__quote" [quote]="quote"></app-quote>
+
+            <!--
                     TODO: THIS SECTION SHOULD BE COMING FROM OUTSIDE
                     ----------------------------
                 -->
-                <div *ngIf="size=='large'" class="hero__cta">
-                    <a 
-                        class="button-primary button-primary--{{size}}" 
-                        routerLink="/projects"
-                    >
-                        Latest work
-                        <app-icon class="icon" name="arrowRight"></app-icon>
-                    </a>
-                </div>
-                <!-- ---------------------------- -->
+            <div *ngIf="size=='large'" class="hero__cta">
+                <a class="button-primary button-primary--{{size}}" routerLink="/projects">
+                    Latest work
+                    <app-icon class="icon" name="arrowRight"></app-icon>
+                </a>
             </div>
-    
-            <img 
-                *ngIf="size=='small'"
-                [ngClass]="imgClass(imageType)" 
-                class="img" 
-                src={{image}} 
-                alt="">
-    
-    
-            <div *ngIf="size=='large'">
-                <img 
-                    class="img img--phone" 
-                    src="./../../../assets/img/project-25-hero.png"
-                    alt=""
-                >
-                <img 
-                    class="img img--laptop" 
-                    src="./../../../assets/img/project-26-hero.png"
-                    alt=""
-                >
-            </div>
+            <!-- ---------------------------- -->
         </div>
-    
-        <span class="background"></span>
+
+        <img *ngIf="size=='small'" [ngClass]="imgClass(imageType)" class="img" src={{image}} alt="">
+
+
+        <div *ngIf="size=='large'">
+            <img class="img img--phone" src="./../../../assets/img/project-25-hero.png" alt="">
+            <img class="img img--laptop" src="./../../../assets/img/project-26-hero.png" alt="">
+        </div>
     </section>
 </div>

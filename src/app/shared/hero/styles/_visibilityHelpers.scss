@@ -1,0 +1,235 @@
+/**
+ * - Set a min height
+ * - Hide all images
+ * - Push quotes and CTAs down
+ * - Add bottom spacing
+*/
+@mixin container_S_eltStyles() {
+    // Set a min height
+    @include rem(min-height, 200px);
+
+    // Hide all images
+    img {
+        display: none;
+    }
+
+    // Push quotes and CTAs down
+    .hero__quote,
+    .hero__cta {
+        @include rem(margin-top, 20px);
+    }
+
+    // Add bottom spacing
+    @include gobalBottomSpacing();
+}
+
+
+/**
+ * - Limit height + add an overflow
+ * - Display only 1 image (laptopn) with limited width
+ * - Limit text's width + change position
+ * - Push quotes and CTAs down
+ * - Set gap between flex items
+ * - Add bottom spacing
+*/
+@mixin container_M_eltStyles() {
+    // ...
+    @include rem(max-height, 330px);
+    overflow: hidden;
+
+    // ..
+    .img--phone {
+        @include rem(max-width, 170px);
+    }
+    .img--laptop {
+        display: none;
+    }
+
+    // Limit text's width
+    .text-wrapper {
+        position: relative;
+        @include rem(max-width, 434px);
+        @include rem(top, 30px);
+    }
+
+    // Push quotes and CTAs down
+    .hero__quote,
+    .hero__cta {
+        @include rem(margin-top, 20px);
+    }
+
+    // ...
+    @include rem(gap, 30px);
+
+    // Add bottom spacing
+    @include gobalBottomSpacing();
+}
+
+
+/**
+ * - Limit height + add an overflow
+ * - Increase left and right padding
+ * - Display only 1 image (laptopn) with limited width
+ * - Limit text's width + change position
+ * - Push quotes and CTAs down (++)
+ * - Increase gap between flex items
+ * - Add bottom spacing
+*/
+@mixin container_L_eltStyles() {
+    // ...
+    @include rem(height, 380px);
+    overflow: hidden;
+
+    //... 
+    @include rem(padding-left, 40px);
+    @include rem(padding-right, 40px);
+
+    // ..
+    .img--phone {
+        position: relative;
+        @include rem(top, -35px);
+        @include rem(max-width, 300px);
+    }
+    .img--laptop {
+        display: none;
+    }
+
+    // Limit text's width 
+    .text-wrapper {
+        position: relative;
+        @include rem(max-width, 434px);
+        @include rem(top, 20px);
+    }
+
+    // Push quotes and CTAs down
+    .hero__quote,
+    .hero__cta {
+        @include rem(margin-top, 30px);
+    }
+
+    // ...
+    @include rem(gap, 70px);
+
+    // Add bottom spacing
+    @include gobalBottomSpacing();
+}
+
+@mixin HL_container_L_eltStyles() {
+    // Set a min height
+    @include rem(min-height, 400px);
+
+    // ..
+    .img--phone {
+        display: block;
+        top: 5%;
+        right: 8%;
+        width: 28%;
+    }
+}
+
+
+
+
+
+
+
+/**
+ * - Limit height + add an overflow
+ * - Increase left and right padding
+ * - Display both images (with custom positions)
+ * - Limit text's width + change position
+ * - Push quotes and CTAs down (++)
+ * - Add bottom spacing
+*/
+@mixin container_XL_eltStyles() {
+    // ...
+    @include rem(height, 430px);
+    overflow: hidden;
+
+    //... 
+    @include rem(padding-left, 50px);
+    @include rem(padding-right, 50px);
+
+    // ..
+    .img--phone {
+        position: absolute;
+        @include rem(top, 5px);
+        @include rem(right, 40px);
+        @include rem(max-width, 300px);
+        z-index: 1;
+    }
+    .img--laptop {
+        position: absolute;
+        @include rem(top, 30px);
+        @include rem(right, -40px);
+        @include rem(max-width, 576.97px);
+    }
+
+    // Limit text's width 
+    .text-wrapper {
+        position: relative;
+        @include rem(max-width, 450px);
+    }
+
+    // Push quotes and CTAs down
+    .hero__quote,
+    .hero__cta {
+        @include rem(margin-top, 30px);
+    }
+
+    // Add bottom spacing
+    $spacer-md: map-get($gap, spacer-md);
+    @include gobalBottomSpacing($spacer-md);
+}
+
+
+
+/**
+ * - Limit height + add an overflow
+ * - Increase left and right padding
+ * - Display both images (with custom positions)
+ * - Limit text's width + change position
+ * - Push quotes and CTAs down (++)
+ * - Add bottom spacing
+*/
+@mixin container_XXL_eltStyles() {
+    // ...
+    @include rem(height, 500px);
+    overflow: hidden;
+
+    //... 
+    @include rem(padding-left, 60px);
+    @include rem(padding-right, 60px);
+
+    // ..
+    .img--phone {
+        position: absolute;
+        @include rem(top, 5px);
+        @include rem(right, 40px);
+        @include rem(max-width, 300px);
+        z-index: 1;
+    }
+    .img--laptop {
+        position: absolute;
+        @include rem(top, 30px);
+        @include rem(right, -40px);
+        @include rem(max-width, 681.68px);
+    }
+
+    // Limit text's width 
+    .text-wrapper {
+        position: relative;
+        @include rem(max-width, 550px);
+        @include rem(top, 50px);
+    }
+
+    // Push quotes and CTAs down
+    .hero__quote,
+    .hero__cta {
+        @include rem(margin-top, 35px);
+    }
+
+    // Add bottom spacing
+    $spacer-lg: map-get($gap, spacer-lg);
+    @include gobalBottomSpacing($spacer-lg);
+}

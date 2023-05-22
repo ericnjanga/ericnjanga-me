@@ -1,0 +1,45 @@
+@mixin quoteStyling() {
+    .hero__quote {
+        display: block;
+    }
+
+    .hero__quote::ng-deep {
+        .title-wrapper {
+            border-left: 1px solid #{map-get($colors, primary_gray1)} !important;
+        }
+
+        .title-wrapper .title-wrapper__heading,
+        .title-wrapper .title-wrapper__subtitle,
+        svg {
+            @include colorIm(bright2);
+        }
+    }
+}
+
+@mixin captionStyling() {
+    .hero__caption {
+        @include color(bright2);
+        @include typo-titleCaption(uppercase);
+        @include rem(margin-bottom, 5px);
+    }
+}
+
+@mixin titleQuoteStyling() {
+    .hero__title.isQuote {
+        &::before {
+            content: '\201C';
+            /* Unicode character for left double quotation mark */
+            @include rem(font-size, 40px);
+            @include color(bright1);
+            margin-right: 5px;
+        }
+
+        &::after {
+            content: '\201D';
+            /* Unicode character for right double quotation mark */
+            @include rem(font-size, 40px);
+            @include color(bright1);
+            margin-left: 5px;
+        }
+    }
+}
