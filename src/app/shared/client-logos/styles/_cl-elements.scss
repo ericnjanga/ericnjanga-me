@@ -1,0 +1,61 @@
+// Spacers 
+$spacer-sm: map-get($gap, spacer-sm);
+$spacer-md: map-get($gap, spacer-md);
+$spacer-lg: map-get($gap, spacer-lg);
+$spacer-xl: map-get($gap, spacer-xl);
+
+// Dimension
+$with-sm: 113px;
+$with-md: 135px;
+$with-lg: 188px;
+$gap: 20px;
+$ngLogos: 9;
+$total-length: $with-sm + ($with-md * 6) + $with-lg + ($gap * $ngLogos);
+$info-iw: map-get($components-size, info-icon-w);
+
+
+
+.component-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: flex;
+    @include rem(gap, 10px);
+    align-items: center;
+
+    ::ng-deep {
+        svg {
+            @include rem(width, $info-iw);
+            @include rem(height, $info-iw);
+        }
+    }
+}
+
+
+
+// Scroll system ..
+.scrallable-area--content {
+    @include rem(width, $total-length);
+}
+
+
+.company-logo {
+    @include rem(border-radius, 4px);
+    @include rem(width, $with-sm);
+}
+.company-logo--width1 {
+    @include rem(width, $with-md);
+}
+.company-logo--width2 {
+    @include rem(width, $with-lg);
+}
+
+
+.list-inline-item {
+    @include rem(margin-right, $gap);
+
+    &.is-last {
+        margin-right: 0;
+    }
+}

@@ -27,9 +27,6 @@
     .hero__cta {
         @include rem(margin-top, 20px);
     }
-
-    // Add bottom spacing
-    @include gobalBottomSpacing();
 }
 
 
@@ -69,9 +66,6 @@
 
     // ...
     @include rem(gap, 30px);
-
-    // Add bottom spacing
-    @include gobalBottomSpacing();
 }
 
 
@@ -120,7 +114,7 @@
     @include rem(gap, 70px);
 
     // Add bottom spacing
-    @include gobalBottomSpacing();
+    @include gobalBottomSpacing($spacer-md);
 }
 
 
@@ -167,8 +161,7 @@
     }
 
     // Add bottom spacing
-    $spacer-md: map-get($gap, spacer-md);
-    @include gobalBottomSpacing($spacer-md);
+    @include gobalBottomSpacing($spacer-lg);
 }
 
 
@@ -216,8 +209,7 @@
     }
 
     // Add bottom spacing
-    $spacer-lg: map-get($gap, spacer-lg);
-    @include gobalBottomSpacing($spacer-lg);
+    @include gobalBottomSpacing($spacer-xl);
 }
 
 
@@ -248,6 +240,9 @@
     @include quoteStyling();
     @include captionStyling();
     @include titleQuoteStyling();
+
+    // Add bottom spacing
+    @include gobalBottomSpacing();
 }
 
 

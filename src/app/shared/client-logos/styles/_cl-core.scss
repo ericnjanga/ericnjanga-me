@@ -1,0 +1,22 @@
+.client-logos {
+    // Vertical spacing with the next component
+    @include gobalBottomSpacing();  
+}
+
+
+.client-logos {
+    @container (min-width: 1141px) {
+        // Increase bottom spacing
+        @include gobalBottomSpacing($spacer-xl);
+    }
+ 
+    @container (min-width: 961px) and (max-width: 1140px) {
+        // Increase bottom spacing
+        @include gobalBottomSpacing($spacer-lg);
+    }
+ 
+    @container (min-width: 721px) and (max-width: 960px) {
+        // Increase bottom spacing
+        @include gobalBottomSpacing($spacer-md);
+    }
+}

@@ -1,90 +1,12 @@
 @import './../../../assets/styles/mixins';
 @import './../../../assets/styles/variables';
 
-// Spacers 
-$spacer-sm: map-get($gap, spacer-sm);
-$spacer-md: map-get($gap, spacer-md);
-$spacer-lg: map-get($gap, spacer-lg);
-$spacer-xl: map-get($gap, spacer-xl);
-
-$with-sm: 113px;
-$with-md: 135px;
-$with-lg: 188px;
-$gap: 20px;
-$ngLogos: 9;
-$total-length: $with-sm + ($with-md * 6) + $with-lg + ($gap * $ngLogos);
-$info-iw: map-get($components-size, info-icon-w);
-
+@layer components.company-logos {
+    @import './styles/cl-core';
+    @import './styles/cl-elements';
+}
 
 :host {
     position: relative;
     display: block;
-}
-
-
-
-// [visibility] ....................................................
-@layer components.company-logos {
-    .component-wrapper {
-        @include rem(margin-bottom, $spacer-sm);
-    }
-}
-// [visibility] ....................................................
-
-
-// [styling] .......................................................
-@layer components.company-logos {
-    .title {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0;
-        display: flex;
-        @include rem(gap, 10px);
-        align-items: center;
-
-        ::ng-deep {
-            svg {
-                @include rem(width, $info-iw);
-                @include rem(height, $info-iw);
-            }
-        }
-    }
-}
-// [styling] .......................................................
-
-
- 
-
-
-@layer components.company-logos {
-
-    // Scroll system ..
-    .scrallable-area--content {
-        @include rem(width, $total-length);
-    }
-
-    .company-logo {
-        @include rem(border-radius, 4px);
-    }
-
-    .company-logo--width1 {
-        @include rem(width, $with-md);
-    }
-
-    .company-logo--width2 {
-        @include rem(width, $with-lg);
-    }
-
-    img {
-        @include rem(width, $with-sm);
-    }
-
-    .list-inline-item {
-        @include rem(margin-right, $gap);
-
-        &.is-last {
-            margin-right: 0;
-        }
-    }
 }

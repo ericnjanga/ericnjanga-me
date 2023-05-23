@@ -1,12 +1,10 @@
 @import './../../../assets/styles/mixins';
 
-
 @layer components.carousel {
     @import './styles/carousel-mixins';
     @import './styles/carousel-core';
     @import './styles/carousel-elements';
 }
-
 
 // By default
 :host {

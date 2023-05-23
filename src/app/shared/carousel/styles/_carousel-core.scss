@@ -1,4 +1,3 @@
-
 .carousel {
     // Set top and bottom padding
     @include rem(padding-top, 40px);
@@ -52,7 +51,7 @@
         @include rem(padding-right, 60px);
 
         // Increase bottom spacing
-        @include gobalBottomSpacing($spacer-lg);
+        @include gobalBottomSpacing($spacer-xl);
     }
  
     @container (min-width: 961px) and (max-width: 1140px) {
@@ -61,7 +60,7 @@
         @include rem(padding-right, 50px);
 
         // Increase bottom spacing
-        @include gobalBottomSpacing($spacer-md);
+        @include gobalBottomSpacing($spacer-lg);
     }
  
     @container (min-width: 721px) and (max-width: 960px) {
@@ -72,5 +71,8 @@
         // Increase left & right padding
         @include rem(padding-left, 40px);
         @include rem(padding-right, 40px);
+
+        // Increase bottom spacing
+        @include gobalBottomSpacing($spacer-md);
     }
 }
