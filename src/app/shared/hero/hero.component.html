@@ -14,8 +14,8 @@
                     TODO: THIS SECTION SHOULD BE COMING FROM OUTSIDE
                     ----------------------------
                 -->
-            <div *ngIf="size=='large'" class="hero__cta">
-                <a class="button-primary button-primary--{{size}}" routerLink="/projects">
+            <div *ngIf="page=='home'" class="hero__cta">
+                <a class="button-primary button-primary--large" routerLink="/projects">
                     Latest work
                     <app-icon class="icon" name="arrowRight"></app-icon>
                 </a>
@@ -26,9 +26,9 @@
 
         <div *ngIf="page=='about'" class="circle"></div>
 
-        <img *ngIf="size=='small'" [ngClass]="imgClass(imageType)" class="img" src={{image}} alt="">
+        <img *ngIf="page=='about' || page=='other'" [ngClass]="imgClass(imageType)" class="img" src={{image}} alt="">
 
-        <div *ngIf="size=='large'">
+        <div *ngIf="page=='home'">
             <img class="img img--phone" src="./../../../assets/img/project-25-hero.png" alt="">
             <img class="img img--laptop" src="./../../../assets/img/project-26-hero.png" alt="">
         </div>

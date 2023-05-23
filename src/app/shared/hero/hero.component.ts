@@ -9,7 +9,6 @@ import { Testimonial } from 'src/app/projects/model/testimonial';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
-  @Input() size: string = '';
   @Input() title: string = '';
   @Input() image: string = '';
   @Input() imageType: string = '';
@@ -20,16 +19,12 @@ export class HeroComponent {
 
 
   parentClassSetup() {
-    return `hero--${this.size} hero--${this.page}`;
+    return `hero--${this.page}`;
     // return {
     //   'hero--small': this.size === 'small',
     //   'hero--large': this.size === 'large',
     // };
   }
-
-  // slideClassSetup() {
-  //   return `slide--${this.page}`;
-  // }
 
   imgClass(type: string) {
     return `img--${type}`;
@@ -39,14 +34,3 @@ export class HeroComponent {
     return this.quote ? 'isQuote' : '';
   }
 }
-
-
-
-
-
-// imgClass(index: number) {
-//   return {
-//     'width1': index === 6,
-//     'width2': index === 9
-//   }
-// }
