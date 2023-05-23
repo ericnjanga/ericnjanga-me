@@ -1,0 +1,142 @@
+
+@import './visibilityHelpers';
+
+
+
+
+@mixin global() {
+    .circle { 
+        @include rem(inline-size, 324px);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        @include bgColor(state3);
+    }
+    img {
+        display: block;
+        bottom: 0;
+    }
+    .circle, img {
+        position: absolute;
+    }
+}
+
+@mixin style-721px-up {
+    @container (min-width: 721px) {
+        @include rem(height, 330px);
+
+        img {
+            @include rem(max-width, 510px);
+        }
+        .circle {
+            @include rem(inline-size, 405px);
+        }
+        .hero__quote, .hero__cta {
+            @include rem(margin-top, 20px);
+        }
+    }
+}
+
+@mixin style-961px-up {
+    @container (min-width: 961px) {
+        .text-wrapper {
+            top: 0;
+            max-width: 550px;
+        }
+    }
+}
+
+
+// Switch visibility between small and large navigation depending 
+// on the container's size (bx-container)
+.hero--about {
+    @include global();
+    @include style-721px-up();
+    @include style-961px-up();
+    
+    @container (min-width: 1141px) {
+
+        // position circle
+        .circle {
+            @include rem(bottom, -100px);
+            @include rem(right, 80px);
+        }
+
+        //display image and position it
+        img {
+            @include rem(right, 40px);
+        }
+    }
+ 
+    @container (min-width: 961px) and (max-width: 1140px) {
+
+        // position circle
+        .circle {
+            @include rem(bottom, -100px);
+            @include rem(right, 80px);
+        }
+
+        //display image and position it
+        img {
+            @include rem(right, 40px);
+        }
+    }
+ 
+    @container (min-width: 721px) and (max-width: 960px) {
+
+        // ...
+        .text-wrapper {
+            top: 0;
+        }
+
+        // position circle
+        .circle {
+            @include rem(bottom, -100px);
+            @include rem(right, -30px);
+        }
+
+        //display image and position it
+        img {
+            @include rem(right, -50px);
+        }
+    }
+ 
+    @container (min-width: 541px) and (max-width: 720px) {
+        @include rem(height, 450px);
+
+        // ...
+        .text-wrapper {
+            top: 0;
+        }
+
+        // position circle
+        .circle {
+            @include rem(bottom, -80px);
+            @include rem(right, -30px);
+        }
+
+        //display image and position it
+        img {
+            @include rem(right, -30px);
+            @include rem(max-width, 400px);
+        }
+    }
+
+    // From zero to small ...
+    @container (max-width: 540px) {
+        @include rem(height, 500px);
+
+        // position circle
+        .circle {
+            @include rem(bottom, -80px);
+            @include rem(right, 10px);
+        }
+
+        //display image and position it
+        img {
+            right: 0;
+            @include rem(max-width, 400px);
+        }
+    }
+}
+
+

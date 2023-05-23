@@ -23,8 +23,10 @@
             <!-- ---------------------------- -->
         </div>
 
-        <img *ngIf="size=='small'" [ngClass]="imgClass(imageType)" class="img" src={{image}} alt="">
 
+        <div *ngIf="page=='about'" class="circle"></div>
+
+        <img *ngIf="size=='small'" [ngClass]="imgClass(imageType)" class="img" src={{image}} alt="">
 
         <div *ngIf="size=='large'">
             <img class="img img--phone" src="./../../../assets/img/project-25-hero.png" alt="">

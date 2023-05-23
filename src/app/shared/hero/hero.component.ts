@@ -20,7 +20,7 @@ export class HeroComponent {
 
 
   parentClassSetup() {
-    return `hero--${this.size}`;
+    return `hero--${this.size} hero--${this.page}`;
     // return {
     //   'hero--small': this.size === 'small',
     //   'hero--large': this.size === 'large',

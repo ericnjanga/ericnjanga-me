@@ -9,6 +9,7 @@
 .hero {
     position: relative;
     display: flex;
+    overflow: hidden;
     @include bgColor(primary);
     @include gobalBorderRadius();
     @include rem(padding-left, 20px);

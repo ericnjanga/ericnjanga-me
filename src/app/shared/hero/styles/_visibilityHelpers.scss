@@ -34,8 +34,7 @@
 */
 @mixin container_M_eltStyles() {
     // ...
-    @include rem(max-height, 330px);
-    overflow: hidden;
+    @include rem(height, 330px);
 
     // ..
     .img--phone {
@@ -78,7 +77,6 @@
 @mixin container_L_eltStyles() {
     // ...
     @include rem(height, 380px);
-    overflow: hidden;
 
     //... 
     @include rem(padding-left, 40px);
@@ -144,7 +142,6 @@
 @mixin container_XL_eltStyles() {
     // ...
     @include rem(height, 430px);
-    overflow: hidden;
 
     //... 
     @include rem(padding-left, 50px);
@@ -195,7 +192,6 @@
 @mixin container_XXL_eltStyles() {
     // ...
     @include rem(height, 500px);
-    overflow: hidden;
 
     //... 
     @include rem(padding-left, 60px);
