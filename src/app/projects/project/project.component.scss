@@ -3,16 +3,20 @@
 
 $gap: 75px;
 
+.main-wrapper {
+    display: none;
+}
+
 
 
 p {
     color: #455445;
 }
 
-.main-wrapper {
-    align-items: stretch;
-    margin-bottom: $gap;
-}
+// .main-wrapper {
+//     align-items: stretch;
+//     margin-bottom: $gap;
+// }
 
 .block-left {
     padding-top: $gap;

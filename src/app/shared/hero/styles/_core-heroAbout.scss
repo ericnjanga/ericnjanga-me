@@ -1,9 +1,4 @@
 
-@import './visibilityHelpers';
-
-
-
-
 @mixin global() {
     .circle { 
         @include rem(inline-size, 324px);
@@ -138,5 +133,3 @@
         }
     }
 }
-
-

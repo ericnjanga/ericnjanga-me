@@ -1,7 +1,4 @@
 
-@import './visibilityHelpers';
-
-
 @mixin style-721px-up {
     @container (min-width: 721px) {
         @include rem(height, 330px);

@@ -1,10 +1,229 @@
-@import './visibilityHelpers';
 @import './stylingHelpers';
 
 /**
  * Component's core structure
  * ....................................................
 */
+
+
+
+/**
+ * - Set a min height
+ * - Hide all images
+ * - Push quotes and CTAs down
+ * - Add bottom spacing
+*/
+@mixin container_S_eltStyles() {
+    // Set a min height
+    @include rem(min-height, 200px);
+
+    // Hide all images
+    img {
+        display: none;
+    }
+
+    // Push quotes and CTAs down
+    .hero__quote,
+    .hero__cta {
+        @include rem(margin-top, 20px);
+    }
+
+    // Add bottom spacing
+    @include gobalBottomSpacing();
+}
+
+
+/**
+ * - Limit height + add an overflow
+ * - Display only 1 image (laptopn) with limited width
+ * - Limit text's width + change position
+ * - Push quotes and CTAs down
+ * - Set gap between flex items
+ * - Add bottom spacing
+*/
+@mixin container_M_eltStyles() {
+    // ...
+    @include rem(height, 330px);
+
+    // ..
+    .img--phone {
+        @include rem(max-width, 170px);
+        @include rem(right, 20px);
+    }
+    // .img--laptop {
+    //     display: none;
+    // }
+
+    // Limit text's width
+    .text-wrapper {
+        position: relative;
+        @include rem(max-width, 434px);
+        @include rem(top, 30px);
+    }
+
+    // Push quotes and CTAs down
+    .hero__quote,
+    .hero__cta {
+        @include rem(margin-top, 20px);
+    }
+
+    // ...
+    @include rem(gap, 30px);
+
+    // Add bottom spacing
+    @include gobalBottomSpacing();
+}
+
+
+/**
+ * - Limit height + add an overflow
+ * - Increase left and right padding
+ * - Display only 1 image (laptopn) with limited width
+ * - Limit text's width + change position
+ * - Push quotes and CTAs down (++)
+ * - Increase gap between flex items
+ * - Add bottom spacing
+*/
+@mixin container_L_eltStyles() {
+    // ...
+    @include rem(height, 380px);
+
+    //... 
+    @include rem(padding-left, 40px);
+    @include rem(padding-right, 40px);
+
+    // ..
+    .img--phone {
+        position: relative;
+        @include rem(top, -35px);
+        @include rem(max-width, 300px);
+    }
+    .img--laptop {
+        @include rem(width, 450px);
+        right: 0;
+    }
+
+    // Limit text's width 
+    .text-wrapper {
+        position: relative;
+        @include rem(max-width, 434px);
+        @include rem(top, 20px);
+    }
+
+    // Push quotes and CTAs down
+    .hero__quote,
+    .hero__cta {
+        @include rem(margin-top, 30px);
+    }
+
+    // ...
+    @include rem(gap, 70px);
+
+    // Add bottom spacing
+    @include gobalBottomSpacing();
+}
+
+
+
+/**
+ * - Limit height + add an overflow
+ * - Increase left and right padding
+ * - Display both images (with custom positions)
+ * - Limit text's width + change position
+ * - Push quotes and CTAs down (++)
+ * - Add bottom spacing
+*/
+@mixin container_XL_eltStyles() {
+    // ...
+    @include rem(height, 430px);
+
+    //... 
+    @include rem(padding-left, 50px);
+    @include rem(padding-right, 50px);
+
+    // ..
+    .img--phone {
+        @include rem(top, 5px);
+        @include rem(right, 40px);
+        @include rem(max-width, 300px);
+        z-index: 1;
+    }
+    .img--laptop {
+        @include rem(top, 30px);
+        @include rem(right, -40px);
+        @include rem(max-width, 576.97px);
+    }
+
+    // Limit text's width 
+    .text-wrapper {
+        position: relative;
+        @include rem(max-width, 450px);
+    }
+
+    // Push quotes and CTAs down
+    .hero__quote,
+    .hero__cta {
+        @include rem(margin-top, 30px);
+    }
+
+    // Add bottom spacing
+    $spacer-md: map-get($gap, spacer-md);
+    @include gobalBottomSpacing($spacer-md);
+}
+
+
+
+/**
+ * - Limit height + add an overflow
+ * - Increase left and right padding
+ * - Display both images (with custom positions)
+ * - Limit text's width + change position
+ * - Push quotes and CTAs down (++)
+ * - Add bottom spacing
+*/
+@mixin container_XXL_eltStyles() {
+    // ...
+    @include rem(height, 500px);
+
+    //... 
+    @include rem(padding-left, 60px);
+    @include rem(padding-right, 60px);
+
+    // ..
+    .img--phone {
+        @include rem(top, 5px);
+        @include rem(right, 40px);
+        @include rem(max-width, 300px);
+        z-index: 1;
+    }
+    .img--laptop {
+        @include rem(top, 30px);
+        @include rem(right, -40px);
+        @include rem(max-width, 681.68px);
+    }
+
+    // Limit text's width 
+    .text-wrapper {
+        position: relative;
+        @include rem(max-width, 550px);
+        @include rem(top, 50px);
+    }
+
+    // Push quotes and CTAs down
+    .hero__quote,
+    .hero__cta {
+        @include rem(margin-top, 35px);
+    }
+
+    // Add bottom spacing
+    $spacer-lg: map-get($gap, spacer-lg);
+    @include gobalBottomSpacing($spacer-lg);
+}
+
+
+
+
+
 
 .hero {
     position: relative;
@@ -23,6 +242,9 @@
     .hero__title {
         @include color(bright1);
     }
+    .img--phone, .img--laptop {
+        position: absolute;
+    }
     @include quoteStyling();
     @include captionStyling();
     @include titleQuoteStyling();
@@ -33,229 +255,23 @@
 // on the container's size (bx-container)
 .hero {
     @container (min-width: 1141px) {
-        border: 3px solid green;
         @include container_XXL_eltStyles();
     }
  
     @container (min-width: 961px) and (max-width: 1140px) {
-        border: 3px solid orange;
         @include container_XL_eltStyles();
     }
  
     @container (min-width: 721px) and (max-width: 960px) {
-        border: 3px solid blue;
         @include container_L_eltStyles();
     }
  
     @container (min-width: 541px) and (max-width: 720px) {
-        border: 3px solid red;
         @include container_M_eltStyles();
     }
 
     // From zero to small ...
     @container (max-width: 540px) {
-        border: 3px solid greenyellow;
         @include container_S_eltStyles();
     }
 }
-
-
-
-// .hero__quote {
-//     ::ng-deep header {
-//         border-left: 1px solid map-get($colors, primary_gray3);
-
-//         a {
-//             @include color(primary_gray3);
-
-//             .title-wrapper__heading {
-//                 @include color(primary_gray3);
-//             }
-
-//             &:hover {
-//                 @include color(state3);
-
-//                 .title-wrapper__heading {
-//                     @include color(state3);
-//                 }
-
-//                 svg {
-//                     @include color(state3);
-//                 }
-//             }
-//         }
-
-//         .title-wrapper__subtitle,
-//         svg {
-//             @include color(primary_gray3);
-//         }
-//     }
-// }
-
-// .text-wrapper {
-//     position: relative;
-// }
-
-// .hero--small {
-//     // height: $hero-height-sm;
-//     overflow: hidden;
-
-//     .img--laptop {
-//         width: 648px;
-//         top: 30px;
-//         right: -200px;
-//     }
-
-//     .img--phone {
-//         width: 329px;
-//         top: 0;
-//         right: 0
-//     }
-// }
-
-// .img {
-//     position: absolute;
-//     filter: drop-shadow(20px 11.4887px 33.08px rgba(0, 0, 0, 0.75));
-// }
-
-
-
-
-
-// // .text-wrapper {
-// //     @include rem(left, 50px);
-// // }
-
-// .hero--about {
-//     .img {
-//         width: 41.188rem;
-//     }
-// }
-
-// .hero {
-//     .caption {
-//         display: block;
-//     }
-
-//     ::ng-deep .caption {
-
-//         // border: 2px solid red;
-//         .title-caption {
-//             color: #5A6D5B;
-//             text-transform: uppercase;
-
-//             .mat-badge-content {
-//                 @include color(accent2);
-//                 background-color: #5E675E;
-//             }
-//         }
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Dimensions
-// $hero-height-lg: 700px;
-// $hero-height-mg: 550px;
-// $hero-height-sm: 405px;
-// $hero-bg-lg: 486px;
-
-// // Spacers 
-
-
-// ::host {
-//     display: block;
-// }
-
-
-
-// // [visibility] ....................................................
-
-
-
-
-
-
-
-//         // ...
-//         @container (min-width: 516px) {
-//             @include rem(margin-bottom, $spacer-sm);
-
-
-
-//             background-color: blue;
-//         }
-
-//         // ...
-//         @container (min-width: 696px) {
-//             @include rem(margin-bottom, $spacer-md);
-//             border: 1px dashed pink;
-
-//             &.hero--large {
-//                 height: $hero-height-mg;
-
-//                 .text-wrapper {
-//                     top: 30%;
-//                     @include rem(max-width, 434px);
-//                 }
-//             }
-
-//             background-color: pink;
-//         }
-
-//         // ...
-//         @container (min-width: 936px) { // max-width: 1116px
-//             @include rem(margin-bottom, $spacer-lg);
-
-//             &.hero--large {
-
-//                 .img--laptop {
-//                     @include rem(top, 170px);
-//                     @include rem(right, 220px);
-//                     width: 542px;
-//                     height: 347.91px;
-//                 }
-
-//                 .img--phone {
-//                     top: 0;
-//                     @include rem(right, 100px);
-//                     width: 302px;
-//                     height: 650.24px;
-//                     z-index: 1;
-//                 }
-
-//                 // height: $hero-bg-lg;
-//             }
-
-//             background-color: lime;
-//         }
-
-//         // ...
-//         @container (min-width: 1116px) { // max-width: 1296px
-//             @include rem(margin-bottom, $spacer-xl);
-
-//             background-color: orange;
-//         }
-
-//         // ...
-//         @container (min-width: 1296px) { // max-width: 1296px
-
-//             background-color: purple; 
-//         }
-//     }
-
-
-// // [visibility] ....................................................
