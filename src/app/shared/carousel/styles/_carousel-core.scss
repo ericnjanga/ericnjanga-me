@@ -1,0 +1,76 @@
+
+.carousel {
+    // Set top and bottom padding
+    @include rem(padding-top, 40px);
+    @include rem(padding-bottom, 40px);
+
+    // Set left & right padding
+    @include rem(padding-left, 20px);
+    @include rem(padding-right, 20px);
+
+    // Set spacing between titl and the next element
+    .component-title {
+        @include rem(margin-bottom, 15px);
+    }
+
+    // Set a limit to the inner content's horizontal growth 
+    // and set pagination's top position on same height
+    .inner-wrapper {
+        position: relative;
+        @include rem(max-width, 500px);
+        // ...
+        .text-wrapper {
+            position: relative;
+            .component-pagination {
+                @include paginationTopPos(0);
+            }
+        }
+    }
+
+    // Set spacing between the paragram and the next element
+    p {
+        @include color(primary_gray3);
+        @include rem(margin-bottom, 40px);
+    }
+
+    @include color(bright1);
+
+    // Set the component's decoration
+    @include gobalBorderRadius();       // Border radius
+    @include bgColor(primary_dark2);    // background color 
+    @include gobalBottomSpacing();      // Vertical spacing with the next component
+
+    // ...
+    @include elts-961px-up();
+}
+
+
+.carousel {
+    @container (min-width: 1141px) {
+        // Increase left & right padding
+        @include rem(padding-left, 60px);
+        @include rem(padding-right, 60px);
+
+        // Increase bottom spacing
+        @include gobalBottomSpacing($spacer-lg);
+    }
+ 
+    @container (min-width: 961px) and (max-width: 1140px) {
+        // Increase left & right padding
+        @include rem(padding-left, 50px);
+        @include rem(padding-right, 50px);
+
+        // Increase bottom spacing
+        @include gobalBottomSpacing($spacer-md);
+    }
+ 
+    @container (min-width: 721px) and (max-width: 960px) {
+        // Increase top and bottom padding
+        @include rem(padding-top, 50px);
+        @include rem(padding-bottom, 50px);
+
+        // Increase left & right padding
+        @include rem(padding-left, 40px);
+        @include rem(padding-right, 40px);
+    }
+}

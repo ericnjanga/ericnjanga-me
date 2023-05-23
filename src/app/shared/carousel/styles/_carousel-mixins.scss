@@ -1,0 +1,46 @@
+
+
+
+
+@mixin elts-961px-up() {
+    @container (min-width: 961px) {
+        
+        // Increase top and bottom padding
+        @include rem(padding-top, 70px);
+        @include rem(padding-bottom, 70px);
+
+        // Turn inner content into a 3 column grid
+        .inner-wrapper {
+            // ...
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: 500px 40px auto;
+            @include rem(min-height, 350px);    // Set height
+    
+            // Place image in 1st position
+            img {
+                grid-row: 1;
+                grid-column: 1;
+            }
+    
+            // Place text in 3rd position
+            $vertical-gap: 50px;
+            .text-wrapper {
+                position: relative;
+                grid-row: 1;
+                grid-column: 3;
+                @include rem(padding-top, $vertical-gap);
+
+                .component-pagination {
+                    @include paginationTopPos($vertical-gap);
+                }
+            }
+        }
+    }
+}
+
+@mixin paginationTopPos($vGap) {
+    $dim: $vGap - 6px;
+    @include rem(top, $dim);
+}
+

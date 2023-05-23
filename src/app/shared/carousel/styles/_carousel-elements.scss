@@ -1,0 +1,9 @@
+
+
+.component-pagination {
+    position: absolute;
+    right: 0;
+    @include bgColor(primary_gray1);
+    @include rem(height, 45px);
+    @include rem(width, 95px);
+}

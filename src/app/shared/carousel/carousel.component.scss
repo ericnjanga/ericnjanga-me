@@ -2,19 +2,11 @@
 
 
 @layer components.carousel {
-    @import './styles/core';
+    @import './styles/carousel-mixins';
+    @import './styles/carousel-core';
+    @import './styles/carousel-elements';
 }
 
-// Spacers 
-$spacer-sm: map-get($gap, spacer-sm);
-$spacer-md: map-get($gap, spacer-md);
-$spacer-lg: map-get($gap, spacer-lg);
-$spacer-xl: map-get($gap, spacer-xl);
-
-$card-width: 295px;
-$card-height: 340px;
-$gap: 60px;
-$ng-card: 5;
 
 // By default
 :host {
