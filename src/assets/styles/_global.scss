@@ -46,6 +46,15 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
 
 
 
+@layer components.section-title {
+    .section-title {
+        border: 1px solid orange;
+        @include rem(padding-left, 60px);
+    }
+}
+
+
+
 
 
 

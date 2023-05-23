@@ -12,6 +12,23 @@
      width 4: 1140px
 */
 
+.yy-container {
+    @container (min-width: 1141px) {
+    }
+ 
+    @container (min-width: 961px) and (max-width: 1140px) {
+    }
+ 
+    @container (min-width: 721px) and (max-width: 960px) {
+    }
+ 
+    @container (min-width: 541px) and (max-width: 720px) {
+    }
+
+    @container (max-width: 540px) {
+    }
+}
+
 .xxx-container {
     // ...
     @container (min-width: 1141px) { 

@@ -1,0 +1,156 @@
+
+.carousel {
+    @include rem(padding-top, 40px);
+    @include rem(padding-bottom, 40px);
+
+    // Add left & right padding
+    @include rem(padding-left, 20px);
+    @include rem(padding-right, 20px);
+
+    p {
+        @include color(primary_gray3);
+    }
+
+    @include color(bright1);
+    @include gobalBorderRadius();
+    @include bgColor(primary_dark2);
+
+    // Add default bottom spacing
+    @include gobalBottomSpacing();
+}
+
+
+
+.carousel {
+    @container (min-width: 1141px) {
+        border: 3px solid orange;
+        @include rem(padding-top, 70px);
+        @include rem(padding-bottom, 70px);
+
+        // Increase left & right padding
+        @include rem(padding-left, 60px);
+        @include rem(padding-right, 60px);
+
+        // Increase bottom spacing
+        @include gobalBottomSpacing($spacer-lg);
+    }
+ 
+    @container (min-width: 961px) and (max-width: 1140px) {
+        border: 3px solid turquoise;
+        @include rem(padding-top, 70px);
+        @include rem(padding-bottom, 70px);
+
+        // Increase left & right padding
+        @include rem(padding-left, 50px);
+        @include rem(padding-right, 50px);
+
+        // Increase bottom spacing
+        @include gobalBottomSpacing($spacer-md);
+    }
+ 
+    @container (min-width: 721px) and (max-width: 960px) {
+        border: 3px solid blue;
+        @include rem(padding-top, 50px);
+        @include rem(padding-bottom, 50px);
+
+        // Increase left & right padding
+        @include rem(padding-left, 40px);
+        @include rem(padding-right, 40px);
+    }
+ 
+    @container (min-width: 541px) and (max-width: 720px) {
+        border: 3px solid pink;
+    }
+
+    @container (max-width: 540px) {
+        border: 3px solid yellow;
+    }
+}
+
+
+
+
+    // // Scroll system ..
+    // .scrallable-area--content {
+    //     display: flex;
+    //     @include rem(gap, $gap);
+    //     // border: 2px solid turquoise;
+    //     width: ($card-width * $ng-card) + ($gap * ($ng-card - 1));
+    // }
+
+
+    // .card {
+    //     $vertical-gap: 13px;
+
+    //     // ...
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     width: $card-width;
+    //     height: $card-height;
+    //     border: 0px solid;
+    //     background-color: transparent;
+
+    //     // Decoration
+    //     &::after {
+    //         position: absolute;
+    //         @include rem(bottom, $vertical-gap);
+    //         content: '';
+    //         width: 265px;
+    //         height: ($card-height - ($vertical-gap * 2));
+    //         @include rem(border-radius, 4px);
+    //         background-color: #fff;
+    //     }
+
+    //     .card-top {
+    //         position: absolute;
+    //         @include rem(top, $vertical-gap * 2);
+    //     }
+
+    //     .card-bottom {
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: center;
+    //         height: 100%;
+    //         border: 0px solid transparent;
+    //         background-color: transparent;
+
+    //         .MuiTooltip-tooltip {
+    //             background-color: #f7f7f7;
+    //         }
+    //     }
+
+
+
+    //     .title-caption {
+    //         margin-bottom: 0;
+    //     }
+
+    //     .title-caption,
+    //     .thumbnail,
+    //     button {
+    //         z-index: 1;
+    //     }
+
+    //     .thumbnail {
+    //         margin-top: auto;
+    //         margin-bottom: auto;
+    //         filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+    //     }
+    // }
+
+    // .card:hover {
+
+    //     // hide title
+    //     .card-top {
+    //         visibility: hidden;
+    //     }
+
+    //     // change background color
+    //     @include bgColor(primary_gray4);
+
+    //     // change "decoration" background color
+    //     &::after {
+    //         @include bgColor(primary_gray1);
+    //     }
+    // }
