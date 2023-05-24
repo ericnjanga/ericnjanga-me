@@ -11,6 +11,10 @@ import { EMPTY_PROJECT, EMPTY_PROJECT_DETAIL } from 'src/app/projects/mocks/proj
 })
 
 export class ProjectService {
+
+  // Only use production domain if the flag is on
+  private isProduction = true;
+  private prodDomain = this.isProduction == true ? 'https://eric-njanga-2023-api.herokuapp.com' : '';
   private baseUrl = 'api/projects';  // URL to web api
 
 
@@ -27,8 +31,9 @@ export class ProjectService {
 
     // Default value for pagination
     const pNumber = 0;
+    const queryParams = `status=${stat}&industry=${ind}&pageNumber=${pNumber}&pageSize=${pSize}`;
 
-    const url = `/${this.baseUrl}?status=${stat}&industry=${ind}&pageNumber=${pNumber}&pageSize=${pSize}`;
+    const url = `${this.prodDomain}/${this.baseUrl}?${queryParams}`;
     const headers = { 'Content-Type': 'application/json' }; 
 
     return this.http.get<ProjectsPayload>(url, { headers })
@@ -42,8 +47,7 @@ export class ProjectService {
   loadProjectByUrl(projectUrl: string): Observable<Project> {
 
     //Sample API call: http://localhost:7000/api/projects/28-connecting-the-dots-of-a-social-business
-
-    const url = `/${this.baseUrl}/${projectUrl}`;
+    const url = `${this.prodDomain}/${this.baseUrl}/${projectUrl}`;
 
     return this.http.get<Project>(url)
     .pipe(
