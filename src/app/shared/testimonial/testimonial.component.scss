@@ -5,7 +5,6 @@
 
     .testimonial {
         width: 100%;
-        max-width: 800px;
         @include rem(padding, 20px);
         // @include rem(padding, 45px);
         overflow: hidden;

@@ -19,17 +19,17 @@ export class TestimonialComponent {
   fullText: string = '';
   showFullText = false;
 
-  ngOnInit() {
-    const htmlFreeText = stripHtmlTags(this.testimonial.text);
-    this.trimmedText = htmlFreeText.substring(0, 135);
-    this.fullText = this.testimonial.text;
-  }
+  // ngOnInit() {
+  //   const htmlFreeText = stripHtmlTags(this.testimonial.text);
+  //   this.trimmedText = htmlFreeText.substring(0, 135);
+  //   this.fullText = this.testimonial.text;
+  // }
 
-  toggleText() {
-    this.showFullText = !this.showFullText;
-  }
+  // toggleText() {
+  //   this.showFullText = !this.showFullText;
+  // }
 
-  arrowDirection(dir: boolean) {
-    return `button-secondary--${dir ? 'up' : 'down'}`;
-  }
+  // arrowDirection(dir: boolean) {
+  //   return `button-secondary--${dir ? 'up' : 'down'}`;
+  // }
 }

@@ -26,6 +26,7 @@ import { AppbarComponent } from './appbar/appbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { RevealContentComponent } from './reveal-content/reveal-content.component';
 
 
 
@@ -51,6 +52,7 @@ import { MatMenuModule } from '@angular/material/menu';
     QuoteComponent,
     NicePosterComponent,
     AppbarComponent,
+    RevealContentComponent,
   ],
   imports: [
     CommonModule,
@@ -80,6 +82,7 @@ import { MatMenuModule } from '@angular/material/menu';
     QuoteComponent,
     NicePosterComponent,
     AppbarComponent,
+    RevealContentComponent,
   ]
 })
 export class SharedModule { }

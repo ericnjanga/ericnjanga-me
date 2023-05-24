@@ -1,0 +1,12 @@
+<div class="bx-container">
+    <div class="component-wrapper" [ngClass]="compClass()">
+        <div class="reveal-content">
+    
+            <ng-content></ng-content>
+        </div>
+    
+        <button class="btn button-secondary" (click)="toggleMask()">
+            {{ showContent ? 'Read less' : 'Read more' }}
+        </button>
+    </div>
+</div>

@@ -16,19 +16,21 @@
         </a>
     </header>
 
-
-
-    
     <div class="testimonial-body">
+        <div [innerHTML]="testimonial.text"></div>
+    </div>
+
+
+    <!-- <div class="testimonial-body">
         <div [@slideUpDown]="showFullText ? 'hidden' : 'visible'">
             <p>{{ trimmedText }}</p>
         </div>
         <div [@slideUpDown]="showFullText ? 'visible' : 'hidden'">
             <div [innerHTML]="testimonial.text"></div>
         </div>
-    </div>
+    </div> -->
 
-
+    <!-- 
     <button 
         class="button-secondary" 
         (click)="toggleText()"
@@ -39,9 +41,9 @@
             class="icon" 
             name="arrowRight"
         ></app-icon>
-    </button>
+    </button> -->
 
-     
+
 
 
 

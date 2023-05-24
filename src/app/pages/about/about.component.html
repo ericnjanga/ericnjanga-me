@@ -4,23 +4,33 @@
 
 <div class="bx-container">
     <section class="introduction">
-        <app-about-developer></app-about-developer>
-        <app-about-ux-designer></app-about-ux-designer>
+        <app-reveal-content [containerQuery]="true">
+            <app-about-developer></app-about-developer>
+        </app-reveal-content>
+        <app-reveal-content [containerQuery]="true">
+            <app-about-ux-designer></app-about-ux-designer>
+        </app-reveal-content>
     </section>
 
 
     <section class="excellence">
-        <app-about-excellence></app-about-excellence>
+        <app-reveal-content [containerQuery]="true">
+            <app-about-excellence></app-about-excellence>
+        </app-reveal-content>
     </section>
 
 
     <section class="">
-        <app-about-professional-qualities></app-about-professional-qualities>
+        <app-reveal-content [containerQuery]="true">
+            <app-about-professional-qualities></app-about-professional-qualities>
+        </app-reveal-content>
     </section>
 
 
     <section class="mentors ">
-        <app-about-mentors></app-about-mentors>
+        <app-reveal-content [containerQuery]="true">
+            <app-about-mentors></app-about-mentors>
+        </app-reveal-content>
     </section>
 
 

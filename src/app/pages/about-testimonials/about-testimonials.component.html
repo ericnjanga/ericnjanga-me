@@ -4,9 +4,13 @@
         <h2>What people are saying about Eric</h2>
     </header>
     <div class="list">
-        <app-testimonial 
+
+        <app-reveal-content *ngFor="let item of testimonialList">
+            <app-testimonial 
             [testimonial]="item"
-            class="item" *ngFor="let item of testimonialList"
+            class="item" 
         ></app-testimonial>
+        </app-reveal-content>
+        
     </div>
 </div>
