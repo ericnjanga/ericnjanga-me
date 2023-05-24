@@ -2,39 +2,48 @@
     image="./../../../assets/img/about-hero.png" [quote]="heroQuote"></app-hero>
 
 
+
+
+<h2 class="component-title section-title">
+    Everything about Eric
+    <app-icon name="info circle">
+        ></app-icon>
+</h2>
+
+
 <div class="bx-container">
-    <section class="introduction">
-        <app-reveal-content [containerQuery]="true">
+    <section class="introduction page-section">
+        <app-reveal-content class="content-block" [containerQuery]="true">
             <app-about-developer></app-about-developer>
         </app-reveal-content>
-        <app-reveal-content [containerQuery]="true">
+        <app-reveal-content class="content-block" [containerQuery]="true">
             <app-about-ux-designer></app-about-ux-designer>
         </app-reveal-content>
     </section>
 
 
-    <section class="excellence">
-        <app-reveal-content [containerQuery]="true">
+    <section class="excellence page-section">
+        <app-reveal-content class="content-block" [containerQuery]="true">
             <app-about-excellence></app-about-excellence>
         </app-reveal-content>
     </section>
 
 
-    <section class="">
-        <app-reveal-content [containerQuery]="true">
+    <section class="professional-qualities page-section">
+        <app-reveal-content class="content-block" [containerQuery]="true">
             <app-about-professional-qualities></app-about-professional-qualities>
         </app-reveal-content>
     </section>
 
 
-    <section class="mentors ">
-        <app-reveal-content [containerQuery]="true">
+    <section class="mentors  page-section">
+        <app-reveal-content class="content-block" [containerQuery]="true">
             <app-about-mentors></app-about-mentors>
         </app-reveal-content>
     </section>
 
 
-    <section class="testimonials ">
+    <section class="testimonials  page-section">
         <app-about-testimonials></app-about-testimonials>
     </section>
 </div>

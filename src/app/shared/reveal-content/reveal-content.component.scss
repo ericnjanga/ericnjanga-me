@@ -1,48 +1,10 @@
- 
+@import './../../../assets/styles/variables';
+@import './../../../assets/styles/mixins';
 
-.btn {
-    margin-left: auto;
-}
-
-// Toggle content anytime
-// ...
-.component-wrapper:not(.is-container-query) { 
-    .btn {
-        display: block;
-    }
-    &.content-masked {
-        .reveal-content { 
-            max-height: 200px;
-            overflow-y: hidden; 
-            padding: 10px;
-            border: 3px solid turquoise;
-        }
-    }
+@layer components.reval-content {
+    @import './styles/rc-elements';
+    @import './styles/rc-logic';
 }
 
 
 
-// Toggle content only within a certain range
-// ...
-.component-wrapper.is-container-query {
-    @container (min-width: 936px) {
-        .btn {
-            display: none;
-        }
-    }
-    // ...
-    @container (max-width: 935px) {
-        &.content-masked {
-            .reveal-content { 
-                max-height: 200px;
-                overflow-y: hidden; 
-                padding: 10px;
-                border: 3px solid turquoise;
-            }
-        }
-        
-        .btn {
-            display: block;
-        }
-    }
-}

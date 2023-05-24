@@ -6,7 +6,9 @@ utilities,
 components;
 
 @layer components {
-    @layer footer, icons, buttons;
+    @layer footer,
+    icons,
+    buttons;
 }
 
 // Font import
@@ -57,21 +59,25 @@ $xl: map-get($breakpoints, screen-xl);
 // Typography
 // -------------------------
 @layer base {
+
     h1,
     h2,
     h3,
     h4 {
         @include setFontFamily('heading');
     }
-    
+
 
     h1 {
         @include typo-h1('small');
 
-        @include respond-to($lg) { // <= lg
+        @include respond-to($lg) {
+            // <= lg
             @include typo-h1('medium');
         }
-        @include respond-to($xl) { // <= lg
+
+        @include respond-to($xl) {
+            // <= lg
             @include typo-h1('large');
         }
     }
@@ -79,13 +85,18 @@ $xl: map-get($breakpoints, screen-xl);
     h2 {
         @include typo-h2('small');
 
-        @include respond-to($md) { // <= md ...
+        @include respond-to($md) {
+            // <= md ...
             @include typo-h2('small');
         }
-        @include respond-to($lg) { // <= lg
+
+        @include respond-to($lg) {
+            // <= lg
             @include typo-h2('medium');
         }
-        @include respond-to($xl) { // <= lg
+
+        @include respond-to($xl) {
+            // <= lg
             @include typo-h2('large');
         }
     }
@@ -98,11 +109,15 @@ $xl: map-get($breakpoints, screen-xl);
             border: 3px solid red;
             @include typo-h3('small');
         }
-        @include respond-to($lg) { // <= lg
+
+        @include respond-to($lg) {
+            // <= lg
             border: 3px solid greenyellow;
             @include typo-h3('medium');
         }
-        @include respond-to($xl) { // <= lg
+
+        @include respond-to($xl) {
+            // <= lg
             border: 3px solid rgb(18, 179, 173);
             @include typo-h3('large');
         }
@@ -132,5 +147,43 @@ $xl: map-get($breakpoints, screen-xl);
         container-type: inline-size;
     }
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+
+// Pages
+// -------------------------
+@layer page {
+
+    .page-section {
+        @include gobalBottomSpacing(); // Vertical spacing with the next component
+    }
+
+
+    .page-section {
+        @container (min-width: 1141px) {
+            // Increase bottom spacing
+            @include gobalBottomSpacing($spacer-xl);
+        }
+
+        @container (min-width: 961px) and (max-width: 1140px) {
+            // Increase bottom spacing
+            @include gobalBottomSpacing($spacer-lg);
+        }
+
+        @container (min-width: 721px) and (max-width: 960px) {
+            // Increase bottom spacing
+            @include gobalBottomSpacing($spacer-md);
+        }
+    }
+
+}

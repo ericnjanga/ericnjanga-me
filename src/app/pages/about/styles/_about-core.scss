@@ -1,0 +1,32 @@
+
+@mixin bodyStyling() {
+    background-color: #fff;
+    border: 1px solid #555;
+    @include rem(border-radius, 10px);
+}
+
+
+
+// Wrapper of every major content block
+.content-block {
+    display: block;
+}
+
+
+.content-block {
+    @container (min-width: 1141px) {
+    }
+ 
+    @container (min-width: 961px) and (max-width: 1140px) {
+    }
+ 
+    @container (min-width: 721px) and (max-width: 960px) {
+    }
+ 
+    @container (min-width: 541px) and (max-width: 720px) {
+    }
+
+    @container (max-width: 540px) {
+        @include bodyStyling();
+    }
+}
