@@ -5,12 +5,12 @@
     </header>
     <div class="list">
 
-        <app-reveal-content *ngFor="let item of testimonialList">
-            <app-testimonial 
-            [testimonial]="item"
-            class="item" 
-        ></app-testimonial>
+        <app-reveal-content 
+            *ngFor="let item of testimonialList"
+            class="content-block"
+        >
+            <app-testimonial [testimonial]="item" class="item"></app-testimonial>
         </app-reveal-content>
-        
+
     </div>
 </div>

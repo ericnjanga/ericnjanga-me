@@ -1,3 +1,16 @@
+
+
+<div class="bx-container">
+    <section class="excellence page-section">
+        <app-reveal-content class="content-block" [containerQuery]="true">
+            <app-about-excellence class="content"></app-about-excellence>
+        </app-reveal-content>
+    </section>
+
+</div>
+
+
+
 <app-hero title="Eric is incredibly dedicated to his work and unwavering in his focus." page="about"
     image="./../../../assets/img/about-hero.png" [quote]="heroQuote"></app-hero>
 
@@ -13,37 +26,37 @@
 
 <div class="bx-container">
     <section class="introduction page-section">
-        <app-reveal-content class="content-block" [containerQuery]="true">
-            <app-about-developer></app-about-developer>
+        <app-reveal-content class="content-block content-text--dev" [containerQuery]="true">
+            <app-about-developer class="content"></app-about-developer>
         </app-reveal-content>
-        <app-reveal-content class="content-block" [containerQuery]="true">
-            <app-about-ux-designer></app-about-ux-designer>
+        <app-reveal-content class="content-block content-text--uxd" [containerQuery]="true">
+            <app-about-ux-designer class="content"></app-about-ux-designer>
         </app-reveal-content>
     </section>
 
 
     <section class="excellence page-section">
         <app-reveal-content class="content-block" [containerQuery]="true">
-            <app-about-excellence></app-about-excellence>
+            <app-about-excellence class="content"></app-about-excellence>
         </app-reveal-content>
     </section>
 
 
     <section class="professional-qualities page-section">
         <app-reveal-content class="content-block" [containerQuery]="true">
-            <app-about-professional-qualities></app-about-professional-qualities>
+            <app-about-professional-qualities class="content"></app-about-professional-qualities>
         </app-reveal-content>
     </section>
 
 
-    <section class="mentors  page-section">
+    <section class="mentors page-section">
         <app-reveal-content class="content-block" [containerQuery]="true">
             <app-about-mentors></app-about-mentors>
         </app-reveal-content>
     </section>
 
 
-    <section class="testimonials  page-section">
+    <section class="testimonials page-section">
         <app-about-testimonials></app-about-testimonials>
     </section>
 </div>

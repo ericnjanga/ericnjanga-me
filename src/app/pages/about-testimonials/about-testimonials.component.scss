@@ -2,6 +2,15 @@
 @import './../../../assets/styles/mixins';
 
 
+
+.content-block {
+    display: block;
+    border: 1px solid #555;
+    @include gobalBorderRadius('medium');
+    @include rem(margin-bottom, 15px);
+}
+
+
 // ::host {
 //     display: block;
 // }
