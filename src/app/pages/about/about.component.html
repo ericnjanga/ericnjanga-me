@@ -1,66 +1,30 @@
-<app-hero title="Eric is incredibly dedicated to his work and unwavering in his focus."
-    page="about" image="./../../../assets/img/about-hero.png" [quote]="heroQuote"></app-hero>
+<app-hero title="Eric is incredibly dedicated to his work and unwavering in his focus." page="about"
+    image="./../../../assets/img/about-hero.png" [quote]="heroQuote"></app-hero>
 
 
-
-<ul>
-    <li>
-        <a routerLink="/about/ui-developer">
-            UI developer for 16 years
-        </a>
-    </li>
-    <li>
-        <a routerLink="/about/ux-designer">
-            ux designer for 4 years
-        </a>
-    </li>
-    <li>
-        <a routerLink="/about/excellence">
-            Area of excellence
-        </a>
-    </li>
-    <li>
-        <a routerLink="/about/professional">
-            Professional qualities
-        </a>
-    </li>
-    <li>
-        <a routerLink="/about/mentors">
-            Friends and mentors
-        </a>
-    </li>
-    <li>
-        <a routerLink="/about/testimonials">
-            Testimonials
-        </a>
-    </li>
-</ul>
+<div class="bx-container">
+    <section class="introduction">
+        <app-about-developer></app-about-developer>
+        <app-about-ux-designer></app-about-ux-designer>
+    </section>
 
 
+    <section class="excellence">
+        <app-about-excellence></app-about-excellence>
+    </section>
 
 
-
-<section class="introduction">
-    <app-about-developer class="bx-container mobile-hidden"></app-about-developer>
-    <app-about-ux-designer class="bx-container mobile-hidden"></app-about-ux-designer>
-</section>
+    <section class="">
+        <app-about-professional-qualities></app-about-professional-qualities>
+    </section>
 
 
-<section class="excellence bx-container mobile-hidden">
-    <app-about-excellence></app-about-excellence>
-</section>
+    <section class="mentors ">
+        <app-about-mentors></app-about-mentors>
+    </section>
 
 
-<section class="bx-container mobile-hidden">
-    <app-about-professional-qualities></app-about-professional-qualities>
-</section>
-
-
-<section class="mentors bx-container mobile-hidden">
-    <app-about-mentors></app-about-mentors>
-</section>
-
-
-<section class="testimonials bx-container mobile-hidden">
-    <app-about-testimonials></app-about-testimonials>
-</section>
+    <section class="testimonials ">
+        <app-about-testimonials></app-about-testimonials>
+    </section>
+</div>

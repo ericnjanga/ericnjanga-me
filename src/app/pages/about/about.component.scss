@@ -3,95 +3,47 @@
 
 
 
-$xl: map-get($breakpoints, screen-xl);
-$md: map-get($breakpoints, screen-md);
+// $xl: map-get($breakpoints, screen-xl);
+// $md: map-get($breakpoints, screen-md);
 
-.mobile-hidden {
-    @include before-to($md) {
-        display: none;
-    }
-}
-
-
-
-.introduction {
-    display: grid;
-    grid-template-columns: auto auto;
-    @include rem(gap, 90px);
-    @include respond-to($xl) {
-        @include rem(gap, 120px);
-    }
-}
-
-
-.excellence {
-    background-color: #fff;
-    @include rem(border-radius, 4px);
-    @include respond-to($md) {
-        @include rem(padding, 30px);
-    }
-}
-
-
-.highlights {
-    p {
-        @include rem(margin-bottom, 30px);
-    }
-}
-
-.mentors {
-    @include rem(border-radius, 4px);
-    @include respond-to($md) {
-        @include bgColor(dark1);
-        @include rem(padding, 30px);
-    }
-}
-
-
-
-// .xxx111 {
-//     display: flex;
-//     @include rem(gap, 60px);
-//     .yyy {
-//         max-width: 380px;
+// .mobile-hidden {
+//     @include before-to($md) {
+//         display: none;
 //     }
-//     .vdsvs {
-//         display: flex;
-//         width: 100%;
-//         max-width: 700px;
-//         justify-content: end;
-//         @include rem(gap, 30px);
+// }
+
+
+
+// .introduction {
+//     display: grid;
+//     grid-template-columns: auto auto;
+//     @include rem(gap, 90px);
+//     @include respond-to($xl) {
+//         @include rem(gap, 120px);
 //     }
+// }
 
-//     .mentors__quote {
-//         display: block;
-//         @include rem(margin-top, 40px);
 
-//         ::ng-deep {
-//             .title-wrapper {
-//                 border-left: 1px solid map-get($colors, state3);
-//             }
-//             .title-wrapper__heading,
-//             .title-wrapper__subtitle {
-//                 font-family: 'Maitree', serif;
-//                 @include color(state3);
-
-//                 // quotes ...
-//                 &::before {
-//                     @include color(state3);
-//                 }
-//                 &::after {
-//                     @include color(state3);
-//                 }
-//             }
-//             .title-wrapper__heading {
-//                 @include rem(margin-bottom, 10px);
-//             }
-//         }
+// .excellence {
+//     background-color: #fff;
+//     @include rem(border-radius, 4px);
+//     @include respond-to($md) {
+//         @include rem(padding, 30px);
 //     }
+// }
 
-//     .vertical-list {
-//         flex-direction: column;
+
+// .highlights {
+//     p {
+//         @include rem(margin-bottom, 30px);
+//     }
+// }
+
+// .mentors {
+//     @include rem(border-radius, 4px);
+//     @include respond-to($md) {
+//         @include bgColor(dark1);
+//         @include rem(padding, 30px);
 //     }
 // }
 

@@ -7,52 +7,52 @@
     display: block;
 }
 
-header {
-    display: none;
-}
+// header {
+//     display: none;
+// }
 
-// screen-sm: 576px,
-// screen-md: 768px,
-// screen-lg: 992px,
-// screen-xl: 1200px
-
-
-$sm: map-get($breakpoints, screen-sm);
-$md: map-get($breakpoints, screen-md);
-$lg: map-get($breakpoints, screen-lg);
-$xl: map-get($breakpoints, screen-xl);
-
-::host {
-    display: block;
-}
+// // screen-sm: 576px,
+// // screen-md: 768px,
+// // screen-lg: 992px,
+// // screen-xl: 1200px
 
 
-.component-wrapper {
-    // Increase space between content and bullet if the container increases
-    @container (min-width: 768px) { //$md
-        .text, img {
-            @include rem(max-width, 600px);
-        }
-    }
+// $sm: map-get($breakpoints, screen-sm);
+// $md: map-get($breakpoints, screen-md);
+// $lg: map-get($breakpoints, screen-lg);
+// $xl: map-get($breakpoints, screen-xl);
 
-    @container (min-width: 992px) { //$lg
-        .text, img {
-            width: auto;
-        }
+// ::host {
+//     display: block;
+// }
 
-        display: grid;
-        grid-template-columns: 600px auto;
-        @include rem(gap, 70px);
 
-        img {
-            grid-row: 1;
-            grid-column: 1;
-        }
-        .text {
-            grid-row: 1;
-            grid-column: 2;
-        }
-    }
+// .component-wrapper {
+//     // Increase space between content and bullet if the container increases
+//     @container (min-width: 768px) { //$md
+//         .text, img {
+//             @include rem(max-width, 600px);
+//         }
+//     }
 
-}
+//     @container (min-width: 992px) { //$lg
+//         .text, img {
+//             width: auto;
+//         }
+
+//         display: grid;
+//         grid-template-columns: 600px auto;
+//         @include rem(gap, 70px);
+
+//         img {
+//             grid-row: 1;
+//             grid-column: 1;
+//         }
+//         .text {
+//             grid-row: 1;
+//             grid-column: 2;
+//         }
+//     }
+
+// }
 

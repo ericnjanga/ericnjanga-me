@@ -3,35 +3,35 @@
 @import './../about/styles/style1';
 
 
-::host {
-    display: block;
-}
+// ::host {
+//     display: block;
+// }
 
-header {
-    display: none;
-}
-
-
-
-.component-wrapper {
-    @container (min-width: 480px) { 
-        display: grid;
-        @include rem(gap, 40px);
-        grid-template-columns: auto auto;
-    }
-
-    @container (min-width: 930px) { 
-        @include rem(gap, 80px);
-        grid-template-columns: auto auto auto;
-    }
-}
+// header {
+//     display: none;
+// }
 
 
 
+// .component-wrapper {
+//     @container (min-width: 480px) { 
+//         display: grid;
+//         @include rem(gap, 40px);
+//         grid-template-columns: auto auto;
+//     }
 
-.list-inline {
-    display: flex;
-}
-.list-inline-item {
-    max-width: 100px;
-}
+//     @container (min-width: 930px) { 
+//         @include rem(gap, 80px);
+//         grid-template-columns: auto auto auto;
+//     }
+// }
+
+
+
+
+// .list-inline {
+//     display: flex;
+// }
+// .list-inline-item {
+//     max-width: 100px;
+// }

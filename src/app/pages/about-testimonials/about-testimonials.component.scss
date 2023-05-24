@@ -4,34 +4,34 @@
 @import './../about/styles/style1';
 
 
-::host {
-    display: block;
-}
+// ::host {
+//     display: block;
+// }
 
-header {
-    display: none;
-}
-
-
-.list {
-    display: flex;
-    flex-direction: column;
-    @include rem(gap, 20px);
-}
+// header {
+//     display: none;
+// }
 
 
-@container (min-width: 1116px) {
-    .component-wrapper {
-        border: 4px solid red;
-        display: grid;
-        grid-template-columns: auto 800px;
-        @include rem(gap, 30px);
-    }
-}
+// .list {
+//     display: flex;
+//     flex-direction: column;
+//     @include rem(gap, 20px);
+// }
 
 
-@container (min-width: 1296px) {
-    .component-wrapper {
-        @include rem(gap, 60px);
-    }
-}
+// @container (min-width: 1116px) {
+//     .component-wrapper {
+//         border: 4px solid red;
+//         display: grid;
+//         grid-template-columns: auto 800px;
+//         @include rem(gap, 30px);
+//     }
+// }
+
+
+// @container (min-width: 1296px) {
+//     .component-wrapper {
+//         @include rem(gap, 60px);
+//     }
+// }
