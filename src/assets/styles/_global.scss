@@ -39,7 +39,7 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
 }
 
 .box-acccent1 {
-    @include bgColor(accent4_white);
+    @include bgColor(pure_white);
 }
 
 
@@ -68,7 +68,7 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
 
     .scrallable-area--pagination {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
     }
 
     .scrallable-area--content {}
@@ -101,30 +101,7 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
     }
 }
 
-
-/**
- *
- * Bootstrap grid
- * --------------------------------------------------
-*/
-
-// // Increasing columnb gutter
-// @include respond-to($xl) {
-//     .row {
-//         margin-right: calc(-1 * map-get($gap, lg));
-//         margin-left: calc(-1 * map-get($gap, lg));
-//     }
-//     .row>* {
-//         padding-right: map-get($gap, lg);
-//         padding-left: map-get($gap, lg);
-//     }
-// }
-
-
-
-
-
-
+ 
 
 
 /**

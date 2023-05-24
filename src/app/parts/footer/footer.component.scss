@@ -9,7 +9,7 @@
         align-items: center;
         justify-content: center;
         height: map-get($gap, appFooter);
-        @include bgColor(white);
+        @include bgColor(pure_white);
     }
 
     .spacer {

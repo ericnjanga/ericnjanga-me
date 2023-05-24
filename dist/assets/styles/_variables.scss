@@ -10,7 +10,11 @@
 */
 $colors: (
     dark1                   : #202023,
-    white                   : #fff, 
+    pure_white              : #fff,
+
+    // Brightness
+    bright1                 : #E6F2EF,
+    bright2                 : #8BC1B5,
 
     // ....
     primary_dark2            : #1E2725,
@@ -20,10 +24,8 @@ $colors: (
     primary_light1           : #86E1CC,
 
     primary_gray1            : #588F82,
-    bright2            : #8BC1B5,
     primary_gray3             : #B3D2CB,
     primary_gray4             : #C1DBD5, 
-    bright1             : #E6F2EF,
 
 
 
@@ -36,7 +38,6 @@ $colors: (
     accent1                 : #2F392F,
     accent2                 : #E4E4B1,
     accent3                 : #E0F6E1,
-    accent4_white           : #fff,
 
     gray0                   : #3D4A47,
     gray1                   : #5C6966,
@@ -72,10 +73,10 @@ $gap: (
     xs          : 10px,
     sm          : 20px,
     lg          : 40px,
-    spacer-xl   : 100px,
-    spacer-lg   : 80px,
-    spacer-md   : 50px,
-    spacer-sm   : 30px,
+    spacer-xl   : 90px,
+    spacer-lg   : 75px,
+    spacer-md   : 60px,
+    spacer-sm   : 40px,
     p-card-ds   : 4px, // project card drop shadow
 );
 
@@ -95,21 +96,3 @@ $components-size: (
 $border: (
     radius      : 4px
 );
- 
-
-/* Sidebar */
-$sidebar: (
-    // expanded-w      : 256px, 
-    // collapsed-w     : map-get($gap, btn-square-dim) + (map-get($gap, xs) * 2), // Collapsed width = double gap + square button width
-);
-
-
-/* Main Content */
-$mainContent: (
-    // collapsed-w     : calc(100% - #{map-get($sidebar, expanded-w)}), // Collapsed width
-    // expanded-w      : calc(100% - #{map-get($sidebar, collapsed-w)}), // Expanded width
-);
-
-
-
-

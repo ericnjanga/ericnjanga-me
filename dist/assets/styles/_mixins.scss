@@ -10,7 +10,11 @@
 $base-font-size: 16px; // Set your base font size in pixels
 
 @mixin rem($property, $value) {
-  #{$property}: ($value / $base-font-size) * 1rem;
+  // #{$property}: ($value / $base-font-size) * 1rem;
+  $quotient: calc($value / $base-font-size);;
+
+
+  #{$property}: $quotient * 1rem;
 }
 
 @mixin color($colorVal) {
@@ -31,7 +35,7 @@ $base-font-size: 16px; // Set your base font size in pixels
 
 @mixin centerAbsElt($width) {
   margin-left: 50%;
-  left: -($width/2);
+  left: calc(-#{$width} / 2);
 }
 
 
@@ -62,6 +66,18 @@ $base-font-size: 16px; // Set your base font size in pixels
 */
 @mixin set-app-background-color() {
   @include bgColor(bright1);
+}
+@mixin gobalBorderRadius() {
+  @include rem(border-radius, 20px);
+}
+
+
+$spacer-sm: map-get($gap, spacer-sm);
+$spacer-md: map-get($gap, spacer-md);
+$spacer-lg: map-get($gap, spacer-lg);
+$spacer-xl: map-get($gap, spacer-xl);
+@mixin gobalBottomSpacing($spacer: $spacer-sm) {
+  @include rem(margin-bottom, $spacer);
 }
 
 

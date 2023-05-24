@@ -10,7 +10,7 @@ $comp-w: map-get($components-size, nice-post-w);
     justify-content: center;
     width: $comp-w;
     height: 380px;
-    @include bgColor(white);
+    @include bgColor(pure_white);
     box-shadow: 5px 5px 0px #131A18;
     .title-wrapper__img {
         @include rem(margin-bottom, 15px);

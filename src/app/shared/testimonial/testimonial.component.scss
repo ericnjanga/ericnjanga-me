@@ -8,7 +8,7 @@
         @include rem(padding, 20px);
         // @include rem(padding, 45px);
         overflow: hidden;
-        @include bgColor(accent4_white);
+        @include bgColor(pure_white);
 
         ::ng-deep app-icon {
             svg {
