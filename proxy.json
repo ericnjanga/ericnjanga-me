@@ -1,6 +1,7 @@
 {
     "/api/*": {
-      "target": "http://localhost:7000",
+      "target-local-placeholder-not-a-real-property": "http://localhost:7000 (replace url bellow in case I need the localhost feed instead of the live feed)",
+      "target": "https://eric-njanga-2023-api.herokuapp.com",
       "secure": true,
       "changeOrigin": true
     }
