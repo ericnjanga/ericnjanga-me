@@ -2,29 +2,35 @@
 @import './../../../assets/styles/mixins';
 
 
+
 @layer page {
     @layer about {
         @layer mentors {
-            .component-wrapper {
-                @include rem(padding, 20px);
-                @include bgColor(primary_dark3);
-            }
-            .title-caption {
-                color: turquoise;
-            }
-            .component-title {
-                color: rgb(49, 168, 103);
-            }
-            p {
-                color: rgb(106, 182, 20);
-            }
-
-            .mentors__quote::ng-deep {
-                .title-wrapper__heading,
-                .title-wrapper__subtitle {
-                    color: rgb(182, 20, 179)!important;
-                }
-            }
+            @import './styles/am-core';
+            @import './styles/am-cosmetics';
         }
+    }
+}
+
+
+
+
+
+/*
+ * Poster frame
+*/
+.posters-wrapper {
+    $grid-w: 644px;
+    $poster-w: 300px;
+    // ...
+    border: 4px solid purple;
+    display: grid;
+    grid-template-columns: $poster-w auto $poster-w;
+    @include rem(width, $grid-w);
+
+
+    .poster-2 {
+        grid-row: 1;
+        grid-column: 3;
     }
 }

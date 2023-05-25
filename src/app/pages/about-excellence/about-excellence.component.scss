@@ -9,7 +9,6 @@
 .content-wrapper {
     @container (min-width: 1141px) {
         $col-width: 513px;
-
         // Set the grid as a 1 row and 3 cols ...
         grid-template-columns: $col-width auto $col-width;
 
@@ -18,7 +17,6 @@
     // Increase column width
     @container (min-width: 961px) and (max-width: 1140px) {
         $col-width: 450px;
-
         // Set the grid as a 1 row and 3 cols ...
         grid-template-columns: $col-width auto $col-width;
 
@@ -27,7 +25,6 @@
     // Set column width
     @container (min-width: 721px) and (max-width: 960px) {
         $col-width: 390px;
-
         // Set the grid as a 1 row and 3 cols ...
         grid-template-columns: $col-width auto $col-width;
 
@@ -35,7 +32,6 @@
 
     // By default, establish grid ...
     @container (min-width: 721px) {
-
         // Set inner content as a grid and reposition its elements
         // Set the grid as a 1 row and 3 cols ...
         display: grid;

@@ -1,18 +1,22 @@
 <div class="component-wrapper">
-    <div>
-        <header>
-            <h5 class="title-caption section-title">friends and mentors</h5>
-            <h2 class="component-title">Following the footsteps of top UX experts</h2>
-        </header>
-        <p>During his UX Design journey, Eric was blessed to cross paths with Dave and Alex, two successful UX experts.
-        </p>
+    <div class="elements-wrapper">
+        <div class="text-wrapper">
+            <header>
+                <h5 class="title-caption section-title">friends and mentors</h5>
+                <h2 class="component-title">Following the footsteps of top UX experts</h2>
+            </header>
+            <p>During his UX Design journey, Eric was blessed to cross paths with Dave and Alex, two successful UX
+                experts.
+            </p>
 
-        <app-quote class="mentors__quote" [quote]="ericQuote" [displayQuote]="true"></app-quote>
-    </div>
-    <div class="frame-testimonials">
-        <div class="frame-testimonials-scroll">
-            <app-nice-poster *ngFor="let mentor of mentors; index as i;" [elt]="mentor"
-                decType="{{decorationNumber(i)}}" class="block"></app-nice-poster>
+            <app-quote class="mentors__quote" [quote]="ericQuote" [displayQuote]="true"></app-quote>
+        </div>
+        <div class="frame-testimonials">
+            <nav class="component-pagination">...</nav>
+            <div class="frame-testimonials-scroll posters-wrapper">
+                <app-nice-poster *ngFor="let mentor of mentors; index as i;" [elt]="mentor"
+                    decType="{{decorationNumber(i)}}" class="poster poster-{{i + 1}}"></app-nice-poster>
+            </div>
         </div>
     </div>
 </div>

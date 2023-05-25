@@ -5,6 +5,7 @@
 @mixin bodyStyling-w720-max() { 
     // Box styling
     @container (max-width: 720px) {
+        overflow: hidden;
         background-color: #fff; // bg
         border: 1px solid #555; // border
         @include gobalBorderRadius('medium'); // ...
@@ -20,37 +21,6 @@
 }
 
 
-/**
- * Structure blocks of texts into columns 
- * within a container range (width from 721px up)
-**/
-@mixin column-structure-w721px-up() {
-    // Increase column width
-    // @container (min-width: 1141px) {
-    //     &.content-text--dev,
-    //     &.content-text--uxd {
-    //         @include rem(width, 513px);
-    //     }
-    // }
- 
-    // // Increase column width
-    // @container (min-width: 961px) and (max-width: 1140px) {
-    //     &.content-text--dev,
-    //     &.content-text--uxd {
-    //         @include rem(width, 463.03px);
-    //     }
-    // }
-    
-    // // Set column width
-    // @container (min-width: 721px) and (max-width: 960px) {
-    //     &.content-text--dev,
-    //     &.content-text--uxd {
-    //         @include rem(width, 390px);
-    //     }
-    // }
-
-}
-
 
 
 
@@ -65,7 +35,6 @@
 }
 .content-block {
     @include bodyStyling-w720-max();
-    @include column-structure-w721px-up();
 }
 
 
