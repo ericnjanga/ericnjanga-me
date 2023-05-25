@@ -1,16 +1,16 @@
-<div>
-    <header>
-        <h5 class="title-caption section-title">testimonials</h5>
-        <h2>What people are saying about Eric</h2>
-    </header>
-    <div class="list">
-
-        <app-reveal-content 
-            *ngFor="let item of testimonialList"
-            class="content-block"
-        >
-            <app-testimonial [testimonial]="item" class="item"></app-testimonial>
-        </app-reveal-content>
-
+<div class="bx-container">
+    <div class="elements-wrapper">
+        <header>
+            <h5 class="title-caption section-title">testimonials</h5>
+            <h2>What people are saying about Eric</h2>
+        </header>
+        <div class="list-wrapper">
+            <app-reveal-content 
+                *ngFor="let item of testimonialList"
+                class="content-block"
+            >
+                <app-testimonial [testimonial]="item" class="item"></app-testimonial>
+            </app-reveal-content>
+        </div>
     </div>
 </div>
