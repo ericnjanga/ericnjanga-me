@@ -7,43 +7,43 @@
 
     @container (min-width: 1141px) { 
         $gap: 60px;
-        $col-width: 513px;
+        // $col-width: 513px;
 
         // Set padding ...
         @include rem(padding, $gap);
 
-        // Set the grid as a 1 row and 3 cols ...
-        .content::ng-deep {
-            grid-template-columns: $col-width auto $col-width;
-        }
+        // // Set the grid as a 1 row and 3 cols ...
+        // .content::ng-deep {
+        //     grid-template-columns: $col-width auto $col-width;
+        // }
     }
  
     // Increase column width
     @container (min-width: 961px) and (max-width: 1140px) { 
         $gap: 50px;
-        $col-width: 450px;
+        // $col-width: 450px;
 
         // Set padding ...
         @include rem(padding, $gap);
 
-        // Set the grid as a 1 row and 3 cols ...
-        .content::ng-deep {
-            grid-template-columns: $col-width auto $col-width;
-        }
+        // // Set the grid as a 1 row and 3 cols ...
+        // .content::ng-deep {
+        //     grid-template-columns: $col-width auto $col-width;
+        // }
     }
     
     // Set column width
     @container (min-width: 721px) and (max-width: 960px) { 
         $gap: 40px;
-        $col-width: 390px;
+        // $col-width: 390px;
 
         // Set padding ...
         @include rem(padding, $gap);
 
-        // Set the grid as a 1 row and 3 cols ...
-        .content::ng-deep {
-            grid-template-columns: $col-width auto $col-width;
-        }
+        // // Set the grid as a 1 row and 3 cols ...
+        // .content::ng-deep {
+        //     grid-template-columns: $col-width auto $col-width;
+        // }
     }
 
     // By default, establish grid ...
@@ -52,26 +52,26 @@
         @include gobalBorderRadius(); //radius
         border: 1px solid #555; // border
 
-        // Set inner content as a grid and reposition its elements
-        // Set the grid as a 1 row and 3 cols ...
-        .content::ng-deep {
-            display: grid;
+        // // Set inner content as a grid and reposition its elements
+        // // Set the grid as a 1 row and 3 cols ...
+        // .content::ng-deep {
+        //     display: grid;
 
-            // Move UXD on the third column
-            img {
-                // Adjust top pos ...
-                position: relative;
-                @include rem(top, 100px);
-                // Adjust column position ...
-                grid-row: 1;
-                grid-column: 1;
-                // Decorate with dropshadow ...
-                filter: drop-shadow(25.2941px 14.5299px 41.8365px rgba(0, 0, 0, 0.9));
-            }
-            .content-text {
-                grid-row: 1;
-                grid-column: 3;
-            }
-        }
+        //     // Move UXD on the third column
+        //     img {
+        //         // Adjust top pos ...
+        //         position: relative;
+        //         @include rem(top, 100px);
+        //         // Adjust column position ...
+        //         grid-row: 1;
+        //         grid-column: 1;
+        //         // Decorate with dropshadow ...
+        //         filter: drop-shadow(25.2941px 14.5299px 41.8365px rgba(0, 0, 0, 0.9));
+        //     }
+        //     .content-text {
+        //         grid-row: 1;
+        //         grid-column: 3;
+        //     }
+        // }
     }
 }

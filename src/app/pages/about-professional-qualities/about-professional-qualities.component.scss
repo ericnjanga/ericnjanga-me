@@ -3,35 +3,91 @@
 
 
 
-// ::host {
-//     display: block;
-// }
+/**
+ * Page section structure 
+ * --------------------------------------------------------
+**/
+.list-wrapper {
+    @container (min-width: 1141px) {
+        $col-width: 372px;
 
-// header {
-//     display: none;
-// }
+        // Set the grid as a 1 row and 5 cols ...
+        grid-template-columns: $col-width auto $col-width auto $col-width;
+    }
+
+    // Increase column width
+    @container (min-width: 961px) and (max-width: 1140px) {
+        $col-width: 330px;
+
+        // Set the grid as a 1 row and 5 cols ...
+        grid-template-columns: $col-width auto $col-width auto $col-width;
+    }
+
+    // Set column width
+    @container (min-width: 721px) and (max-width: 960px) {
+        $col-width: 280px;
+
+        // Set the grid as a 1 row and 5 cols ...
+        grid-template-columns: $col-width auto $col-width auto $col-width;
+    }
+
+    // By default, establish grid ...
+    @container (min-width: 721px) {
+        // Set box look
+        @include gobalBorderRadius(); //radius
+
+        // Set inner content as a grid and reposition its elements
+        // Set the grid as a 1 row and 3 cols ...
+        display: grid;
+
+        // Set all columns positionning
+        .self-starter {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .career-highlights {
+            grid-row: 1;
+            grid-column: 3;
+        }
+
+        .avid-leaner {
+            grid-row: 1;
+            grid-column: 5;
+        }
+    }
+
+    // By default, establish grid ...
+    @container (max-width: 720px) {
+        .list-inline {
+            @include rem(max-width, 310px);
+            @include gobalBottomSpacing();
+        }
+    }
+}
 
 
 
-// .component-wrapper {
-//     @container (min-width: 480px) { 
-//         display: grid;
-//         @include rem(gap, 40px);
-//         grid-template-columns: auto auto;
-//     }
-
-//     @container (min-width: 930px) { 
-//         @include rem(gap, 80px);
-//         grid-template-columns: auto auto auto;
-//     }
-// }
 
 
 
+/**
+ * Elements styling
+ * --------------------------------------------------------
+**/
+// Set all list of images as a grid
+.list-img {
+    display: grid;
+    @include rem(gap, 10px);
+    grid-template-columns: 30% 30% 30%;
 
-// .list-inline {
-//     display: flex;
-// }
-// .list-inline-item {
-//     max-width: 100px;
-// }
+    .list-inline-item {
+        margin: 0;
+    }
+}
+
+// Give a shape to all images
+.list-img img {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
