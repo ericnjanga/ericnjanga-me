@@ -1,7 +1,17 @@
 @import './../../../assets/styles/mixins';
+@import './../../../assets/styles/_mixin-styles';
 
 @layer page.about {
     @import './styles/about-core';
     @import './styles/about-introduction';
     @import './styles/about-excellence';
+}
+
+
+/**
+ * Content block structure 
+ * --------------------------------------------------------
+**/
+.content-block {
+    @include boxReveal-w720-max();
 }

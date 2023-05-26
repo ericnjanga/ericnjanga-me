@@ -1,139 +1,81 @@
-<app-hero
-    class="hero"
-    [title]="project.descriptions.title"
-    page="other"
-    [titleCaption]="project.categories[0].title"
-    [imageType]="project.images.type"
-    [image]="project.images.hero"
-></app-hero>
+<app-hero class="hero" [title]="project.descriptions.title" page="other" [titleCaption]="project.categories[0].title"
+    [imageType]="project.images.type" [image]="project.images.hero"></app-hero>
+
+
+<h2 class="component-title section-title">
+    jvwkjvwjfwebf fknfwekf lodqdjqofqe fqwefqw
+    <app-icon name="info circle">
+        ></app-icon>
+</h2>
 
 
 
- 
+
 <app-title-caption class="caption" [items]="project.categories"></app-title-caption>
- 
 
-<section class="main-wrapper">
-    <div class="block-left">
-        <ul class="references list-inline">
-            <li class="list-inline-item">
-                <h5 class="title text-uppercase">people in the project</h5>
-                <p>
-                    {{project.references.teamCount}}
-                </p>
-            </li>
-            <li class="list-inline-item">
-                <h5 class="title text-uppercase">industry of focus</h5>
-                <p>
-                    {{project.references.industry}}
-                </p>
-            </li>
-            <li class="list-inline-item">
-                <h5 class="title text-uppercase">duration of the project</h5>
-                <p>
-                    1 month
-                </p>
-            </li>
-            <li class="list-inline-item">
-                <h5 class="title text-uppercase">
-                    tools & technologies
-                </h5>
-                <p>
-                    <!-- Figma + 3 -->
-                    <app-title-caption class="caption" [items]="project.tools"></app-title-caption>
-                </p>
-            </li>
-        </ul>
-        <div class="description">
-            <h3>Context</h3>
-            <p>{{project.descriptions.context}}</p>
 
-            <h3>Contribution</h3>
+<div class="bx-container">
+    <section class="about">
+        <app-reveal-content class="content-block xxx" [containerQuery]="true">
+            <h2 class="component-title section-title">
+                About this project
+                <app-icon name="info circle">
+                    ></app-icon>
+            </h2>
+            <div class="description">
+                <h3>Context</h3>
+                <p>{{project.descriptions.context}}</p>
+
+                <h3>constraints</h3>
+                <p>{{project.descriptions.constraints}}</p>
+            </div>
+
+            <ul class="references">
+                <li>
+                    <h5 class="title text-uppercase">people in the project</h5>
+                    <p>
+                        {{project.references.teamCount}}
+                    </p>
+                </li>
+                <li>
+                    <h5 class="title text-uppercase">industry of focus</h5>
+                    <p>
+                        {{project.references.industry}}
+                    </p>
+                </li>
+                <li>
+                    <h5 class="title text-uppercase">duration of the project</h5>
+                    <p>
+                        1 month
+                    </p>
+                </li>
+                <li>
+                    <h5 class="title text-uppercase">
+                        tools & technologies
+                    </h5>
+                    <p>
+                        <!-- Figma + 3 -->
+                        <app-title-caption class="caption" [items]="project.tools"></app-title-caption>
+                    </p>
+                </li>
+            </ul>
+        </app-reveal-content>
+    </section>
+    <section class="contribution">
+        <app-reveal-content class="content-block xxx" [containerQuery]="true">
+            <h2 class="component-title section-title">
+                Eric’s contribution
+                <app-icon name="info circle">
+                    ></app-icon>
+            </h2>
             <div class="contribution" *ngFor="let category as category of project.categories">
                 <h4>{{category.title}}</h4>
                 <p>{{category.projectContribution}}</p>
             </div>
-
-            <h3>constraints</h3>
-            <p>{{project.descriptions.constraints}}</p>
-        </div>
-    </div>
-    <div class="block-right">
-        <img 
-            class="img-body" 
-            [ngClass]="imgClass(project.images, 'body')"
-            [src]="project.images.body" 
-            alt=""
-            >
-    </div>
-</section>
+        </app-reveal-content>
+    </section>
+</div>
 
 
 
-<!-- 
-<section class="footer-cta text-center">
-    <h2 *ngIf="!project.links.live">Not yet live</h2>
-    <h2 *ngIf="project.links.live">This project is live</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.</p>
 
-    <ul class="links">
-        <li class="xxx" *ngIf="project.links.git">
-            <a href="{{project.links.git}}" class="btn-small text-uppercase" target="_blank">
-                Git repo 
-                <app-icon name="github"></app-icon>
-            </a>
-        </li>
-        <li class="xxx" *ngIf="project.links.figma">
-            <a href="{{project.links.figma}}" class="btn-small text-uppercase" target="_blank">
-                figma files
-                <app-icon name="fileearmarkrichtext"></app-icon>
-            </a>
-        </li>
-        <li class="xxx" *ngIf="project.links.figmaJam">
-            <a href="{{project.links.figmaJam}}" class="btn-small text-uppercase" target="_blank">
-                figjam files
-                <app-icon name="fileslides"></app-icon>
-            </a>
-        </li>
-        <li class="xxx" *ngIf="project.links.prototype">
-            <a href="{{project.links.prototype}}" class="btn-small text-uppercase" target="_blank">
-                prototypes
-                <app-icon name="fileearmarkpdf"></app-icon>
-            </a>
-        </li>
-        <li class="xxx" *ngIf="project.links.presentation">
-            <a href="{{project.links.presentation}}" class="btn-small text-uppercase" target="_blank">
-                pdf presentation
-                <app-icon name="window"></app-icon>
-            </a>
-        </li>
-        <li class="xxx" *ngIf="project.links.live">
-            <a href="{{project.links.live}}" class="btn-small text-uppercase" target="_blank">
-                live project
-                <app-icon name="fileearmark"></app-icon>
-            </a>
-        </li>
-        <li class="xxx" *ngIf="project.links.devProcessVideo">
-            <a href="{{project.links.devProcessVideo}}" class="btn-small text-uppercase" target="_blank">
-                dev process videos
-                <app-icon name="fileplayfill"></app-icon>
-            </a>
-        </li>
-    </ul>
-</section> -->
-
-
-
-     
-
-
-<!-- 
-
-"git": "git...",
-"figma": "figma...",
-"figmaJam": "figmaJam...",
-"prototype": "prototype...",
-"presentation": "presentation...",
-"live": "live...",
-
--->

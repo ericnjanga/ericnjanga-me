@@ -1,0 +1,30 @@
+
+
+/**
+ * Styling "reveal-content" component as a box when the parent container is
+ * within a container range (width from 0 to 720px)
+**/
+@mixin boxReveal-w720-max() { 
+    // Allow this component and imediate child to be controlled as blocks...
+    display: block;
+    .content {
+        display: block;
+    }
+
+    // Box styling
+    @container (max-width: 720px) {
+        overflow: hidden;
+        background-color: #fff; // bg
+        border: 1px solid #555; // border
+        @include gobalBorderRadius('medium'); // ...
+        @include rem(margin-bottom, 15px);  // bottom spacing
+    }
+
+    // Content padding
+    @container (max-width: 720px) {
+        .content {
+            @include rem(padding, 20px);
+        }
+    }
+}
+
