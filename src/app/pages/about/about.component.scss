@@ -1,22 +1,23 @@
 @import './../../../assets/styles/mixins';
 @import './../../../assets/styles/_mixin-styles';
 
-@layer page.about {
-    @import './styles/about-introduction';
-}
-
 
 /**
  * Basic cosmetic and structuration of section pages
  * --------------------------------------------------------
 **/
-.section-excellence::ng-deep .component-wrapper  .component-wrapper {
-    background-color: #fff;
-}
-.section-mentors::ng-deep .component-wrapper  .component-wrapper {
-    @include bgColor(primary_dark3);
-    @include darkHighlightBoxStyling();
-}
-.content-block {
-    @include boxReveal-w720-max();
+@layer page.about {
+    .section-introduction {
+        @include TwoColsArticleStyling();
+    }
+    .section-excellence::ng-deep .component-wrapper  .component-wrapper {
+        background-color: #fff;
+    }
+    .section-mentors::ng-deep .component-wrapper  .component-wrapper {
+        @include bgColor(primary_dark3);
+        @include darkHighlightBoxStyling();
+    }
+    .content-block {
+        @include boxReveal-w720-max();
+    }
 }

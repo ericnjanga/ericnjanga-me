@@ -7,27 +7,29 @@
  * Content block structure 
  * --------------------------------------------------------
 **/
+@layer page.project-detail {
+    // Set this section as a 2 cols row
+    .first-section {
+        @include TwoColsArticleStyling();
+    }
 
-.section-links {
+    // Set styling for content block
+    .content-block {
+        @include boxReveal-w720-max();
+    }
 
-    &::ng-deep .component-wrapper {
-        // Styling of 1st content wrapper (that exists up to 720px)
-        @container (max-width: 720px) { 
-            @include bgColor(primary_dark3);
-        }
-        // Styling of 2nd (content source) content wrapper (that is always present)
-        .component-wrapper {
-            @include bgColor(primary_dark3);
-            @include darkHighlightBoxStyling();
+    // Set this section as a dark highlight section
+    .section-links {
+        &::ng-deep .component-wrapper {
+            // Styling of 1st content wrapper (that exists up to 720px)
+            @container (max-width: 720px) { 
+                @include bgColor(primary_dark3);
+            }
+            // Styling of 2nd (content source) content wrapper (that is always present)
+            .component-wrapper {
+                @include bgColor(primary_dark3);
+                @include darkHighlightBoxStyling();
+            }
         }
     }
 }
-
-
-
-.content-block {
-    @include boxReveal-w720-max();
-}
-
-$gap: 75px;
-
