@@ -27,6 +27,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { RevealContentComponent } from './reveal-content/reveal-content.component';
+import { HighlightSectionTextImgComponent } from './highlight-section-text-img/highlight-section-text-img.component';
 
 
 
@@ -53,6 +54,7 @@ import { RevealContentComponent } from './reveal-content/reveal-content.componen
     NicePosterComponent,
     AppbarComponent,
     RevealContentComponent,
+    HighlightSectionTextImgComponent,
   ],
   imports: [
     CommonModule,
@@ -83,6 +85,7 @@ import { RevealContentComponent } from './reveal-content/reveal-content.componen
     NicePosterComponent,
     AppbarComponent,
     RevealContentComponent,
+    HighlightSectionTextImgComponent,
   ]
 })
 export class SharedModule { }

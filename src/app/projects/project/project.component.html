@@ -1,3 +1,24 @@
+<div class="bx-container">
+
+    <section class="section-links page-section">
+        <app-reveal-content class="content-block" [containerQuery]="true">
+            <app-highlight-section-text-img class="content" title="this project is live" subTitle="Image, code, and files"
+                stageImage="./../../../assets/img/project-26-hero.png">
+
+                <div class="links">
+                    <a 
+                    *ngFor="let link of projLinks(project.links)"
+                        [href]="link.url" 
+                        target="_blank"
+                    >{{link.name}}</a>
+                    <span>&nbsp;</span>
+                </div>
+            </app-highlight-section-text-img>
+        </app-reveal-content>
+    </section>
+</div>
+
+
 <app-hero class="hero" [title]="project.descriptions.title" page="other" [titleCaption]="project.categories[0].title"
     [imageType]="project.images.type" [image]="project.images.hero"></app-hero>
 
@@ -15,67 +36,89 @@
 
 
 <div class="bx-container">
-    <section class="about">
-        <app-reveal-content class="content-block xxx" [containerQuery]="true">
-            <h2 class="component-title section-title">
-                About this project
-                <app-icon name="info circle">
-                    ></app-icon>
-            </h2>
-            <div class="description">
-                <h3>Context</h3>
-                <p>{{project.descriptions.context}}</p>
+    <div class="page-section">
+        <section class="about">
+            <app-reveal-content class="content-block xxx" [containerQuery]="true">
+                <div class="content">
+                    <h2 class="component-title section-title">
+                        About this project
+                        <app-icon name="info circle">
+                            ></app-icon>
+                    </h2>
+                    <div class="description">
+                        <h3>Context</h3>
+                        <p>{{project.descriptions.context}}</p>
 
-                <h3>constraints</h3>
-                <p>{{project.descriptions.constraints}}</p>
-            </div>
+                        <h3>constraints</h3>
+                        <p>{{project.descriptions.constraints}}</p>
+                    </div>
 
-            <ul class="references">
-                <li>
-                    <h5 class="title text-uppercase">people in the project</h5>
-                    <p>
-                        {{project.references.teamCount}}
-                    </p>
-                </li>
-                <li>
-                    <h5 class="title text-uppercase">industry of focus</h5>
-                    <p>
-                        {{project.references.industry}}
-                    </p>
-                </li>
-                <li>
-                    <h5 class="title text-uppercase">duration of the project</h5>
-                    <p>
-                        1 month
-                    </p>
-                </li>
-                <li>
-                    <h5 class="title text-uppercase">
-                        tools & technologies
-                    </h5>
-                    <p>
-                        <!-- Figma + 3 -->
-                        <app-title-caption class="caption" [items]="project.tools"></app-title-caption>
-                    </p>
-                </li>
-            </ul>
-        </app-reveal-content>
-    </section>
-    <section class="contribution">
-        <app-reveal-content class="content-block xxx" [containerQuery]="true">
-            <h2 class="component-title section-title">
-                Eric’s contribution
-                <app-icon name="info circle">
-                    ></app-icon>
-            </h2>
-            <div class="contribution" *ngFor="let category as category of project.categories">
-                <h4>{{category.title}}</h4>
-                <p>{{category.projectContribution}}</p>
-            </div>
+                    <ul class="references">
+                        <li>
+                            <h5 class="title text-uppercase">people in the project</h5>
+                            <p>
+                                {{project.references.teamCount}}
+                            </p>
+                        </li>
+                        <li>
+                            <h5 class="title text-uppercase">industry of focus</h5>
+                            <p>
+                                {{project.references.industry}}
+                            </p>
+                        </li>
+                        <li>
+                            <h5 class="title text-uppercase">duration of the project</h5>
+                            <p>
+                                1 month
+                            </p>
+                        </li>
+                        <li>
+                            <h5 class="title text-uppercase">
+                                tools & technologies
+                            </h5>
+                            <p>
+                                <!-- Figma + 3 -->
+                                <app-title-caption class="caption" [items]="project.tools"></app-title-caption>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </app-reveal-content>
+        </section>
+        <section class="contribution">
+            <app-reveal-content class="content-block xxx" [containerQuery]="true">
+                <div class="content">
+                    <h2 class="component-title section-title">
+                        Eric’s contribution
+                        <app-icon name="info circle">
+                            ></app-icon>
+                    </h2>
+                    <div class="contribution" *ngFor="let category as category of project.categories">
+                        <h4>{{category.title}}</h4>
+                        <p>{{category.projectContribution}}</p>
+                    </div>
+                </div>
+            </app-reveal-content>
+        </section>
+    </div>
+
+
+   
+
+    <section class="section-links page-section">
+        <app-reveal-content class="content-block" [containerQuery]="true">
+            <app-highlight-section-text-img class="content" title="this project is live" subTitle="Image, code, and files"
+                stageImage="./../../../assets/img/project-26-hero.png">
+
+                <div class="links">
+                    <a 
+                    *ngFor="let link of projLinks(project.links)"
+                        [href]="link.url" 
+                        target="_blank"
+                    >{{link.name}}</a>
+                    <span>&nbsp;</span>
+                </div>
+            </app-highlight-section-text-img>
         </app-reveal-content>
     </section>
 </div>
-
-
-
-

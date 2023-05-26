@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-highlight-section-text-img',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./highlight-section-text-img.component.scss']
 })
 export class HighlightSectionTextImgComponent {
+  @Input() title = '';
+  @Input() titleIcon = '';
+  @Input() subTitle = '';
+  @Input() stageImage = '';
 
-}
+} 

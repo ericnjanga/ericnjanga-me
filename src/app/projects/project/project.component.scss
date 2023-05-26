@@ -7,144 +7,27 @@
  * Content block structure 
  * --------------------------------------------------------
 **/
+
+.section-links {
+
+    &::ng-deep .component-wrapper {
+        // Styling of 1st content wrapper (that exists up to 720px)
+        @container (max-width: 720px) { 
+            @include bgColor(primary_dark3);
+        }
+        // Styling of 2nd (content source) content wrapper (that is always present)
+        .component-wrapper {
+            @include bgColor(primary_dark3);
+            @include darkHighlightBoxStyling();
+        }
+    }
+}
+
+
+
 .content-block {
     @include boxReveal-w720-max();
 }
 
 $gap: 75px;
 
-
-// p {
-//     color: #455445;
-// }
-
-// // .main-wrapper {
-// //     align-items: stretch;
-// //     margin-bottom: $gap;
-// // }
-
-// .block-left {
-//     padding-top: $gap;
-//     width: 600px;
-
-//     .description {
-//         p {
-//             margin-bottom: 40px;
-//         }
-//     }
-
-//     .contribution {
-//         margin-top: 20px;
-//         padding-left: 30px;
-//         border-left: 1px solid map-get($colors, primary_dark1);
-//         h4 {
-//             margin-bottom: 12px;
-//             line-height: 10px;
-//             text-transform: uppercase;
-//             font-size: 16px;
-//             font-weight: 400;
-//         }
-//     }
-// }
-
-// .block-right {
-//     margin-left: auto;
-//     width: 590px;
-//     min-height: 790px;
-//     overflow: hidden;
-//     // border: 1px solid green;
-//     background-color: #919171;
-
-//     .img-body {
-//         position: relative;
-//     }
-//     .img-body--laptop {
-//         top: 10px;
-//         width: 1022.5px;
-//     }
-//     .img-body--phone {
-//         top: 0;
-//         width: 618.5px;
-//     }
-// }
-
-// .references {
-//     display: flex;
-//     justify-content: space-between;
-//     margin-bottom: 60px;
-
-//     li {
-//         padding-left: 10px;
-//         width: 110px;
-//         border-left: 1px solid #96B596;
-//     }
-//     .title {
-//         margin-bottom: 0.4rem;
-//         font-size: 13px;
-//         @include color(primary_dark1);
-//     }
-//     p {
-//         margin-bottom: 0;
-//         font-size: 17px;
-//         line-height: 20px;
-//         font-weight: 700;
-//     }
-// }
-
-
-
-// .footer-cta {
-//     margin-left: auto;
-//     margin-right: auto;
-//     width: 700px;
-//     min-height: 380px;
-//     padding: 70px 104px;
-//     background-color: #EAF6EA;
-//     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
-
-//     p {
-//         margin-bottom: 30px;
-//     }
-// }
-
-// .links {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     padding-left: 0;
-//     gap: 25px;
-
-//     li {
-//         display: inline-block;
-//     }
-// }
-
-// .btn-small {
-//     display: flex;
-//     align-items: center;
-//     font-size: 13px;
-//     text-decoration: none;
-//     gap: 8px;
-//     padding: 8px 12px;
-//     font-weight: 600;
-//     @include color(primary_dark1);
-//     background-color: #D0E0D1;
-//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-//     &:hover {
-//         @include bgColor(accent2);
-//         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
-//     }
-
-
-
-//     ::ng-deep app-icon {
-//         display: inline-block;
-//         width: 20px;
-//         @include color(accent1);
-//         svg {
-//             width: inherit;
-//         }
-//     }
-
-// }

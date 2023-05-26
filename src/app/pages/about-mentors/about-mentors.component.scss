@@ -1,5 +1,6 @@
 @import './../../../assets/styles/variables';
 @import './../../../assets/styles/mixins';
+@import './../../../assets/styles/_mixin-styles';
 
 
 
@@ -7,7 +8,6 @@
     @layer about {
         @layer mentors {
             @import './styles/am-core';
-            @import './styles/am-cosmetics';
         }
     }
 }
@@ -15,22 +15,36 @@
 
 
 
+@layer page {
+    @layer about {
+        @layer mentors {
 
-/*
- * Poster frame
-*/
-.posters-wrapper {
-    $grid-w: 644px;
-    $poster-w: 300px;
-    // ...
-    border: 4px solid purple;
-    display: grid;
-    grid-template-columns: $poster-w auto $poster-w;
-    @include rem(width, $grid-w);
+            // Poster frame ...
+            .posters-wrapper {
+                $grid-w: 644px;
+                $poster-w: 300px;
+                // ...
+                border: 4px solid purple;
+                display: grid;
+                grid-template-columns: $poster-w auto $poster-w;
+                @include rem(width, $grid-w);
 
 
-    .poster-2 {
-        grid-row: 1;
-        grid-column: 3;
+                .poster-2 {
+                    grid-row: 1;
+                    grid-column: 3;
+                }
+            }
+
+
+            // pagination ...
+            .component-pagination {
+                position: absolute;
+                right: 0;
+                @include bgColor(primary_gray1);
+                @include rem(height, 45px);
+                @include rem(width, 95px);
+            }
+        }
     }
 }

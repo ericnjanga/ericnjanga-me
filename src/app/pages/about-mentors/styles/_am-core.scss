@@ -79,12 +79,6 @@
             @include rem(margin-top, 30px);
         }
     }
-
-    // @container (max-width: 540px) {
-    //     .text-wrapper {
-    //         @include rem(margin-bottom, 30px);
-    //     }
-    // }
 }
 
 
@@ -135,23 +129,4 @@
         }
     }
 
-}
-
-
-
-// Text wrapper size (on all screen size)
-// ------------------------------------------------
-$text-wrapper-w: 433px;
-
-.text-wrapper {
-
-    @container (min-width: 1141px) {}
-
-    @container (min-width: 961px) and (max-width: 1140px) {}
-
-    @container (min-width: 721px) and (max-width: 960px) {}
-
-    @container (min-width: 541px) and (max-width: 720px) {}
-
-    @container (max-width: 540px) {}
 }

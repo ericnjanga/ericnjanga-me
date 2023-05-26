@@ -28,3 +28,29 @@
     }
 }
 
+@mixin darkHighlightBoxStyling() { 
+    .component-subtitle {
+        color: turquoise;
+    }
+    .component-title {
+        color: rgb(49, 168, 103);
+    }
+    p {
+        color: rgb(106, 182, 20);
+    }
+
+    .mentors__quote::ng-deep {
+        .title-wrapper__heading,
+        .title-wrapper__subtitle {
+            color: rgb(182, 20, 179)!important;
+        }
+        .title-wrapper {
+            border-left: 1px solid #bbff00!important;
+        }
+        .title-wrapper__subtitle.isQuote::before,
+        .title-wrapper__subtitle.isQuote::after {
+            color: #ff4f4f!important;
+        }
+    } 
+}
+

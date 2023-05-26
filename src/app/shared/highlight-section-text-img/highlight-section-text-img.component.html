@@ -1,1 +1,12 @@
-<p>highlight-section-text-img works!</p>
+<div class="component-wrapper">
+    <div class="content-text">
+        <header>
+            <h5 class="component-subtitle title-caption section-title">{{subTitle}}</h5>
+            <h2 class="component-title">{{title}}</h2>
+        </header>
+
+        <ng-content></ng-content>
+    </div>
+    
+    <img [src]="stageImage" alt="">
+</div>
