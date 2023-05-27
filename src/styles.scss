@@ -49,7 +49,7 @@ $xl: map-get($breakpoints, screen-xl);
         margin: 0;
         @include setFontFamily('body');
         // older browsers that don’t understand webfont will simply ignore it
-        font-display: fallback;
+        font-display: swap;
         @include color(primary_dark1);
         @include set-app-background-color();
     }
