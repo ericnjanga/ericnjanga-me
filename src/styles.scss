@@ -34,18 +34,22 @@ $xl: map-get($breakpoints, screen-xl);
 
 
 @layer base {
-
     html,
     body {
         height: 100%;
+    }
+
+    html {
         font-size: 1rem;
+        // font-size: calc(0.75rem + 1.5vw);
+        // font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
     }
 
     body {
         margin: 0;
         @include setFontFamily('body');
         // older browsers that don’t understand webfont will simply ignore it
-        font-display: fallback; 
+        font-display: fallback;
         @include color(primary_dark1);
         @include set-app-background-color();
     }
@@ -147,15 +151,7 @@ $xl: map-get($breakpoints, screen-xl);
     }
 }
 
-html,
-body {
-    height: 100%;
-}
 
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}
 
 
 
