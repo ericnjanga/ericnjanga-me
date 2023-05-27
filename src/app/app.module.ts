@@ -27,7 +27,7 @@ import { AboutExcellenceComponent } from './pages/about-excellence/about-excelle
 import { AboutProfessionalQualitiesComponent } from './pages/about-professional-qualities/about-professional-qualities.component';
 import { AboutMentorsComponent } from './pages/about-mentors/about-mentors.component';
 import { AboutTestimonialsComponent } from './pages/about-testimonials/about-testimonials.component';
-import { TypescaleComponent } from './pages/typescale/typescale.component';
+import { TypescaleComponent } from './pages-static/typescale/typescale.component';
 
 @NgModule({
   declarations: [

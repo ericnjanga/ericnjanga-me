@@ -5,13 +5,13 @@ import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { RichyGroupComponent } from './pages-static/richy-group/richy-group.component';
 import { AboutDeveloperComponent } from './pages/about-developer/about-developer.component';
 import { AboutUxDesignerComponent } from './pages/about-ux-designer/about-ux-designer.component';
 import { AboutExcellenceComponent } from './pages/about-excellence/about-excellence.component';
 import { AboutProfessionalQualitiesComponent } from './pages/about-professional-qualities/about-professional-qualities.component';
 import { AboutMentorsComponent } from './pages/about-mentors/about-mentors.component';
 import { AboutTestimonialsComponent } from './pages/about-testimonials/about-testimonials.component';
+import { TypescaleComponent } from './pages-static/typescale/typescale.component';
 
 const routes: Routes = [
   { 
@@ -29,6 +29,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
 
+
+  { path: 'typescale', component: TypescaleComponent },
+
   /**
    * TODO: About should have it's own module
    */
@@ -40,7 +43,6 @@ const routes: Routes = [
   { path: 'about/mentors', component: AboutMentorsComponent },
   { path: 'about/testimonials', component: AboutTestimonialsComponent },
   
-  { path: 'static-richy-group', component: RichyGroupComponent },
 
 
   // Matches anything typed in the browser
