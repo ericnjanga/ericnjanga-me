@@ -17,7 +17,7 @@
 
 @mixin style-721px-up {
     @container (min-width: 721px) {
-        @include rem(height, 330px);
+        height: 330px;
 
         img {
             @include rem(max-width, 510px);
@@ -96,7 +96,7 @@
     }
  
     @container (min-width: 541px) and (max-width: 720px) {
-        @include rem(height, 450px);
+        height: 450px;
 
         // ...
         .text-wrapper {
@@ -118,7 +118,7 @@
 
     // From zero to small ...
     @container (max-width: 540px) {
-        @include rem(height, 500px);
+        height: 500px;
 
         // position circle
         .circle {

@@ -40,7 +40,7 @@
 */
 @mixin container_M_eltStyles() {
     // ...
-    @include rem(height, 330px);
+    height: 330px;
 
     // ..
     .img--phone {
@@ -77,7 +77,7 @@
 */
 @mixin container_L_eltStyles() {
     // ...
-    @include rem(height, 380px);
+    height: 380px;
 
     //... 
     @include rem(padding-left, 40px);
@@ -126,7 +126,7 @@
 */
 @mixin container_XL_eltStyles() {
     // ...
-    @include rem(height, 430px);
+    height: 430px;
 
     //... 
     @include rem(padding-left, 50px);
@@ -173,7 +173,7 @@
 */
 @mixin container_XXL_eltStyles() {
     // ...
-    @include rem(height, 500px);
+    height: 500px;
 
     //... 
     @include rem(padding-left, 60px);

@@ -63,8 +63,8 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
             background-image: url(./../img/icons.png);
             background-size: cover;
             background-repeat: no-repeat;
-            @include rem(width, $icon-size);
-            @include rem(height, $icon-size);
+            width: $icon-size;
+            height: $icon-size;
         }
 
         .title-icon {
@@ -216,7 +216,7 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
         .icon {
             display: block;
             @include color(state3);
-            @include rem(width, 20px);
+            width: 20px;
             transition: transform 0.2s ease-in-out;
         }
 
@@ -234,7 +234,7 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
         @include rem(font-size, 20px);
 
         .icon {
-            @include rem(width, 30px);
+            width: 30px;
         }
     }
 
@@ -253,7 +253,7 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
         }
 
         .icon svg {
-            @include rem(width, 16px);
+            width: 16px;
         }
     }
 
@@ -318,14 +318,10 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
             content: "";
             display: inline-block;
             position: absolute;
-            @include rem(width, 10px);
-            @include rem(height, 10px);
-            @include rem(left, -15px);
-            @include rem(top, 6px);
-            // left: -15px;
-            // top: 6px;
-            // width: 10px;
-            // height: 10px;
+            width: 10px;
+            height: 10px;
+            left: -15px;
+            top: 6px;
             background-color: black;
             border-radius: 50%;
         }

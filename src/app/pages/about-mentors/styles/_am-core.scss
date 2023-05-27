@@ -52,10 +52,10 @@
     // Display element in a row (only starting at this breakpoint)
     @container (min-width: 721px) {
         display: flex;
-        @include rem(width, 1180px);
+        width: 1180px;
         // ...
         .text-wrapper {
-            @include rem(width, 433px);
+            width: 433px;
         }
         .frame-testimonials {
             margin-left: auto;

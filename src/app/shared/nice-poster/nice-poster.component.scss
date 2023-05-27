@@ -10,8 +10,8 @@ $comp-w: map-get($components-size, nice-post-w);
     
     // Image decoration ...
     .title-wrapper__img {
-        @include rem(width, 302px);
-        @include rem(height, 193px);
+        width: 302px;
+        height: 193px;
         @include gobalBorderRadius();
         background: blue;
     }

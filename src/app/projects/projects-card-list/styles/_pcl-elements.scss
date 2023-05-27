@@ -8,7 +8,7 @@ $info-iw: map-get($components-size, info-icon-w);
 .component-title {
     position: absolute;
     top: 0;
-    @include rem(left, $frame-padding);
+    left: $frame-padding;
     margin: 0;
     display: flex;
     @include rem(gap, 10px);
@@ -16,8 +16,8 @@ $info-iw: map-get($components-size, info-icon-w);
 
     ::ng-deep {
         svg {
-            @include rem(width, $info-iw);
-            @include rem(height, $info-iw);
+            width: $info-iw;
+            height: $info-iw;
         }
     }
 }

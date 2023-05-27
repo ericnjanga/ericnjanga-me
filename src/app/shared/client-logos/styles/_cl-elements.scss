@@ -26,8 +26,8 @@ $info-iw: map-get($components-size, info-icon-w);
 
     ::ng-deep {
         svg {
-            @include rem(width, $info-iw);
-            @include rem(height, $info-iw);
+            width: $info-iw;
+            height: $info-iw;
         }
     }
 }
@@ -36,19 +36,19 @@ $info-iw: map-get($components-size, info-icon-w);
 
 // Scroll system ..
 .scrallable-area--content {
-    @include rem(width, $total-length);
+    width: $total-length;
 }
 
 
 .company-logo {
     @include rem(border-radius, 4px);
-    @include rem(width, $with-sm);
+    width: $with-sm;
 }
 .company-logo--width1 {
-    @include rem(width, $with-md);
+    width: $with-md;
 }
 .company-logo--width2 {
-    @include rem(width, $with-lg);
+    width: $with-lg;
 }
 
 

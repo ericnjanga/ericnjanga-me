@@ -4,8 +4,8 @@
     position: absolute;
     right: 0;
     @include bgColor(primary_gray1);
-    @include rem(height, 45px);
-    @include rem(width, 95px);
+    height: 45px;
+    width: 95px;
 }
 
 .section-title {

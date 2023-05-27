@@ -22,7 +22,7 @@
     }
 
     .title-wrapper__img {
-        @include rem(width, 60px);
+        width: 60px;
         height: inherit;
     }
 
