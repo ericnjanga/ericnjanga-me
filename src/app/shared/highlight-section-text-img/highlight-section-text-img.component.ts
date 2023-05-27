@@ -11,4 +11,8 @@ export class HighlightSectionTextImgComponent {
   @Input() subTitle = '';
   @Input() stageImage = '';
 
+  // ...
+  titleClass() {
+    return this.titleIcon;
+  }
 } 

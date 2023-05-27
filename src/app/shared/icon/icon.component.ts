@@ -26,6 +26,7 @@ export class IconComponent {
   isfileslides: boolean = false;
   isfileearmarkrichtext: boolean = false;
   isfileplayfill: boolean = false;
+  isFlaticonSuitcase = false;
 
   ngOnInit() {
     /** Will display help icon if no value is received */
@@ -97,6 +98,10 @@ export class IconComponent {
 
       case "fileplayfill":
         this.isfileplayfill = true;
+        break;
+
+      case "flaticon suitcase":
+        this.isFlaticonSuitcase = true;
         break;
     }
   }

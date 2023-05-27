@@ -4,9 +4,7 @@
 
 
 <h2 class="component-title section-title">
-    jvwkjvwjfwebf fknfwekf lodqdjqofqe fqwefqw
-    <app-icon name="info circle">
-        ></app-icon>
+    About this project
 </h2>
 
 
@@ -17,10 +15,8 @@
         <section class="about content-block-1">
             <app-reveal-content class="content-block xxx" [containerQuery]="true">
                 <div class="content">
-                    <h2 class="component-title section-title">
-                        About this project
-                        <app-icon name="info circle">
-                            ></app-icon>
+                    <h2 class="component-title section-title info">
+                        How it happened
                     </h2>
                     <div class="description">
                         <h3>Context</h3>
@@ -52,10 +48,8 @@
         <section class="contribution content-block-2">
             <app-reveal-content class="content-block xxx" [containerQuery]="true">
                 <div class="content">
-                    <h2 class="component-title section-title">
+                    <h2 class="component-title section-title contribution">
                         Eric’s contribution
-                        <app-icon name="info circle">
-                            ></app-icon>
                     </h2>
                     <div class="contribution" *ngFor="let category as category of project.categories">
                         <h4>{{category.title}}</h4>
@@ -71,9 +65,14 @@
 
     <section class="section-links page-section">
         <app-reveal-content class="content-block" [containerQuery]="true">
-            <app-highlight-section-text-img class="content" title="this project is live" subTitle="Image, code, and files"
+            <app-highlight-section-text-img 
+                class="content" 
+                title="Image, code, and files" 
+                titleIcon="celebration"
+                [subTitle]="projectStatusTitle(project.links)"
                 stageImage="./../../../assets/img/project-26-hero.png">
 
+                <p>Do you need more information about this project? Checkout the links below.</p>
                 <div class="links">
                     <a 
                     *ngFor="let link of projLinks(project.links)"

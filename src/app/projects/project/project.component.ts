@@ -28,6 +28,18 @@ export class ProjectComponent {
     return `img-${prefix}--${img.type}`;
   }
 
+  // ...
+  projectStatusTitle(links: Links) {
+    let message = '';
+    if (links.live) {
+      message = 'This project is live';
+    } else {
+      message =`This project isn't yet live`;
+    }
+ 
+    return message;
+  }
+
   // Return only links that are available
   projLinks(links: Links) {
     const projLinks = [];

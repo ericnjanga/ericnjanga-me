@@ -12,8 +12,14 @@ import { Category } from '../model/category';
 })
 export class ProjectsCardListComponent {
   @Input() title = '';
+  @Input() titleIcon = '';
   @Input() info = '';
   @Input() source: Project[] = [];
+
+  // ...
+  titleClass() {
+    return this.titleIcon;
+  }
 
   // tooltip positionning ...
   positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];

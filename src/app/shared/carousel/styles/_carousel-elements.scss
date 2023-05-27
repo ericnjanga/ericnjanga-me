@@ -7,3 +7,7 @@
     @include rem(height, 45px);
     @include rem(width, 95px);
 }
+
+.section-title {
+    position: relative;
+}
