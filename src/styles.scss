@@ -40,8 +40,8 @@ $xl: map-get($breakpoints, screen-xl);
     }
 
     html {
-        // font-size: 1rem;
-        font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
+        font-size: 1rem;
+        // font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
     }
 
     body {
@@ -120,9 +120,15 @@ $xl: map-get($breakpoints, screen-xl);
     }
 
 
+
+
     .title-caption {
         text-transform: uppercase;
         @include rem(font-size, 13px);
+    }
+
+    p {
+        @include typo-body1();
     }
 }
 
