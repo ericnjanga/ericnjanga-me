@@ -1,0 +1,113 @@
+
+
+/**
+ * Styling "reveal-content" component as a box when the parent container is
+ * within a container range (width from 0 to 720px)
+**/
+@mixin boxReveal-w720-max() { 
+    // Allow this component and imediate child to be controlled as blocks...
+    display: block;
+    .content {
+        display: block;
+    }
+
+    // Box styling
+    @container (max-width: 720px) {
+        overflow: hidden;
+        background-color: #fff; // bg
+        border: 1px solid #555; // border
+        @include gobalBorderRadius('medium'); // ...
+        @include rem(margin-bottom, 15px);  // bottom spacing
+    }
+
+    // Content padding
+    @container (max-width: 720px) {
+        .content {
+            @include rem(padding, 20px);
+        }
+    }
+}
+
+/**
+ * Styling for dark boxes
+*/
+@mixin darkHighlightBoxStyling() { 
+    .component-subtitle {
+        color: turquoise;
+    }
+    .component-title {
+        color: rgb(49, 168, 103);
+    }
+    p {
+        color: rgb(106, 182, 20);
+    }
+
+    .mentors__quote::ng-deep {
+        .title-wrapper__heading,
+        .title-wrapper__subtitle {
+            color: rgb(182, 20, 179)!important;
+        }
+        .title-wrapper {
+            border-left: 1px solid #bbff00!important;
+        }
+        .title-wrapper__subtitle.isQuote::before,
+        .title-wrapper__subtitle.isQuote::after {
+            color: #ff4f4f!important;
+        }
+    } 
+}
+
+
+/**
+ * Styling two blocks into a 2 columns row with a very specific spacing
+*/
+@mixin TwoColsArticleStyling() {
+    @container (min-width: 1141px) { 
+        $gap: 60px;
+        $col-width: 513px;
+
+        // Set padding ...
+        @include rem(padding-left, $gap);
+        @include rem(padding-right, $gap);
+
+        // Set the grid as a 1 row and 3 cols ...
+        grid-template-columns: $col-width auto $col-width;
+    }
+ 
+    // Increase column width
+    @container (min-width: 961px) and (max-width: 1140px) { 
+        $gap: 50px;
+        $col-width: 450px;
+
+        // Set padding ...
+        @include rem(padding-left, $gap);
+        @include rem(padding-right, $gap);
+
+        // Set the grid as a 1 row and 3 cols ...
+        grid-template-columns: $col-width auto $col-width;
+    }
+    
+    // Set column width
+    @container (min-width: 721px) and (max-width: 960px) { 
+        $gap: 40px;
+        $col-width: 390px;
+
+        // Set padding ...
+        @include rem(padding-left, $gap);
+        @include rem(padding-right, $gap);
+
+        // Set the grid as a 1 row and 3 cols ...
+        grid-template-columns: $col-width auto $col-width;
+    }
+
+    // By default, establish grid ...
+    @container (min-width: 721px) { 
+        display: grid;
+
+        // Move UXD on the third column (step over the column space)
+        .content-block-2 {
+            grid-row: 1;
+            grid-column: 3;
+        }
+    }
+}
