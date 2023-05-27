@@ -8,6 +8,14 @@
 
 $base-font-size: 16px; // Set your base font size in pixels
 
+/**
+ * Set font size and line height
+*/
+@mixin font-size-line-height($size) {
+  @include rem(font-size, $size);
+  @include rem(line-height, ($size * 1.4));
+}
+
 @mixin rem($property, $value) {
   // #{$property}: ($value / $base-font-size) * 1rem;
   $quotient: calc($value / $base-font-size);
@@ -101,54 +109,34 @@ $spacer-xl: map-get($gap, spacer-xl);
  * ------------------------------------
 */
 @mixin typo-h1() {
-  @include rem(font-size, 32px);
-  @include rem(line-height, (32px * 1.4));
+  @include font-size-line-height(32px);
   font-weight: 500;
 }
 
 @mixin typo-h2($size) {
-
-
   color: blueviolet !important;
-
-
-  // @if ($size=='small') {
-  //   @include rem(font-size, 28px);
-  //   @include rem(line-height, 32px); 
-  // }
-  // @else if ($size=='medium') {
-  //   @include rem(font-size, 28px);
-  //   @include rem(line-height, 30px); 
-  // }
-  // @else if ($size=='large') {
-  $size: 32px;
-  @include rem(font-size, $size);
-  @include rem(line-height, ($size * 1.4));
-  // }
+  @include font-size-line-height(23px);
   font-weight: 400;
 }
 
 @mixin typo-h3($size) {
-
 
   color: coral !important;
 
   a {
     color: coral !important;
   }
+ 
+  @include font-size-line-height(19px);
+  font-weight: 400;
+}
 
 
-
-  // @if ($size=='small') {
-  @include rem(font-size, 24px);
-  @include rem(line-height, 28px);
-  // }
-  // @else if ($size=='medium') {
-
-  // } @else if ($size=='large') { 
-
-  // }
-  font-weight: 500;
+@mixin typo-body1() {
+  $size: 16px;
+  // @include rem(font-size, $size);
+  font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
+  @include rem(line-height, ($size * 1.4));
 }
 
 @mixin typo-h4($size) {

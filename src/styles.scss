@@ -40,7 +40,7 @@ $xl: map-get($breakpoints, screen-xl);
     }
 
     html {
-        font-size: 1rem;
+        @include font-size-line-height(16px);
         // font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
     }
 
