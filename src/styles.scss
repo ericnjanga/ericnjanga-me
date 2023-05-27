@@ -11,9 +11,6 @@ components;
     buttons;
 }
 
-// Font import
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Maitree:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
-
 // ...
 // Font import
 @import './assets/styles/mixins';
@@ -47,6 +44,8 @@ $xl: map-get($breakpoints, screen-xl);
     body {
         margin: 0;
         @include setFontFamily('body');
+        // older browsers that don’t understand webfont will simply ignore it
+        font-display: fallback; 
         @include color(primary_dark1);
         @include set-app-background-color();
     }
