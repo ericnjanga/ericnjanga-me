@@ -1,7 +1,7 @@
 
 @mixin style-721px-up {
     @container (min-width: 721px) {
-        @include rem(height, 330px);
+        height: 330px;
     }
 }
 
@@ -9,7 +9,7 @@
     @container (min-width: 961px) {
         .text-wrapper {
             top: 0;
-            max-width: 550px;
+            max-width: 650px;
         }
     }
 }

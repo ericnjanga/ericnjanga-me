@@ -41,7 +41,7 @@ $xl: map-get($breakpoints, screen-xl);
 
     html {
         // font-size: 1rem;
-        font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+        font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
     }
 
     body {
@@ -71,17 +71,7 @@ $xl: map-get($breakpoints, screen-xl);
 
 
     h1 {
-        @include typo-h1('small');
-
-        @include respond-to($lg) {
-            // <= lg
-            @include typo-h1('medium');
-        }
-
-        @include respond-to($xl) {
-            // <= lg
-            @include typo-h1('large');
-        }
+        @include typo-h1();
     }
 
     h2 {

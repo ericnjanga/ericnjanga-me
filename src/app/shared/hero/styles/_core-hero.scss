@@ -90,7 +90,7 @@
         @include rem(max-width, 300px);
     }
     .img--laptop {
-        @include rem(width, 450px);
+        width: 450px;
         right: 0;
     }
 
@@ -140,9 +140,9 @@
         z-index: 1;
     }
     .img--laptop {
-        @include rem(top, 30px);
-        @include rem(right, -40px);
-        @include rem(max-width, 576.97px);
+        top: 0;
+        right: -180px;
+        max-width: 576.97px;
     }
 
     // Limit text's width 
@@ -183,19 +183,20 @@
     .img--phone {
         @include rem(top, 5px);
         @include rem(right, 40px);
-        @include rem(max-width, 300px);
+        max-width: 430px;
+        border: 10px solid red;
         z-index: 1;
     }
     .img--laptop {
-        @include rem(top, 30px);
-        @include rem(right, -40px);
-        @include rem(max-width, 681.68px);
+        top: 0;
+        right: -150px;
+        max-width: 681.68px;
     }
 
     // Limit text's width 
     .text-wrapper {
         position: relative;
-        @include rem(max-width, 550px);
+        @include rem(max-width, 650px);
         @include rem(top, 50px);
     }
 

@@ -1,4 +1,3 @@
-
 @import './variables';
 
 
@@ -11,7 +10,8 @@ $base-font-size: 16px; // Set your base font size in pixels
 
 @mixin rem($property, $value) {
   // #{$property}: ($value / $base-font-size) * 1rem;
-  $quotient: calc($value / $base-font-size);;
+  $quotient: calc($value / $base-font-size);
+  ;
 
 
   #{$property}: $quotient * 1rem;
@@ -20,15 +20,17 @@ $base-font-size: 16px; // Set your base font size in pixels
 @mixin color($colorVal) {
   color: map-get($colors, $colorVal);
 }
+
 @mixin colorIm($colorVal) {
-  color: map-get($colors, $colorVal)!important;
+  color: map-get($colors, $colorVal) !important;
 }
 
 @mixin bgColor($colorVal) {
   background-color: map-get($colors, $colorVal);
 }
+
 @mixin bgColorImp($colorVal) {
-  background-color: map-get($colors, $colorVal)!important;
+  background-color: map-get($colors, $colorVal) !important;
 }
 
 
@@ -53,13 +55,14 @@ $base-font-size: 16px; // Set your base font size in pixels
     @content;
   }
 }
+
 @mixin before-to($breakpoint) {
   @media only screen and (max-width: $breakpoint) {
     @content;
   }
 }
 
- 
+
 /**
  * General Layout
  * ------------------------------------
@@ -67,14 +70,17 @@ $base-font-size: 16px; // Set your base font size in pixels
 @mixin set-app-background-color() {
   @include bgColor(bright1);
 }
+
 @mixin gobalBorderRadius($type: 'large') {
-  @if ($type == 'large') {
+  @if ($type =='large') {
     @include rem(border-radius, 20px);
-  } 
-  @else if ($type == 'medium') {
+  }
+
+  @else if ($type =='medium') {
     @include rem(border-radius, 10px);
   }
-  @else if ($type == 'small') {
+
+  @else if ($type =='small') {
     @include rem(border-radius, 5px);
   }
 }
@@ -84,6 +90,7 @@ $spacer-sm: map-get($gap, spacer-sm);
 $spacer-md: map-get($gap, spacer-md);
 $spacer-lg: map-get($gap, spacer-lg);
 $spacer-xl: map-get($gap, spacer-xl);
+
 @mixin gobalBottomSpacing($spacer: $spacer-sm) {
   @include rem(margin-bottom, $spacer);
 }
@@ -93,121 +100,104 @@ $spacer-xl: map-get($gap, spacer-xl);
  * Typography
  * ------------------------------------
 */
-@mixin typo-h1($size) {
+@mixin typo-h1() {
+  color: aqua !important;
 
-
-  color: aqua!important;
-
-
-  @if ($size=='small') {
-    @include rem(font-size, 34px);
-    @include rem(line-height, 42px);
-  }
-  @else if ($size=='medium') {
-    @include rem(font-size, 40px);
-    @include rem(line-height, 46px);
-  }
-  @else if ($size=='large') {
-    @include rem(font-size, 44px);
-    @include rem(line-height, 62px);
-  }
-
-  font-weight: 600;
+  @include rem(font-size, 32px);
+  @include rem(line-height, (32px * 1.4));
+  font-weight: 500;
 }
 
 @mixin typo-h2($size) {
 
 
-  color: blueviolet!important;
+  color: blueviolet !important;
 
 
-  @if ($size=='small') {
-    @include rem(font-size, 28px);
-    @include rem(line-height, 32px); 
-  }
-  @else if ($size=='medium') {
-    @include rem(font-size, 28px);
-    @include rem(line-height, 30px); 
-  }
-  @else if ($size=='large') {
-    @include rem(font-size, 32px);
-    @include rem(line-height, 34px);
-  }
-  font-weight: 600;
+  // @if ($size=='small') {
+  //   @include rem(font-size, 28px);
+  //   @include rem(line-height, 32px); 
+  // }
+  // @else if ($size=='medium') {
+  //   @include rem(font-size, 28px);
+  //   @include rem(line-height, 30px); 
+  // }
+  // @else if ($size=='large') {
+  $size: 32px;
+  @include rem(font-size, $size);
+  @include rem(line-height, ($size * 1.4));
+  // }
+  font-weight: 400;
 }
 
 @mixin typo-h3($size) {
 
 
-  color: coral!important;
+  color: coral !important;
 
   a {
-
-    color: coral!important;
+    color: coral !important;
   }
 
 
 
-  @if ($size=='small') {
-    @include rem(font-size, 24px);
-    @include rem(line-height, 28px);
-  }
-  @else if ($size=='medium') {
+  // @if ($size=='small') {
+  @include rem(font-size, 24px);
+  @include rem(line-height, 28px);
+  // }
+  // @else if ($size=='medium') {
 
-  } @else if ($size=='large') { 
+  // } @else if ($size=='large') { 
 
-  }
+  // }
   font-weight: 500;
 }
 
 @mixin typo-h4($size) {
 
 
-  color: darkgoldenrod!important;
+  color: darkgoldenrod !important;
 
-
-
-  @if ($size=='small') {
-    @include rem(font-size, 20px);
-    @include rem(line-height, 24px); 
-  } @else if ($size=='medium') {
-
-  } @else if ($size=='large') {
-
-  }
-  // font-size: 24px;
-  // line-height: 26px;
+  font-size: 24px;
+  line-height: 26px;
   font-weight: 500;
 }
+
 @mixin typo-h5() {
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
 }
+
 @mixin typo-logo() {
   font-size: 16px;
   line-height: 16px;
   font-weight: 900;
 }
+
 @mixin typo-navLink() {
   font-size: 16px;
   line-height: 16px;
   font-weight: 600;
 }
+
 @mixin typo-buttonLink() {
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
 }
+
 @mixin typo-titleCaption($transform: null) {
   font-size: 15px;
   line-height: 20px;
   font-weight: 500;
-  @if $transform != null {
+
+  @if $transform !=null {
     text-transform: $transform;
   }
-  
+
 }
+
 @mixin typo-caption1() {
   font-weight: 400;
   font-size: 14px;
@@ -226,9 +216,10 @@ $spacer-xl: map-get($gap, spacer-xl);
 
 
 @mixin setFontFamily($type) {
-  @if ($type == 'heading') {
+  @if ($type =='heading') {
     font-family: 'Kanit', sans-serif;
   }
+
   @else {
     font-family: 'Montserrat', sans-serif;
   }
