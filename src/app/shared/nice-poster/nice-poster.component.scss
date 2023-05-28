@@ -19,7 +19,6 @@ $comp-w: map-get($components-size, nice-post-w);
     //  Title ...
     .title-wrapper__heading {
         margin-bottom: 0;
-        @include typo-h5();
 
         .icon {
             position: relative;
@@ -37,8 +36,7 @@ $comp-w: map-get($components-size, nice-post-w);
 
     //  Subtitle ...
     .title-wrapper__subtitle {
-        @include typo-caption1();
-        font-weight: 500;
+        // font-weight: 500;
     //    @include color(gray1);
         color: orchid;
     }

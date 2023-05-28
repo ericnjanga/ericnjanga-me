@@ -8,12 +8,10 @@
 
 $base-font-size: 16px; // Set your base font size in pixels
 
+// Write a property in rem
 @mixin rem($property, $value) {
   // #{$property}: ($value / $base-font-size) * 1rem;
   $quotient: calc($value / $base-font-size);
-  ;
-
-
   #{$property}: $quotient * 1rem;
 }
 
@@ -101,56 +99,27 @@ $spacer-xl: map-get($gap, spacer-xl);
  * ------------------------------------
 */
 @mixin typo-h1() {
-  color: aqua !important;
-
-  @include rem(font-size, 32px);
-  @include rem(line-height, (32px * 1.4));
-  font-weight: 500;
+  color: aquamarine !important;
+  // font-size: clamp(2rem, 1.5rem + 1.5vw, 3.375rem);
+  // font-weight: 500;
 }
 
 @mixin typo-h2($size) {
-
-
   color: blueviolet !important;
-
-
-  // @if ($size=='small') {
-  //   @include rem(font-size, 28px);
-  //   @include rem(line-height, 32px); 
-  // }
-  // @else if ($size=='medium') {
-  //   @include rem(font-size, 28px);
-  //   @include rem(line-height, 30px); 
-  // }
-  // @else if ($size=='large') {
-  $size: 32px;
-  @include rem(font-size, $size);
-  @include rem(line-height, ($size * 1.4));
-  // }
-  font-weight: 400;
+  // font-size: clamp(1.313rem, 1.1rem + 1.1vw, 2.813rem);
+  // font-weight: 400;
 }
 
 @mixin typo-h3($size) {
-
+ 
+  // font-size: clamp(1.313rem, 0.8rem + 0.8vw, 2.813rem);
+  // font-weight: 400;
 
   color: coral !important;
 
   a {
     color: coral !important;
   }
-
-
-
-  // @if ($size=='small') {
-  @include rem(font-size, 24px);
-  @include rem(line-height, 28px);
-  // }
-  // @else if ($size=='medium') {
-
-  // } @else if ($size=='large') { 
-
-  // }
-  font-weight: 500;
 }
 
 @mixin typo-h4($size) {
@@ -163,11 +132,8 @@ $spacer-xl: map-get($gap, spacer-xl);
   font-weight: 500;
 }
 
-@mixin typo-h5() {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
-}
+ 
+ 
 
 @mixin typo-logo() {
   font-size: 16px;
@@ -216,13 +182,13 @@ $spacer-xl: map-get($gap, spacer-xl);
 
 
 @mixin setFontFamily($type) {
-  @if ($type =='heading') {
-    font-family: 'Kanit', sans-serif;
-  }
+  // @if ($type =='heading') {
+  //   font-family: 'Kanit', sans-serif;
+  // }
 
-  @else {
-    font-family: 'Montserrat', sans-serif;
-  }
+  // @else {
+  //   font-family: 'Montserrat', sans-serif;
+  // }
 }
 
 

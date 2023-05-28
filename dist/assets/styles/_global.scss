@@ -320,8 +320,8 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
             position: absolute;
             width: 10px;
             height: 10px;
-            left: -15px;
-            top: 6px;
+            @include rem(left, -15px);
+            @include rem(top, 6px);
             background-color: black;
             border-radius: 50%;
         }

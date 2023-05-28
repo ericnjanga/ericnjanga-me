@@ -8,20 +8,10 @@
 
 $base-font-size: 16px; // Set your base font size in pixels
 
-/**
- * Set font size and line height
-*/
-@mixin font-size-line-height($size) {
-  @include rem(font-size, $size);
-  @include rem(line-height, ($size * 1.4));
-}
-
+// Write a property in rem
 @mixin rem($property, $value) {
   // #{$property}: ($value / $base-font-size) * 1rem;
   $quotient: calc($value / $base-font-size);
-  ;
-
-
   #{$property}: $quotient * 1rem;
 }
 
@@ -109,34 +99,27 @@ $spacer-xl: map-get($gap, spacer-xl);
  * ------------------------------------
 */
 @mixin typo-h1() {
-  @include font-size-line-height(32px);
-  font-weight: 500;
+  color: aquamarine !important;
+  // font-size: clamp(2rem, 1.5rem + 1.5vw, 3.375rem);
+  // font-weight: 500;
 }
 
 @mixin typo-h2($size) {
   color: blueviolet !important;
-  @include font-size-line-height(23px);
-  font-weight: 400;
+  // font-size: clamp(1.313rem, 1.1rem + 1.1vw, 2.813rem);
+  // font-weight: 400;
 }
 
 @mixin typo-h3($size) {
+ 
+  // font-size: clamp(1.313rem, 0.8rem + 0.8vw, 2.813rem);
+  // font-weight: 400;
 
   color: coral !important;
 
   a {
     color: coral !important;
   }
- 
-  @include font-size-line-height(19px);
-  font-weight: 400;
-}
-
-
-@mixin typo-body1() {
-  $size: 16px;
-  // @include rem(font-size, $size);
-  font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
-  @include rem(line-height, ($size * 1.4));
 }
 
 @mixin typo-h4($size) {
@@ -149,11 +132,8 @@ $spacer-xl: map-get($gap, spacer-xl);
   font-weight: 500;
 }
 
-@mixin typo-h5() {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
-}
+ 
+ 
 
 @mixin typo-logo() {
   font-size: 16px;
@@ -202,13 +182,13 @@ $spacer-xl: map-get($gap, spacer-xl);
 
 
 @mixin setFontFamily($type) {
-  @if ($type =='heading') {
-    font-family: 'Kanit', sans-serif;
-  }
+  // @if ($type =='heading') {
+  //   font-family: 'Kanit', sans-serif;
+  // }
 
-  @else {
-    font-family: 'Montserrat', sans-serif;
-  }
+  // @else {
+  //   font-family: 'Montserrat', sans-serif;
+  // }
 }
 
 

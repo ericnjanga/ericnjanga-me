@@ -61,8 +61,7 @@
     }
 
     .title-wrapper__heading {
-        display: flex;
-        @include typo-h5();
+        display: flex; 
         margin-bottom: 0;
 
         .icon {
@@ -74,7 +73,7 @@
 
     .title-wrapper__subtitle {
         @include color(gray0);
-        font-weight: 500;
+        // font-weight: 500;
     }
 
 

@@ -1,0 +1,182 @@
+@import './mixins';
+
+
+// $fs-increment: 5.5px;
+$base-h1-size: 32px;
+$base-h2-size: 26px;
+$base-h3-size: 21px;
+$base-h4-size: 18px;
+$base-body1-size: 16px;
+$base-body2-size: 14px;
+$base-caption-size: 13px;
+
+$inc1: 5.5;
+$inc2: 1.9;
+$inc3: 0.8;
+$inc-body1: 0.5;
+$inc-body2: 0.4;
+$inc-caption: 0.4;
+
+// Set font size and line height
+@mixin fs-ln($fs-var, $lh-var, $size, $increment, $step) {
+    $unit: 1.4; // to get the line height, we multiply the font size by this unit
+
+    @if($fs-var == --fs-body1) {
+        $unit: 1.7;
+    }
+    $currSize: ($increment * $step);
+    @include rem($fs-var, $size + $currSize);
+    @include rem($lh-var, ($size * $unit) + $currSize);
+}
+
+:root {
+    // Font families
+    --ff-body: 'Montserrat', sans-serif;
+    --ff-heading: 'Kanit', sans-serif;
+
+    // Color variables
+    // (coming soon)
+
+    // Font sizes (mobile first
+    @include fs-ln(--fs-h1, --fs-h1-line-height, $base-h1-size, 0, 1); 
+    @include fs-ln(--fs-h2, --fs-h2-line-height, $base-h2-size, 0, 1);  
+    @include fs-ln(--fs-h3, --fs-h3-line-height, $base-h3-size, 0, 1);  
+    @include fs-ln(--fs-h4, --fs-h4-line-height, $base-h4-size, 0, 1);    
+    @include fs-ln(--fs-h4, --fs-h4-line-height, $base-h4-size, 0, 1);   
+    @include fs-ln(--fs-body1, --fs-body1-line-height, $base-body1-size, 0, 1); 
+    @include fs-ln(--fs-body2, --fs-body2-line-height, $base-body2-size, 0, 1); 
+    @include fs-ln(--fs-caption, --fs-caption-line-height, $base-caption-size, 0, 1); 
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--ff-body);
+    font-size: var(--fs-body1);
+    line-height: var(--fs-body1-line-height);
+    // @include setFontFamily('body');
+    // older browsers that don’t understand webfont will simply ignore it
+    font-display: swap;
+    @include color(primary_dark1);
+    @include set-app-background-color();
+}
+
+// Font families
+h1, h2, h3, h4, h5, h6, .title-caption, .txt-body2 {
+    font-family: var(--ff-heading);
+}
+
+// Headin Font sizes
+h1 {
+    font-size: var(--fs-h1);
+    line-height: var(--fs-h1-line-height);
+}
+h2 {
+    font-size: var(--fs-h2);
+    line-height: var(--fs-h2-line-height);
+}
+h3 {
+    font-size: var(--fs-h3);
+    line-height: var(--fs-h3-line-height);
+}
+h4 {
+    font-size: var(--fs-h4);
+    line-height: var(--fs-h4-line-height);
+}
+.title-caption {
+    text-transform: uppercase;
+    font-size: var(--fs-caption);
+    line-height: var(--fs-caption-line-height);
+} 
+.txt-body2 {
+    font-size: var(--fs-body2);
+    line-height: var(--fs-body2-line-height);
+    font-weight: 400;
+}
+
+
+$bp5: 1400px;
+$bp4: 1200px;
+$bp3: 992px;
+$bp2: 768px;
+$bp1: 576px;
+
+
+@media (min-width: $bp5) {
+    :root {
+        $stp: 4;
+        // h1
+        @include fs-ln(--fs-h1, --fs-h1-line-height, $base-h1-size, $inc1, $stp);
+        // h2
+        @include fs-ln(--fs-h2, --fs-h2-line-height, $base-h2-size, $inc2, $stp);
+        // h3
+        @include fs-ln(--fs-h3, --fs-h3-line-height, $base-h3-size, $inc3, $stp);
+        // body1
+        @include fs-ln(--fs-body1, --fs-body1-line-height, $base-body1-size, $inc-body1, $stp);
+        // body2
+        @include fs-ln(--fs-body2, --fs-body2-line-height, $base-body2-size, $inc-body2, $stp);
+        // caption
+        @include fs-ln(--fs-caption, --fs-caption-line-height, $base-caption-size, $inc-caption, $stp);
+    }
+}
+
+// @media (min-width: 961px) and (max-width: 1140px) {
+@media (min-width: $bp4) and (max-width: ($bp5 - 1)) {
+    :root {
+        $stp: 3;
+        // h1
+        @include fs-ln(--fs-h1, --fs-h1-line-height, $base-h1-size, $inc1, $stp);
+        // h2
+        @include fs-ln(--fs-h2, --fs-h2-line-height, $base-h2-size, $inc2, $stp);
+        // h3
+        @include fs-ln(--fs-h3, --fs-h3-line-height, $base-h3-size, $inc3, $stp);
+        // body1
+        @include fs-ln(--fs-body1, --fs-body1-line-height, $base-body1-size, $inc-body1, $stp);
+        // body2
+        @include fs-ln(--fs-body2, --fs-body2-line-height, $base-body2-size, $inc-body2, $stp);
+        // caption
+        @include fs-ln(--fs-caption, --fs-caption-line-height, $base-caption-size, $inc-caption, $stp);
+    }
+}
+
+@media (min-width: $bp3) and (max-width: ($bp4 - 1)) {
+    :root {
+        $stp: 2;
+        // h1
+        @include fs-ln(--fs-h1, --fs-h1-line-height, $base-h1-size, $inc1, $stp);
+        // h2
+        @include fs-ln(--fs-h2, --fs-h2-line-height, $base-h2-size, $inc2, $stp);
+        // h3
+        @include fs-ln(--fs-h3, --fs-h3-line-height, $base-h3-size, $inc3, $stp);
+        // body1
+        @include fs-ln(--fs-body1, --fs-body1-line-height, $base-body1-size, $inc-body1, $stp);
+        // body2
+        @include fs-ln(--fs-body2, --fs-body2-line-height, $base-body2-size, $inc-body2, $stp);
+        // caption
+        @include fs-ln(--fs-caption, --fs-caption-line-height, $base-caption-size, $inc-caption, $stp);
+    }
+}
+
+@media (min-width: $bp2) and (max-width: ($bp3 - 1)) {
+    :root {
+        $stp: 1;
+        // h1
+        @include fs-ln(--fs-h1, --fs-h1-line-height, $base-h1-size, $inc1, $stp);
+        // h2
+        @include fs-ln(--fs-h2, --fs-h2-line-height, $base-h2-size, $inc2, $stp);
+        // h3
+        @include fs-ln(--fs-h3, --fs-h3-line-height, $base-h3-size, $inc3, $stp);
+        // body1
+        @include fs-ln(--fs-body1, --fs-body1-line-height, $base-body1-size, $inc-body1, $stp);
+        // body2
+        @include fs-ln(--fs-body2, --fs-body2-line-height, $base-body2-size, $inc-body2, $stp);
+        // caption
+        @include fs-ln(--fs-caption, --fs-caption-line-height, $base-caption-size, $inc-caption, $stp);
+        
+    }
+}

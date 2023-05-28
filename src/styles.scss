@@ -11,6 +11,12 @@ components;
     buttons;
 }
 
+// Root typography
+@layer base {
+
+    @import './assets/styles/typography';
+}
+
 // ...
 // Font import
 @import './assets/styles/mixins';
@@ -33,104 +39,7 @@ $xl: map-get($breakpoints, screen-xl);
 
 
 
-@layer base {
-    html,
-    body {
-        height: 100%;
-    }
-
-    html {
-        @include font-size-line-height(16px);
-        // font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
-    }
-
-    body {
-        margin: 0;
-        @include setFontFamily('body');
-        // older browsers that don’t understand webfont will simply ignore it
-        font-display: swap;
-        @include color(primary_dark1);
-        @include set-app-background-color();
-    }
-}
-
-
-
-
-
-// Typography
-// -------------------------
-@layer base {
-
-    h1,
-    h2,
-    h3,
-    h4 {
-        @include setFontFamily('heading');
-    }
-
-
-    h1 {
-        @include typo-h1();
-    }
-
-    h2 {
-        @include typo-h2('small');
-
-        @include respond-to($md) {
-            // <= md ...
-            @include typo-h2('small');
-        }
-
-        @include respond-to($lg) {
-            // <= lg
-            @include typo-h2('medium');
-        }
-
-        @include respond-to($xl) {
-            // <= lg
-            @include typo-h2('large');
-        }
-    }
-
-    h3 {
-        // border: 3px solid;
-        @include typo-h3('small');
-
-        @include respond-to($md) {
-            border: 3px solid red;
-            @include typo-h3('small');
-        }
-
-        @include respond-to($lg) {
-            // <= lg
-            border: 3px solid greenyellow;
-            @include typo-h3('medium');
-        }
-
-        @include respond-to($xl) {
-            // <= lg
-            border: 3px solid rgb(18, 179, 173);
-            @include typo-h3('large');
-        }
-    }
-
-    h4 {
-        @include typo-h4('small');
-    }
-
-
-
-
-    .title-caption {
-        text-transform: uppercase;
-        @include rem(font-size, 13px);
-    }
-
-    p {
-        @include typo-body1();
-    }
-}
+ 
 
 
 

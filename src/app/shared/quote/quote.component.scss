@@ -27,8 +27,7 @@
         }
     }
 }
-.title-wrapper__heading {
-    @include typo-h5();
+.title-wrapper__heading { 
     margin-bottom: 0;
 
     .icon {

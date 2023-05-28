@@ -19,7 +19,6 @@
 @mixin captionStyling() {
     .hero__caption {
         @include color(bright2);
-        @include typo-titleCaption(uppercase);
         @include rem(margin-bottom, 5px);
     }
 }
