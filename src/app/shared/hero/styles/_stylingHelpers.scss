@@ -18,7 +18,6 @@
 
 @mixin captionStyling() {
     .hero__caption {
-        @include color(bright2);
         @include rem(margin-bottom, 5px);
     }
 }

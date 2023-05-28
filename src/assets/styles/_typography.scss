@@ -1,14 +1,15 @@
 @import './mixins';
 
 
-// $fs-increment: 5.5px;
+// https://m2.material.io/design/typography/the-type-system.html#type-scale
 $base-h1-size: 32px;
 $base-h2-size: 26px;
 $base-h3-size: 21px;
 $base-h4-size: 18px;
 $base-body1-size: 16px;
 $base-body2-size: 14px;
-$base-caption-size: 13px;
+$base-caption1-size: 13px;
+$base-caption2-size: 12px;
 
 $inc1: 5.5;
 $inc2: 1.9;
@@ -39,14 +40,13 @@ $inc-caption: 0.4;
 
     --clr-primary-200: hsl(160 5% 95%);
 
-
-    // neutral-200             : #C1DBD5, \
     --clr-primary-600: hsl(160 38% 56%);
     --clr-primary-800: hsl(160 34% 29%);
     --clr-primary-900: hsl(160 23% 26%);
 
     --clr-neutral-200: hsl(161, 29%, 81%);
     --clr-neutral-250: hsl(160 15% 82%);
+    --clr-neutral-350: hsl(160 12% 53%);
     --clr-neutral-500: hsl(160 13% 30%);
     --clr-neutral-900: hsl(160 23% 15%);
 
@@ -62,7 +62,7 @@ $inc-caption: 0.4;
     @include fs-ln(--fs-h4, --fs-h4-line-height, $base-h4-size, 0, 1);   
     @include fs-ln(--fs-body1, --fs-body1-line-height, $base-body1-size, 0, 1); 
     @include fs-ln(--fs-body2, --fs-body2-line-height, $base-body2-size, 0, 1); 
-    @include fs-ln(--fs-caption, --fs-caption-line-height, $base-caption-size, 0, 1); 
+    @include fs-ln(--fs-caption1, --fs-caption1-line-height, $base-caption1-size, 0, 1); 
 }
 
 
@@ -79,7 +79,7 @@ body {
     // @include setFontFamily('body');
     // older browsers that don’t understand webfont will simply ignore it
     font-display: swap;
-    @include color(primary-800);
+    @include color(neutral-500);
     @include bgColor(primary-200);
 }
 
@@ -106,9 +106,14 @@ h4 {
     line-height: var(--fs-h4-line-height);
 }
 .title-caption {
+    color: var(--clr-primary-600);
     text-transform: uppercase;
-    font-size: var(--fs-caption);
-    line-height: var(--fs-caption-line-height);
+    font-size: var(--fs-caption1);
+    line-height: var(--fs-caption1-line-height);
+} 
+.txt-caption {
+    font-size: var(--fs-caption1);
+    line-height: var(--fs-caption1-line-height);
 } 
 .txt-body2 {
     font-size: var(--fs-body2);
@@ -138,7 +143,7 @@ $bp1: 576px;
         // body2
         @include fs-ln(--fs-body2, --fs-body2-line-height, $base-body2-size, $inc-body2, $stp);
         // caption
-        @include fs-ln(--fs-caption, --fs-caption-line-height, $base-caption-size, $inc-caption, $stp);
+        @include fs-ln(--fs-caption1, --fs-caption1-line-height, $base-caption1-size, $inc-caption, $stp);
     }
 }
 
@@ -157,7 +162,7 @@ $bp1: 576px;
         // body2
         @include fs-ln(--fs-body2, --fs-body2-line-height, $base-body2-size, $inc-body2, $stp);
         // caption
-        @include fs-ln(--fs-caption, --fs-caption-line-height, $base-caption-size, $inc-caption, $stp);
+        @include fs-ln(--fs-caption1, --fs-caption1-line-height, $base-caption1-size, $inc-caption, $stp);
     }
 }
 
@@ -175,7 +180,7 @@ $bp1: 576px;
         // body2
         @include fs-ln(--fs-body2, --fs-body2-line-height, $base-body2-size, $inc-body2, $stp);
         // caption
-        @include fs-ln(--fs-caption, --fs-caption-line-height, $base-caption-size, $inc-caption, $stp);
+        @include fs-ln(--fs-caption1, --fs-caption1-line-height, $base-caption1-size, $inc-caption, $stp);
     }
 }
 
@@ -193,7 +198,7 @@ $bp1: 576px;
         // body2
         @include fs-ln(--fs-body2, --fs-body2-line-height, $base-body2-size, $inc-body2, $stp);
         // caption
-        @include fs-ln(--fs-caption, --fs-caption-line-height, $base-caption-size, $inc-caption, $stp);
+        @include fs-ln(--fs-caption1, --fs-caption1-line-height, $base-caption1-size, $inc-caption, $stp);
         
     }
 }

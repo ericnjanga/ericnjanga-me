@@ -291,7 +291,6 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
     .nice-bullet-list {
         list-style: none;
 
-
         li {
             position: relative;
             margin-right: 0px;
@@ -304,14 +303,7 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
             @container (min-width: 450px) {
                 @include rem(padding-left, 20px);
             }
-
-
         }
-
-
-
-
-
 
         li::before {
             border: 1px solid map-get($colors, neutral-900);
@@ -320,9 +312,10 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
             position: absolute;
             width: 10px;
             height: 10px;
-            @include rem(left, -15px);
-            @include rem(top, 6px);
-            background-color: black;
+            left: -15px;
+            top: 10px;
+            @include bgColor(primary-800);
+            border-color: var(--clr-primary-800);
             border-radius: 50%;
         }
     }

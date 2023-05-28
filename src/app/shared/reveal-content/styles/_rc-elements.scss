@@ -5,7 +5,10 @@
     width: 100%;
     text-align: right;
     padding: 15px 25px;
-    background: #ccc;
+    // background: #ccc;
+    @include bgColor(neutral-250);
+    @include color(neutral-900);
+    text-decoration: none;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 10px;

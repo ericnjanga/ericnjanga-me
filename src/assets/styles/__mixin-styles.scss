@@ -31,10 +31,7 @@
 /**
  * Styling for dark boxes
 */
-@mixin darkHighlightBoxStyling() { 
-    .component-subtitle {
-        color: turquoise;
-    }
+@mixin darkHighlightBoxStyling() {
     .component-title {
         color: rgb(49, 168, 103);
     }
