@@ -8,7 +8,7 @@
         @include rem(padding, 20px);
         @include gobalBorderRadius('medium');
         overflow: hidden;
-        @include bgColor(pure_white);
+        @include bgColor(pure-white);
 
         ::ng-deep app-icon {
             svg {
@@ -42,7 +42,7 @@
 
     .title-wrapper {
         a {
-            @include color(primary_dark1);
+            @include color(primary-800);
             text-decoration: none;
 
             &:hover {

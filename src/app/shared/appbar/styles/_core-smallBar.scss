@@ -12,7 +12,7 @@
 
     // the bar ...
     .mat-toolbar {
-        @include bgColorImp(primary-abc);
+        @include bgColorImp(primary-200);
     }
 
     .small__page-indicator {
@@ -33,11 +33,11 @@
     .btn-menu {
         // trigger button
         // hamburger
-        @include colorIm(primary_dark2);
+        @include colorIm(neutral-900);
     }
 
     .btn-menu[aria-expanded="true"] {
-        @include bgColorImp(primary_gray3);
+        @include bgColorImp(neutral-250);
     }
 
     // spacer between logo and trigger button

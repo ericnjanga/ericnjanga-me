@@ -10,22 +10,16 @@
 */
 $colors: (
     dark1                   : #202023,
-    pure_white              : #fff,
 
     // Brightness
     bright2                 : #8BC1B5,
 
-    // ....
-    primary_dark2            : #1E2725,
-    primary_dark1            : #304943,
-    primary_dark3            : #33423E,
+    // .... 
     primary                  : #2A6356,
 
     primary_light1           : #86E1CC,
 
-    primary_gray1            : #588F82,
-    primary_gray3             : #B3D2CB,
-    primary_gray4             : #C1DBD5, 
+    primary-600            : #588F82, 
 
 
 
@@ -33,7 +27,7 @@ $colors: (
 
     state1                  : #CE699A,
     state2                  : #DD036C,
-    state3                  : #FFE66D,
+    accent-100                  : #FFE66D,
     state4                  : #cbaa08,
     accent1                 : #2F392F,
     accent2                 : #E4E4B1,

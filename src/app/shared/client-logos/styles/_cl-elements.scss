@@ -43,6 +43,7 @@ $info-iw: map-get($components-size, info-icon-w);
 .company-logo {
     @include rem(border-radius, 4px);
     width: $with-sm;
+    border: 1px solid var(--clr-neutral-250);
 }
 .company-logo--width1 {
     width: $with-md;

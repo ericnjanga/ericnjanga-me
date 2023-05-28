@@ -62,7 +62,7 @@ body {
     // @include setFontFamily('body');
     // older browsers that don’t understand webfont will simply ignore it
     font-display: swap;
-    @include color(primary_dark1);
+    @include color(primary-800);
     @include set-app-background-color();
 }
 

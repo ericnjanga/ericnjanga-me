@@ -4,7 +4,7 @@
         @include rem(inline-size, 324px);
         aspect-ratio: 1;
         border-radius: 50%;
-        @include bgColor(state3);
+        @include bgColor(accent-100);
     }
     img {
         display: block;

@@ -52,7 +52,7 @@ $comp-w: map-get($components-size, nice-post-w);
 
 
     a {
-        // @include color(primary_dark1);
+        // @include color(primary-800);
         color: aqua;
         text-decoration: none;
         &:hover {

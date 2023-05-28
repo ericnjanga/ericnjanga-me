@@ -15,7 +15,7 @@
     @container (max-width: 720px) {
         overflow: hidden;
         background-color: #fff; // bg
-        border: 1px solid #555; // border
+        border: 1px solid var(--clr-neutral-250); // border
         @include gobalBorderRadius('medium'); // ...
         @include rem(margin-bottom, 15px);  // bottom spacing
     }

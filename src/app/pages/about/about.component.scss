@@ -11,10 +11,10 @@
         @include TwoColsArticleStyling();
     }
     .section-excellence::ng-deep .component-wrapper  .component-wrapper {
-        background-color: #fff;
+        @include bgColor(pure-white);
     }
     .section-mentors::ng-deep .component-wrapper  .component-wrapper {
-        @include bgColor(primary_dark3);
+        @include bgColor(neutral-900);
         @include darkHighlightBoxStyling();
     }
     .content-block {

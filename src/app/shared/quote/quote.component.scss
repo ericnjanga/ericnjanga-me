@@ -18,7 +18,7 @@
 }
 .title-wrapper {
     a {
-        @include color(primary_dark1);
+        @include color(primary-800);
         text-decoration: none;
         &:hover {
             .title-wrapper__heading {
@@ -46,7 +46,7 @@
         &::before {
             content: '\201C'; /* Unicode character for left double quotation mark */
             @include rem(font-size, 25px);  
-            @include color(primary-abc);
+            @include color(primary-200);
             line-height: 0;
             position: relative;
             margin-right: 5px;
@@ -56,7 +56,7 @@
         &::after {
             content: '\201D'; /* Unicode character for right double quotation mark */
             @include rem(font-size, 25px);  
-            @include color(primary-abc);
+            @include color(primary-200);
             line-height: 0;
             position: relative;
             margin-left: 5px;

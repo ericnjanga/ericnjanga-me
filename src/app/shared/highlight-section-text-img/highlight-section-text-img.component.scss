@@ -120,6 +120,6 @@
     @container (min-width: 721px) {
         // Set box look
         @include gobalBorderRadius(); //radius
-        border: 1px solid #555; // border
+        border: 1px solid var(--clr-neutral-250); // border
     }
 }

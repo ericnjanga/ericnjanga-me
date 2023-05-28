@@ -28,15 +28,15 @@
 
     // Set spacing between the paragram and the next element
     p {
-        @include color(primary_gray3);
+        @include color(neutral-250);
         @include rem(margin-bottom, 40px);
     }
 
-    @include color(primary-abc);
+    @include color(primary-200);
 
     // Set the component's decoration
     @include gobalBorderRadius();       // Border radius
-    @include bgColor(primary_dark2);    // background color 
+    @include bgColor(neutral-900);    // background color 
     @include gobalBottomSpacing();      // Vertical spacing with the next component
 
     // ...

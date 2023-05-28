@@ -15,7 +15,7 @@
     }
 }
 .bg-two {
-    @include bgColor(primary_gray1);
+    @include bgColor(primary-600);
     img {
         width: 217px;
     }

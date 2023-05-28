@@ -41,7 +41,7 @@
             .component-pagination {
                 position: absolute;
                 right: 0;
-                @include bgColor(primary_gray1);
+                @include bgColor(primary-600);
                 height: 45px;
                 width: 95px;
             }

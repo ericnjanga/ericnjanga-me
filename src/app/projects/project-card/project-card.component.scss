@@ -53,7 +53,8 @@ $tmb-laptop-height: 199px;
             position: absolute;
             width: $bg-deco-width;
             height: $bg-deco-height;
-            @include bgColor(primary_gray4);
+            @include bgColor(neutral-200);
+            @include gobalBorderRadius();
 
             // Horizontally center
             @include centerAbsElt($bg-deco-width);
@@ -70,42 +71,42 @@ $tmb-laptop-height: 199px;
         // width: $card-width-large;
         // height: $card-height;
         z-index: 1;
-        @include bgColor(pure_white);
+        @include bgColor(pure-white);
         @include rem(border-radius, 4px);
-        box-shadow: 0px 0px #{$dropshadow-blur} rgba(0, 0, 0, 0.25);
-        border-width: 0px;
+        border: 1px solid var(--clr-neutral-250);
+        // border-width: 0px;
 
         // On card hover
         &:hover {
             // change background color
-            @include bgColor(primary_gray4);
+            @include bgColor(neutral-200);
 
             // Change colors ... if title-caption has extra info to display
             ::ng-deep .title-caption.hasInfo {
 
                 // change "icon" color
                 svg {
-                    @include color(primary-abc);
-                    border: 3px solid map-get($colors, primary_gray1);
-                    @include bgColor(primary_gray1);
+                    @include color(primary-200);
+                    border: 3px solid map-get($colors, primary-600);
+                    @include bgColor(primary-600);
                 }
 
                 // change "icon" color
                 svg {
-                    @include color(primary-abc);
-                    border: 3px solid map-get($colors, primary_gray1);
-                    @include bgColor(primary_gray1);
+                    @include color(primary-200);
+                    border: 3px solid map-get($colors, primary-600);
+                    @include bgColor(primary-600);
                 }
 
                 // change "title caption" background color
                 &:hover {
-                    @include bgColor(primary-abc);
+                    @include bgColor(primary-200);
                 }
             }
 
             // change "decoration" background color
             &::after {
-                @include bgColor(primary_gray1);
+                @include bgColor(primary-600);
             }
         }
 
@@ -115,7 +116,7 @@ $tmb-laptop-height: 199px;
 
             a {
                 text-decoration: none;
-                // @include color(primary_dark2);
+                @include color(neutral-500);
 
                 &:hover {
                     text-decoration: underline;
@@ -128,11 +129,6 @@ $tmb-laptop-height: 199px;
         p {
             @include color(gray1);
         }
-
-        // .title,
-        // .subtitle {
-        //     @include rem(margin-bottom, 10px);
-        // }
     }
 }
 
@@ -189,8 +185,8 @@ $tmb-laptop-height: 199px;
 
             svg {
                 @include color(primary);
-                border: 3px solid map-get($colors, primary_gray4);
-                @include bgColor(primary_gray4);
+                border: 3px solid map-get($colors, neutral-200);
+                @include bgColor(neutral-200);
 
                 &::after {
                     content: '';

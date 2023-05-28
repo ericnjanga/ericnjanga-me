@@ -39,7 +39,7 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
 }
 
 .box-acccent1 {
-    @include bgColor(pure_white);
+    @include bgColor(pure-white);
 }
 
 
@@ -185,14 +185,14 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
 */
 .custom-tooltip-1 {
     .mdc-tooltip__surface {
-        @include bgColor(primary_dark2);
+        @include bgColor(neutral-900);
     }
 }
 
 .custom-tooltip-2 {
     .mdc-tooltip__surface {
-        @include color(primary_dark2);
-        @include bgColor(state3);
+        @include color(neutral-900);
+        @include bgColor(accent-100);
     }
 }
 
@@ -211,18 +211,18 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
         @include rem(gap, 10px);
         font-weight: 700;
         text-transform: uppercase;
-        @include color(state3);
+        @include color(accent-100);
 
         .icon {
             display: block;
-            @include color(state3);
+            @include color(accent-100);
             width: 20px;
             transition: transform 0.2s ease-in-out;
         }
 
         &:hover {
             text-decoration: none;
-            @include color(state3);
+            @include color(accent-100);
 
             .icon {
                 transform: translateX(10px);
@@ -314,7 +314,7 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
 
 
         li::before {
-            border: 1px solid map-get($colors, primary_dark2);
+            border: 1px solid map-get($colors, neutral-900);
             content: "";
             display: inline-block;
             position: absolute;

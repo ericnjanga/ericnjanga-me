@@ -5,7 +5,7 @@
 
     .hero__quote::ng-deep {
         .title-wrapper {
-            border-left: 1px solid #{map-get($colors, primary_gray1)} !important;
+            border-left: 1px solid #{map-get($colors, primary-600)} !important;
         }
 
         .title-wrapper .title-wrapper__heading,
@@ -29,7 +29,7 @@
             content: '\201C';
             /* Unicode character for left double quotation mark */
             @include rem(font-size, 40px);
-            @include color(primary-abc);
+            @include color(primary-200);
             margin-right: 5px;
         }
 
@@ -37,7 +37,7 @@
             content: '\201D';
             /* Unicode character for right double quotation mark */
             @include rem(font-size, 40px);
-            @include color(primary-abc);
+            @include color(primary-200);
             margin-left: 5px;
         }
     }

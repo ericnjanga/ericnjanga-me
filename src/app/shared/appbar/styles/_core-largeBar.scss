@@ -6,7 +6,7 @@
     width: 100%;
     height: map-get($gap, appBar-lg);
 
-    @include bgColor(primary-abc);
+    @include bgColor(primary-200);
     z-index: 3;
 
     //...
@@ -29,7 +29,7 @@
         }
 
         .menu-item-active, a:hover {
-            @include color(primary_gray1);
+            @include color(primary-600);
             text-decoration: underline;
         }
 

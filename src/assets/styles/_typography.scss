@@ -37,17 +37,22 @@ $inc-caption: 0.4;
     // Color variables
     --clr-primary: #2A6356;
 
-    --clr-primary-abc: hsl(160 5% 95%);
+    --clr-primary-200: hsl(160 5% 95%);
 
 
+    // neutral-200             : #C1DBD5, \
+    --clr-primary-600: hsl(160 38% 56%);
+    --clr-primary-800: hsl(160 34% 29%);
+    --clr-primary-900: hsl(160 23% 26%);
 
+    --clr-neutral-200: hsl(161, 29%, 81%);
+    --clr-neutral-250: hsl(160 15% 82%);
+    --clr-neutral-500: hsl(160 13% 30%);
+    --clr-neutral-900: hsl(160 23% 15%);
 
-//   --clr-primary-400: hsl(60 100% 50%);
-//   --clr-neutral-900: hsl(0 0% 0%);
-//   --clr-neutral-100: hsl(0 0% 100%);
-    // ....
-    // .....
-    // ...
+    --clr-pure-white: hsl(0 0% 100%);
+
+    --clr-accent-100: hsl(50, 81%, 62%);
 
     // Font sizes (mobile first
     @include fs-ln(--fs-h1, --fs-h1-line-height, $base-h1-size, 0, 1); 
@@ -74,8 +79,8 @@ body {
     // @include setFontFamily('body');
     // older browsers that don’t understand webfont will simply ignore it
     font-display: swap;
-    @include color(primary_dark1);
-    @include bgColor(primary-abc);
+    @include color(primary-800);
+    @include bgColor(primary-200);
 }
 
 // Font families
