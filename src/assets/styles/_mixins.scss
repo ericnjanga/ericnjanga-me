@@ -16,19 +16,23 @@ $base-font-size: 16px; // Set your base font size in pixels
 }
 
 @mixin color($colorVal) {
-  color: map-get($colors, $colorVal);
+  $val: --clr-#{$colorVal};
+  color: var($val);
 }
 
 @mixin colorIm($colorVal) {
-  color: map-get($colors, $colorVal) !important;
+  $val: --clr-#{$colorVal};
+  color: var($val) !important;
 }
 
 @mixin bgColor($colorVal) {
-  background-color: map-get($colors, $colorVal);
+  $val: --clr-#{$colorVal};
+  background-color: var($val);
 }
 
 @mixin bgColorImp($colorVal) {
-  background-color: map-get($colors, $colorVal) !important;
+  $val: --clr-#{$colorVal};
+  background-color: var($val) !important;
 }
 
 
@@ -65,9 +69,6 @@ $base-font-size: 16px; // Set your base font size in pixels
  * General Layout
  * ------------------------------------
 */
-@mixin set-app-background-color() {
-  @include bgColor(bright1);
-}
 
 @mixin gobalBorderRadius($type: 'large') {
   @if ($type =='large') {

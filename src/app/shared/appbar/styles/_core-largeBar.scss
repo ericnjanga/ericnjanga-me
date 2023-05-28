@@ -6,7 +6,7 @@
     width: 100%;
     height: map-get($gap, appBar-lg);
 
-    @include set-app-background-color();
+    @include bgColor(primary-abc);
     z-index: 3;
 
     //...

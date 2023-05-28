@@ -35,7 +35,19 @@ $inc-caption: 0.4;
     --ff-heading: 'Kanit', sans-serif;
 
     // Color variables
-    // (coming soon)
+    --clr-primary: #2A6356;
+
+    --clr-primary-abc: hsl(160 5% 95%);
+
+
+
+
+//   --clr-primary-400: hsl(60 100% 50%);
+//   --clr-neutral-900: hsl(0 0% 0%);
+//   --clr-neutral-100: hsl(0 0% 100%);
+    // ....
+    // .....
+    // ...
 
     // Font sizes (mobile first
     @include fs-ln(--fs-h1, --fs-h1-line-height, $base-h1-size, 0, 1); 
@@ -63,7 +75,7 @@ body {
     // older browsers that don’t understand webfont will simply ignore it
     font-display: swap;
     @include color(primary_dark1);
-    @include set-app-background-color();
+    @include bgColor(primary-abc);
 }
 
 // Font families
