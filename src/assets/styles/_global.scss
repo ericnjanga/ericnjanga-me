@@ -348,21 +348,32 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
  * --------------------------------------------------
 */
 .component-pagination {
-    $btn-size: 48px;
 
+    // ...
+    --pag-width: 120px;
+    --pag-height: 45px;
+    --pag-btn-w: 48px;
+    --pag-sep-align: right;
+
+    // ....
     right: 0;
-    // @include bgColor(primary-600);
-    height: 45px;
-    width: 160px;
+    height: var(--pag-height);
+    width: var(--pag-width);
 
     display: grid;
-    grid-template-columns: auto 20px #{$btn-size} #{$btn-size};
+    grid-template-columns: auto 20px #{var(--pag-btn-w)} #{var(--pag-btn-w)};
     align-items: center;
 
     .sep {
-        text-align: center;
+        text-align: var(--pag-sep-align);
         @include color(neutral-350);
     }
 
     @include color(neutral-200);
+ 
+    // When the container grows, make the pagination more spacious
+    @container (min-width: 541px) {
+        --pag-width: 160px;
+        --pag-sep-align: center;
+    }
 }
