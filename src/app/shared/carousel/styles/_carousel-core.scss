@@ -20,7 +20,8 @@
         // ...
         .text-wrapper {
             position: relative;
-            .component-pagination {
+            .component-pagination { 
+                position: absolute;
                 @include paginationTopPos(0);
             }
         }
@@ -36,11 +37,30 @@
 
     // Set the component's decoration
     @include gobalBorderRadius();       // Border radius
-    @include bgColor(neutral-900);    // background color 
     @include gobalBottomSpacing();      // Vertical spacing with the next component
 
     // ...
     @include elts-961px-up();
+}
+
+
+// Slide's background color
+.carousel {
+    &.slide-1 {
+        @include bgColor(skill-1); 
+    }
+    &.slide-2 {
+        @include bgColor(skill-2); 
+    }
+    &.slide-3 {
+        @include bgColor(skill-3); 
+    }
+    &.slide-4 {
+        @include bgColor(skill-4); 
+    }
+    &.slide-5 {
+        @include bgColor(skill-5); 
+    }
 }
 
 

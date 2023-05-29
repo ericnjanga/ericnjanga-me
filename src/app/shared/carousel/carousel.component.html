@@ -1,5 +1,5 @@
 <div class="bx-container">
-    <div class="carousel">
+    <div class="carousel" [ngClass]="currSlide()">
         <div class="inner-wrapper">
             <div class="text-wrapper">
                 <h2 class="component-title section-title skills">
@@ -8,17 +8,23 @@
                         [matTooltipPosition]="position.value!">
                         ></app-icon>
                 </h2>
-                <h3>lorem ipsum.....</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-                    Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae
-                    mattis
-                    tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.
+                <h3>{{skillOnDisplay.title}}</h3>
+                <p>{{skillOnDisplay.description}}
                 </p>
 
-                <nav class="component-pagination">...</nav>
+                <nav class="component-pagination">
+                    <div class="counter">{{currSkillInd + 1}}/{{listOfSkills.length}}</div>
+                    <span class="sep">|</span>
+                    <button class="btn-prev" alt="...." (click)="prevSkill(listOfSkills)" mat-icon-button aria-label="Previous skill">
+                        <mat-icon class="chevron_left">chevron_left</mat-icon>
+                    </button>
+                    <button class="btn-next" (click)="nextSkill(listOfSkills)" mat-icon-button aria-label="Next skill">
+                        <mat-icon class="chevron_right">chevron_right</mat-icon>
+                    </button>
+                </nav>
             </div>
 
-            <img src="./../../../assets/img/img-ide.png" />
+            <img [src]="skillOnDisplay.img" />
         </div>
     </div>
 </div>

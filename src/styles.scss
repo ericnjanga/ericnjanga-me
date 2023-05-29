@@ -13,7 +13,7 @@ components;
 
 // Root typography
 @layer base {
-
+    @import './assets/styles/colours';
     @import './assets/styles/typography';
 }
 

@@ -4,9 +4,11 @@ $xl: map-get($breakpoints, screen-xl); //extra large screens
 $lg: map-get($breakpoints, screen-lg); //extra large screens
 
 @layer base {
+
     // Adjust document top padding to the appbar in display
     body {
         padding-top: map-get($gap, appBar-sm); // Smaller padding for small appbar
+
         @include respond-to($lg) {
             padding-top: map-get($gap, appBar-lg); // Bigger padding for small appbar
         }
@@ -73,6 +75,7 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
             left: 0;
         }
     }
+
     .section-title.title-caption {
         &::before {
             @include rem(top, -22px);
@@ -85,60 +88,71 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
                 background-position-x: -#{$icon-size};
             }
         }
+
         &.skills {
             &::before {
                 background-position-x: -#{$icon-size * 2};
             }
         }
+
         &.new {
             &::before {
                 background-position-x: -#{$icon-size * 3};
             }
         }
+
         &.uxd {
             &::before {
                 background-position-x: -#{$icon-size * 4};
             }
         }
+
         &.dev {
             &::before {
                 background-position-x: -#{$icon-size * 5};
             }
         }
+
         &.info {
             &::before {
                 background-position-x: -#{$icon-size * 6};
             }
         }
+
         &.businessman {
             &::before {
                 background-position-x: -#{$icon-size * 7};
             }
         }
+
         &.mentors {
             &::before {
                 left: 0;
                 background-position-x: -#{$icon-size * 8};
             }
         }
+
         &.testimonial-bubble {
             &::before {
                 left: 0;
                 background-position-x: -#{$icon-size * 9};
             }
         }
+
         &.work-experience {
             &::before {
                 left: 0;
                 background-position-x: -#{$icon-size * 10};
             }
         }
+
         &.excellence {
             &::before {
                 left: 0;
                 background-position-x: -#{$icon-size * 11};
             }
         }
+
         &.celebration {
             &::before {
                 left: 0;
@@ -196,7 +210,7 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
     }
 }
 
- 
+
 
 
 /**
@@ -319,4 +333,36 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
             border-radius: 50%;
         }
     }
+}
+
+
+
+
+
+
+
+
+/**
+ *
+ * CAROUSEL PAGINATION
+ * --------------------------------------------------
+*/
+.component-pagination {
+    $btn-size: 48px;
+
+    right: 0;
+    // @include bgColor(primary-600);
+    height: 45px;
+    width: 160px;
+
+    display: grid;
+    grid-template-columns: auto 20px #{$btn-size} #{$btn-size};
+    align-items: center;
+
+    .sep {
+        text-align: center;
+        @include color(neutral-350);
+    }
+
+    @include color(neutral-200);
 }
