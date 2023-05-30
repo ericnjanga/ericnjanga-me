@@ -82,6 +82,10 @@ $lg: map-get($breakpoints, screen-lg); //extra large screens
         }
     }
 
+    .section-title app-icon {
+        color: red;
+    }
+
     .section-title {
         &.contribution {
             &::before {

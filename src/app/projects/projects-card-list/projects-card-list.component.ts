@@ -18,7 +18,7 @@ export class ProjectsCardListComponent {
 
   // ...
   titleClass() {
-    return this.titleIcon;
+    return `icon-${this.titleIcon}`;
   }
 
   // tooltip positionning ...

@@ -3,7 +3,7 @@
     [imageType]="project.images.type" [image]="project.images.hero"></app-hero>
 
 
-<h2 class="component-title section-title">
+<h2 class="component-title section-title section-title-icon title-decorator">
     About this project
 </h2>
 
@@ -15,7 +15,7 @@
         <section class="about content-block-1">
             <app-reveal-content class="content-block xxx" [containerQuery]="true">
                 <div class="content">
-                    <h2 class="component-title section-title info">
+                    <h2 class="component-title section-title section-title-icon title-decorator icon-info">
                         How it happened
                     </h2>
                     <div class="description">
@@ -48,7 +48,7 @@
         <section class="contribution content-block-2">
             <app-reveal-content class="content-block xxx" [containerQuery]="true">
                 <div class="content">
-                    <h2 class="component-title section-title contribution">
+                    <h2 class="component-title section-title section-title-icon title-decorator icon-contribution">
                         Eric’s contribution
                     </h2>
                     <div class="contribution" *ngFor="let category as category of project.categories">

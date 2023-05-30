@@ -13,76 +13,13 @@ components;
 
 // Root typography
 @layer base {
+    @import './assets/styles/vars';
     @import './assets/styles/colours';
     @import './assets/styles/typography';
+    @import './assets/styles/utility-classes';
+    @import './assets/styles/body-setup';
 }
-
-// ...
-// Font import
-@import './assets/styles/mixins';
-
 
 @layer framework {
     @import '../node_modules/bootstrap/scss/bootstrap';
-}
-
-// layer(framework);
-
-@import './assets/styles/global';
-
-
-$sm: map-get($breakpoints, screen-sm);
-$md: map-get($breakpoints, screen-md);
-$lg: map-get($breakpoints, screen-lg);
-$xl: map-get($breakpoints, screen-xl);
-
-
-
-
- 
-
-
-
-// Global helpers
-// -------------------------
-@layer utilities {
-    .list-align-bullets-with-left-edge {
-        padding-left: 0.9rem;
-    }
-
-    .bx-container {
-        container-type: inline-size;
-    }
-}
-
-
-
-
-
-// Pages
-// -------------------------
-@layer page {
-
-    .page-section {
-        @include gobalBottomSpacing(); // Vertical spacing with the next component
-    }
-
-
-    .page-section {
-        @container (min-width: 1141px) {
-            // Increase bottom spacing
-            @include gobalBottomSpacing($spacer-xl);
-        }
-
-        @container (min-width: 961px) and (max-width: 1140px) {
-            // Increase bottom spacing
-            @include gobalBottomSpacing($spacer-lg);
-        }
-
-        @container (min-width: 721px) and (max-width: 960px) {
-            // Increase bottom spacing
-            @include gobalBottomSpacing($spacer-md);
-        }
-    }
-
 }

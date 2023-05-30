@@ -13,6 +13,6 @@ export class HighlightSectionTextImgComponent {
 
   // ...
   titleClass() {
-    return this.titleIcon;
+    return `icon-${this.titleIcon}`;
   }
 } 

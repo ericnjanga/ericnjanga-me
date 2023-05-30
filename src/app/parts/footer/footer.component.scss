@@ -26,9 +26,9 @@
         @include type-caption();
     }
 
-    ::ng-deep app-icon {
-        @include color(primary-600);
-    }
+    // ::ng-deep app-icon {
+    //     @include color(primary-600);
+    // }
 
 
 
