@@ -2,13 +2,8 @@
     <div class="carousel" [ngClass]="currSlide()">
         <div class="inner-wrapper">
             <div class="text-wrapper">
-                <h2 class="component-title section-title section-title-icon title-decorator icon-skills">
-                    {{title}}
-                    <app-icon name="info circle" [matTooltip]="info" matTooltipClass="custom-tooltip-1"
-                        [matTooltipPosition]="position.value!">
-                        ></app-icon>
-                </h2>
-                <h3>{{skillOnDisplay.title}}</h3>
+                <h5 class="component-subtitle title-caption section-title section-title-icon title-decorator title-overline icon-skills">{{title}}</h5>
+                <h2 class="component-title title-decorator">{{skillOnDisplay.title}}</h2>
                 <p>{{skillOnDisplay.description}}
                 </p>
 

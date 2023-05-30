@@ -213,7 +213,6 @@
 
     .section-title {
         position: relative;
-        border: 1px solid red;
     }
 
     .section-title-icon {
@@ -230,18 +229,19 @@
             width: $icon-size;
             height: $icon-size;
         }
+    } 
+
+    // Position small icon titles differently
+    .section-title-icon.title-caption {
+        &::before {
+            top: -22px;
+        }
     }
 
-
-
-
-
-
-
-    .section-title.title-caption {
-        &::before {
-            @include rem(top, -22px);
-        }
+    // Move title close to the next component
+    // (Useful when this title is used as an overline to bigger titles)
+    .title-overline {
+        margin-bottom: -5px;
     }
 
     // Reduce a component's visible prominence by reducing it's opacity 
@@ -254,7 +254,7 @@
         }
 
         &::before { // Decorator icon
-            opacity: calc(var(--section-tile-opacity) - 0.1);
+            opacity: calc(var(--section-tile-opacity) - 0.3);
         }
     }
 
@@ -265,8 +265,35 @@
             }
         }
         &.icon-contribution {
+            padding-left: 35px;
             &::before {
+                left: -8px;
                 background-position-x: -#{$icon-size};
+            }
+        }
+        &.icon-info {
+            padding-left: 35px;
+            &::before {
+                left: -8px;
+                background-position-x: -#{$icon-size * 6};
+            }
+        }
+        &.icon-dev {
+            &::before {
+                left: -7px;
+                top: -3px;
+                background-position-x: -#{$icon-size * 5};
+            }
+        }
+        &.icon-uxd {
+            &::before {
+                background-position-x: -#{$icon-size * 4};
+            }
+        }
+        &.icon-businessman {
+            &::before {
+                left: -4px;
+                background-position-x: -#{$icon-size * 7};
             }
         }
 
@@ -282,30 +309,6 @@
             }
         }
 
-        &.icon-uxd {
-            &::before {
-                background-position-x: -#{$icon-size * 4};
-            }
-        }
-
-        &.icon-dev {
-            &::before {
-                background-position-x: -#{$icon-size * 5};
-            }
-        }
-
-        &.icon-info {
-            &::before {
-                background-position-x: -#{$icon-size * 6};
-            }
-        }
-
-        &.icon-businessman {
-            &::before {
-                background-position-x: -#{$icon-size * 7};
-            }
-        }
-
         &.icon-mentors {
             &::before {
                 left: 0;
@@ -315,6 +318,7 @@
 
         &.icon-testimonial-bubble {
             &::before {
+                top: -19px;
                 left: 0;
                 background-position-x: -#{$icon-size * 9};
             }
@@ -322,7 +326,8 @@
 
         &.icon-work-experience {
             &::before {
-                left: 0;
+                left: -2px;
+                top: -20px;
                 background-position-x: -#{$icon-size * 10};
             }
         }
@@ -338,6 +343,28 @@
             &::before {
                 left: 0;
                 background-position-x: -#{$icon-size * 12};
+            }
+        }
+    }
+
+    // Dimensions for h5
+    h5.section-title {
+        &.icon-dev {
+            &::before {
+                top: -19px;
+                left: -8px;
+            }
+        }
+        &.icon-uxd {
+            &::before {
+                top: -19px;
+                left: -8px;
+            }
+        }
+        &.icon-excellence {
+            padding-left: 35px;
+            &::before {
+                left: -6px;
             }
         }
     }
@@ -360,6 +387,15 @@
     .scrallable-area--pagination {
         display: flex;
         justify-content: flex-end;
+    }
+
+    .component-wrapper {
+        position: relative;
+        .scrallable-area--pagination {
+            position: absolute;
+            right: 0;
+            z-index: 2;
+        }
     }
 
     .scrallable-area--content {}
