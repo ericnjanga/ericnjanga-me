@@ -1,11 +1,18 @@
 @import './../../../assets/styles/variables';
 @import './../../../assets/styles/mixins';
+@import './../../../assets/styles/_mixin-styles';
 
 
 /**
  * Component structure (on all screens)
  * --------------------------------------------------------
 **/
+.component-title {
+    @include page_h2_global_spacing();
+}
+
+
+
 .component-wrapper {
     @container (min-width: 1141px) {
         $col-width: 513px;

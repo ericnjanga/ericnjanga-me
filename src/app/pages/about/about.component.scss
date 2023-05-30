@@ -21,3 +21,13 @@
         @include boxReveal-w720-max();
     }
 }
+
+
+@layer page.about {
+    h2.title-intro {
+        @include TwoColsArticleStyling_h2();
+    }
+    h2 {
+        @include page_h2_global_spacing();
+    }
+}

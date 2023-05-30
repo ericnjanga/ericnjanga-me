@@ -1,12 +1,19 @@
 @import './../../../assets/styles/variables';
 @import './../../../assets/styles/mixins';
-
+@import './../../../assets/styles/_mixin-styles';
+ 
 
 
 /**
  * Page section structure 
  * --------------------------------------------------------
 **/
+.component-title {
+    @include page_h2_global_spacing();
+}
+
+
+
 .list-wrapper {
     @container (min-width: 1141px) {
         $col-width: 372px;

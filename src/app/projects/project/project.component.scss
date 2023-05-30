@@ -8,6 +8,14 @@
  * --------------------------------------------------------
 **/
 @layer page.project-detail {
+    h2.title-intro {
+        @include TwoColsArticleStyling_h2();
+    }
+    .component-title {
+        @include page_h2_global_spacing();
+    }
+}
+@layer page.project-detail {
     // Set this section as a 2 cols row
     .first-section {
         @include TwoColsArticleStyling();

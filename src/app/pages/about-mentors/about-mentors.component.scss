@@ -18,6 +18,9 @@
 @layer page {
     @layer about {
         @layer mentors {
+            .component-title {
+                @include page_h2_global_spacing();
+            }
 
             // Poster frame ...
             .posters-wrapper {
