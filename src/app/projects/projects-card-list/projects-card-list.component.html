@@ -12,6 +12,7 @@
         <h2 class="component-title section-title section-title-icon title-decorator" [ngClass]="titleClass()">
             {{title}}
             <app-icon 
+                *ngIf="isHoverSupported"
                 name="info circle"
                 [matTooltip]="info" matTooltipClass="custom-tooltip-1"
                 [matTooltipPosition]="position.value!">

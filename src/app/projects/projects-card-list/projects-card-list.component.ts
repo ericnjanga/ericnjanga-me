@@ -21,10 +21,11 @@ export class ProjectsCardListComponent {
     return `icon-${this.titleIcon}`;
   }
 
+  // Will help hide informational icons on touch screens (because material toolip supports only hovers)
+  isHoverSupported = true;
   // tooltip positionning ...
   positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
   position = new FormControl(this.positionOptions[3]);
-
   
   // scroll system
   @ViewChild('scrollable', { static: true }) scrollable: any; // scrollable area ..
@@ -43,5 +44,18 @@ export class ProjectsCardListComponent {
       behavior: 'smooth'
     });
     this.scrollValue += step * direction;
+  }
+
+  // Assign a value to hover flag base on browser support
+  activateHoverFlagSupport() {
+    // Enable tooltips on touch devices
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {
+      this.isHoverSupported = false;
+    }
+  }
+
+
+  ngOnInit() {
+    this.activateHoverFlagSupport();
   }
 }

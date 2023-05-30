@@ -12,6 +12,8 @@ export class ClientLogosComponent {
   @Input() title = '';
   @Input() info = '';
 
+  // Will help hide informational icons on touch screens (because material toolip supports only hovers)
+  isHoverSupported = true;
   // tooltip positionning ...
   positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
   position = new FormControl(this.positionOptions[3]);
@@ -44,5 +46,18 @@ export class ClientLogosComponent {
       behavior: 'smooth'
     });
     this.scrollValue += step * direction;
+  }
+
+  // Assign a value to hover flag base on browser support
+  activateHoverFlagSupport() {
+    // Enable tooltips on touch devices
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {
+      this.isHoverSupported = false;
+    }
+  }
+
+
+  ngOnInit() {
+    this.activateHoverFlagSupport();
   }
 }
