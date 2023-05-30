@@ -31,29 +31,6 @@ $inc-caption: 0.4;
 }
 
 :root {
-    // Font families
-    --ff-body: 'Montserrat', sans-serif;
-    --ff-heading: 'Kanit', sans-serif;
-
-    // // Color variables
-    // --clr-primary: #2A6356;
-
-    // --clr-primary-200: hsl(160 5% 95%);
-
-    // --clr-primary-600: hsl(160 38% 56%);
-    // --clr-primary-800: hsl(160 34% 29%);
-    // --clr-primary-900: hsl(160 23% 26%);
-
-    // --clr-neutral-200: hsl(161, 29%, 81%);
-    // --clr-neutral-250: hsl(160 15% 82%);
-    // --clr-neutral-350: hsl(160 12% 53%);
-    // --clr-neutral-500: hsl(160 13% 30%);
-    // --clr-neutral-900: hsl(160 23% 15%);
-
-    // --clr-pure-white: hsl(0 0% 100%);
-
-    // --clr-accent-100: hsl(50, 81%, 62%);
-
     // Setup font sizes (mobile first)
     @include fs-ln(--fs-h1, --fs-h1-line-height, $base-h1-size, 0, 1); 
     @include fs-ln(--fs-h2, --fs-h2-line-height, $base-h2-size, 0, 1);  
@@ -65,23 +42,6 @@ $inc-caption: 0.4;
     @include fs-ln(--fs-caption1, --fs-caption1-line-height, $base-caption1-size, 0, 1); 
 }
 
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: var(--ff-body);
-    font-size: var(--fs-body1);
-    line-height: var(--fs-body1-line-height);
-    // @include setFontFamily('body');
-    // older browsers that don’t understand webfont will simply ignore it
-    font-display: swap;
-    @include color(neutral-500);
-    @include bgColor(primary-200);
-}
 
 // Font families
 h1, h2, h3, h4, h5, h6, .title-caption, .txt-body2 {

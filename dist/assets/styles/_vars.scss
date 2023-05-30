@@ -1,0 +1,16 @@
+
+@import './variables';
+@import './mixins';
+
+:root {
+    --body-top-padding      : 64px; 
+    --section-tile-opacity  : 0.7;
+
+    // Font families
+    --ff-body: 'Montserrat', sans-serif;
+    --ff-heading: 'Kanit', sans-serif;
+}
+
+
+// Temporary variables initialization to be used in lower level files
+$lg: map-get($breakpoints, screen-lg); //extra large screens

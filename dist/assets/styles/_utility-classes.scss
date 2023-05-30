@@ -1,0 +1,444 @@
+/**
+ *
+ * CONTAINER QUERIES
+ * --------------------------------------------------
+*/
+@layer utilities {
+    .bx-container {
+        container-type: inline-size;
+    }
+}
+
+
+
+
+
+/**
+ *
+ * BULLET LIST
+ * --------------------------------------------------
+*/
+@layer utilities {
+    .nice-bullet-list {
+        list-style: none;
+
+        li {
+            position: relative;
+            margin-right: 0px;
+            margin-left: 0px;
+            @include rem(margin-top, 10px);
+            @include rem(margin-bottom, 15px);
+            @include rem(padding-left, 10px);
+
+            // Increase space between content and bullet if the container increases
+            @container (min-width: 450px) {
+                @include rem(padding-left, 20px);
+            }
+        }
+
+        li::before {
+            border: 1px solid map-get($colors, neutral-900);
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            left: -15px;
+            top: 10px;
+            @include bgColor(primary-800);
+            border-color: var(--clr-primary-800);
+            border-radius: 50%;
+        }
+    }
+
+    .list-align-bullets-with-left-edge {
+        padding-left: 0.9rem;
+    }
+}
+
+
+
+
+
+/**
+ *
+ * CAROUSEL PAGINATION
+ * --------------------------------------------------
+*/
+@layer utilities {
+    .component-pagination {
+
+        // ...
+        --pag-width: 120px;
+        --pag-height: 45px;
+        --pag-btn-w: 48px;
+        --pag-sep-align: right;
+
+        // ....
+        right: 0;
+        height: var(--pag-height);
+        width: var(--pag-width);
+
+        display: grid;
+        grid-template-columns: auto 20px #{var(--pag-btn-w)} #{var(--pag-btn-w)};
+        align-items: center;
+
+        .sep {
+            text-align: var(--pag-sep-align);
+            @include color(neutral-350);
+        }
+
+        @include color(neutral-200);
+
+        // When the container grows, make the pagination more spacious
+        @container (min-width: 541px) {
+            --pag-width: 160px;
+            --pag-sep-align: center;
+        }
+    }
+}
+
+
+
+
+
+/**
+ *
+ * BUTTONS
+ * --------------------------------------------------
+*/
+@layer components.buttons {
+
+    .button-primary {
+        display: flex;
+        @include rem(gap, 10px);
+        font-weight: 700;
+        text-transform: uppercase;
+        @include color(accent-100);
+
+        .icon {
+            display: block;
+            @include color(accent-100);
+            width: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        &:hover {
+            text-decoration: none;
+            @include color(accent-100);
+
+            .icon {
+                transform: translateX(10px);
+            }
+        }
+    }
+
+    .button-primary--large {
+        @include rem(font-size, 20px);
+
+        .icon {
+            width: 30px;
+        }
+    }
+
+
+    .button-secondary {
+        padding-left: 0;
+        padding-right: 0;
+        border-width: 0px;
+        font-weight: 500;
+        text-decoration: underline;
+        background-color: transparent;
+        @include color(gray1);
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        .icon svg {
+            width: 16px;
+        }
+    }
+
+    .button-secondary--up {
+        .icon svg {
+            transform: rotate(-90deg);
+        }
+    }
+
+    .button-secondary--down {
+        .icon svg {
+            transform: rotate(90deg);
+        }
+    }
+
+}
+
+
+
+
+
+/**
+ *
+ * Angular Material - Toolip customization
+ * --------------------------------------------------
+*/
+@layer utilities {
+    .custom-tooltip-1 {
+        .mdc-tooltip__surface {
+            @include bgColor(neutral-900);
+        }
+    }
+
+    .custom-tooltip-2 {
+        .mdc-tooltip__surface {
+            @include color(neutral-900);
+            @include bgColor(accent-100);
+        }
+    }
+}
+
+
+
+
+
+/**
+ *
+ * Angular Material - Toolip customization
+ * --------------------------------------------------
+*/
+@layer components.section-title {
+
+    $icon-size: 50px;
+
+    .section-title {
+        position: relative;
+    }
+
+    .section-title-icon {
+        padding-left: 40px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -10px;
+            background-image: url(./../img/icons.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: $icon-size;
+            height: $icon-size;
+        }
+    } 
+
+    // Position small icon titles differently
+    .section-title-icon.title-caption {
+        &::before {
+            top: -22px;
+        }
+    }
+
+    // Move title close to the next component
+    // (Useful when this title is used as an overline to bigger titles)
+    .title-overline {
+        margin-bottom: -5px;
+    }
+
+    // Reduce a component's visible prominence by reducing it's opacity 
+    // (When associated with "section title", information and decoration icons' opacity is reduced too)
+    .title-decorator {
+        opacity: var(--section-tile-opacity);
+
+        app-icon { // information icon
+            opacity: calc(var(--section-tile-opacity) - 0.1);
+        }
+
+        &::before { // Decorator icon
+            opacity: calc(var(--section-tile-opacity) - 0.3);
+        }
+    }
+
+    .section-title {
+        &.icon-suitcase {
+            &::before {
+                background-position-x: 0;
+            }
+        }
+        &.icon-contribution {
+            padding-left: 35px;
+            &::before {
+                left: -8px;
+                background-position-x: -#{$icon-size};
+            }
+        }
+        &.icon-info {
+            padding-left: 35px;
+            &::before {
+                left: -8px;
+                background-position-x: -#{$icon-size * 6};
+            }
+        }
+        &.icon-dev {
+            &::before {
+                left: -7px;
+                top: -3px;
+                background-position-x: -#{$icon-size * 5};
+            }
+        }
+        &.icon-uxd {
+            &::before {
+                background-position-x: -#{$icon-size * 4};
+            }
+        }
+        &.icon-businessman {
+            &::before {
+                left: -4px;
+                background-position-x: -#{$icon-size * 7};
+            }
+        }
+
+        &.icon-skills {
+            &::before {
+                background-position-x: -#{$icon-size * 2};
+            }
+        }
+
+        &.icon-new {
+            &::before {
+                background-position-x: -#{$icon-size * 3};
+            }
+        }
+
+        &.icon-mentors {
+            &::before {
+                left: 0;
+                background-position-x: -#{$icon-size * 8};
+            }
+        }
+
+        &.icon-testimonial-bubble {
+            &::before {
+                top: -19px;
+                left: 0;
+                background-position-x: -#{$icon-size * 9};
+            }
+        }
+
+        &.icon-work-experience {
+            &::before {
+                left: -2px;
+                top: -20px;
+                background-position-x: -#{$icon-size * 10};
+            }
+        }
+
+        &.icon-excellence {
+            &::before {
+                left: 0;
+                background-position-x: -#{$icon-size * 11};
+            }
+        }
+
+        &.icon-celebration {
+            &::before {
+                left: 0;
+                background-position-x: -#{$icon-size * 12};
+            }
+        }
+    }
+
+    // Dimensions for h5
+    h5.section-title {
+        &.icon-dev {
+            &::before {
+                top: -19px;
+                left: -8px;
+            }
+        }
+        &.icon-uxd {
+            &::before {
+                top: -19px;
+                left: -8px;
+            }
+        }
+        &.icon-excellence {
+            padding-left: 35px;
+            &::before {
+                left: -6px;
+            }
+        }
+    }
+}
+
+
+
+
+
+/**
+ *
+ * Scrollable areas
+ * --------------------------------------------------
+*/
+@layer components {
+    .scrallable-area--wrapper {
+        overflow-x: scroll;
+    }
+
+    .scrallable-area--pagination {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .component-wrapper {
+        position: relative;
+        .scrallable-area--pagination {
+            position: absolute;
+            right: 0;
+            z-index: 2;
+        }
+    }
+
+    .scrallable-area--content {}
+}
+
+
+
+
+
+/**
+ *
+ * PAGE SECTION
+ * (Change bottom spacing depending on the container's width)
+ * --------------------------------------------------
+*/
+@layer utilities {
+    .page-section {
+        --ps-btm-spacing: 40px;
+        margin-bottom: var(--ps-btm-spacing);
+
+        @container (min-width: 1141px) {
+            --ps-btm-spacing: 90px;
+        }
+        
+        @container (min-width: 961px) and (max-width: 1140px) {
+            --ps-btm-spacing: 75px;
+        }
+        
+        @container (min-width: 721px) and (max-width: 960px) {
+            --ps-btm-spacing: 60px;
+        }
+    }
+}
+
+
+
+
+
+/**
+ *
+ * GROUP OF COMPONENTS
+ * --------------------------------------------------
+*/
+img {
+    max-width: 100%;
+}

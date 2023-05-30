@@ -58,7 +58,45 @@
 /**
  * Styling two blocks into a 2 columns row with a very specific spacing
 */
+
+@mixin page_h2_global_spacing() {
+    --h2-bottom-spacing: 15px; 
+    margin-bottom: var(--h2-bottom-spacing); 
+
+    @container (min-width: 1141px) {
+        --h2-bottom-spacing: 40px;
+    }
+    
+    @container (min-width: 961px) and (max-width: 1140px) {
+        --h2-bottom-spacing: 30px;
+    }
+    
+    @container (min-width: 721px) and (max-width: 960px) {
+        --h2-bottom-spacing: 25px;
+    }
+}
+
+
+@mixin TwoColsArticleStyling_h2() {
+    --about-h2-marg: 0;
+    margin-left: var( --about-h2-marg);
+
+    @container (min-width: 1141px) {
+        --about-h2-marg: 3.75rem;
+    }
+    
+    @container (min-width: 961px) and (max-width: 1140px) {
+        --about-h2-marg: 3.125rem;
+    }
+    
+    @container (min-width: 721px) and (max-width: 960px) {
+        --about-h2-marg: 2.5rem;
+    }
+}
+
 @mixin TwoColsArticleStyling() {
+    // TO DO:
+    // Update below code with css variables
     @container (min-width: 1141px) { 
         $gap: 60px;
         $col-width: 513px;

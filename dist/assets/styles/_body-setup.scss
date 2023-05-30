@@ -1,0 +1,25 @@
+
+// ...
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: var(--ff-body);
+    font-size: var(--fs-body1);
+    line-height: var(--fs-body1-line-height);
+    // older browsers that don’t understand webfont will simply ignore it
+    font-display: swap;
+    @include color(neutral-500);
+    @include bgColor(primary-200);
+    padding-top: var(--body-top-padding);
+}
+
+
+// Increase body top padding for large screens
+@include respond-to($lg) {
+    :root {
+        --body-top-padding: 80px;
+    }
+}
