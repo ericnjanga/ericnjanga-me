@@ -257,6 +257,10 @@
             opacity: calc(var(--section-tile-opacity) - 0.3);
         }
     }
+    // Allow small title to keep their opacity
+    .title-decorator.title-caption {
+        opacity: 1;
+    }
 
     .section-title {
         &.icon-suitcase {
