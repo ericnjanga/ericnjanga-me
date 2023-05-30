@@ -14,7 +14,7 @@
             // ...
             max-width: 100%;
             display: grid;
-            grid-template-columns: 500px 40px auto;
+            grid-template-columns: 500px 80px auto;
             @include rem(min-height, 350px);    // Set height
     
             // Place image in 1st position

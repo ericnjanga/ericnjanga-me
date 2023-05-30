@@ -30,27 +30,27 @@ export class CarouselComponent {
     {
       title: 'Web Development',
       description: 'Versatility and proficiency at developing in both front-end and back-end technologies, aptitude at crafting intuitive user interfaces while seamlessly integrating them with robust server-side functionality, ensuring a cohesive and dynamic web application experience.',
-      img: './../../../assets/img/img-ide.png',
+      img: './../../../assets/img/skills-web-development.png',
     },
     {
       title: 'UI Design',
       description: 'Creation of visually appealing and user-friendly interfaces for websites and mobile applications. This involves understanding user behavior, optimizing layouts, choosing appropriate typography and color schemes, and implementing responsive design techniques for seamless experiences across different devices.',
-      img: './../../../assets/img/img-ide.png',
+      img: './../../../assets/img/skills-ui-design.png',
     },
     {
       title: 'User Research',
       description: 'Understanding user behavior, needs, and motivations. This involves techniques such as interviews, surveys, usability testing, and analytics analysis. The insights gained from this process will inform the design and development process, ensuring products and experiences are tailored to user expectations and preferences.',
-      img: './../../../assets/img/img-ide.png',
+      img: './../../../assets/img/skills-user-research.png',
     },
     {
       title: 'Information Architecture',
       description: 'Organizing and structuring information within a system or website. This involves creating hierarchies, navigation schemes, and categorization methods that enable users to locate and interact with content in a logical and intuitive manner, enhancing usability and user experience.',
-      img: './../../../assets/img/img-ide.png',
+      img: './../../../assets/img/skills-information-architecture.png',
     },
     {
       title: 'Interaction Design',
       description: 'Designing meaningful and engaging interactions between users and digital products or services. This involves understanding user goals, creating intuitive interfaces, defining interactive behaviors, and ensuring seamless and satisfying user experiences through user-centered design principles.',
-      img: './../../../assets/img/img-ide.png',
+      img: './../../../assets/img/skills-interaction-design.png',
     },
   ];
   // Skills index

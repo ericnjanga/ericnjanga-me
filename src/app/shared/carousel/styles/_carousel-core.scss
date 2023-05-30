@@ -27,6 +27,10 @@
         }
     }
 
+    .slide-img {
+        filter: drop-shadow(25.2941px 14.5299px 41.8365px rgba(0, 0, 0, 0.75));
+    }
+
     // Set spacing between the paragram and the next element
     p {
         @include color(neutral-250);
