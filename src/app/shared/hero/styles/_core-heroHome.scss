@@ -15,11 +15,19 @@
 // Switch visibility between small and large navigation depending 
 // on the container's size (bx-container)
 .hero--home {
-    @container (min-width: 721px) and (max-width: 960px) {
-        @include container_L_eltStyles();
+    // Temporary hide laptop slides here
+    .img--laptop {
+        display: none;
+    }
+
+    --img--phone-right-pos: 50px;
+    .img--phone {
+        right: var(--img--phone-right-pos);
     }
  
-    @container (min-width: 541px) and (max-width: 720px) {
-        @include container_M_eltStyles();
-    }
+    @container (min-width: 961px) {
+        .img--phone {
+            --img--phone-right-pos: 130px;
+        }
+    } 
 }

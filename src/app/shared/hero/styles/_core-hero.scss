@@ -184,7 +184,6 @@
         @include rem(top, 5px);
         @include rem(right, 40px);
         max-width: 430px;
-        border: 10px solid red;
         z-index: 1;
     }
     .img--laptop {
@@ -241,6 +240,11 @@
 
     // Add bottom spacing
     @include gobalBottomSpacing();
+
+    // Defautl dropshadow for every image
+    img {
+        filter: drop-shadow(19.7351px 11.3366px 32.6419px rgba(0, 0, 0, 0.75));
+    }
 }
 
 
