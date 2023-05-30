@@ -1,12 +1,11 @@
 <div class="bx-container">
     <div class="component-wrapper client-logos">
         <nav class="scrallable-area--pagination">
-            <button class="btn scroll-btn left" (click)="scroll(-1)">
-                <app-icon class="icon" name="arrowLeft"></app-icon>
+            <button class="btn scroll-btn left" (click)="scroll(-1)" mat-icon-button>
+                <mat-icon class="chevron_left">chevron_left</mat-icon>
             </button>
-
-            <button class="btn scroll-btn right" (click)="scroll(1)">
-                <app-icon class="icon" name="arrowRight"></app-icon>
+            <button class="btn scroll-btn right" (click)="scroll(1)" mat-icon-button>
+                <mat-icon class="chevron_right">chevron_right</mat-icon>
             </button>
         </nav>
         
