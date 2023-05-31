@@ -5,13 +5,19 @@
 
     .hero__quote::ng-deep {
         .title-wrapper {
-            border-left: 1px solid #{map-get($colors, primary-600)} !important;
+            border-left: 2px solid #{map-get($colors, primary-600)} !important;
         }
 
         .title-wrapper .title-wrapper__heading,
         .title-wrapper .title-wrapper__subtitle,
         svg {
-            @include colorIm(bright2);
+            @include colorIm(primary-600);
+        }
+        .title-wrapper__subtitle {
+            line-height: 18px;
+        }
+        .title-wrapper__heading {
+            font-weight: 700;
         }
     }
 }

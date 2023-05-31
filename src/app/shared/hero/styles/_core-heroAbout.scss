@@ -5,13 +5,40 @@
         aspect-ratio: 1;
         border-radius: 50%;
         @include bgColor(accent-100);
+        z-index: 1;
     }
     img {
         display: block;
         bottom: 0;
+        z-index: 3;
     }
     .circle, img {
         position: absolute;
+    }
+
+    .hero__quote {
+        position: relative;
+        z-index: 2;
+    }
+    .text-wrapper {
+        z-index: 2;
+    }
+}
+
+@mixin style-540px-max {
+    @container (max-width: 540px) {
+        .hero__quote::ng-deep .title-wrapper {
+            border-left: 2px solid var(--clr-neutral-900)!important;
+            a .intro .title-wrapper__heading,
+            a .intro .title-wrapper__subtitle, 
+            a .intro .title-wrapper__heading .icon svg {
+                @include colorIm(neutral-900);
+            }
+        }
+        // .hero__quote::ng-deep .title-wrapper a .intro .title-wrapper__heading,
+        // .hero__quote::ng-deep .title-wrapper a .intro .title-wrapper__subtitle {
+        //     @include colorIm(neutral-900);
+        // }
     }
 }
 
@@ -26,7 +53,10 @@
             @include rem(inline-size, 405px);
         }
         .hero__quote, .hero__cta {
-            @include rem(margin-top, 20px);
+            margin-top: 20px;
+        }
+        .text-wrapper {
+            max-width: 550px;
         }
     }
 }
@@ -40,13 +70,23 @@
     }
 }
 
+@mixin style-1141px-up {
+    @container (min-width: 1141px) {
+        .hero__quote {
+            margin-top: 5px;
+        }
+    }
+}
+
 
 // Switch visibility between small and large navigation depending 
 // on the container's size (bx-container)
 .hero--about {
     @include global();
+    @include style-540px-max();
     @include style-721px-up();
     @include style-961px-up();
+    @include style-1141px-up();
     
     @container (min-width: 1141px) {
 
@@ -105,14 +145,14 @@
 
         // position circle
         .circle {
-            @include rem(bottom, -80px);
-            @include rem(right, -30px);
+            bottom: -80px;
+            right: -30px;
         }
 
         //display image and position it
         img {
-            @include rem(right, -30px);
-            @include rem(max-width, 400px);
+            right: -30px;
+            max-width: 400px;
         }
     }
 
@@ -122,14 +162,14 @@
 
         // position circle
         .circle {
-            @include rem(bottom, -80px);
-            @include rem(right, 10px);
+            bottom: -80px;
+            right: 10px;
         }
 
         //display image and position it
         img {
             right: 0;
-            @include rem(max-width, 400px);
+            max-width: 400px;
         }
     }
 }

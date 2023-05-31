@@ -2,7 +2,7 @@
 
 .title-wrapper {
     @include rem(padding-left, 20px);
-    border-left: 1px solid map-get($colors, gray0);
+    border-left: 2px solid map-get($colors, gray0);
 }
 
 .title-wrapper__heading,
