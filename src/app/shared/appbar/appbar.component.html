@@ -13,17 +13,16 @@
 
 
             <div 
+              (click)="goBack()"
               class="small__page-indicator"
               *ngIf="isChildRouteOf(['about', 'projects'], currentRoute)"
             >
               <button 
                 class="btn-back"
                 mat-icon-button
-                (click)="goBack()"
               >
                 <mat-icon aria-hidden="false" aria-label="Back">arrow_back</mat-icon>
               </button>
-
               <span class="txt-body2">Back</span>
             </div>
 

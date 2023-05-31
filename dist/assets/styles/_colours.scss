@@ -3,7 +3,7 @@
     // Application color variables
     --clr-primary: #2A6356;
 
-    --clr-primary-200: hsl(160 5% 95%);
+    --clr-primary-200: hsl(160, 32%, 93%);
 
     --clr-primary-600: hsl(160 38% 56%);
     --clr-primary-800: hsl(160 34% 29%);
@@ -12,12 +12,15 @@
     --clr-neutral-200: hsl(161, 29%, 81%);
     --clr-neutral-250: hsl(160 15% 82%);
     --clr-neutral-350: hsl(160 12% 53%);
+    --clr-neutral-400: hsl(160deg 47.51% 18.9%);
     --clr-neutral-500: hsl(160 13% 30%);
     --clr-neutral-700: hsl(160 23% 15%);
+    --clr-neutral-800: hsl(160, 23%, 8%);
 
     --clr-pure-white: hsl(0 0% 100%);
 
     --clr-accent-100: hsl(50, 81%, 62%);
+    --clr-accent-200: hsl(50, 57%, 62%);
 
     // Variant colors (for skills section)
     --clr-skill-1: hsl(160 23% 15%);
