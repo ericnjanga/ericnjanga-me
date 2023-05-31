@@ -90,7 +90,6 @@
         @include rem(max-width, 300px);
     }
     .img--laptop {
-        width: 450px;
         right: 0;
     }
 
@@ -134,15 +133,14 @@
 
     // ..
     .img--phone {
-        @include rem(top, 5px);
-        @include rem(right, 40px);
-        @include rem(max-width, 300px);
+        top: 5px;
+        right: 40px;
+        max-width: 300px;
         z-index: 1;
     }
     .img--laptop {
         top: 0;
         right: -180px;
-        max-width: 576.97px;
     }
 
     // Limit text's width 
@@ -186,10 +184,9 @@
         max-width: 430px;
         z-index: 1;
     }
-    .img--laptop {
+    .img--laptop, .img--tablet {
         top: 0;
         right: -150px;
-        max-width: 681.68px;
     }
 
     // Limit text's width 
@@ -231,7 +228,7 @@
     .hero__title {
         @include color(primary-200);
     }
-    .img--phone, .img--laptop {
+    .img--phone, .img--laptop, .img--tablet {
         position: absolute;
     }
     @include quoteStyling();
@@ -251,11 +248,19 @@
 // Switch visibility between small and large navigation depending 
 // on the container's size (bx-container)
 .hero {
+    --img-laptop-width: 450px;
+
+    .img--laptop, .img--tablet {
+        width: var(--img-laptop-width);
+    }
+
     @container (min-width: 1141px) {
+        --img-laptop-width: 681.68px;
         @include container_XXL_eltStyles();
     }
  
     @container (min-width: 961px) and (max-width: 1140px) {
+        --img-laptop-width: 576.97px;
         @include container_XL_eltStyles();
     }
  
