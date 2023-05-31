@@ -37,7 +37,7 @@
         }
 
         li::before {
-            border: 1px solid map-get($colors, neutral-900);
+            border: 1px solid map-get($colors, neutral-700);
             content: "";
             display: inline-block;
             position: absolute;
@@ -109,7 +109,7 @@
 */
 @layer components.buttons {
 
-    .button-primary {
+    .btn-primary {
         display: flex;
         @include rem(gap, 10px);
         font-weight: 700;
@@ -186,13 +186,13 @@
 @layer utilities {
     .custom-tooltip-1 {
         .mdc-tooltip__surface {
-            @include bgColor(neutral-900);
+            @include bgColor(neutral-700);
         }
     }
 
     .custom-tooltip-2 {
         .mdc-tooltip__surface {
-            @include color(neutral-900);
+            @include color(neutral-700);
             @include bgColor(accent-100);
         }
     }

@@ -102,6 +102,16 @@
 }
 
 @mixin TwoColsArticleStyling() {
+
+    // Change bullet list structure a little bit
+    .nice-bullet-list li {
+        margin-bottom: 3px;
+        margin-top: 3px;
+    }
+
+
+
+
     // TO DO:
     // Update below code with css variables
     @container (min-width: 1141px) { 

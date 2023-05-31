@@ -28,11 +28,11 @@
 @mixin style-540px-max {
     @container (max-width: 540px) {
         .hero__quote::ng-deep .title-wrapper {
-            border-left: 2px solid var(--clr-neutral-900)!important;
+            border-left: 2px solid var(--clr-neutral-700)!important;
             a .intro .title-wrapper__heading,
             a .intro .title-wrapper__subtitle, 
             a .intro .title-wrapper__heading .icon svg {
-                @include colorIm(neutral-900);
+                @include colorIm(neutral-700);
             }
         }
     }

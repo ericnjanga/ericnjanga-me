@@ -14,7 +14,7 @@
         @include bgColor(pure-white);
     }
     .section-mentors::ng-deep .component-wrapper  .component-wrapper {
-        @include bgColor(neutral-900);
+        @include bgColor(neutral-700);
         @include darkHighlightBoxStyling();
     }
     .content-block {

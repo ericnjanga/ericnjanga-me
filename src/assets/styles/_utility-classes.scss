@@ -37,7 +37,7 @@
         }
 
         li::before {
-            border: 1px solid map-get($colors, neutral-900);
+            border: 1px solid map-get($colors, neutral-700);
             content: "";
             display: inline-block;
             position: absolute;
@@ -108,70 +108,7 @@
  * --------------------------------------------------
 */
 @layer components.buttons {
-
-    .button-primary {
-        display: flex;
-        @include rem(gap, 10px);
-        font-weight: 700;
-        text-transform: uppercase;
-        @include color(accent-100);
-
-        .icon {
-            display: block;
-            @include color(accent-100);
-            width: 20px;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        &:hover {
-            text-decoration: none;
-            @include color(accent-100);
-
-            .icon {
-                transform: translateX(10px);
-            }
-        }
-    }
-
-    .button-primary--large {
-        @include rem(font-size, 20px);
-
-        .icon {
-            width: 30px;
-        }
-    }
-
-
-    .button-secondary {
-        padding-left: 0;
-        padding-right: 0;
-        border-width: 0px;
-        font-weight: 500;
-        text-decoration: underline;
-        background-color: transparent;
-        @include color(gray1);
-
-        &:hover {
-            text-decoration: none;
-        }
-
-        .icon svg {
-            width: 16px;
-        }
-    }
-
-    .button-secondary--up {
-        .icon svg {
-            transform: rotate(-90deg);
-        }
-    }
-
-    .button-secondary--down {
-        .icon svg {
-            transform: rotate(90deg);
-        }
-    }
-
+    @import './utility-buttons';
 }
 
 
@@ -186,13 +123,13 @@
 @layer utilities {
     .custom-tooltip-1 {
         .mdc-tooltip__surface {
-            @include bgColor(neutral-900);
+            @include bgColor(neutral-700);
         }
     }
 
     .custom-tooltip-2 {
         .mdc-tooltip__surface {
-            @include color(neutral-900);
+            @include color(neutral-700);
             @include bgColor(accent-100);
         }
     }

@@ -31,6 +31,11 @@ export interface Links {
     live: string;
     devProcessVideo: string;
 }
+export interface LinkItem {
+    name: string; 
+    url: string; 
+    icon: string;
+}
 
 export type imageType = 'phone' | 'tablet' | 'laptop' | 'monitor';
 

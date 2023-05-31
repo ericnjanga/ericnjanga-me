@@ -22,24 +22,28 @@
                     <div class="description">
                         <h3>The story behind the work</h3>
                         <p>{{project.descriptions.context}}</p>
+                        <br>
 
                         <h3>Challenges encountered</h3>
                         <p>{{project.descriptions.constraints}}</p>
+                        <br>
                     </div>
                     <div class="references">
                         <h3>In summary</h3>
                         <ul class="nice-bullet-list list-align-bullets-with-left-edge references">
                             <li>
-                                {{project.references.teamCount}} people's team
+                                <b>Team on the project:</b> {{project.references.teamCount}} people
                             </li>
                             <li>
-                                {{project.references.industry}} industry
+                                <b>Industry:</b> {{project.references.industry}}
                             </li>
                             <li>
-                                1 month's duration
+                                <b>Duration:</b> {{getDuration(project.references)}}
                             </li>
                             <li>
-                                <app-title-caption class="caption" [items]="project.tools"></app-title-caption>
+                                <b>Tools used:</b> <span *ngFor="let tool as Tool of project.tools; let last = last">
+                                    {{tool.title}}<span *ngIf="!last">, </span>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -55,6 +59,7 @@
                     <div class="contribution" *ngFor="let category as category of project.categories">
                         <h3>{{category.title}}</h3>
                         <p>{{category.projectContribution}}</p>
+                        <br>
                     </div>
                 </div>
             </app-reveal-content>
@@ -76,7 +81,9 @@
                 <p>Do you need more information about this project? Checkout the links below.</p>
                 <div class="links">
                     <a 
-                    *ngFor="let link of projLinks(project.links)"
+                        class="btn btn-secondary btn-icon"
+                        *ngFor="let link of projLinks(project.links)"
+                        [ngClass]="linkClass(link)"
                         [href]="link.url" 
                         target="_blank"
                     >{{link.name}}</a>

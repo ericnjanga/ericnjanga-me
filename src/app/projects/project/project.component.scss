@@ -31,12 +31,19 @@
         &::ng-deep .component-wrapper {
             // Styling of 1st content wrapper (that exists up to 720px)
             @container (max-width: 720px) { 
-                @include bgColor(neutral-900);
+                @include bgColor(neutral-700);
             }
             // Styling of 2nd (content source) content wrapper (that is always present)
             .component-wrapper {
-                @include bgColor(neutral-900);
+                @include bgColor(neutral-700);
                 @include darkHighlightBoxStyling();
+            }
+
+            .links {
+                margin-top: 30px;
+                display: flex;
+                gap: 15px;
+                flex-flow: wrap;
             }
         }
     }

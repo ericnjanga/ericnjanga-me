@@ -18,7 +18,7 @@
     .small__page-indicator {
         display: flex;
         align-items: center;
-        @include color(gray0);
+        @include color(neutral-700);
 
         .btn-back {
             position: relative;
@@ -33,7 +33,8 @@
     .btn-menu {
         // trigger button
         // hamburger
-        @include colorIm(neutral-900);
+        @include colorIm(neutral-700);
+        border: 20px solid red;
     }
 
     .btn-menu[aria-expanded="true"] {
