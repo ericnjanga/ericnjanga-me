@@ -33,23 +33,30 @@
 */
 @mixin darkHighlightBoxStyling() {
     .component-title {
-        color: rgb(49, 168, 103);
+        @include color(primary-200);
     }
     p {
-        color: rgb(106, 182, 20);
+        @include color(neutral-250);
     }
 
     .mentors__quote::ng-deep {
         .title-wrapper__heading,
         .title-wrapper__subtitle {
-            color: rgb(182, 20, 179)!important;
+            @include colorIm(accent-200);
         }
         .title-wrapper {
-            border-left: 2px solid #bbff00!important;
+            border-left: 2px solid var(--clr-accent-200)!important;
         }
         .title-wrapper__subtitle.isQuote::before,
         .title-wrapper__subtitle.isQuote::after {
-            color: #ff4f4f!important;
+            @include colorIm(accent-200);
+        }
+        .title-wrapper__heading {
+            margin-bottom: 10px!important;
+            font-weight: 700;
+        }
+        .title-wrapper__subtitle.isQuote{
+            line-height: 1.4rem;
         }
     } 
 }

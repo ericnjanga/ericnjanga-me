@@ -27,7 +27,6 @@
                 $grid-w: 644px;
                 $poster-w: 300px;
                 // ...
-                border: 4px solid purple;
                 display: grid;
                 grid-template-columns: $poster-w auto $poster-w;
                 width: $grid-w;

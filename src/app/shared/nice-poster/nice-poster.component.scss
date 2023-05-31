@@ -13,7 +13,7 @@ $comp-w: map-get($components-size, nice-post-w);
         width: 302px;
         height: 193px;
         @include gobalBorderRadius();
-        background: blue;
+        @include bgColor(neutral-350);
     }
 
     //  Title ...
@@ -28,17 +28,14 @@ $comp-w: map-get($components-size, nice-post-w);
         
         ::ng-deep app-icon {
             svg {
-                // @include color(primary);
-                color: orangered;
+                @include color(neutral-350);
             }    
         }
     }
 
     //  Subtitle ...
     .title-wrapper__subtitle {
-        // font-weight: 500;
-    //    @include color(gray1);
-        color: orchid;
+        @include color(neutral-350);
     }
 }
 
@@ -52,17 +49,19 @@ $comp-w: map-get($components-size, nice-post-w);
 
 
     a {
-        // @include color(primary-800);
-        color: aqua;
+        @include color(neutral-350);
         text-decoration: none;
+
+        .title-wrapper__heading {
+            @include color(neutral-250);
+        }
         &:hover {
             .title-wrapper__heading {
-                @include color(state4);
+                @include color(accent-200);
                 text-decoration: underline;
                 ::ng-deep app-icon {
                     svg {
-                        color:chocolate;
-                        // @include color(state4);
+                        @include color(accent-200);
                     }
                 }
             }
