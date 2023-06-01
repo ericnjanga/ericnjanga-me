@@ -64,20 +64,20 @@
 
     // Decorate image for smaller container sizes
     @container (min-width: 541px) and (max-width: 720px) {
-        img {
-            @include rem(max-width, 560px);
+        .img-wrapper { 
+            max-width: 560px;
         }
     }
 
     @container (max-width: 540px) {
-        img {
-            @include rem(max-width, 400px);
+        .img-wrapper { 
+            max-width: 400px;
         }
     }
     @container (max-width: 720px) {
-        img {
-            @include rem(margin-top, 20px);
-            @include rem(margin-bottom, 20px);
+        .img-wrapper {
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
     }
 
