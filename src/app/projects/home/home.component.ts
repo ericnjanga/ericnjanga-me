@@ -11,10 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent {
   
-  totalCount: number | undefined;
-  uxdCount: number | undefined;
-  uidCount: number | undefined;
-
+  uxdProjects: Project[] = [];
+  devProjects: Project[] = [];
   projects: Project[] = [];
   heroImgType = 'phone';
   heroImg = './../../../assets/img/project-25-hero.png';
@@ -47,14 +45,13 @@ export class HomeComponent {
   }
 
   loadCounters() {
-    this.projectService.loadAll('published', 'all').subscribe((obj) => {
-      this.totalCount = obj.total;
-    });
     this.projectService.loadAll('published', 'ux-design').subscribe((obj) => {
-      this.uxdCount = obj.total;
+      this.uxdProjects = obj.payload;
     });
     this.projectService.loadAll('published', 'ui-development').subscribe((obj) => {
-      this.uidCount = obj.total;
+      this.devProjects = obj.payload;
+
+      console.log('..... this.devProjects = ', this.devProjects);
     });
   }
 
