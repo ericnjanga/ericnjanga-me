@@ -47,4 +47,40 @@
             }
         }
     }
+
+
+    .section-links {
+        --box-height: 700px;
+        --content-txt-top-gap: 0px;
+        --content-txt-bottom-gap: 20px;
+        &::ng-deep .component-wrapper {
+            // Styling of 2nd (content source) content wrapper (that is always present)
+            .component-wrapper {
+                // ...
+                max-height: var(--box-height);
+                overflow: hidden;
+
+                .content-text {
+                    margin-top: var(--content-txt-top-gap);
+                    margin-bottom: var(--content-txt-bottom-gap);
+                }
+
+                @container (min-width: 1141px) {
+                    --content-txt-top-gap: 60px;
+                }
+            
+                @container (min-width: 961px) and (max-width: 1140px) {
+                    --content-txt-top-gap: 30px;
+                }
+            
+                @container (min-width: 721px) and (max-width: 960px) {
+                    --content-txt-top-gap: 30px;
+                }
+                @container (min-width: 721px) {
+                    --box-height: 500px;
+                    --content-txt-bottom-gap: 0;
+                }
+            }
+        }
+    }
 }
