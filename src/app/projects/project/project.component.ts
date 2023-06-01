@@ -28,6 +28,10 @@ export class ProjectComponent {
     return `img-${prefix}--${img.type}`;
   }
 
+  getBodyImg(proj: Project) {
+    return proj.images.body;
+  }
+
   // ...
   projectStatusTitle(links: Links) {
     let message = '';
