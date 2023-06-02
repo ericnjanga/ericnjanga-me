@@ -10,35 +10,35 @@
         justify-content: center;
         height: map-get($gap, appFooter);
         border-top: 1px solid var(--clr-neutral-250);
-        @include bgColor(pure-white);
+        @include bgColor(neutral-700);
     }
 
-    .spacer {
-        display: block;
-        margin-bottom: 30px;
-    }
-
-    .wrapper {
-        width: 323px;
-    }
-
-    .caption {
-        @include type-caption();
-    }
-
-    // ::ng-deep app-icon {
-    //     @include color(primary-600);
+    // .spacer {
+    //     display: block;
+    //     margin-bottom: 30px;
     // }
 
+    // .wrapper {
+    //     width: 323px;
+    // }
+
+    // .caption {
+    //     @include type-caption();
+    // }
+
+    // // ::ng-deep app-icon {
+    // //     @include color(primary-600);
+    // // }
 
 
 
-    /**
-    * TODO: Footer link hover
-    * ------
-    * It needs to be done
-    */
-    .list-inline-item:not(:last-child) {
-        margin-right: 1.875rem;
-    }
+
+    // /**
+    // * TODO: Footer link hover
+    // * ------
+    // * It needs to be done
+    // */
+    // .list-inline-item:not(:last-child) {
+    //     margin-right: 1.875rem;
+    // }
 }
