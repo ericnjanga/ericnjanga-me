@@ -32,6 +32,8 @@
  * Styling for dark boxes
 */
 @mixin darkHighlightBoxStyling() {
+
+    // ...
     .component-title {
         @include color(primary-200);
     }
