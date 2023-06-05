@@ -55,3 +55,28 @@
         @include action1();
     }
 }
+
+.browser-query {
+    $bp5: 1400px;
+    $bp4: 1200px;
+    $bp3: 992px;
+    $bp2: 768px;
+    $bp1: 576px;
+
+
+    @media (min-width: $bp5) {
+        // ...
+    }
+    @media (min-width: $bp4) and (max-width: ($bp5 - 1)) {
+        // ...
+    }
+    @media (min-width: $bp3) and (max-width: ($bp4 - 1)) {
+        // ...
+    }
+    @media (min-width: $bp2) and (max-width: ($bp3 - 1)) {
+        // ...
+    }
+    @media (min-width: $bp1) and (max-width: ($bp2 - 1)) {
+        // ...
+    }
+}
