@@ -13,11 +13,8 @@ export class AppComponent {
 
   ngOnInit() {
 
-    console.log('-app ngOnInit');
-
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        console.log('--nav end');
         this.currentRoute = event.url;
       }
     });

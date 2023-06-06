@@ -13,10 +13,6 @@ export class InMemoryDataService implements InMemoryDbService {
   
   // Generate an array of random projects
   createDb(reqInfo?: RequestInfo) {
-
-    console.log('createDb().....', reqInfo);
-
-    // return {projects}; // product endpoint
     return { projects: this.projects };
   }
 

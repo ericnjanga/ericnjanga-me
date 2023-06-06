@@ -50,8 +50,6 @@ export class HomeComponent {
     });
     this.projectService.loadAll('published', 'ui-development').subscribe((obj) => {
       this.devProjects = obj.payload;
-
-      console.log('..... this.devProjects = ', this.devProjects);
     });
   }
 
