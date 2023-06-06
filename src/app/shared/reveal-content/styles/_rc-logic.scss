@@ -4,7 +4,7 @@
 // ...
 .component-wrapper:not(.is-container-query) { 
     .reveal-content__footer {
-        display: block;
+        display: flex;
     }
     &.content-masked {
         .reveal-content { 

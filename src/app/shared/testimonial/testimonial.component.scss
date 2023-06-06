@@ -5,8 +5,10 @@
 
     .testimonial {
         width: 100%;
-        @include rem(padding, 20px);
-        border-radius: 20px;
+        padding: 20px;
+        padding-bottom: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         overflow: hidden;
         @include bgColor(pure-white);
 
@@ -91,7 +93,8 @@
 
     @container (min-width: 790px) {
         .testimonial {
-            @include rem(padding, 40px);
+            padding: 40px;
+            padding-bottom: 0;
         }
     }
 
