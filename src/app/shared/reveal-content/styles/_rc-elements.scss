@@ -1,16 +1,40 @@
  
 
+.reveal-content__footer {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #fff;
+
+    padding: 15px 20px;
+    align-items: center;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: calc(100% - 40px);
+        height: 1px;
+        left: 20px;
+        top: 0;
+        @include bgColor(neutral-250);
+    }
+
+}
+
 .btn {
+
+    padding: 10px 20px;
+    font-size: 14px;
+
+
+
     display: block;
-    width: 100%;
+    // width: 100%;
     text-align: right;
-    padding: 15px 25px;
     // background: #ccc;
     @include bgColor(neutral-250);
     @include color(neutral-700);
     text-decoration: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 20px;
 }

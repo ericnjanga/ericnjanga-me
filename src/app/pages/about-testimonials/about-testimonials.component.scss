@@ -6,7 +6,7 @@
 .content-block {
     display: block;
     border: 1px solid var(--clr-neutral-250);
-    @include gobalBorderRadius('medium');
+    border-radius: 20px;
     @include rem(margin-bottom, 15px);
 }
 
