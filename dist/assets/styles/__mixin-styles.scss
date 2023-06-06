@@ -16,7 +16,7 @@
         overflow: hidden;
         background-color: #fff; // bg
         border: 1px solid var(--clr-neutral-250); // border
-        @include gobalBorderRadius('medium'); // ...
+        @include gobalBorderRadius('large'); // ...
         @include rem(margin-bottom, 15px);  // bottom spacing
     }
 
@@ -61,6 +61,7 @@
             line-height: 1.4rem;
         }
     } 
+
 }
 
 

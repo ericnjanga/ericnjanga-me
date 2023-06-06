@@ -3,7 +3,7 @@
 // Toggle content anytime
 // ...
 .component-wrapper:not(.is-container-query) { 
-    .btn {
+    .reveal-content__footer {
         display: block;
     }
     &.content-masked {
@@ -20,7 +20,7 @@
 // ...
 .component-wrapper.is-container-query {
     @container (min-width: 936px) {
-        .btn {
+        .reveal-content__footer {
             display: none;
         }
     }
@@ -33,8 +33,8 @@
             }
         }
         
-        .btn {
-            display: block;
+        .reveal-content__footer {
+            display: flex;
         }
     }
 }

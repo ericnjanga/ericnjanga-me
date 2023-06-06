@@ -6,7 +6,7 @@
     .testimonial {
         width: 100%;
         @include rem(padding, 20px);
-        @include gobalBorderRadius('medium');
+        border-radius: 20px;
         overflow: hidden;
         @include bgColor(pure-white);
 
