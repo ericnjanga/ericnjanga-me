@@ -4,9 +4,11 @@
     
             <ng-content></ng-content>
         </div>
-    
-        <button class="btn button-secondary" (click)="toggleMask()">
-            {{ showContent ? 'Read less' : 'Read more' }}
-        </button>
+
+        <footer class="reveal-content__footer">
+            <button class="btn button-secondary" (click)="toggleMask()">
+                {{ showContent ? 'Read less' : 'Read more' }}
+            </button>
+        </footer>
     </div>
 </div>
