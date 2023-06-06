@@ -28,6 +28,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { RevealContentComponent } from './reveal-content/reveal-content.component';
 import { HighlightSectionTextImgComponent } from './highlight-section-text-img/highlight-section-text-img.component';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+
 
 
 
@@ -66,6 +68,7 @@ import { HighlightSectionTextImgComponent } from './highlight-section-text-img/h
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,
+    MatBottomSheetModule,
   ],
   exports: [
     IconComponent,

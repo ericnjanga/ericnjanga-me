@@ -12,6 +12,12 @@
             grid-column-gap: 20px;
         }
         p, ul, a {
+            @include color(neutral-250);
+        }
+        a:hover {
+            @include color(accent-100);
+        }
+        .motto, .copyright {
             @include color(neutral-350);
         }
     }
