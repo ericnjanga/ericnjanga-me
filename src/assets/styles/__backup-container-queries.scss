@@ -3,6 +3,7 @@
 
 /**
  *  MAIN CONTAINER BREAKPOINTS
+ * <div class="container"></div> width in relationship to viewport
  * - .container's width remains fixed until the viewport space allows it to reach the next width
  * (NOTE: @container property is not yet recognize by VSCode, so #$transition-breakpoint {} doesn't work)
  * ---------
