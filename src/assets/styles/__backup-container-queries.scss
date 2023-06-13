@@ -12,7 +12,6 @@
      width 3: 960px
      width 4: 1140px
 */
-
 .yy-container {
     @container (min-width: 1141px) {
     }
@@ -27,6 +26,36 @@
     }
 
     @container (max-width: 540px) {
+    }
+}
+
+
+/**
+ *  BROWSER BREAKPOINTS
+ * ---------
+*/
+.browser-query {
+    $bp5: 1400px;
+    $bp4: 1200px;
+    $bp3: 992px;
+    $bp2: 768px;
+    $bp1: 576px;
+
+
+    @media (min-width: $bp5) {
+        // ...
+    }
+    @media (min-width: $bp4) and (max-width: ($bp5 - 1)) {
+        // ...
+    }
+    @media (min-width: $bp3) and (max-width: ($bp4 - 1)) {
+        // ...
+    }
+    @media (min-width: $bp2) and (max-width: ($bp3 - 1)) {
+        // ...
+    }
+    @media (min-width: $bp1) and (max-width: ($bp2 - 1)) {
+        // ...
     }
 }
 
@@ -54,30 +83,5 @@
     // From zero to small ...
     @container (max-width: 540px) {
         @include action1();
-    }
-}
-
-.browser-query {
-    $bp5: 1400px;
-    $bp4: 1200px;
-    $bp3: 992px;
-    $bp2: 768px;
-    $bp1: 576px;
-
-
-    @media (min-width: $bp5) {
-        // ...
-    }
-    @media (min-width: $bp4) and (max-width: ($bp5 - 1)) {
-        // ...
-    }
-    @media (min-width: $bp3) and (max-width: ($bp4 - 1)) {
-        // ...
-    }
-    @media (min-width: $bp2) and (max-width: ($bp3 - 1)) {
-        // ...
-    }
-    @media (min-width: $bp1) and (max-width: ($bp2 - 1)) {
-        // ...
     }
 }
