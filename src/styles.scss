@@ -1,25 +1,38 @@
-// Layers:
-// Definition by order of specificity (the last layer to be specified overrides the ones specified earlier)
-@layer framework,
-base,
-utilities,
-components;
-
-@layer components {
-    @layer footer,
-    icons,
-    buttons;
-}
-
-// Root typography
-@layer base {
-    @import './assets/styles/vars';
-    @import './assets/styles/colours';
-    @import './assets/styles/typography';
-    @import './assets/styles/utility-classes';
-    @import './assets/styles/body-setup';
-}
 
 @layer framework {
     @import '../node_modules/bootstrap/scss/bootstrap';
 }
+
+@layer base {
+    @import './assets/styles/base/layout-global';
+    @import './assets/styles/base/variables';
+    @import './assets/styles/base/layout-variables';
+}
+
+
+
+// // Layers:
+// // Definition by order of specificity (the last layer to be specified overrides the ones specified earlier)
+// @layer framework,
+// base,
+// utilities,
+// components;
+
+// @layer components {
+//     @layer footer,
+//     icons,
+//     buttons;
+// }
+
+// // Root typography
+// @layer base {
+//     @import './assets/styles/vars';
+//     @import './assets/styles/colours';
+//     @import './assets/styles/typography';
+//     @import './assets/styles/utility-classes';
+//     @import './assets/styles/body-setup';
+// }
+
+// @layer framework {
+//     @import '../node_modules/bootstrap/scss/bootstrap';
+// }

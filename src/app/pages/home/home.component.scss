@@ -1,15 +1,46 @@
 
-@import './../../../assets/styles/mixins';
 
 
-app-hero {
-    display: block;
+@layer home {
+    .hero {
+        text-align: var(--enjanga-hero-text-align);
+        padding-top: var(--enjanga-hero-padding-y);
+        padding-bottom: var(--enjanga-hero-padding-y);
+        background-color: var(--enjanga-clr-hero-bg);
+    
+        .text-wrapper {
+            margin: 0 var(--enjanga-hero-txtWrapMargW);
+            max-width: var(--enjanga-hero-txtWrapMaxW);
+        }
+    
+        h1 {
+            color: var(--enjanga-clr-hero-h1);
+        }
+        p {
+            color: var(--enjanga-clr-hero-p);
+        }
+        .main-character {
+            display: var(--enjanga-hero-main-character-dislay);
+        }
+        .ellipse {
+            display: var(--enjanga-hero-ellipse-dislay);
+        }
+    }
 }
 
-h1 {
-    @include rem(margin-top, 100px);
-    // @include rem(margin-bottom, 100px);
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 560px;
+
+
+@layer home {
+    .latest-case-study {
+        padding-top: var(--enjanga-section-cs-padding-y);
+        padding-bottom: var(--enjanga-section-cs-padding-y);
+        margin: 0 var(--enjanga-hero-txtWrapMargW);
+        max-width: var(--enjanga-section-cs-txtWrapMaxW);
+
+    }
 }
+
+
+
+
+

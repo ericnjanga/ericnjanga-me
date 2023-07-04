@@ -1,12 +1,6 @@
-@import './../../../assets/styles/variables';
-@import './../../../assets/styles/mixins';
 
-@layer components.appBar {
-    @import './styles/core';
-    @import './styles/core-smallBar';
-    @import './styles/core-largeBar';
-}
 
-::host {
-    display: block;
+.enjnaga-navbar {
+    // position: var(--enjanga-navbar-position);
+    background-color: var(--enjanga-clr-nav-bg);
 }
