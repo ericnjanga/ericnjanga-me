@@ -1,16 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { MatMenuModule } from '@angular/material/menu';
-
-
-
-// Additional packages
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './projects/services/in-memory-data/in-memory-data.service';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,6 +20,7 @@ import { AboutMentorsComponent } from './pages/about-mentors/about-mentors.compo
 import { AboutTestimonialsComponent } from './pages/about-testimonials/about-testimonials.component';
 import { TypescaleComponent } from './pages-static/typescale/typescale.component';
 import { CaseStudiesModule } from './case-studies/case-studies.module';
+
 
 @NgModule({
   declarations: [
