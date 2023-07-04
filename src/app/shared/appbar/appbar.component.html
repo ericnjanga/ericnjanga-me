@@ -6,7 +6,8 @@
     </button>
     <div class="collapse navbar-collapse"
       [@collapseAnimation]="isCollapsed ? 'closed' : 'open'"
-      (@collapseAnimation.done)="onAnimationDone($event)">
+      (@collapseAnimation.done)="onAnimationDone($event)"
+      [ngClass]="{ 'show': !isCollapsed }">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a href="https://www.linkedin.com/in/ericnjanga/">LinkedIn</a>
@@ -14,11 +15,7 @@
         <li class="nav-item">
           Theme color
         </li>
-        
       </ul>
     </div>
   </div>
 </nav>
-
-
-
