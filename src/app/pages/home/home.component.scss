@@ -1,22 +1,11 @@
 
 @layer home {
     .hero {
-        text-align: var(--enjanga-hero-text-align);
-        padding-top: var(--enjanga-hero-padding-y);
-        padding-bottom: var(--enjanga-hero-padding-y);
-        background-color: var(--enjanga-clr-hero-bg);
-    
         .text-wrapper {
             margin: 0 var(--enjanga-hero-txtWrapMargW);
             max-width: var(--enjanga-hero-txtWrapMaxW);
         }
-    
-        h1 {
-            color: var(--enjanga-clr-hero-h1);
-        }
-        p {
-            color: var(--enjanga-clr-hero-p);
-        }
+     
         .main-character {
             display: var(--enjanga-hero-main-character-dislay);
         }

@@ -9,6 +9,10 @@
     @import './assets/styles/base/layout-variables';
 }
 
+@layer components {
+    @import './assets/styles/aesthetics/components/hero';
+}
+
 
 
 // // Layers:
