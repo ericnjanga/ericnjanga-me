@@ -28,6 +28,7 @@ import { AboutProfessionalQualitiesComponent } from './pages/about-professional-
 import { AboutMentorsComponent } from './pages/about-mentors/about-mentors.component';
 import { AboutTestimonialsComponent } from './pages/about-testimonials/about-testimonials.component';
 import { TypescaleComponent } from './pages-static/typescale/typescale.component';
+import { CaseStudiesModule } from './case-studies/case-studies.module';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { TypescaleComponent } from './pages-static/typescale/typescale.component
     MatMenuModule,
     SharedModule,
     ProjectsModule,
+    CaseStudiesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

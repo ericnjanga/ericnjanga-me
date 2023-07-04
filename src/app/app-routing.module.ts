@@ -19,18 +19,23 @@ const routes: Routes = [
     redirectTo: '/home', 
     pathMatch: 'full' // if the path is an exact match
   },
+  { path: 'home', component: HomeComponent },
   { 
-    path: 'projects', 
-    loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule),
+    path: 'case-studies', 
+    loadChildren: () => import('./case-studies/case-studies.module').then(m => m.CaseStudiesModule),
     data: {
       preload: false
     }
   },
-  { path: 'home', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-
-
-  { path: 'typescale', component: TypescaleComponent },
+  // { 
+  //   path: 'projects', 
+  //   loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule),
+  //   data: {
+  //     preload: false
+  //   }
+  // },
+  // { path: 'login', component: LoginComponent },
+  // { path: 'typescale', component: TypescaleComponent },
 
   /**
    * TODO: About should have it's own module
