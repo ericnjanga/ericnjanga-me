@@ -1,5 +1,5 @@
-import { Component, Input, Renderer2, ElementRef  } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component, HostBinding, Renderer2, ElementRef } from '@angular/core';
+import { trigger, state, style, animate, transition, AnimationEvent } from '@angular/animations';
 import { Location } from '@angular/common';
 
 @Component({
@@ -7,7 +7,7 @@ import { Location } from '@angular/common';
   templateUrl: './appbar.component.html',
   styleUrls: ['./appbar.component.scss'],
 
-  // Aniamtion settings
+  // Animation settings
   animations: [
     trigger('collapseAnimation', [
       state('open', style({
@@ -17,40 +17,29 @@ import { Location } from '@angular/common';
       state('closed', style({
         height: '0',
         visibility: 'hidden',
-        // overflow: 'hidden',
+        overflow: 'hidden',
       })),
       transition('open <=> closed', animate('250ms ease-in-out')),
     ]),
-  ]
+  ],
 
 })
 export class AppbarComponent {
-  @Input() currentRoute!: string;
   isCollapsed = true;
+  @HostBinding('class.show') isExpanded = false;
 
-  // Navigate the user back to the previous route 
-  goBack() {
-    this.location.back();
-  }
-
-
-  isChildRouteOf(parents:string[], route:string): boolean {
-    let isChild = parents.filter((p) => {
-      const childRoutes = this.currentRoute.split(`/${p}/`);
-      return childRoutes[0]=='' && childRoutes[1]!==undefined;
-    });
-
-    return !!isChild[0];
-  }
+  constructor(private location: Location, private renderer: Renderer2, private elementRef: ElementRef) { }
 
   toggleNavbar() {
     this.isCollapsed = !this.isCollapsed;
-    // const navbarCollapse = this.elementRef.nativeElement.querySelector('.navbar-collapse');
-    // this.renderer.addClass(navbarCollapse, 'show');
+    this.isExpanded = !this.isCollapsed; // Add this line to properly set isExpanded
   }
-  
 
-  constructor(private location: Location, private renderer: Renderer2, private elementRef: ElementRef) {
-
+  onAnimationDone(event: AnimationEvent) {
+    if (event.toState === 'open') {
+      this.isExpanded = true;
+    } else {
+      this.isExpanded = false;
+    }
   }
 }

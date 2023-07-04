@@ -4,7 +4,9 @@
     <button class="navbar-toggler" (click)="toggleNavbar()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse"  [@collapseAnimation]="isCollapsed ? 'closed' : 'open'" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse"
+      [@collapseAnimation]="isCollapsed ? 'closed' : 'open'"
+      (@collapseAnimation.done)="onAnimationDone($event)">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a href="https://www.linkedin.com/in/ericnjanga/">LinkedIn</a>
@@ -20,79 +22,3 @@
 
 
 
-
-
-<!-- <div class="appbar-wrapper">
-  <div class="container bx-container">
-    <div class="row appbar-container">
-      <div class="col">
-
-
-
-        <nav class="small-nav">
-          <mat-toolbar class="toolbar">
-            <a class="logo" routerLink="/home">
-              <app-icon *ngIf="!isChildRouteOf(['about', 'projects'], currentRoute)" name="logo top"></app-icon>
-            </a>
-
-
-            <div 
-              (click)="goBack()"
-              class="small__page-indicator"
-              *ngIf="isChildRouteOf(['about', 'projects'], currentRoute)"
-            >
-              <button 
-                class="btn-back"
-                mat-icon-button
-              >
-                <mat-icon aria-hidden="false" aria-label="Back">arrow_back</mat-icon>
-              </button>
-              <span class="txt-body2">Back</span>
-            </div>
-
-            <span class="nav-spacer"></span>
-
-            <div class="menu" *ngIf="!isChildRouteOf(['about', 'projects'], currentRoute)">
-              <button mat-icon-button [matMenuTriggerFor]="menu" class="btn-menu" aria-label="Open menu">
-                <mat-icon>menu</mat-icon>
-              </button>
-              <mat-menu #menu="matMenu">
-                <button routerLink="/" mat-menu-item>Home</button>
-                <button routerLink="/about" mat-menu-item>About</button>
-                <button routerLink="/projects" [queryParams]="{ industry:'all' }" mat-menu-item>Projects</button>
-              </mat-menu>
-            </div>
-
-          </mat-toolbar>
-        </nav>
-
-
-        <nav class="large-nav">
-          <a routerLink="/home">
-            <app-icon name="logo top"></app-icon>
-          </a>
-
-          <ul class="menu-list">
-            <li>
-              <a routerLink="/home" routerLinkActive="menu-item-active">Home</a>
-            </li>
-            <li>
-              <a routerLink="/about" routerLinkActive="menu-item-active">About</a>
-            </li>
-            <li>
-              <a routerLink="/projects" routerLinkActive="menu-item-active" [queryParams]="{ industry: 'all' }">Projects</a>
-            </li>
-          </ul>
-        </nav>
-
-
-
-
-
-
-      </div>
-    </div>
-
-
-  </div>
-</div> -->
