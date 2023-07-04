@@ -8,6 +8,10 @@
     background-color: var(--enjanga-clr-footer-bg);
     
     .text-wrapper {
+        display: var(--enjanga-footer-txtWrap-display);
+        grid-template-rows: var(--enjanga-footer-txtWrap-gtr);
+        gap: var(--enjanga-footer-txtWrap-gap);
+
         margin: 0 var(--enjanga-footer-txtWrapMargW);
         max-width: var(--enjanga-footer-txtWrapMaxW);
     }

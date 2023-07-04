@@ -1,6 +1,4 @@
 
-
-
 @layer home {
     .hero {
         text-align: var(--enjanga-hero-text-align);
@@ -37,6 +35,9 @@
         margin: 0 var(--enjanga-hero-txtWrapMargW);
         max-width: var(--enjanga-section-cs-txtWrapMaxW);
 
+        .cta-image {
+            margin-top: var(--enjanga-section-cs-ctaImg-margTop);
+        }
     }
 }
 
