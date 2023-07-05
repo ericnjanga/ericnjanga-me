@@ -1,11 +1,10 @@
 <app-appbar></app-appbar>
 
+<div class="outlet-wrapper" [@routeAnimations]="prepareRoute(outlet)">
+    <app-messages></app-messages>
+    <app-loading [detectRoutingOngoing]="true"></app-loading>
 
-<app-messages></app-messages>
-<app-loading [detectRoutingOngoing]="true"></app-loading>
-
-<router-outlet></router-outlet>
-
-
+    <router-outlet #outlet="outlet"></router-outlet>
+</div>
 
 <app-footer></app-footer>

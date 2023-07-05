@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class CaseStudy1Component {
 
+
+
+
+  ngOnInit() {
+    // Set the scroll position to 0,0 when the component is initialized. 
+    window.scrollTo(0, 0);
+
+    // Set page title
+    // this.titleService.setTitle('Eric Njanga | About');
+  }
 }
