@@ -9,7 +9,6 @@ import { TwoSkillsComponent } from './two-skills/two-skills.component';
 import { CallToActionComponent } from './call-to-action/call-to-action.component';
 import { LogoComponent } from './logo/logo.component';
 import { BoxPresentationComponent } from './box-presentation/box-presentation.component';
-import { HeroComponent } from './hero/hero.component';
 import { MessagesComponent } from './messages/messages.component';
 import { LoadingComponent } from './loading/loading.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -41,7 +40,6 @@ import { FadeInSectionDirective } from './directives/fade-in-section.directive';
     CallToActionComponent,
     LogoComponent,
     BoxPresentationComponent,
-    HeroComponent,
     MessagesComponent,
     LoadingComponent,
     TextTimPipe,
@@ -75,7 +73,6 @@ import { FadeInSectionDirective } from './directives/fade-in-section.directive';
     CallToActionComponent,
     CallToActionParamsComponent,
     LogoComponent,
-    HeroComponent,
     MessagesComponent,
     LoadingComponent,
     TextTimPipe,

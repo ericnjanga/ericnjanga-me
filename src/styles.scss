@@ -15,6 +15,10 @@
     }
 }
 
+@layer layout {
+    @import './assets/styles/layouts/components/small-centered-block';
+}
+
 @layer components {
     @import './assets/styles/aesthetics/components/hero';
 }

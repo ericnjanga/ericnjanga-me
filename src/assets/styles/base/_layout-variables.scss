@@ -8,20 +8,27 @@
     --enjanga-navbar-position: fixed;
 
     // Hero
-    --enjanga-hero-text-align: center;
-    --enjanga-hero-main-character-dislay: none;
-    --enjanga-hero-ellipse-dislay: none;
-    --enjanga-hero-padding-y: 40px;
+    --enjanga-hero-text-align: left;
+    --enjanga-hero-main-character-dislay: block;
+    --enjanga-hero-img-wrapper-dislay: block;
+    --enjanga-hero-img-wrapper-align-items: end;
+    --enjanga-hero-ellipse-dislay: block;
+    --enjanga-hero-img-wrapper-width: 80%;
+    --enjanga-hero-padding-y: 20px;
     --enjanga-hero-txtWrapMaxW: 80%;
     --enjanga-hero-txtWrapMargW: auto;
+    --enjanga-hero-ellipse-top: 5%;
+    --enjanga-hero-ellipse-bottom: inherit;
+    --enjanga-hero-ellipse-width: 80%;
+    --enjanga-hero-container-dislay: block;
+    --enjanga-hero-container-gap: 30px;
 
     // (Home Page) Case study section
     --enjanga-home-cs-padding-y: 40px;
-    --enjanga-home-cs-txtWrapMaxW: 80%;
     --enjanga-home-cs-ctaImg-margTop: 30px;
 
     // Footer
-    --enjanga-footer-text-align: center;
+    --enjanga-footer-text-align: left;
     --enjanga-footer-txtWrapMaxW: 80%;
     --enjanga-footer-txtWrapMargW: auto;
     --enjanga-footer-padding-y: 40px;
@@ -32,13 +39,15 @@
     // Case study page
     --enjanga-case-study-margTop: 20px;
     --enjanga-case-study-section-wrapper-padding: 40px 0;
-    --enjanga-case-study-content-wrapper-txtWrapMaxW: 100%;
     --enjanga-case-study-boxAccent-padding: 20px;
     --enjanga-case-study-img-wrapper-padding: 20px;
 
     // Accent box
     --enjanga-box-accent-image-width: 100px;
     --enjanga-box-accent-content-width: 80%;
+
+    // Small centered content block
+    --enjanga-small-centered-block-width: 80%;
 
 }
 

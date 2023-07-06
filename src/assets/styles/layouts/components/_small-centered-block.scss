@@ -1,0 +1,38 @@
+
+
+@layer small-centered-block {
+
+    .small-centered-block {
+        max-width: var(--enjanga-box-accent-content-width);
+    }
+        
+    .small-centered-block {
+        margin: 0 auto;
+        max-width: var(--enjanga-small-centered-block-width);
+
+        // ...
+        @media (max-width: 335px) {
+            --enjanga-small-centered-block-width: 100%;
+        }
+    
+        @media (min-width: 1400px) {
+            border: 10px solid green; 
+            --enjanga-small-centered-block-width: 50ch;
+        }
+        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            border: 10px solid rgb(183, 0, 255); 
+            --enjanga-small-centered-block-width: 50ch;
+        }
+        @media (min-width: 992px) and (max-width: (1200px - 1)) {
+            border: 10px solid lime; 
+            --enjanga-small-centered-block-width: 50ch;
+        }
+        @media (min-width: 768px) and (max-width: (992px - 1)) {
+            border: 10px solid blue; 
+            --enjanga-small-centered-block-width: 50ch;
+        }
+        @media (min-width: 576px) and (max-width: (768px - 1)) {
+            border: 10px solid turquoise;
+        }
+    }
+}

@@ -2,7 +2,7 @@
 @layer home {
     .hero {
         .text-wrapper {
-            margin: 0 var(--enjanga-hero-txtWrapMargW);
+            // margin: 0 var(--enjanga-hero-txtWrapMargW);
             max-width: var(--enjanga-hero-txtWrapMaxW);
         }
      
@@ -22,7 +22,6 @@
         padding-top: var(--enjanga-home-cs-padding-y);
         padding-bottom: var(--enjanga-home-cs-padding-y);
         margin: 0 var(--enjanga-hero-txtWrapMargW);
-        max-width: var(--enjanga-home-cs-txtWrapMaxW);
 
         .cta-image {
             margin-top: var(--enjanga-home-cs-ctaImg-margTop);
