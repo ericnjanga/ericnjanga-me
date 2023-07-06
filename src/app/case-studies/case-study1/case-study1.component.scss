@@ -2,8 +2,25 @@
 
 @layer case-study {
     .section-wrapper {
-        border: 5px solid turquoise;
+        // border: 5px solid turquoise;
         padding: var(--enjanga-case-study-section-wrapper-padding);
+
+
+        @media (min-width: 1400px) {
+            border: 10px solid green;
+        }
+        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            /* // ... */
+        }
+        @media (min-width: 992px) and (max-width: (1200px - 1)) {
+            border: 10px solid lime;
+        }
+        @media (min-width: 768px) and (max-width: (992px - 1)) {
+            border: 10px solid blue;
+        }
+        @media (min-width: 576px) and (max-width: (768px - 1)) {
+            border: 10px solid turquoise;
+        }
     }
 
     .content-wrapper {
