@@ -7,11 +7,14 @@
     @import './assets/styles/base/layout-global';
     @import './assets/styles/base/variables';
     @import './assets/styles/base/layout-variables';
+    @import './assets/styles/aesthetics/base/body';
+    @import './assets/styles/aesthetics/framework-overrides/bs-utilities';
 }
 
 @layer components {
     @import './assets/styles/aesthetics/components/hero';
 }
+
 
 
 

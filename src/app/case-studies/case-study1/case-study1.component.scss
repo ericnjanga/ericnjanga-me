@@ -1,0 +1,40 @@
+
+
+@layer case-study {
+    .section-wrapper {
+        border: 5px solid turquoise;
+        padding: var(--enjanga-case-study-section-wrapper-padding);
+    }
+
+    .content-wrapper {
+        .img-wrapper {
+            margin-top: var(--enjanga-case-study-margTop);
+        }
+    }
+
+    .img-wrapper {
+        display: flex;
+        // width: 1320px;
+        // height: 580.521px;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .dd1 {
+        
+        border-radius: 6px;border-radius: 6px;
+        background: var(--dd-1, linear-gradient(360deg, #A7A7A7 0%, #C6C6C6 100%));
+    }
+
+    .bg-accent {
+        background-color: var(--enjanga-clr-case-study-bg-accent-bg);
+    }
+    .accent-title {
+        color: var(--enjanga-clr-case-study-bg-accent-title);
+    }
+    .accent-paragraph {
+        color: var(--enjanga-clr-case-study-bg-accent-paragraph);
+    }
+}

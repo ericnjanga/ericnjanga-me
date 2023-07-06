@@ -29,11 +29,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { RevealContentComponent } from './reveal-content/reveal-content.component';
 import { HighlightSectionTextImgComponent } from './highlight-section-text-img/highlight-section-text-img.component';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
-
-
-
-
-
+import { FadeInSectionDirective } from './directives/fade-in-section.directive';
 
 @NgModule({
   declarations: [
@@ -57,6 +53,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
     AppbarComponent,
     RevealContentComponent,
     HighlightSectionTextImgComponent,
+    FadeInSectionDirective,
   ],
   imports: [
     CommonModule,
@@ -89,6 +86,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
     AppbarComponent,
     RevealContentComponent,
     HighlightSectionTextImgComponent,
+    FadeInSectionDirective,
   ]
 })
 export class SharedModule { }

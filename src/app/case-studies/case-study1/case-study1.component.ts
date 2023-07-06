@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-case-study1',
@@ -7,8 +7,14 @@ import { Component } from '@angular/core';
 })
 export class CaseStudy1Component {
 
+  constructor(private elementRef: ElementRef) {}
 
-
+  scrollToSection(sectionId: string) {
+    const section = this.elementRef.nativeElement.querySelector(`#${sectionId}`);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
   ngOnInit() {
     // Set the scroll position to 0,0 when the component is initialized. 
