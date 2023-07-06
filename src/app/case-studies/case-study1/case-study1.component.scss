@@ -8,15 +8,19 @@
 
         @media (min-width: 1400px) {
             border: 10px solid green;
+            --enjanga-case-study-section-wrapper-padding: 80px 0;
         }
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            /* // ... */
+            border: 10px solid rgb(183, 0, 255);
+            --enjanga-case-study-section-wrapper-padding: 70px 0;
         }
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
             border: 10px solid lime;
+            --enjanga-case-study-section-wrapper-padding: 60px 0;
         }
         @media (min-width: 768px) and (max-width: (992px - 1)) {
             border: 10px solid blue;
+            --enjanga-case-study-section-wrapper-padding: 50px 0;
         }
         @media (min-width: 576px) and (max-width: (768px - 1)) {
             border: 10px solid turquoise;
@@ -24,9 +28,32 @@
     }
 
     .content-wrapper {
-        .img-wrapper {
-            margin-top: var(--enjanga-case-study-margTop);
+        margin: 0 auto;
+        max-width: var(--enjanga-case-study-content-wrapper-txtWrapMaxW);
+
+        @media (min-width: 1400px) {
+            border: 10px solid green; 
+            --enjanga-case-study-content-wrapper-txtWrapMaxW: 60ch;
         }
+        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            border: 10px solid rgb(183, 0, 255); 
+            --enjanga-case-study-content-wrapper-txtWrapMaxW: 60ch;
+        }
+        @media (min-width: 992px) and (max-width: (1200px - 1)) {
+            border: 10px solid lime; 
+            --enjanga-case-study-content-wrapper-txtWrapMaxW: 60ch;
+        }
+        @media (min-width: 768px) and (max-width: (992px - 1)) {
+            border: 10px solid blue; 
+            --enjanga-case-study-content-wrapper-txtWrapMaxW: 50ch;
+        }
+        @media (min-width: 576px) and (max-width: (768px - 1)) {
+            border: 10px solid turquoise;
+        }
+    }
+
+    .content-wrapper + .img-wrapper {
+        margin-top: var(--enjanga-case-study-margTop);
     }
 
     .img-wrapper {
@@ -41,7 +68,7 @@
 
     .dd1 {
         
-        border-radius: 6px;border-radius: 6px;
+        // border-radius: 6px;border-radius: 6px;
         background: var(--dd-1, linear-gradient(360deg, #A7A7A7 0%, #C6C6C6 100%));
     }
 

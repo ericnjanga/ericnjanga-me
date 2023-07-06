@@ -19,13 +19,13 @@
 
 @layer home {
     .latest-case-study {
-        padding-top: var(--enjanga-section-cs-padding-y);
-        padding-bottom: var(--enjanga-section-cs-padding-y);
+        padding-top: var(--enjanga-home-cs-padding-y);
+        padding-bottom: var(--enjanga-home-cs-padding-y);
         margin: 0 var(--enjanga-hero-txtWrapMargW);
-        max-width: var(--enjanga-section-cs-txtWrapMaxW);
+        max-width: var(--enjanga-home-cs-txtWrapMaxW);
 
         .cta-image {
-            margin-top: var(--enjanga-section-cs-ctaImg-margTop);
+            margin-top: var(--enjanga-home-cs-ctaImg-margTop);
         }
     }
 }
