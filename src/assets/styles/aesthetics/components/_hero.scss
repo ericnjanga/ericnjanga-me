@@ -46,7 +46,7 @@
 
 @layer hero {
     .hero {
-        .img-wrapper {
+        .hero-img-wrapper {
             @media (min-width: 1400px) {
                 border: 10px solid green; 
             }

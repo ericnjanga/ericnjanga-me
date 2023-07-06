@@ -9,6 +9,10 @@
     @import './assets/styles/base/layout-variables';
     @import './assets/styles/aesthetics/base/body';
     @import './assets/styles/aesthetics/framework-overrides/bs-utilities';
+
+    @layer layouts {
+        @import './assets/styles/layouts/base/countainer-queries';
+    }
 }
 
 @layer components {
