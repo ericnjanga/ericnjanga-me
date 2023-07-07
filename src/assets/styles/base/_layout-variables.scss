@@ -8,20 +8,27 @@
     --enjanga-navbar-position: fixed;
 
     // Hero
+    --enjanga-hero-padding-y: 40px;
     --enjanga-hero-text-align: left;
     --enjanga-hero-main-character-dislay: block;
     --enjanga-hero-img-wrapper-dislay: block;
     --enjanga-hero-img-wrapper-align-items: end;
     --enjanga-hero-ellipse-dislay: block;
     --enjanga-hero-img-wrapper-width: 80%;
-    --enjanga-hero-padding-y: 20px;
+    --enjanga-hero-text-wrapper-padding-y: 20px;
+    --enjanga-hero-text-wrapper-display: block;
+    --enjanga-hero-text-wrapper-justify-content: center;
+    --enjanga-hero-text-wrapper-flex-dir: column;
     --enjanga-hero-txtWrapMaxW: 80%;
     --enjanga-hero-txtWrapMargW: auto;
     --enjanga-hero-ellipse-top: 5%;
     --enjanga-hero-ellipse-bottom: inherit;
+    --enjanga-hero-ellipse-left: 50%;
     --enjanga-hero-ellipse-width: 80%;
     --enjanga-hero-container-dislay: block;
     --enjanga-hero-container-gap: 30px;
+    --enjanga-hero-text-wrapper-flex-basis: 400px;
+    --enjanga-hero-img-wrapper-flex: 1;
 
     // (Home Page) Case study section
     --enjanga-home-cs-padding-y: 40px;
