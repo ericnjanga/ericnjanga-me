@@ -1,6 +1,19 @@
 
 
-.enjnaga-navbar {
-    // position: var(--enjanga-navbar-position);
-    background-color: var(--enjanga-clr-nav-bg);
+
+@layer appbar {
+    .enjnaga-navbar {
+        background-color: var(--enjanga-clr-nav-bg);
+
+        .logo {
+            width: var(--enjanga-navbar-logo-width);
+            @media (min-width: 1200px) {
+                --enjanga-navbar-logo-width: 250px;
+            }
+            @media (min-width: 992px) and (max-width: 1199px) {
+                --enjanga-navbar-logo-width: 230px;
+            }
+        }
+    }
+ 
 }

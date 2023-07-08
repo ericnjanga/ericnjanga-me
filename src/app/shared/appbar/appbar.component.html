@@ -1,21 +1,42 @@
 <nav class="enjnaga-navbar navbar navbar-expand-lg bg-body-tertiary fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/">Navbar</a>
-    <button class="navbar-toggler" (click)="toggleNavbar()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <img class="logo img-fluid" src="./../../../assets/img/july2023/Logo.png" alt="Eric Njanga, Web Developer & Designer">
+    </a>
+    <button class="navbar-toggler hidden-on-lg-screens" 
+    (click)="toggleNavbar()" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+    aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse"
+    <div class="collapse navbar-collapse hidden-on-lg-screens"
       [@collapseAnimation]="isCollapsed ? 'closed' : 'open'"
       (@collapseAnimation.done)="onAnimationDone($event)"
       [ngClass]="{ 'show': !isCollapsed }">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a href="https://www.linkedin.com/in/ericnjanga/">LinkedIn</a>
+          <a href="mailto:eric.njanga@gmail.com">Email me</a>
         </li>
         <li class="nav-item">
           Theme color
         </li>
       </ul>
     </div>
+
+
+
+    <ul class="list-inline hidden-on-small-screens">
+      <li class="list-inline-item">
+        <a href="mailto:eric.njanga@gmail.com">Email me</a>
+      </li>
+      <li class="list-inline-item">
+        <button href="" class="btn btn-transparent" (click)="toggleColorScheme()">light</button>
+      </li>
+      <li class="list-inline-item">
+        <button href="" class="btn btn-transparent" (click)="toggleColorScheme()">dark</button>
+      </li>
+    </ul>
+
+
   </div>
 </nav>

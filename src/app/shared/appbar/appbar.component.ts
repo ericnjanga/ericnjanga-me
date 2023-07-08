@@ -1,4 +1,4 @@
-import { Component, HostBinding, Renderer2, ElementRef } from '@angular/core';
+import { Component, OnInit , HostBinding, Renderer2, ElementRef } from '@angular/core';
 import { trigger, state, style, animate, transition, AnimationEvent } from '@angular/animations';
 import { Location } from '@angular/common';
 
@@ -25,10 +25,27 @@ import { Location } from '@angular/common';
 
 })
 export class AppbarComponent {
+  darkMode = false;
   isCollapsed = true;
   @HostBinding('class.show') isExpanded = false;
 
   constructor(private location: Location, private renderer: Renderer2, private elementRef: ElementRef) { }
+
+  ngOnInit() {
+    this.detectColorScheme();
+  }
+
+  detectColorScheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      console.log('...dark')
+      this.darkMode = true;
+    }
+  }
+
+  toggleColorScheme() {
+    this.darkMode = !this.darkMode;
+    console.log('...dark = ', this.darkMode);
+  }
 
   toggleNavbar() {
     this.isCollapsed = !this.isCollapsed;
