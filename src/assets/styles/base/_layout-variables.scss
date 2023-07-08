@@ -6,6 +6,7 @@
 
     // Navbar
     --enjanga-navbar-position: fixed;
+    --enjanga-navbar-logo-width: 170px;
 
     // Hero
     --enjanga-hero-padding-y: 40px;
@@ -59,3 +60,13 @@
 }
 
 
+
+
+
+
+
+// Typography
+:root {
+    --enjanga-fs-h1: 2.3rem;
+    --enjanga-fs-h1-margin-bottom: 1rem;
+}

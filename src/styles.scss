@@ -8,6 +8,8 @@
     @import './assets/styles/base/variables';
     @import './assets/styles/base/layout-variables';
     @import './assets/styles/aesthetics/base/body';
+    @import './assets/styles/aesthetics/base/typography';
+    @import './assets/styles/aesthetics/base/utilities';
     @import './assets/styles/aesthetics/framework-overrides/bs-utilities';
 
     @layer layouts {
