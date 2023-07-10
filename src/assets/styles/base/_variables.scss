@@ -26,11 +26,13 @@
         
         // Footer
         --enjanga-clr-footer-bg: #003A34;
+        --enjanga-clr-footer-link: #fff;
+        --enjanga-clr-footer-svg: #79C5BD;
 
         // Box Accent 
         --enjanga-clr-box-accent-bg: #1A1A1A;
         --enjanga-clr-box-accent-title: #fff;
-        --enjanga-clr-box-accent-paragraph: #CACACA;
+        --enjanga-clr-box-accent-paragraph: #79C5BD;
 
         // Buttons
         --enjanga-clr-btn-primary: #141F1F;
@@ -41,7 +43,12 @@
         --enjanga-clr-btn-secondary-icon: #BAE3DF;
         --enjanga-clr-btn-secondary-bg: #141F1F;
 
+        // Case studies
+        --enjanga-clr-case-study-pre-title: #AA4D6A;
 
+        // Small centered content block
+        --enjanga-clr-small-centered-block-title: #141F1F;
+        --enjanga-clr-small-centered-block-p: #404F4B;
     }
 
     :root { /* Hero images */

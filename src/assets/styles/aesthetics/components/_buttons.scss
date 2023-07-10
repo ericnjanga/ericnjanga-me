@@ -20,6 +20,10 @@
         border-radius: var(--enjanga-btn-border-radius);
         padding-left: var(--enjanga-btn-padding-x);
         padding-right: var(--enjanga-btn-padding-x);
+
+        .icon {
+            margin-left: 5px;
+        }
     }
     .btn-primary {
         color: var(--enjanga-clr-btn-primary);
