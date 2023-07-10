@@ -1,0 +1,21 @@
+
+
+@layer bg-accent {
+    .bg-accent {
+        background-color: var(--enjanga-clr-box-accent-bg);
+    }
+    .bg-accent {
+        .image-accent {
+            width: var(--enjanga-box-accent-image-width);
+        }
+    
+        @container (min-width: 721px) {
+            --enjanga-box-accent-image-width: 150px;
+            --enjanga-box-accent-content-width: 40ch;
+        }
+
+        @container (min-width: 541px) and (max-width: 720px) {
+            --enjanga-box-accent-content-width: 40ch;
+        }
+    }
+}

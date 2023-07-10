@@ -1,0 +1,67 @@
+
+
+// .section-spacing {
+//     padding-top: var(--enjanga-section-spacing-y);
+//     padding-bottom: var(--enjanga-section-spacing-y);
+
+//     border: 20px solid chocolate;
+
+
+//     @media (min-width: 1400px) {
+//         border: 10px solid green;
+//         --enjanga-section-spacing-y: 120px;
+//     }
+//     @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+//         --enjanga-section-spacing-y: 100px;
+//     }
+//     @media (min-width: 992px) and (max-width: (1200px - 1)) {
+//         border: 10px solid lime;
+//         --enjanga-section-spacing-y: 80px;
+//     }
+//     @media (min-width: 768px) and (max-width: (992px - 1)) {
+//         border: 10px solid blue;
+//         --enjanga-section-spacing-y: 60px;
+//     }
+//     @media (min-width: 576px) and (max-width: (768px - 1)) {
+//         border: 10px solid turquoise;
+//     }
+// }
+
+
+
+
+
+
+.section-spacing-padd-y-top {
+    padding-top: var(--enjanga-section-spacing-y);
+}
+.section-spacing-padd-y-bottom {
+    padding-bottom: var(--enjanga-section-spacing-y);
+}
+.section-spacing-marg-y-top {
+    margin-top: var(--enjanga-section-spacing-y);
+}
+.section-spacing-marg-y-bottom {
+    margin-bottom: var(--enjanga-section-spacing-y);
+}
+
+.section-spacing-padd-y-top,
+.section-spacing-padd-y-bottom,
+.section-spacing-marg-y-top,
+.section-spacing-marg-y-bottom {
+    @media (min-width: 1400px) {
+        --enjanga-section-spacing-y: 120px;
+    }
+    @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+        --enjanga-section-spacing-y: 100px;
+    }
+    @media (min-width: 992px) and (max-width: (1200px - 1)) {
+        border: 10px solid lime;
+        --enjanga-section-spacing-y: 80px;
+    }
+    @media (min-width: 768px) and (max-width: (992px - 1)) {
+        --enjanga-section-spacing-y: 60px;
+    }
+    @media (min-width: 576px) and (max-width: (768px - 1)) {
+    }
+}

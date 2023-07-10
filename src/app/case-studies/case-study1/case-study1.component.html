@@ -1,12 +1,12 @@
 <header class="hero page-case-study">
-    <div class="container text-center" appFadeInSection>
+    <div class="container text-center">
         <div class="text-wrapper">
             <h1>
                 Transformation and realignment of a website with corporate strategy
             </h1>
         </div>
 
-        <div class="hero-img-wrapper">
+        <div class="hero-img-wrapper" appFadeInSection>
             <img class="img-fluid cta-image" src="./../../../assets/img/july2023/case-study-1.png" alt="">
         </div>
     </div>
@@ -16,10 +16,10 @@
 
 <main class="container page-case-study bx-container">
 
-    <section class="section-wrapper">
+    <section class="section-wrapper section-spacing-marg-y-top">
         <div class="small-centered-block">
             <header>
-                <h2>Transforming without compromising business objectives</h2>
+                <h2>Misalignment with business objectives and stagnant growth</h2>
             </header>
             <div appFadeInSection>
                 <p>“Over time, my website grew to become disorganized, with things scattered all over the place. 
@@ -28,7 +28,7 @@
                 <p class="fs-8">Viren Parmar (CEO of Karma Financial)</p>
         
                 <footer>
-                    <a class="btn btn-secondary btn-small" (click)="scrollToSection('customer-studies')">Customer Studies</a>
+                    <a class="btn btn-secondary btn-small" (click)="scrollToSection('customer-studies')">How I’m studying customers</a>
                     <a class="btn btn-primary btn-small">Slideshow</a>
                 </footer>
             </div>
@@ -39,7 +39,7 @@
         </div>
     </section>
     
-    <section class="section-wrapper" id="customer-studies">
+    <section class="section-wrapper section-spacing-marg-y-top" id="customer-studies">
         <div class="small-centered-block">
             <header>
                 <h2>Putting customers at the center of the new solution</h2>
@@ -49,7 +49,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur atque vero culpa veniam molestiae a fuga voluptas ipsum voluptatem, necessitatibus quam nesciunt veritatis magnam commodi explicabo debitis rerum qui aut.</p>
         
                 <footer>
-                    <a class="btn btn-secondary btn-small" (click)="scrollToSection('a-tailored-solution')">A tailored solution</a>
+                    <a class="btn btn-secondary btn-small" (click)="scrollToSection('a-tailored-solution')">How I’m creating the solution</a>
                     <a class="btn btn-primary btn-small">Slideshow</a>
                 </footer>
             </div>
@@ -60,17 +60,7 @@
         </div>
     </section>
     
-    <section class="section-wrapper bg-accent rounded-3 text-center">
-        <div class="small-centered-block">
-            <img class="img-fluid image-accent" src="./../../../assets/img/july2023/Eric Njanga - v2.png" alt="">
-            <div appFadeInSection>
-                <h3 class="accent-title">No cookie cutters</h3>
-                <p class="accent-paragraph">“I research and test the solution on paper, then I’m creating a prototype to visualize the solution before finalizing the details”.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="section-wrapper" id="a-tailored-solution">
+    <section class="section-wrapper section-spacing-marg-y-top" id="a-tailored-solution">
         <div class="small-centered-block">
             <header>
                 <span class="fs-8">Creating a prototype</span>
@@ -81,7 +71,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur atque vero culpa veniam molestiae a fuga voluptas ipsum voluptatem, necessitatibus quam nesciunt veritatis magnam commodi explicabo debitis rerum qui aut.</p>
                 
                 <footer>
-                    <a class="btn btn-secondary btn-small" (click)="scrollToSection('accessibility')">Accessibility</a>
+                    <a class="btn btn-secondary btn-small" (click)="scrollToSection('accessibility')">How I’m making the solution accessible</a>
                     <a class="btn btn-primary btn-small">Slideshow</a>
                 </footer>
             </div>
@@ -92,7 +82,7 @@
         </div>
     </section>
     
-    <section class="section-wrapper" id="accessibility">
+    <section class="section-wrapper section-spacing-marg-y-top" id="accessibility">
         <div class="small-centered-block">
             <header>
                 <span class="fs-8">Accessibility</span>
@@ -114,10 +104,10 @@
         </div>
     </section>
     
-    <section class="section-wrapper" id="user-preferrences">
+    <section class="section-wrapper section-spacing-marg-y-top" id="user-preferrences">
         <div class="small-centered-block">
             <header>
-                <span class="fs-8">User Preferences</span>
+                <span class="fs-8">How I’m addressing user preferences</span>
                 <h2>Anticipating users’ preferences</h2>
             </header>
             
@@ -131,16 +121,22 @@
         </div>
     </section>
     
-    <section class="section-wrapper bg-accent rounded-3 text-center">
-        <div class="small-centered-block">
-            <img class="img-fluid image-accent" src="./../../../assets/img/july2023/Eric Njanga - v2.png" alt="">
-            <div appFadeInSection>
-                <h3 class="accent-title">Thank you for reading.</h3>
-                <p class="accent-paragraph">I research and test the solution on paper, then I’m creating a prototype to visualize the solution before finalizing the details.</p>
+
+    <div class="section-spacing-marg-y-top section-spacing-marg-y-bottom pt-0">
+        <section class="section-wrapper bg-accent rounded-3 text-center">
+            <div class="small-centered-block">
+                <img class="img-fluid image-accent" src="./../../../assets/img/july2023/Eric Njanga - v2.png" alt="">
+                <div appFadeInSection>
+                    <h3 class="accent-title">Book a consultation today</h3>
+                    <p class="accent-paragraph">I can transform the experience on your website to make it user-friendly, engaging, responsive, and drive business’ growth. </p>
+                </div>
             </div>
-        </div>
-        <footer appFadeInSection>
-            <a href="mailto:eric.njanga@gmail.com" class="btn btn-primary">Email me</a>
-        </footer>
-    </section>
+            <footer appFadeInSection>
+                <a target="_blank" href="https://calendly.com/enjanga/15min" class="btn btn-primary">Book a meeting</a>
+            </footer>
+        </section>
+    </div>
+
+
+    
 </main>

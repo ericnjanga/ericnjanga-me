@@ -1,6 +1,49 @@
 
 @layer hero {
     .hero {
+        padding-top: var(--enjanga-hero-padding-y);
+        padding-bottom: var(--enjanga-hero-padding-y);
+
+        @media (min-width: 1400px) {
+            --enjanga-hero-padding-y: 100px;
+        }
+        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            --enjanga-hero-padding-y: 80px;
+        }
+        @media (min-width: 992px) and (max-width: (1200px - 1)) {
+            --enjanga-hero-padding-y: 60px;
+        }
+        @media (min-width: 768px) and (max-width: (992px - 1)) {
+            --enjanga-hero-padding-y: 40px;
+        }
+    }
+}
+
+
+// @layer hero {
+//     .hero {
+//         .text-wrapper {
+//             @media (min-width: 1400px) {
+//                 border: 10px solid green; 
+//             }
+//             @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+//                 border: 10px solid rgb(183, 0, 255); 
+//             }
+//             @media (min-width: 992px) and (max-width: (1200px - 1)) {
+//                 border: 10px solid lime; 
+//             }
+//             @media (min-width: 768px) and (max-width: (992px - 1)) {
+//                 border: 10px solid blue; 
+//             }
+//             @media (min-width: 576px) and (max-width: (768px - 1)) {
+//                 border: 10px solid turquoise;
+//             }
+//         }
+//     }
+// }
+
+@layer hero {
+    .hero {
         text-align: var(--enjanga-hero-text-align);
         background-color: var(--enjanga-clr-hero-bg);
     
@@ -50,20 +93,6 @@
 
 @layer hero {
     .hero.page-home {
-        padding-top: var(--enjanga-hero-padding-y);
-
-        @media (min-width: 1400px) {
-            --enjanga-hero-padding-y: 100px;
-        }
-        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            --enjanga-hero-padding-y: 80px;
-        }
-        @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            --enjanga-hero-padding-y: 60px;
-        }
-        @media (min-width: 768px) and (max-width: (992px - 1)) {
-            --enjanga-hero-padding-y: 40px;
-        }
         .container {
             justify-content: space-between;
             display: var(--enjanga-hero-container-dislay);
@@ -81,20 +110,8 @@
                 flex-direction: var(--enjanga-hero-text-wrapper-flex-dir);
                 flex: var(--enjanga-hero-img-wrapper-flex);
 
-
-
-                // @media (min-width: 1400px) {
-                //     --enjanga-hero-text-wrapper-display: flex;
-                // }
-                // @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-                //     --enjanga-hero-padding-y: 80px;
-                // }
-                // @media (min-width: 992px) and (max-width: (1200px - 1)) {
-                //     --enjanga-hero-padding-y: 60px;
-                // }
                 @media (min-width: 768px) /* and (max-width: (992px - 1)) */ {
                     --enjanga-hero-text-wrapper-display: flex;
-                    // --enjanga-hero-padding-y: 40px;
                 }
 
                 
@@ -149,29 +166,6 @@
                 --enjanga-hero-ellipse-bottom: -30px;
                 background: red;
                 border: 10px solid blue;
-            }
-            @media (min-width: 576px) and (max-width: (768px - 1)) {
-                border: 10px solid turquoise;
-            }
-        }
-    }
-}
-
-
-@layer hero {
-    .hero {
-        .text-wrapper {
-            @media (min-width: 1400px) {
-                border: 10px solid green; 
-            }
-            @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-                border: 10px solid rgb(183, 0, 255); 
-            }
-            @media (min-width: 992px) and (max-width: (1200px - 1)) {
-                border: 10px solid lime; 
-            }
-            @media (min-width: 768px) and (max-width: (992px - 1)) {
-                border: 10px solid blue; 
             }
             @media (min-width: 576px) and (max-width: (768px - 1)) {
                 border: 10px solid turquoise;

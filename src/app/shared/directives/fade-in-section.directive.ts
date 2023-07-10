@@ -15,7 +15,8 @@ export class FadeInSectionDirective implements OnInit {
 
   ngOnInit() {
     const options = {
-      threshold: 0.85 // Adjust this value as needed
+      // threshold: 0.85 // Adjust this value as needed
+      threshold: 0.45 // Adjust this value as needed
     };
 
     const intersectionObserver = new IntersectionObserver((entries, observer) => {

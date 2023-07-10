@@ -13,7 +13,8 @@
     @import './assets/styles/aesthetics/framework-overrides/bs-utilities';
 
     @layer layouts {
-        @import './assets/styles/layouts/base/countainer-queries';
+        @import './assets/styles/layouts/base/container-queries';
+        @import './assets/styles/layouts/base/utilities';
     }
 }
 
@@ -23,6 +24,7 @@
 
 @layer components {
     @import './assets/styles/aesthetics/components/hero';
+    @import './assets/styles/aesthetics/components/bg-accent';
 }
 
 
