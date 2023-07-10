@@ -21,6 +21,7 @@
     --enjanga-hero-text-wrapper-justify-content: center;
     --enjanga-hero-text-wrapper-flex-dir: column;
     --enjanga-hero-text-wrapper-p-display: initial;
+    --enjanga-hero-text-wrapper-p-margin-bottom: 0;
     --enjanga-hero-txtWrapMaxW: 80%;
     --enjanga-hero-txtWrapMargW: auto;
     --enjanga-hero-ellipse-top: 5%;
@@ -37,6 +38,9 @@
     --enjanga-hero-footer-gap: 15px;
     --enjanga-hero-footer-margin-top: 20px;
     --enjanga-hero-footer-margin-bottom: 20px;
+
+    --enjanga-hero-case-study-txtWrapMaxW: 70ch;
+    --enjanga-hero-case-study-txtWrap-margin-bottom: 20px;
 
     // (Home Page) Case study section
     --enjanga-home-cs-ctaImg-margTop: 30px;
@@ -77,6 +81,6 @@
 
 // Typography
 :root {
-    --enjanga-fs-h1: 2.3rem;
+    --enjanga-fs-h1: 2.1rem;
     --enjanga-fs-h1-margin-bottom: 1rem;
 }

@@ -21,17 +21,23 @@
     h1 {
         font-size: var(--enjanga-fs-h1);
         margin-bottom: var(--enjanga-fs-h1-margin-bottom);
- 
-        @media screen and (min-width: 768px) {
-            --enjanga-fs-h1: 2.5rem;
+
+
+        @media (min-width: 1400px) {
+            --enjanga-fs-h1: 2.7rem;
+            // border: 10px solid green; 
         }
- 
-        @media screen and (min-width: 992px) {
-            --enjanga-fs-h1: 2.9rem;
+        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            --enjanga-fs-h1: 2.3rem;
         }
- 
-        @media screen and (min-width: 1200px) {
-            --enjanga-fs-h1: 3.3rem;
-        }
+        // @media (min-width: 992px) and (max-width: (1200px - 1)) {
+        //     border: 10px solid lime; 
+        // }
+        // @media (min-width: 768px) and (max-width: (992px - 1)) {
+        //     border: 10px solid blue; 
+        // }
+        // @media (min-width: 576px) and (max-width: (768px - 1)) {
+        //     border: 10px solid turquoise;
+        // }
     }
 }
