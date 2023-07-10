@@ -1,0 +1,40 @@
+
+// Links with icons
+@layer buttons {
+    .link-icon {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        svg path {
+            fill: var(--enjanga-clr-nav-svg);
+        }
+    }
+}
+
+
+// 
+@layer buttons {
+    .btn {
+        border-color: transparent;
+        border-radius: var(--enjanga-btn-border-radius);
+        padding-left: var(--enjanga-btn-padding-x);
+        padding-right: var(--enjanga-btn-padding-x);
+    }
+    .btn-primary {
+        color: var(--enjanga-clr-btn-primary);
+        background-color: var(--enjanga-clr-btn-primary-bg);
+    }
+    .btn-secondary {
+        color: var(--enjanga-clr-btn-secondary);
+        background-color: var(--enjanga-clr-btn-secondary-bg);
+
+        svg path {
+            fill: var(--enjanga-clr-nav-svg);
+        }
+    }
+}
+
+
+// --enjanga-clr-btn-primary: #FFF114;
+// --enjanga-clr-btn-secondary

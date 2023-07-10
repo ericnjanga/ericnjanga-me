@@ -1,6 +1,6 @@
 
 
-
+// Logo
 @layer appbar {
     .enjnaga-navbar {
         background-color: var(--enjanga-clr-nav-bg);
@@ -15,5 +15,43 @@
             }
         }
     }
- 
 }
+
+// Links
+@layer appbar {
+    .enjnaga-navbar {
+        a {
+            color: var(--enjanga-clr-nav-link);
+            text-decoration: none;
+        }
+    }
+}
+
+// Toggle button
+@layer appbar {
+    .enjnaga-navbar {
+        .navbar-toggler {
+            border: 1px solid var(--enjanga-clr-nav-menu);
+            .navbar-icon path {
+               fill: var(--enjanga-clr-nav-menu);
+            }
+        }
+    }
+}
+
+// Collapsible menu
+@layer appbar {
+    .enjnaga-navbar {
+        .collapse.navbar-collapse {
+            background-color: var(--enjanga-clr-nav-collapse-panel);
+
+            // menu items
+            .nav-item {
+                padding: 14px;
+            }
+        }
+    }
+}
+
+
+
