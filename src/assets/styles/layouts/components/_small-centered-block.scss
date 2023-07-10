@@ -6,12 +6,11 @@
         max-width: var(--enjanga-box-accent-content-width);
 
         footer {
-            // display: flex;
             gap: 10px;
             justify-content: center;
 
             @media (max-width: 767px) {
-                flex-direction: column;
+                flex-direction: column-reverse;
             }
         }
     }

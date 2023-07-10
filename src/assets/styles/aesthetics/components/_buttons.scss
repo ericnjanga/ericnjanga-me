@@ -28,10 +28,16 @@
     .btn-primary {
         color: var(--enjanga-clr-btn-primary);
         background-color: var(--enjanga-clr-btn-primary-bg);
+        &:hover {
+            background-color: var(--enjanga-clr-btn-primary-bg-hover);
+        }
     }
     .btn-secondary {
         color: var(--enjanga-clr-btn-secondary);
         background-color: var(--enjanga-clr-btn-secondary-bg);
+        &:hover {
+            background-color: var(--enjanga-clr-btn-secondary-bg-hover);
+        }
 
         svg path {
             fill: var(--enjanga-clr-nav-svg);

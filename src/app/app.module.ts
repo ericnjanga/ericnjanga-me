@@ -20,7 +20,10 @@ import { AboutMentorsComponent } from './pages/about-mentors/about-mentors.compo
 import { AboutTestimonialsComponent } from './pages/about-testimonials/about-testimonials.component';
 import { TypescaleComponent } from './pages-static/typescale/typescale.component';
 import { CaseStudiesModule } from './case-studies/case-studies.module';
-import { YouTubePlayerModule } from '@angular/youtube-player';
+// import { NgYoutubeEmbedModule } from 'ng-youtube-embed';
+
+// import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+
 
 
 @NgModule({
@@ -48,7 +51,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     SharedModule,
     ProjectsModule,
     CaseStudiesModule,
-    YouTubePlayerModule,
+    // ngYoutubeEmbed
   ],
   providers: [],
   bootstrap: [AppComponent]
