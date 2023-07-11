@@ -1,0 +1,48 @@
+
+@layer light-box {
+    .light-box-link-hidden {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .lightbox-img-wrapper {
+        position: relative;
+        img, .light-box-link-icon-wrapper {
+            transition: opacity 0.3s;
+        }
+
+        // Hover effect only on large screens
+        @media (min-width: 1200px) {
+            &:hover {
+                img {
+                    opacity: 0.2;
+                }
+                .light-box-link-icon-wrapper {
+                    opacity: 1;
+                }
+            }
+        }
+        @media (max-width: (1200px - 1)) {
+            img {
+                opacity: 0.2;
+            }
+            .light-box-link-icon-wrapper {
+                opacity: 1;
+            }
+        }
+    }
+
+    .light-box-link-icon-wrapper {
+        position: absolute;
+        top: calc(50% - 54px);
+        left: calc(50% - 54px);
+        padding: 30px;
+        border-radius: 200px;
+        background-color: #003A34;
+        z-index: 5;
+        opacity: 0;
+    }
+    .light-box-link-icon {
+        fill: #fff;
+    }
+}
