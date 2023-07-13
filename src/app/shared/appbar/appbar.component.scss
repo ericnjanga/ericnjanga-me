@@ -20,7 +20,7 @@
 // Links
 @layer appbar {
     .enjnaga-navbar {
-        a {
+        a.navlink {
             color: var(--enjanga-clr-nav-link);
             text-decoration: none;
         }

@@ -16,6 +16,11 @@
       [ngClass]="{ 'show': !isCollapsed }">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
+          <a routerLink="/blog" class="mobile-navlink">
+            Blog
+          </a>
+        </li>
+        <li class="nav-item">
           <a target="_blank" href="https://calendly.com/enjanga/15min" class="link-icon">
             Book a consultation 
             <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="M596.817-220Q556-220 528-248.183q-28-28.183-28-69T528.183-386q28.183-28 69-28T666-385.817q28 28.183 28 69T665.817-248q-28.183 28-69 28ZM180-80q-24 0-42-18t-18-42v-620q0-24 18-42t42-18h65v-60h65v60h340v-60h65v60h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Zm0-60h600v-430H180v430Zm0-490h600v-130H180v130Zm0 0v-130 130Z"/></svg>
@@ -31,9 +36,14 @@
 
     <ul class="list-inline hidden-on-small-screens">
       <li class="list-inline-item">
-        <a target="_blank" href="https://calendly.com/enjanga/15min" class="link-icon">
-          Book a consultation 
-          <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="M596.817-220Q556-220 528-248.183q-28-28.183-28-69T528.183-386q28.183-28 69-28T666-385.817q28 28.183 28 69T665.817-248q-28.183 28-69 28ZM180-80q-24 0-42-18t-18-42v-620q0-24 18-42t42-18h65v-60h65v60h340v-60h65v60h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Zm0-60h600v-430H180v430Zm0-490h600v-130H180v130Zm0 0v-130 130Z"/></svg>
+        <a routerLink="/blog" class="btn navlink">
+            Blog
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a target="_blank" href="https://calendly.com/enjanga/15min" class="btn btn-primary">
+            Book a consultation
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="M596.817-220Q556-220 528-248.183q-28-28.183-28-69T528.183-386q28.183-28 69-28T666-385.817q28 28.183 28 69T665.817-248q-28.183 28-69 28ZM180-80q-24 0-42-18t-18-42v-620q0-24 18-42t42-18h65v-60h65v60h340v-60h65v60h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Zm0-60h600v-430H180v430Zm0-490h600v-130H180v130Zm0 0v-130 130Z"/></svg>
         </a>
       </li>
       <!-- <li class="list-inline-item">

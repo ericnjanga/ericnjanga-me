@@ -49,3 +49,13 @@
         padding-bottom: 0!important;
     }
 }
+
+
+
+
+@layer lists {
+    .list-style-none {
+        list-style: none;
+        padding-left: 0;
+    }
+}
