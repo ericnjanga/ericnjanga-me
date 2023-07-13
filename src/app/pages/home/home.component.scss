@@ -14,3 +14,13 @@
         }
     }
 }
+
+@layer home {
+    .section-case-study {
+        .btn-secondary {
+            @media (max-width: (768px - 1)) {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+
+
+@layer bg-accent {
+    .bg-accent {
+        background-color: var(--enjanga-clr-box-accent-bg);
+
+        .accent-title {
+            color: var(--enjanga-clr-box-accent-title);
+        }
+        .accent-paragraph {
+            color: var(--enjanga-clr-box-accent-paragraph);
+        }
+    }
+    .box-accent {
+        .image-accent {
+            margin-bottom: 15px;
+            width: var(--enjanga-box-accent-image-width);
+        }
+        .accent-title {
+            margin-bottom: 15px;
+
+            @media (min-width: 576px) {
+                margin-bottom: 20px;
+            }
+        }
+        footer {
+            margin-top: 20px;
+
+            @media (min-width: 576px) {
+                margin-top: 25px;
+            }
+        }
+
+    
+        @container (min-width: 721px) {
+            --enjanga-box-accent-image-width: 150px;
+            --enjanga-box-accent-content-width: 40ch;
+        }
+
+        @container (min-width: 541px) and (max-width: 720px) {
+            --enjanga-box-accent-content-width: 40ch;
+        }
+    }
+}

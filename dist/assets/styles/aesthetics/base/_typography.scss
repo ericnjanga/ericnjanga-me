@@ -1,0 +1,34 @@
+
+
+@layer typography {
+    /* .heading-ff: Custom class to be applied to any component in need of this font-family */
+    h1, h2, h3, h4, h5, h6, 
+    .main-nav, 
+    .heading-ff, 
+    .quote::before, 
+    .quote::after,
+    .btn-primary,
+    .btn-secondary,
+    .btn-tertiary,
+    .navbar {
+        font-family: var(--enjanga-font-family-headings);
+    }
+}
+
+
+
+@layer typography {
+    h1 {
+        font-size: var(--enjanga-fs-h1);
+        margin-bottom: var(--enjanga-fs-h1-margin-bottom);
+
+
+        @media (min-width: 1400px) {
+            --enjanga-fs-h1: 2.7rem;
+            // border: 10px solid green; 
+        }
+        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            --enjanga-fs-h1: 2.3rem;
+        }
+    }
+}

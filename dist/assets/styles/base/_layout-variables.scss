@@ -1,0 +1,96 @@
+
+
+:root {
+    // Global layout
+    --enjanga-body-top-padding: 56px;
+
+    // Navbar
+    --enjanga-navbar-position: fixed;
+    --enjanga-navbar-logo-width: 170px;
+
+    // Hero
+    --enjanga-hero-padding-y: 20px;
+    --enjanga-hero-text-align: left;
+    --enjanga-hero-main-character-dislay: block;
+    --enjanga-hero-img-wrapper-dislay: block;
+    --enjanga-hero-img-wrapper-align-items: end;
+    --enjanga-hero-ellipse-dislay: block;
+    --enjanga-hero-img-wrapper-width: 80%;
+    --enjanga-hero-text-wrapper-padding-y: 0;
+    --enjanga-hero-text-wrapper-display: block;
+    --enjanga-hero-text-wrapper-justify-content: center;
+    --enjanga-hero-text-wrapper-flex-dir: column;
+    --enjanga-hero-text-wrapper-p-display: initial;
+    --enjanga-hero-text-wrapper-p-margin-bottom: 0;
+    --enjanga-hero-txtWrapMaxW: 80%;
+    --enjanga-hero-txtWrapMargW: auto;
+    --enjanga-hero-ellipse-top: 5%;
+    --enjanga-hero-ellipse-bottom: inherit;
+    --enjanga-hero-ellipse-left: 50%;
+    --enjanga-hero-ellipse-width: 80%;
+    --enjanga-hero-container-dislay: block;
+    --enjanga-hero-container-gap: 30px;
+    --enjanga-hero-text-wrapper-flex-basis: 400px;
+    --enjanga-hero-img-wrapper-flex: 1;
+
+    --enjanga-hero-footer-display: flex;
+    --enjanga-hero-footer-flex-direction: column;
+    --enjanga-hero-footer-gap: 15px;
+    --enjanga-hero-footer-margin-top: 20px;
+    --enjanga-hero-footer-margin-bottom: 20px;
+
+    --enjanga-hero-case-study-txtWrapMaxW: 70ch;
+    --enjanga-hero-case-study-txtWrap-margin-bottom: 20px;
+
+    // (Home Page) Case study section
+    --enjanga-home-cs-ctaImg-margTop: 30px;
+
+    // Footer
+    --enjanga-footer-text-align: left;
+    --enjanga-footer-container-width: 80%;
+    --enjanga-footer-txtWrapMargW: auto;
+    --enjanga-section-spacing-y: 40px;
+    --enjanga-footer-txtWrap-display: grid;
+    --enjanga-footer-txtWrap-grid-template: auto;
+    --enjanga-footer-txtWrap-gap: 20px;
+    
+    --enjanga-footer-bottom-separator-display: flex;
+    --enjanga-footer-bottom-separator-colspan: 1;
+    --enjanga-footer-bottom-separator-pad-top: 20px;
+    --enjanga-footer-bottom-separator-flex-dir: column;
+    --enjanga-footer-bottom-logo-marg-top: 20px;
+    --enjanga-footer-bottom-separator-justify-content: initial;
+
+    // Case study page
+    --enjanga-case-study-margTop: 20px;
+    --enjanga-case-study-section-wrapper-padding: 40px 0;
+    --enjanga-case-study-boxAccent-padding: 20px;
+    --enjanga-case-study-img-wrapper-padding: 20px;
+
+    // Accent box
+    --enjanga-box-accent-image-width: 100px;
+    --enjanga-box-accent-content-width: 80%;
+
+    // Small centered content block
+    --enjanga-small-centered-block-width: 80%;
+
+    // buttons 
+    --enjanga-btn-border-radius: 30px;
+    --enjanga-btn-padding-x: 40px;
+
+    // Image stage
+    --enjanga-img-stage-margin-top: 10px;
+
+}
+
+
+
+
+
+
+
+// Typography
+:root {
+    --enjanga-fs-h1: 2.1rem;
+    --enjanga-fs-h1-margin-bottom: 1rem;
+}

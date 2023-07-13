@@ -1,0 +1,14 @@
+
+
+@layer img-stage {
+    .img-stage {
+        display: block;
+        margin-top: var(--enjanga-img-stage-margin-top);
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: 992px) {
+            --enjanga-img-stage-margin-top: 20px;
+        }
+    }
+}
