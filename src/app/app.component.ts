@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { fader } from './route-animations';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,11 @@ export class AppComponent {
   title = 'Eric Njanga';
   currentRoute = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private meta: Meta) {  
+    this.meta.addTag({ property: 'og:image', content: './../../../assets/img/july2023/Social media preview.jpg' });
+    this.meta.addTag({ name: 'twitter:image', content: './../../../assets/img/july2023/Social media preview.jpg' });
+  }
+
 
   ngOnInit() {
     this.router.events.subscribe((event) => {

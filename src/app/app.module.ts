@@ -11,6 +11,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { SharedModule } from './shared/shared.module';
 import { TypescaleComponent } from './pages-static/typescale/typescale.component';
 import { CaseStudiesModule } from './case-studies/case-studies.module';
+import { Meta } from '@angular/platform-browser';
+
 
 
 @NgModule({
