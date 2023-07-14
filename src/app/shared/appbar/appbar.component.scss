@@ -20,9 +20,65 @@
 // Links
 @layer appbar {
     .enjnaga-navbar {
+        .nav-item a,
         a.navlink {
             color: var(--enjanga-clr-nav-link);
             text-decoration: none;
+
+            &.active {
+                color: var(--enjanga-clr-btn-primary-bg);
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+@layer appbar {
+    .desktop-menu {
+        width: 100%;
+        text-align: right;
+
+
+        a.navlink {
+            padding: 10px 15px 10px 0;
+            @media (min-width: 1200px) {
+                padding: 10px 50px 10px 0;
+            }
+        }
+
+        .btn-primary {
+            --enjanga-btn-padding-x: 20px; 
+            @media (min-width: 1200px) {
+                --enjanga-btn-padding-x: 40px; 
+            }
+
+            .txt-cta-smaller {
+                @media (min-width: 1200px) {
+                    display: none
+                }
+                @media (max-width: (1200px - 1)) {
+                    display: inline;
+                }
+            }
+            .txt-cta-larger {
+                @media (min-width: 1200px) {
+                    display: inline;
+                }
+                @media (max-width: (1200px - 1)) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+@layer appbar {
+    // Make sure mobile menu doesn't take any space from this breakpoint on
+    .mobile-menu {
+        @media (min-width: 992px) {
+            width: 0;
         }
     }
 }
@@ -55,3 +111,22 @@
 
 
 
+
+
+
+
+// @media (min-width: 1400px) {
+//     border: 10px solid green;
+// }
+// @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+//     /* // ... */
+// }
+// @media (min-width: 992px) and (max-width: (1200px - 1)) {
+//     border: 10px solid lime;
+// }
+// @media (min-width: 768px) and (max-width: (992px - 1)) {
+//     border: 10px solid blue;
+// }
+// @media (min-width: 576px) and (max-width: (768px - 1)) {
+//     border: 10px solid turquoise;
+// }
