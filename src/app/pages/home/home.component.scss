@@ -16,6 +16,59 @@
 }
 
 @layer home {
+    @layer logos {
+        .logos-grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            opacity: 0.5;
+
+            .img-fluid {
+                width: inherit;
+            }
+        }
+
+        .logos-grid{
+            @media (min-width: 1400px) {
+                img { height: 59px; }
+            }
+            @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+                img { height: 50px; }
+                img { // display everything
+                    display: block
+                }
+            }
+            @media (min-width: 992px) and (max-width: (1200px - 1)) {
+                img { height: 40px; }
+                img:nth-child(n+8) { // first 7
+                    display: none;
+                }
+            }
+            @media (min-width: 768px) and (max-width: (992px - 1)) {
+                img { height: 40px; }
+                img:nth-child(n+7) { // first 6
+                    display: none;
+                }
+            }
+            @media (min-width: 576px) and (max-width: (768px - 1)) { 
+                img { height: 30px; }
+                img:nth-child(n+6) { // first 5
+                    display: none;
+                }
+            }
+            @media (max-width: (576px - 1)) { 
+                img { height: 30px; }
+                img:nth-child(n+5) { // first 4
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@layer home {
     .section-case-study {
         .btn-secondary {
             @media (max-width: (768px - 1)) {
