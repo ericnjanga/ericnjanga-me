@@ -1,8 +1,8 @@
 
 
-@layer small-centered-block {
+@layer small-block {
 
-    .small-centered-block {
+    .small-block {
         max-width: var(--enjanga-box-accent-content-width);
 
         footer {
@@ -16,17 +16,17 @@
     }
 
 
-    .small-centered-block {
+    .small-block {
         .block-title {
-            color: var(--enjanga-clr-small-centered-block-title);
+            color: var(--enjanga-clr-small-block-title);
         }
         .block-p {
-            color: var(--enjanga-clr-small-centered-block-p);
+            color: var(--enjanga-clr-small-block-p);
         }
     }
 
 
-    .small-centered-block {
+    .small-block {
         .container-small {
             max-width: 463px;
             margin-left: auto;
@@ -35,27 +35,28 @@
     }
 
    
-        
-    .small-centered-block {
+    .small-block.centered {
         margin: 0 auto;
-        max-width: var(--enjanga-small-centered-block-width);
+    }
+    .small-block {
+        max-width: var(--enjanga-small-block-width);
 
         // ...
         @media (max-width: 335px) {
-            --enjanga-small-centered-block-width: 100%;
+            --enjanga-small-block-width: 100%;
         }
     
         @media (min-width: 1400px) {
-            --enjanga-small-centered-block-width: 50ch;
+            --enjanga-small-block-width: 50ch;
         }
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            --enjanga-small-centered-block-width: 50ch;
+            --enjanga-small-block-width: 50ch;
         }
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            --enjanga-small-centered-block-width: 50ch;
+            --enjanga-small-block-width: 50ch;
         }
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            --enjanga-small-centered-block-width: 50ch;
+            --enjanga-small-block-width: 50ch;
         }
     }
 }

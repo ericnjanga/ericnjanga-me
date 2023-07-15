@@ -1,6 +1,11 @@
 
 
 :root {
+    // Blog
+    --enjanga-blog-grid-display: block;
+    --enjanga-blog-grid-gap: 30px;
+    --enjanga-blog-grid-display-temp-col: 1fr 1fr;
+
     // Global layout
     --enjanga-body-top-padding: 56px;
 
@@ -74,7 +79,7 @@
     --enjanga-box-accent-content-width: 80%;
 
     // Small centered content block
-    --enjanga-small-centered-block-width: 80%;
+    --enjanga-small-block-width: 80%;
 
     // buttons 
     --enjanga-btn-border-radius: 30px;

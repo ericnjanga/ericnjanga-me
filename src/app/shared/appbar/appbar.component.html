@@ -16,6 +16,11 @@
       [ngClass]="{ 'show': !isCollapsed }">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
+          <a routerLink="/home" class="mobile-navlink" routerLinkActive="active">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
           <a routerLink="/blog" class="mobile-navlink" routerLinkActive="active">
             Blog
           </a>
@@ -40,6 +45,11 @@
 
 
     <ul class="desktop-menu list-inline hidden-on-small-screens">
+      <li class="list-inline-item">
+        <a routerLink="/home" class="navlink" routerLinkActive="active">
+            Home
+        </a>
+      </li>
       <li class="list-inline-item">
         <a routerLink="/blog" class="navlink" routerLinkActive="active">
             Blog

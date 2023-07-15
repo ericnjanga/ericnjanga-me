@@ -1,0 +1,19 @@
+
+@layer blog-entry {
+    .entry__header {
+        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 30px;
+
+        svg {
+            width: 100%;
+        }
+    }
+}
+
+@layer blog-entry {
+    .entry-article {
+        font-size: 1.15rem;
+        line-height: 2rem;
+    }
+}

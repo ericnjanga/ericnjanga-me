@@ -19,7 +19,7 @@
 }
 
 @layer layout {
-    @import './assets/styles/layouts/components/small-centered-block';
+    @import './assets/styles/layouts/components/small-block';
 }
 
 @layer components {
@@ -28,4 +28,5 @@
     @import './assets/styles/aesthetics/components/buttons';
     @import './assets/styles/aesthetics/components/img-stage';
     @import './assets/styles/aesthetics/components/light-box';
+    @import './assets/styles/aesthetics/components/blog-entry';
 }

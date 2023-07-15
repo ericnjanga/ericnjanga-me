@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';  
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { FadeInSectionDirective } from './directives/fade-in-section.directive';
+import { BoxBookConsultationComponent } from './box-book-consultation/box-book-consultation.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FadeInSectionDirective } from './directives/fade-in-section.directive';
     LoadingComponent,
     AppbarComponent,
     FadeInSectionDirective,
+    BoxBookConsultationComponent,
   ],
   imports: [
     CommonModule,
@@ -38,6 +40,7 @@ import { FadeInSectionDirective } from './directives/fade-in-section.directive';
     LoadingComponent,
     AppbarComponent,
     FadeInSectionDirective,
+    BoxBookConsultationComponent,
   ]
 })
 export class SharedModule { }
