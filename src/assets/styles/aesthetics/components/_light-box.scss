@@ -7,7 +7,7 @@
 
     .lightbox-img-wrapper {
         position: relative;
-        img, .light-box-link-icon-wrapper {
+        img {
             transition: opacity 0.3s;
         }
 
@@ -17,31 +17,8 @@
                 img {
                     opacity: 0.2;
                 }
-                .light-box-link-icon-wrapper {
-                    opacity: 1;
-                }
             }
         }
-        // @media (max-width: (1200px - 1)) {
-        //     img {
-        //         opacity: 0.2;
-        //     }
-        //     .light-box-link-icon-wrapper {
-        //         display: none;
-        //         opacity: 1;
-        //     }
-        // }
-    }
-
-    .light-box-link-icon-wrapper {
-        position: absolute;
-        top: calc(50% - 54px);
-        left: calc(50% - 54px);
-        padding: 30px;
-        border-radius: 200px;
-        background-color: #003A34;
-        z-index: 5;
-        opacity: 0;
     }
     .light-box-link-icon {
         fill: #fff;
