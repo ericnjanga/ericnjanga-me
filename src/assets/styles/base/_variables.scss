@@ -26,8 +26,12 @@
         
         // Footer
         --enjanga-clr-footer-bg: #003A34;
-        --enjanga-clr-footer-link: #A5F2EA;
-        --enjanga-clr-footer-svg: #51A49D; // #79C5BD;
+        --enjanga-clr-footer-link: #76BF85;
+        --enjanga-clr-footer-text: #D9E8DC;
+        --enjanga-clr-footer-svg: #79C5BD;
+
+        // Box Light Accent 
+        --enjanga-clr-box-light-accent-bg: #E4ECEB;
 
         // Box Accent 
         --enjanga-clr-box-accent-bg: #1A1A1A;
@@ -40,10 +44,13 @@
         --enjanga-clr-btn-primary-bg: #FFF114;
         --enjanga-clr-btn-primary-bg-hover: #BAB01B;
 
-        --enjanga-clr-btn-secondary: #fff;
-        --enjanga-clr-btn-secondary-icon: #BAE3DF;
-        --enjanga-clr-btn-secondary-bg: #141F1F;
-        --enjanga-clr-btn-secondary-bg-hover: #304C4A;
+        --enjanga-clr-btn-secondary: #141F1F;
+        --enjanga-clr-btn-secondary-icon: #203e3e;
+        --enjanga-clr-btn-secondary-bg: #76BF85;
+        --enjanga-clr-btn-secondary-bg-hover: #459254;
+
+        // Img Box
+        --enjanga-clr-icon-box-bg: #D9E8DC;
 
         // Case studies
         --enjanga-clr-case-study-pre-title: #AA4D6A;
@@ -51,6 +58,11 @@
         // Small centered content block
         --enjanga-clr-small-block-title: #141F1F;
         --enjanga-clr-small-block-p: #404F4B;
+
+        // Testimonial
+        --enjanga-clr-testimonial-quote: #2B8A3F;
+        --enjanga-clr-testimonial-img-bg: #779A58;
+        --enjanga-clr-link: #2B8A3F;
     }
 
     :root { /* Hero images */

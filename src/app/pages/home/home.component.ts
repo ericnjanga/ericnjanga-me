@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Project } from './../../projects/model/project';
 import { ProjectService } from './../../projects/services/project.service';
+import { ArticleThumb } from 'src/app/blog/models/article';
 
 @Component({
   selector: 'app-home',
@@ -22,6 +23,9 @@ export class HomeComponent {
     // Reload the list of projects
     this.reloadProjects();
   }
+
+
+
 
   // Present the latest 3 projects of any industry
   reloadProjects() {

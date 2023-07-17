@@ -1,51 +1,34 @@
 <div class="testimonial">
-
-    <!-- [TODO:] Same component in "quote.component.html "-->
-    <header class="title-wrapper wrapper-container">
-        <a class="wrapper-container" href="{{testimonial.linkedIn}}" target="_blank">
-            <img class="title-wrapper__img" src={{testimonial.img}} alt="">
-            <div class="intro">
-                <h5 class="title-wrapper__heading">
-                    {{testimonial.name}}
-                    <app-icon class="icon" name="linkedin"></app-icon>
-                </h5>
-                <div class="title-wrapper__subtitle txt-body2">
-                    {{testimonial.title | textTim:55 }}
-                </div>
-            </div>
-        </a>
-    </header>
-
-    <div class="testimonial-body">
-        <div [innerHTML]="testimonial.text"></div>
-    </div>
+    <article>
+        <!-- <svg class="testimonial-icon" xmlns="http://www.w3.org/2000/svg" height="100" viewBox="0 -960 960 960" width="100"><path d="M580-500h160v-160H580v160Zm-360 0h160v-160H220v160Zm406 220 80-160H520v-280h280v288l-76 152h-98Zm-360 0 80-160H160v-280h280v288l-76 152h-98Zm34-300Zm360 0Z"/></svg> -->
 
 
-    <!-- <div class="testimonial-body">
-        <div [@slideUpDown]="showFullText ? 'hidden' : 'visible'">
-            <p>{{ trimmedText }}</p>
-        </div>
-        <div [@slideUpDown]="showFullText ? 'visible' : 'hidden'">
-            <div [innerHTML]="testimonial.text"></div>
-        </div>
-    </div> -->
-
-    <!-- 
-    <button 
-        class="button-secondary" 
-        (click)="toggleText()"
-        [ngClass]="arrowDirection(showFullText)"
-    >
-        {{ showFullText ? 'Read less' : 'Read more' }}
-        <app-icon 
-            class="icon" 
-            name="arrowRight"
-        ></app-icon>
-    </button> -->
+        <svg class="testimonial-icon" xmlns="http://www.w3.org/2000/svg" width="67" height="46" viewBox="0 0 67 46" fill="currentColor">
+            <g clip-path="url(#clip0_1848_5900)">
+            <path d="M43.75 22.9167H60.4167V6.25H43.75V22.9167ZM6.25 22.9167H22.9167V6.25H6.25V22.9167ZM48.5417 45.8333L56.875 29.1667H37.5V0H66.6667V30L58.75 45.8333H48.5417ZM11.0417 45.8333L19.375 29.1667H0V0H29.1667V30L21.25 45.8333H11.0417Z" fill="#2B8A3F" />
+            </g>
+            <defs>
+            <clipPath id="clip0_1848_5900">
+            <rect width="67" height="46" fill="white"/>
+            </clipPath>
+            </defs>
+        </svg>
 
 
+        <p>Seeing our marketing effort wasted on a website with a negative retention rate was frustrating. We needed a specialist that could improve the website experience to drive conversions. </p>
+        <p>Eric's work makes a world of difference: The site now better reflects our vision, converts far more leads, looks sophisticated, and loads faster. </p>
+        <p>I have very much appreciated Eric’s attention to detail and willingness to understand my business needs.</p>
 
+        <footer>
+            <b>Viren Parmar</b>
+            <p>
+                <span>Founder & CEO, </span>
+                <a target="_blank" href="https://www.karmafinancial.ca/">Karma Financial</a>
+            </p>
+        </footer>
+    </article>
 
-
-
+    <figure class="testimonial-img-wrapper">
+        <img class="img-fluid" src="./../../../assets/img/july2023/client-testimonail-1-min.png" alt="Viren Parmar, Founder & CEO of Karma Financial">
+    </figure>
 </div>

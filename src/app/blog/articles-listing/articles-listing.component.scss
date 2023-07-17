@@ -1,0 +1,21 @@
+
+@layer articles-listing {
+
+    .wrapper {
+        display: var(--enjanga-blog-grid-display);
+        gap: var(--enjanga-blog-grid-gap);
+        grid-template-columns: var(--enjanga-blog-grid-display-temp-col);
+    
+        @media (min-width: 1400px) {
+            --enjanga-blog-grid-gap: 100px;
+        }
+    
+        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            --enjanga-blog-grid-gap: 60px;
+        }
+    
+        @media (min-width: 768px) {
+            --enjanga-blog-grid-display: grid;
+        }
+    }
+}

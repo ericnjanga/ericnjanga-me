@@ -1,6 +1,19 @@
 
 
 :root {
+    // Testimonial
+    --enjanga-testimonial-item-display: block;
+    --enjanga-testimonial-item-grid-template-columns: 1fr auto;
+    --enjanga-testimonial-item-gap: 30px;
+
+
+
+    // Mission section
+    --enjanga-mission-section-display: grid;
+    --enjanga-mission-section-row-gap: 20px;
+    --enjanga-mission-section-column-gap: 20px;
+    --enjanga-mission-section-template-columns: 1fr;
+
     // Blog
     --enjanga-blog-grid-display: block;
     --enjanga-blog-grid-gap: 30px;
@@ -82,7 +95,7 @@
     --enjanga-small-block-width: 80%;
 
     // buttons 
-    --enjanga-btn-border-radius: 30px;
+    --enjanga-btn-border-radius: 5px;
     --enjanga-btn-padding-x: 40px;
 
     // Image stage

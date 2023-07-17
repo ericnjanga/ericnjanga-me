@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <app-article-thumb
+        *ngFor="let article of lisdtOfArticles"
+        [img]="article.img"
+        [link]="article.link"
+        [text]="article.text"
+        [title]="article.title"
+    ></app-article-thumb>
+</div>

@@ -1,4 +1,10 @@
 
+@layer bg-light-accent {
+    .bg-light-accent {
+        background-color: var(--enjanga-clr-box-light-accent-bg);
+    }
+}
+
 
 @layer bg-accent {
     .bg-accent {

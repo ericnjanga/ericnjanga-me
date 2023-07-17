@@ -13,13 +13,19 @@
             color: var(--enjanga-clr-hero-p);
         }
         p, ul {
-            color: var(--enjanga-clr-footer-link);
+            color: var(--enjanga-clr-footer-text);
         }
+
+        
         ul {
             margin-bottom: 1rem;
             li {
                 margin-bottom: 10px;
             }
+        }
+
+        .btn-primary {
+            max-width: max-content;
         }
 
         a {
@@ -97,9 +103,9 @@
         
 
         // ...
-        @media (max-width: 575px) {
-            width: var(--enjanga-footer-container-width);
-        }
+        // @media (max-width: 575px) {
+        //     width: var(--enjanga-footer-container-width);
+        // }
 
         @media (min-width: 1400px) {
             --enjanga-footer-txtWrap-gap: 60px;

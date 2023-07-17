@@ -1,5 +1,41 @@
 
 
+@layer section-header {
+    .section-header {
+        margin-bottom: 30px;
+    }
+}
+
+@layer icon-box {
+    .icon-box {
+        $dim: 86px;
+        $im-dim: 45px;
+        // ...
+        display: flex;
+        width: $dim;
+        height: $dim;
+        justify-content: center;
+        align-items: center;
+        border-radius: $dim;
+        background-color: var(--enjanga-clr-icon-box-bg);
+
+
+        img {
+            width: $im-dim;
+            height: $im-dim;
+        }
+    }
+}
+
+
+
+@layer bg-light-accent {
+    .bg-light-accent {
+        background-color: var(--enjanga-clr-box-light-accent-bg);
+    }
+}
+
+
 @layer bg-accent {
     .bg-accent {
         background-color: var(--enjanga-clr-box-accent-bg);
