@@ -14,28 +14,14 @@
 
 
 @layer home {
-    .testimonial-section {
-        @media (min-width: 992px) {
-            header {
-                text-align: center;
-            }
-        }
-    }
-}
-
-
-
-@layer home {
-    $section-max-width: 1110px;
-
-    .mission-section header,
+    // .mission-section header,
     .mission-section__container {
         margin-left: auto;
         margin-right: auto;
-        max-width: $section-max-width;
     }
 
     .mission-section__container {
+        max-width: var(--enjanga-section-max-width);
         display: var(--enjanga-mission-section-display);
         grid-row-gap: var(--enjanga-mission-section-row-gap);
         grid-column-gap: var(--enjanga-mission-section-column-gap);
@@ -163,12 +149,16 @@
                 margin-bottom: 20px;
             }
 
-            // @media (min-width: 1200px) {
-            //     padding-top: 50px;
-            // }
-            // @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            //     padding-top: 20px;
-            // }
+            @media (min-width: 1200px) {
+                margin-left: 40px;
+                max-width: 40ch;
+
+            }
+
+            @media (min-width: 768px) and (max-width: (1200px - 1)) {
+                margin-left: 20px;
+                max-width: 40ch;
+            }
         }
     }
 }

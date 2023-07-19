@@ -9,6 +9,11 @@
 // @media (prefers-color-scheme: light) {
     :root { /* Colours */
 
+        // Text utilities
+        --enjanga-clr-txt-util-pill-accent: #E8E6BF;
+        --enjanga-clr-txt-util-pill-primary: #BFE8C7;
+
+
         // body
         --enjanga-clr-body-bg: #E6F2EE;
         
@@ -27,6 +32,7 @@
         // Footer
         --enjanga-clr-footer-bg: #003A34;
         --enjanga-clr-footer-link: #76BF85;
+        --enjanga-clr-footer-link-hover: #FFF114;
         --enjanga-clr-footer-text: #D9E8DC;
         --enjanga-clr-footer-svg: #79C5BD;
 
@@ -63,6 +69,11 @@
         --enjanga-clr-testimonial-quote: #2B8A3F;
         --enjanga-clr-testimonial-img-bg: #779A58;
         --enjanga-clr-link: #2B8A3F;
+
+
+        // Article thumb    
+        --enjanga-clr-article-thumb-hover-text: #2B8A3F;
+        --enjanga-clr-article-thumb-hover-svg: #FFF114;
     }
 
     :root { /* Hero images */

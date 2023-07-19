@@ -1,9 +1,10 @@
 
 
 @layer small-block {
-
     .small-block {
-        max-width: var(--enjanga-box-accent-content-width);
+        @media (min-width: 576px) {
+            max-width: var(--enjanga-box-accent-content-width);
+        }
 
         footer {
             gap: 10px;
@@ -39,7 +40,7 @@
         margin: 0 auto;
     }
     .small-block {
-        max-width: var(--enjanga-small-block-width);
+        // max-width: var(--enjanga-small-block-width);
 
         // ...
         @media (max-width: 335px) {

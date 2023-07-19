@@ -41,16 +41,17 @@
             display: grid;
             grid-template-columns: 25px auto;
             gap: 10px;
-            // align-items: center;
         }
 
         .footer-link {
             color: var(--enjanga-clr-footer-link);
+            transition: all 0.3s;
             .icon1, svg {
                 fill: var(--enjanga-clr-footer-svg);
             }
             &:hover {
                 text-decoration: none;
+                color: var(--enjanga-clr-footer-link-hover);
             }
         }
 

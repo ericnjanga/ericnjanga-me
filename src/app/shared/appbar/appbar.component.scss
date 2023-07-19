@@ -4,6 +4,11 @@
 @layer appbar {
     .enjnaga-navbar {
         background-color: var(--enjanga-clr-nav-bg);
+        height: var(--enjanga-navbar-height);
+
+        @media (min-width: 1200px) {
+            --enjanga-navbar-height: 96px;
+        }
 
         .logo {
             width: var(--enjanga-navbar-logo-width);
@@ -28,6 +33,10 @@
             &.active {
                 color: var(--enjanga-clr-btn-primary-bg);
                 text-decoration: underline;
+            }
+
+            &:hover {
+                color: var(--enjanga-clr-btn-primary-bg);
             }
         }
     }

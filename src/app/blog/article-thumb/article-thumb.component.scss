@@ -1,8 +1,18 @@
 
 @layer article-thumb {
     .entry-thumb {
-        img {
+        a,
+        .entry__img,
+        .entry__header,
+        .entry__text {
+            transition: all 0.3s;
             border-radius: var(--enjanga-btn-border-radius);
+        }
+        svg {
+            $dim: 30px;
+            height: $dim;
+            border-radius: $dim;
+            transition: all 0.3s;
         }
     }
 }
@@ -11,7 +21,6 @@
     .entry-thumb {
         margin-bottom: 40px;
     }
-
     .entry__header,
     .entry__text {
         margin-top: 10px;
@@ -22,75 +31,82 @@
 @layer article-thumb {
     .entry-thumb {
         a {
+            &:hover {
+                background-color: var(--enjanga-clr-box-light-accent-bg);
+            }
+            .entry__img {
+                &:hover {
+                    opacity: 0.5!important;
+                }
+            }
+            .entry__header,
+            .entry__text {
+                &:hover {
+                    color: var(--enjanga-clr-article-thumb-hover-text);
+                    text-decoration: underline;
+
+                    svg {
+                        fill: var(--enjanga-clr-article-thumb-hover-svg);
+                        background-color: var(--enjanga-clr-article-thumb-hover-text);
+                    }
+                }
+            }
+        }
+    }
+    .entry-thumb {
+        a {
             text-decoration: none;
             position: relative;
             display: block;
+            padding: 7px;
 
-            .entry-title {
+            .entry__header {
                 color: var(--enjanga-clr-small-block-title);
             }
-
-            img {
-                transition: opacity 0.3s;
-            }
-
             p {
                 color: var(--enjanga-clr-small-block-p);
             }
         }
-
-        a {
-            img:hover {
-                opacity: 0.5;
-            }
-        }
     }
 }
 
 
 
-@layer article-thumb {
-    .entry-thumb {
-        a {
-            .entry-title {
-                position: relative;
-                // &:hover {
-                //     // text-decoration: none;
-                //     &::after {
-                //         animation: underline 0.3s ease-in-out forwards;
-                //     }
-                // }
+// @layer article-thumb {
+//     .entry-thumb {
+//         a {
+//             .entry-title {
+//                 position: relative;
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    bottom: -2px;
-                    width: 100%;
-                    height: 2px;
-                    background-color: #000;
-                    /* Customize the underline color */
-                    transform: scaleX(0);
-                    transition: transform 0.3s ease-in-out;
-                }
+//                 &::after {
+//                     content: '';
+//                     position: absolute;
+//                     left: 0;
+//                     bottom: -2px;
+//                     width: 100%;
+//                     height: 2px;
+//                     background-color: #000;
+//                     /* Customize the underline color */
+//                     transform: scaleX(0);
+//                     transition: transform 0.3s ease-in-out;
+//                 }
         
-                &:hover::after {
-                    transform: scaleX(1);
-                }
-
-            }
-        }
-
+//                 &:hover::after {
+//                     transform: scaleX(1);
+//                 }
+//             }
+//         }
 
 
-        // @keyframes underline {
-        //     0% {
-        //         transform: scaleX(0);
-        //     }
+
+//         // @keyframes underline {
+//         //     0% {
+//         //         transform: scaleX(0);
+//         //     }
         
-        //     100% {
-        //         transform: scaleX(1);
-        //     }
-        // }
-    }
-}
+//         //     100% {
+//         //         transform: scaleX(1);
+//         //     }
+//         // }
+//     }
+// }
