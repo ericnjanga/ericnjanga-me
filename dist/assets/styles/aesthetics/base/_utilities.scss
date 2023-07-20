@@ -2,7 +2,6 @@
 
 @layer utilities {
     .hidden-on-lg-screens {
- 
         @media (min-width: 992px) {
             display: none!important;
             visibility: hidden!important;

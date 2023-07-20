@@ -40,11 +40,18 @@
         }
 
         svg path {
-            fill: var(--enjanga-clr-nav-svg);
+            fill: var(--enjanga-clr-btn-secondary-icon);
+        }
+    }
+
+    .btn-scrollToSection.btn-hero {
+        padding: 10px;
+        border-radius: var(--enjanga-btn-border-radius);
+        color: var(--enjanga-clr-btn-scrollToSection);
+        border: 1px solid var(--enjanga-clr-btn-scrollToSection);
+        background-color: var(--enjanga-clr-btn-scrollToSection-bg);
+        svg {
+            fill: var(--enjanga-clr-btn-scrollToSection);
         }
     }
 }
-
-
-// --enjanga-clr-btn-primary: #FFF114;
-// --enjanga-clr-btn-secondary

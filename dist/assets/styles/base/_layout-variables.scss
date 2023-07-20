@@ -1,12 +1,37 @@
 
 
 :root {
+    // Testimonial
+    --enjanga-testimonial-item-display: block;
+    --enjanga-testimonial-item-grid-template-columns: 1fr auto;
+    --enjanga-testimonial-item-gap: 30px;
+
+    // Sections
+    --enjanga-section-max-width: 1110px;
+    --enjanga-section-header-size1-width: 40ch;
+
+
+
+
+    // Mission section
+    --enjanga-mission-section-display: grid;
+    --enjanga-mission-section-row-gap: 20px;
+    --enjanga-mission-section-column-gap: 20px;
+    --enjanga-mission-section-template-columns: 1fr;
+
+    // Blog
+    --enjanga-blog-grid-display: block;
+    --enjanga-blog-grid-gap: 30px;
+    --enjanga-blog-grid-display-temp-col: 1fr 1fr;
+
     // Global layout
     --enjanga-body-top-padding: 56px;
 
     // Navbar
     --enjanga-navbar-position: fixed;
+    --enjanga-navbar-height: 70px;
     --enjanga-navbar-logo-width: 170px;
+    --enjanga-navbar-logo-height: 31px;
 
     // Hero
     --enjanga-hero-padding-y: 20px;
@@ -44,6 +69,7 @@
 
     // (Home Page) Case study section
     --enjanga-home-cs-ctaImg-margTop: 30px;
+    --enjanga-home-logos-grid: 30px;
 
     // Footer
     --enjanga-footer-text-align: left;
@@ -75,7 +101,7 @@
     --enjanga-small-block-width: 80%;
 
     // buttons 
-    --enjanga-btn-border-radius: 30px;
+    --enjanga-btn-border-radius: 5px;
     --enjanga-btn-padding-x: 40px;
 
     // Image stage

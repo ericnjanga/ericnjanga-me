@@ -36,10 +36,11 @@
     }
 
    
-        
-    .small-block {
+    .small-block.centered {
         margin: 0 auto;
-        max-width: var(--enjanga-small-block-width);
+    }
+    .small-block {
+        // max-width: var(--enjanga-small-block-width);
 
         // ...
         @media (max-width: 335px) {
