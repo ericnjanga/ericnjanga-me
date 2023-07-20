@@ -13,6 +13,21 @@ export class CaseStudy1Component implements AfterViewInit {
 
   constructor(private elementRef: ElementRef) {}
 
+  // This should be in a service
+  // scrollToSection(): void {
+  //   const section = this.elementRef.nativeElement.querySelector('#section-article');
+  //   section.scrollIntoView({ behavior: 'smooth' });
+  // }
+
+
+
+  scrollToSection(sectionId: string) {
+    const section = this.elementRef.nativeElement.querySelector(`#${sectionId}`);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
 
   ngAfterViewInit(): void {
     // https://lokeshdhakar.com/projects/lightbox2/#options
@@ -23,15 +38,6 @@ export class CaseStudy1Component implements AfterViewInit {
       wrapAround: true
       // Lightbox2 configuration options
     });
-  }
-
-
-
-  scrollToSection(sectionId: string) {
-    const section = this.elementRef.nativeElement.querySelector(`#${sectionId}`);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
   }
 
   ngOnInit() {
