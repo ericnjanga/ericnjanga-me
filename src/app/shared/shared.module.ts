@@ -15,6 +15,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { FadeInSectionDirective } from './directives/fade-in-section.directive';
 import { BoxBookConsultationComponent } from './box-book-consultation/box-book-consultation.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
     AppbarComponent,
     FadeInSectionDirective,
     BoxBookConsultationComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    ScrollToTopComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +45,8 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
     AppbarComponent,
     FadeInSectionDirective,
     BoxBookConsultationComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    ScrollToTopComponent
   ]
 })
 export class SharedModule { }

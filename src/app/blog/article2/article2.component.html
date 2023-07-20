@@ -1,65 +1,96 @@
-<header class="hero">
+<header class="hero pb-0">
     <div class="container">
-        <div class="text-wrapper">
-            <h1>
-                Web Design Mistake #1: Ignoring your ideal customers
-            </h1>
+        <div class="row">
+            <div class="text-wrapper">
+                <div class="col">
+                    <h1>
+                        Web Design Mistake #1: Ignoring your ideal customers
+                    </h1>
+                </div>
+                <div class="col">
+                    <button class="btn-scrollToSection btn-hero" (click)="scrollToSection()">
+                        Read now
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="M480-80 200-360l42-42 208 208v-686h60v686l208-208 42 42L480-80Z"/></svg>
+                    </button>
+                </div>
+            </div>
         </div>
-
-        <img class="main-character img-fluid" src="./../../../assets/img/july2023/article-2-tmb-min.png" alt="">
     </div>
 </header>
 
-<main class="container entry-article section-spacing-marg-y-top section-spacing-marg-y-bottom">
-    <h2>It was a poor decision</h2>
-    <p>Back in 2013, I decided to turn my web design skills into a business. "What can go wrong?" I thought, “Everybody would love a beautiful website.” Instead of making a business plan, and getting business and sales coaching, I decided to “follow my #passion”, “because the #money will eventually come” (probably the worst advice I got from internet #influencers and #motivation Gurus).😓 </p>
-    <p>💔 Fast forward, my first venture failed, leaving me cashless, in debt, and on the job market!</p>
-    <p>”I cannot find enough #clients to stay in business,” I said to my old brother on a Saturday afternoon, feeling desperate, a few minutes after switching the “Founder/CEO” title on my LinkedIn profile with a more humble “Senior Front-end Developer”.</p>
-    <p>💔 That moment sucked! It really sucked!!! ⛈️😢😖🌪️</p>
+<figure class="hero-featured-img-wrapper text-center">
+    <div class="container">
+        <img class="main-character img-fluid" src="./../../../assets/img/july2023/article-2-tmb-min.png" alt="">
+    </div>
+    <div id="section-article"></div>
+</figure>
+
+<main class="article-page container entry-article section-spacing-marg-y-top section-spacing-marg-y-bottom">
+    <div class="entry-article-text-wrapper">
+        <article>
+            <h2>It was a poor decision</h2>
+            <p>Back in 2013, I decided to turn my web design skills into a business. "What can go wrong?" I thought, “Everybody would love a beautiful website.” Instead of making a business plan, and getting business and sales coaching, I decided to “follow my #passion”, “because the #money will eventually come” (probably the worst advice I got from internet #influencers and #motivation Gurus).</p>
+            <p>Fast forward, my first venture failed, leaving me cashless, in debt, and on the job market!</p>
+            <p>”I cannot find enough #clients to stay in business,” I said to my old brother on a Saturday afternoon, feeling desperate, a few minutes after switching the “Founder/CEO” title on my LinkedIn profile with a more humble “Senior Front-end Developer”.</p>
+        
+            <span class="spacer"></span>
+
+            <h2>Know your ideal customers</h2>
+            <p>One reason for my business failure was the lack of knowledge of who my ideal #customers were. I assumed “#webdesign customers are everywhere”. </p>
+            <p>The following questions never dawned on me:</p>
+            <p>👉🏾 <b>What do you know about your ideal customers?</b></p>
+        
+            <ul>
+                <li>What do they look like?</li>
+                <li>What are their needs?</li>
+                <li>What are they struggling with?</li>
+                <li>What can you help them with?</li>
+            </ul>
+
+            <br>
+            <p>I was improvising, relying only on my #skills, passion, and the #goodwill of prospective customers.</p>
+    
+            <span class="spacer"></span>
+    
+            <h2>The same principles apply to User Experience and Web Design</h2>
+            <p>In #uxdesign, we have the concept of #persona. A persona is a composite of all the knowledge designers are gathering about customers. The persona helps designers create an emotional connection with users, through that connection, designers #understand, #empathize and #create the type of solutions that get to the heart of users' problems while satisfying business objectives.</p>
+        
+            <blockquote class="blockquote">
+                With a persona, I have to power to make design #decisions that I know will benefit both my clients and their customers. I know what features to add, what fonts to use, what pages to create, and what language to write on the website
+            </blockquote>
+
+            <figure>
+                <img class="img-fluid" src="./../../../assets/img/july2023/persona-1-min.png" alt="">
+                <figcaption>
+                    A persona I created during the web transformation of https://karmafinancial.ca/
+                </figcaption>
+            </figure>
+        
+            <span class="spacer"></span>
+
+            <h2>Takeaway</h2>
+            <p>Customers vary in tastes, needs, and expectations. We cannot satisfy everyone, and not everyone need or can afford our service. Once I started being clear about "who my target customers where", and that I mobilized my efforts preparing for them, the game started to change.</p>
+        
+            <blockquote class="blockquote">"A website that drives business growth is first built on a deep knowledge of customers", anything else is improvisation.</blockquote>
+        </article>
+
+        <section class="entry-article-end text-center">
+            <span class="fs-8">Thank you for reading</span>
+        </section>
 
 
-    <h2>Know your ideal customers</h2>
-    <p>One reason for my business failure was the lack of knowledge of who my ideal #customers were. I assumed “#webdesign customers are everywhere”. </p>
-    <p>The following questions never dawned on me:</p>
-    <p>👉🏾 <b>What do you know about your ideal customers Eric???</b></p>
-
-    <ul>
-        <li>What do they look like?</li>
-        <li>What are their needs?</li>
-        <li>What are they struggling with?</li>
-        <li>What can you help them with?</li>
-    </ul>
-    <p>I was improvising, relying only on my #skills, passion, and the #goodwill of prospective customers. 😂🤣</p>
+        <section class="entry-article-footer">
+            <span class="pill primary pre-title fs-8 rounded-1">Previous article</span>
+            <h3>
+                <a routerLink="/blog/6-keys-captivate-attention-your-web-visitors-hero-section">
+                    6 keys to captivate the attention of your web visitors: The hero section
+                </a>
+            </h3>
+        </section>
 
 
-    <h2>The same principles apply to User Experience and Web Design</h2>
-    <p>In #uxdesign, we have the concept of #persona. A persona is a composite of all the knowledge designers are gathering about customers. The persona helps designers create an emotional connection with users, through that connection, designers #understand, #empathize and #create the type of solutions that get to the heart of users' problems while satisfying business objectives.</p>
-
-    <blockquote>
-        With a persona, I have to power to make design #decisions that I know will benefit both my clients and their customers. I know what features to add, what fonts to use, what pages to create, and what language to write on the website
-    </blockquote>
-
-
-    <figure>
-        <div class="img-placeholder"></div>
-        <figcaption>A persona I created during the web transformation of https://karmafinancial.ca/</figcaption>
-    </figure>
-
-
-    <h2>Takeaway</h2>
-    <p>Customers vary in tastes, needs, and expectations. We cannot satisfy everyone, and not everyone need or can afford our service.
-    </p>
-
-    <blockquote>"Applied knowledge is key to business success."</blockquote>
-
-    <p>Once I started being clear about "who my target customers where", and that I mobilized my efforts preparing for them, the game started to change.</p>
-
-    <blockquote>"A website that drives business growth is first built on a deep knowledge of customers", anything else is improvisation.</blockquote>
-
-    <p>Like my good friend Yves Noubissi used to say: “Business cannot be improvised”. 😊</p>
-
-    <footer>
-        <app-box-book-consultation></app-box-book-consultation>
-    </footer>
-
+        <footer>
+            <app-box-book-consultation></app-box-book-consultation>
+        </footer>
+    </div>
 </main>

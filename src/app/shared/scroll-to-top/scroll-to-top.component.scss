@@ -1,0 +1,32 @@
+@layer scroll-to-top {
+    .scroll-to-top-button {
+        position: fixed;
+        bottom: 30px;
+        right: 10px;
+        background-color: var(--enjanga-clr-scrolltop-btn-bg);
+        border: none;
+        border-radius: var(--enjanga-btn-border-radius);
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0.8;
+
+        @media (min-width: 768px) {
+            right: 30px;
+        }
+    }
+
+    .scroll-to-top-button {
+        svg {
+            width: 25px;
+            height: 25px;
+            fill: var(--enjanga-clr-scrolltop-svg);
+        }
+    }
+
+    .scroll-to-top-button:hover {
+        opacity: 1;
+    }
+}

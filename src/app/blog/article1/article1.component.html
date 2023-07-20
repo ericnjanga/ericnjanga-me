@@ -1,66 +1,104 @@
-<header class="hero">
+<header class="hero pb-0">
     <div class="container">
-        <div class="text-wrapper">
-            <h1>
-                6 keys to captivate the attention of your web visitors: The hero section
-            </h1>
+        <div class="row">
+            <div class="text-wrapper">
+                <div class="col">
+                    <h1>
+                        6 keys to captivate the attention of your web visitors: The hero section
+                    </h1>
+                </div>
+                <div class="col">
+                    <button class="btn-scrollToSection btn-hero" (click)="scrollToSection()">
+                        Read now
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="M480-80 200-360l42-42 208 208v-686h60v686l208-208 42 42L480-80Z"/></svg>
+                    </button>
+                </div>
+            </div>
         </div>
-
-        <img class="main-character img-fluid" src="./../../../assets/img/july2023/article-1-tmb-min.png" alt="">
     </div>
 </header>
 
-<main class="container entry-article section-spacing-marg-y-top section-spacing-marg-y-bottom">
-    <p>The first thing people see when they land on a website is the hero, it refers to the prominent and visually appealing section at the top of a web page. A poorly designed hero will severely damage the chance of user conversion.</p>
-    <p>Here are 6 keys to an excellent hero that captures users’ attention and conveys the website's message effectively:</p>
-    <ol>
-        <li><b>Compelling Visuals:</b> The hero section should feature high-quality and captivating visuals that immediately grab the user's attention, reflects the website's purpose, and represents its brand identity.</li>
-        <li><b>Clear and Concise Message:</b> The hero section should effectively communicate the core message or value proposition of the website. It should convey key information concisely and compellingly.</li>
-        <li><b>Strong Call-to-Action (CTA):</b> The hero section should include a clear and prominent call-to-action that encourages users to take the desired action. Whether it's signing up, making a purchase, or exploring further, the CTA should be visually distinct and positioned prominently.</li>
-        <li><b>Responsive Design:</b> The hero section should be designed to be responsive and adapt seamlessly across different devices and screen sizes. Designers should ensure that the visuals, text, and CTA remain impactful and legible on mobile devices as well.</li>
-        <li><b>Simplicity and Clarity:</b> The hero section shouldn’t be cluttered with excessive content or distracting elements. It should be kept clean, minimal, and focused, with ample white space to create a sense of visual balance and allow the key elements to stand out.</li>
-        <li><b>Fast Loading Time:</b> The hero section should load quickly to capture users' attention immediately. Therefore, image sizes should be optimized, scripts and code should be minimized, and caching techniques should be employed.</li>
-    </ol>
+
+<figure class="hero-featured-img-wrapper">
+    <div class="container">
+        <img class="main-character img-fluid" src="./../../../assets/img/july2023/article-1-tmb-min.png" alt="">
+    </div>
+    <div id="section-article"></div>
+</figure>
 
 
+<main class="article-page container entry-article section-spacing-marg-y-top section-spacing-marg-y-bottom">
+    <div class="entry-article-text-wrapper">
 
-    <h2>Example</h2>
-    <figure>
-        <div class="img-placeholder"></div>
+        <article>
+            <p>The first thing people see when they land on a website is the hero, it refers to the prominent and visually appealing section at the top of a web page. A poorly designed hero will severely damage the chance of user conversion.</p>
+            <p>Here are 6 keys to an excellent hero that captures users’ attention and conveys the website's message effectively:</p>
+            <ol>
+                <li><b>Compelling Visuals:</b> The hero section should feature high-quality and captivating visuals that immediately grab the user's attention, reflects the website's purpose, and represents its brand identity.</li>
+                <li><b>Clear and Concise Message:</b> The hero section should effectively communicate the core message or value proposition of the website. It should convey key information concisely and compellingly.</li>
+                <li><b>Strong Call-to-Action (CTA):</b> The hero section should include a clear and prominent call-to-action that encourages users to take the desired action. Whether it's signing up, making a purchase, or exploring further, the CTA should be visually distinct and positioned prominently.</li>
+                <li><b>Responsive Design:</b> The hero section should be designed to be responsive and adapt seamlessly across different devices and screen sizes. Designers should ensure that the visuals, text, and CTA remain impactful and legible on mobile devices as well.</li>
+                <li><b>Simplicity and Clarity:</b> The hero section shouldn’t be cluttered with excessive content or distracting elements. It should be kept clean, minimal, and focused, with ample white space to create a sense of visual balance and allow the key elements to stand out.</li>
+                <li><b>Fast Loading Time:</b> The hero section should load quickly to capture users' attention immediately. Therefore, image sizes should be optimized, scripts and code should be minimized, and caching techniques should be employed.</li>
+            </ol>
+    
+            <span class="spacer"></span>
+    
+            <h2>Example</h2>
+            <figure>
+                <img class="img-fluid" src="./../../../assets/img/july2023/articel-1-hero-desktop-min.jpeg" alt="Hero section of this website on large screens">
+                <figcaption>
+                    Hero section of this website on large screens
+                </figcaption>
+            </figure>
 
-    </figure>
+            <p>As an illustration, here is how I've designed the hero of my website.</p>
+            <ol>
+                <li><b>Compelling Visuals:</b> I've used a captivating image of myself (I'm the face of my business)</li>
+                <li>Clear and Concise Message: I'm making sure visitors know what I can do for them, and why they should hire me</li>
+                <li>Strong Call-to-Action (CTA): I make sure my visitors know what to do next; booking a consultation with me, or browsing case studies</li>
+                <li>Responsive Design: I'm maintaining the same standards of excellence on small, medium, and large screens</li>
+                <li>Simplicity and Clarity: I'm keeping my hero free of distraction and focus users' attention on my message</li>
+                <li>Fast Loading Time: I'm making sure my code is optimized and fast, visit my website to see it in action</li>
+            </ol>
 
-    <p>As an illustration, here is how I've designed the hero of my website.</p>
-    <ol>
-        <li><b>Compelling Visuals:</b> I've used a captivating image of myself (I'm the face of my business)</li>
-        <li>Clear and Concise Message: I'm making sure visitors know what I can do for them, and why they should hire me</li>
-        <li>Strong Call-to-Action (CTA): I make sure my visitors know what to do next; booking a consultation with me, or browsing case studies</li>
-        <li>Responsive Design: I'm maintaining the same standards of excellence on small, medium, and large screens</li>
-        <li>Simplicity and Clarity: I'm keeping my hero free of distraction and focus users' attention on my message</li>
-        <li>Fast Loading Time: I'm making sure my code is optimized and fast, visit my website to see it in action</li>
-    </ol>
+            <span class="spacer"></span>
+    
+            <h2>My hero on medium screens</h2>
+            <figure>
+                <img class="img-fluid" src="./../../../assets/img/july2023/articel-1-hero-tablet-min.png" alt="Hero section of this website on medium screens">
+                <figcaption>
+                    Hero section of this website on medium screens
+                </figcaption>
+            </figure>
+    
+            <span class="spacer"></span>
+    
+            <h2>My hero on small screens</h2>
+            <figure>
+                <img class="img-fluid" src="./../../../assets/img/july2023/articel-1-hero-phone-min.png" alt="Hero section of this website on small screens">
+                <figcaption>
+                    Hero section of this website on small screens
+                </figcaption>
+            </figure>
+        </article>
+
+        <section class="entry-article-end text-center">
+            <span class="fs-8">Thank you for reading</span>
+        </section>
 
 
-    <h2>My hero on medium screens</h2>
-    <figure>
-        <div class="img-placeholder"></div>
-
-    </figure>
-
-
-    <h2>My hero on small screens</h2>
-    <figure>
-        <div class="img-placeholder"></div>
-
-    </figure>
-
-
-    <p>Thank you for reading.</p>
-
-
-    <footer>
-        <app-box-book-consultation></app-box-book-consultation>
-    </footer>
-
-
+        <section class="entry-article-footer">
+            <span class="pill primary pre-title fs-8 rounded-1">Next article</span>
+            <h3>
+                <a routerLink="/blog/web-design-mistake-1-ignoring-your-ideal-customers">
+                    Web Design Mistake #1: Ignoring your ideal customers
+                </a>
+            </h3>
+        </section>
+        
+        <footer class="">
+            <app-box-book-consultation></app-box-book-consultation>
+        </footer>
+    </div>
 </main>

@@ -34,6 +34,13 @@
 
 
 @layer text-utilities {
+    @layer text {
+        .accent {
+            color: var(--enjanga-clr-btn-primary-bg);
+        }
+    }
+
+
     @layer pre-title {
         .pill {
             padding: 3px 12px;

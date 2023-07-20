@@ -17,15 +17,14 @@ export class ArticlesListingComponent {
         title: 'Web Design Mistake #1: Ignoring your ideal customers',
         link: '/blog/web-design-mistake-1-ignoring-your-ideal-customers',
         img: './../../../assets/img/july2023/article-2-tmb-min.png',
-        text: 'Back in 2013, I decided to turn my web design skills into a business. "What can go wrong?" I thought, “Everybody would love a beautiful website.” Instead of making a business plan, and getting business and sales coaching, I decided to “follow my #passion”, “because the #money will eventually come” (probably the worst advice I got from internet #influencers and #motivation Gurus).'
+        text: 'Your website must be built around a solid understanding of who your ideal customer is. Overlooking such an important fact almost certainly guarantees failure. In this article, I explain why by sharing a personal story of defeat, growth, and redemption.'
       },
       {
         title: '6 keys to captivate the attention of your web visitors: The hero section',
         link: '/blog/6-keys-captivate-attention-your-web-visitors-hero-section',
         img: './../../../assets/img/july2023/article-1-tmb-min.png',
-        text: 'The first thing people see when they land on a website is the hero, it refers to the prominent and visually appealing section at the top of a web page. A poorly designed hero will severely damage the chance of user conversion.'
+        text: 'Competition is fierce, it takes about 5 seconds on average for a user to decide whether to stay on your site or leave. In this article, I’m presenting 6 keys that will captivate your visitors’ attention and give them an incentive to remain on your site a little longer.'
       }
     ];
   }
-
 }

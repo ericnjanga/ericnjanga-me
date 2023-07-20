@@ -24,6 +24,9 @@
     .entry__header,
     .entry__text {
         margin-top: 10px;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -39,16 +42,20 @@
                     opacity: 0.5!important;
                 }
             }
-            .entry__header,
-            .entry__text {
+            .entry__header {
                 &:hover {
                     color: var(--enjanga-clr-article-thumb-hover-text);
-                    text-decoration: underline;
 
                     svg {
                         fill: var(--enjanga-clr-article-thumb-hover-svg);
                         background-color: var(--enjanga-clr-article-thumb-hover-text);
                     }
+                }
+            }
+            .entry__text {
+                color: var(--enjanga-clr-small-block-p);
+                &:hover {
+                    color: var(--enjanga-clr-small-block-title);
                 }
             }
         }

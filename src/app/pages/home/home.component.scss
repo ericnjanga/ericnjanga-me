@@ -126,39 +126,3 @@
         }
     }
 }
-
-@layer home {
-    .section-case-study {
-        .col-a {
-            margin-bottom: 30px;
-            @media (min-width: 992px) {
-                margin-bottom: 0;
-            }
-        }
-        .col-b {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            .btn {
-                width: max-content;
-            }
-
-            .block-title,
-            .block-p {
-                margin-bottom: 20px;
-            }
-
-            @media (min-width: 1200px) {
-                margin-left: 40px;
-                max-width: 40ch;
-
-            }
-
-            @media (min-width: 768px) and (max-width: (1200px - 1)) {
-                margin-left: 20px;
-                max-width: 40ch;
-            }
-        }
-    }
-}

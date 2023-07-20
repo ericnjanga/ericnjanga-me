@@ -2,10 +2,14 @@
     <div class="container">
         <div class="text-wrapper">
             <h1>
-                I will transform your website’s experience to drive growth
+                I will transform <span class="accent">your website’s</span> experience to drive growth
             </h1>
 
-            <p appFadeInSection>I enhance the overall user experience of websites to make it seamless, intuitive, and engaging. I ensure mobile responsiveness, make content easily accessible, simplify navigation, and improve page load times.</p>
+            <p appFadeInSection>
+                Your website won’t matter to customers unless they see the <span class="accent">value</span>, are <span class="accent">comfortable browsing</span>, and feel an <span class="accent">emotional connection</span> with it. My superpower is to make that happen.
+            </p>
+
+            <!-- <p appFadeInSection>I enhance the overall user experience of websites to make it seamless, intuitive, and engaging. I ensure mobile responsiveness, make content easily accessible, simplify navigation, and improve page load times.</p> -->
 
             <footer>
                 <a target="_blank" href="https://calendly.com/enjanga/15min" class="btn btn-primary">
@@ -45,7 +49,7 @@
     </div>
 
 
-    <section class="container mission-section">
+    <section class="container mission-section section-spacing-marg-y-bottom">
         <header class="section-header size-1">
             <div>
                 <h2>My mission is to transform the web experience</h2>
@@ -74,6 +78,10 @@
     </section>
 
 
+
+    <app-case-study-row [bgAccent]="true"></app-case-study-row>
+
+<!-- 
     <section class="section-case-study bg-light-accent section-spacing-marg-y-top section-spacing-marg-y-bottom section-spacing-padd-y-top section-spacing-padd-y-bottom">
         <div class="container">
 
@@ -107,7 +115,7 @@
             </div>
         
         </div>
-    </section>
+    </section> -->
 
 
 
@@ -115,7 +123,7 @@
         <section class="section-spacing-marg-y-top section-spacing-marg-y-bottom">
             <header class="section-header size-1">
                 <span class="pill accent pre-title fs-8 rounded-1">Blog</span>
-                <h2>My thoughts and insights on User Experience for websites</h2>
+                <h2>My thoughts on what makes a website successful</h2>
             </header>
             <app-articles-listing></app-articles-listing>
         </section>
