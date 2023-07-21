@@ -13,14 +13,6 @@ export class CaseStudy1Component implements AfterViewInit {
 
   constructor(private elementRef: ElementRef) {}
 
-  // This should be in a service
-  // scrollToSection(): void {
-  //   const section = this.elementRef.nativeElement.querySelector('#section-article');
-  //   section.scrollIntoView({ behavior: 'smooth' });
-  // }
-
-
-
   scrollToSection(sectionId: string) {
     const section = this.elementRef.nativeElement.querySelector(`#${sectionId}`);
     if (section) {
