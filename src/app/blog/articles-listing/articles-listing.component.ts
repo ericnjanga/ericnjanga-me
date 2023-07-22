@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ArticleThumb } from './../models/article';
 
 @Component({
@@ -8,11 +8,18 @@ import { ArticleThumb } from './../models/article';
 })
 export class ArticlesListingComponent {
   lisdtOfArticles: ArticleThumb[] = [];
+  @Input() displayFirstThree = false;
 
   ngOnInit(): void {
     // [Blog]
     // This needs to go in a service
     this.lisdtOfArticles = [
+      {
+        title: 'Mobile responsiveness is good for business',
+        link: '/blog/6-reasons-why-your-website-loading-speed-matters',
+        img: './../../../assets/img/july2023/article-3-tmb-min.png',
+        text: 'Online visitors have no time to waste, a website that takes more than 2 seconds to load is probably missing out.'
+      },
       {
         title: '6 reasons why your website loading speed matters',
         link: '/blog/6-reasons-why-your-website-loading-speed-matters',

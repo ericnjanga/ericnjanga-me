@@ -1,20 +1,21 @@
-
-<!-- <div class="wrapper one-row">
-    <app-article-thumb
-        *ngFor="let article of lisdtOfArticles | slice:0:3"
-        [img]="article.img"
-        [link]="article.link"
-        [text]="article.text"
-        [title]="article.title"
-    ></app-article-thumb>
-</div> -->
-
 <div class="wrapper">
-    <app-article-thumb
-        *ngFor="let article of lisdtOfArticles"
-        [img]="article.img"
-        [link]="article.link"
-        [text]="article.text"
-        [title]="article.title"
-    ></app-article-thumb>
+    <ng-container *ngIf="displayFirstThree; else displayAll">
+        <app-article-thumb
+          *ngFor="let article of lisdtOfArticles | slice:0:3"
+          [img]="article.img"
+          [link]="article.link"
+          [text]="article.text"
+          [title]="article.title"
+        ></app-article-thumb>
+      </ng-container>
+    
+      <ng-template #displayAll>
+        <app-article-thumb
+          *ngFor="let article of lisdtOfArticles"
+          [img]="article.img"
+          [link]="article.link"
+          [text]="article.text"
+          [title]="article.title"
+        ></app-article-thumb>
+      </ng-template>
 </div>
