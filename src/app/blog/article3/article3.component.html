@@ -1,1 +1,99 @@
-<p>article3 works!</p>
+<header class="hero pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="text-wrapper">
+                <div class="col">
+                    <h1>
+                        6 reasons why your website loading speed matters
+                    </h1>
+                </div>
+                <div class="col">
+                    <button class="btn-scrollToSection btn-hero" (click)="scrollToSection()">
+                        Read now
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="M480-80 200-360l42-42 208 208v-686h60v686l208-208 42 42L480-80Z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<figure class="hero-featured-img-wrapper text-center">
+    <div class="container">
+        <img class="main-character img-fluid" src="./../../../assets/img/july2023/article-3-tmb-min.png" alt="">
+    </div>
+    <div id="section-article"></div>
+</figure>
+
+<main class="article-page container entry-article section-spacing-marg-y-top section-spacing-marg-y-bottom">
+    <div class="entry-article-text-wrapper">
+        <article>
+            <h2>Users today are impatient</h2>
+            <p>Website speed is a critical factor in user experience. It refers to how quickly a web page loads and becomes interactive for visitors. In today's fast-paced digital world, users have high expectations when it comes to website performance. If a website takes too long to load, it can lead to various negative consequences for business:</p>
+        
+            <ol>
+                <li><b>Low User Satisfaction:</b> Slow-loading websites frustrate users and lead to a poor user experience. Users may become impatient and leave the site before it even finishes loading.</li>
+                <li><b>High Bounce Rate:</b> The bounce rate represents the percentage of visitors who leave a website after viewing only one page. A slow-loading website often has a higher bounce rate, as users abandon the site before engaging with its content.</li>
+                <li><b>Low Conversion Rates:</b> Website speed directly impacts conversion rates. Whether the goal is to make a sale, collect leads, or encourage sign-ups, slow-loading pages can deter users from completing these actions.</li>
+                <li><b>Low Search Engine Ranking:</b> Search engines like Google consider website speed as a ranking factor. Faster-loading websites are more likely to rank higher in search results, which can positively impact organic traffic.</li>
+                <li><b>Poor Mobile Experience:</b> With the rise of mobile internet usage, website speed becomes even more critical. Mobile users are often on slower connections, and a slow-loading website can significantly hamper their experience.</li>
+                <li><b>Reduced Competitive Advantage:</b> In a competitive online landscape, a fast website can give businesses a competitive advantage. Users are more likely to choose a fast-loading site over a slower one.</li>
+            </ol>
+
+            <br>
+
+            <blockquote class="blockquote">
+                A fast loading website is good for business: It facilitates users engagement, help SEO ranking, and increase conversion and revenue
+            </blockquote>
+
+            <br>
+
+            <h2>Website speed improvement strategy</h2>
+            <p>I improve website speed in 6 powerful steps:</p>
+            <ol>
+                <li><b>Images Optimization:</b> I make sure images are compressed and resized to reduce their file size without compromising quality.</li>
+                <li><b>HTTP Requests Minimization:</b> I reduce the number of elements (e.g., images, scripts, stylesheets) on each page to minimize HTTP requests, and use techniques like <a class="paragraph-link" href="https://www.cloudflare.com/learning/performance/what-is-lazy-loading/" target="_blank">Lazy loading</a> to load only the most necessary elements on the page.</li>
+                <li><b>Code Optimization:</b> I use efficient code and follow best practices to improve website performance. I also remove unnecessary characters and whitespace from code files (Minify CSS, JavaScript, and HTML) to reduce their size.</li>
+                <li><b>Above-the-Fold Content Prioritization:</b> I make sure the essential parts of a webpage is loaded first, so users see meaningful content quickly.</li>
+                <li><b>Browser Caching Enablement:</b> I use caching mechanisms (cookies or local storage) to store static resources on a user's device, reducing the need to fetch them from the server on subsequent visits.</li>
+                <li><b>Fast Web Hosting Provider Selection:</b> Hosting providers play a significant role in website speed. I always recommend reputable hosting providers with fast hosting service.</li>
+                <!-- <li><b>Use Content Delivery Networks (CDNs):</b> CDNs distribute website content across multiple servers worldwide, delivering it from the nearest server to the user, which can improve load times.</li> -->
+                <!-- <li><b>Test and Monitor Performance:</b> Regularly test website speed and performance using tools like Google PageSpeed Insights, Lighthouse, or WebPageTest. Monitor performance metrics and make necessary adjustments.</li> -->
+            </ol>
+
+            <br>
+
+            <div class="takeaway">
+                <h2>Takeaway</h2>
+                <p>In today's highly competitive environment, the speed with which your website loads cannot be left to chance. By ensuring your website loads fast, you are:</p>
+                <ul>
+                    <li>👍🏾 Increasing the chances of <b>user satisfation</b> and <b>conversion</b></li>
+                    <li>👍🏾 Increasing your <b>SEO ranking</b></li>
+                    <li>👍🏾 Increasing your <b>Mobile Experience</b></li>
+                    <li>👍🏾 Increasing your <b>Competitive Advantage</b></li>
+                    <li>👍🏾 Reducing your <b>bouncing rates</b></li>
+                </ul>
+            </div>   
+        </article>
+
+        <section class="entry-article-end text-center">
+            <span class="fs-8">Thank you for reading</span>
+        </section>
+
+
+
+        <section class="entry-article-footer">
+            <span class="pill primary pre-title fs-8 rounded-1">Previous article</span>
+            <h3>
+                <a routerLink="/blog/Is-your-website-built-for-your-ideal-customers">
+                    Is your website built for your ideal customers?
+                </a>
+            </h3>
+        </section>
+
+
+        <footer>
+            <app-box-book-consultation></app-box-book-consultation>
+        </footer>
+    </div>
+</main>

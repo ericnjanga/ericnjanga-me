@@ -5,13 +5,6 @@
         display: var(--enjanga-testimonial-item-display);
         grid-template-columns: var(--enjanga-testimonial-item-grid-template-columns);
         grid-column-gap: var(--enjanga-testimonial-item-gap);  
-        
-        a {
-            color: var(--enjanga-clr-link);
-            &:hover {
-                text-decoration: none;
-            }
-        }
 
         p {
             color: var(--enjanga-clr-small-block-p);

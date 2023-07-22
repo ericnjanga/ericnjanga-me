@@ -59,3 +59,13 @@
         padding-left: 0;
     }
 }
+
+
+
+//...
+.container {
+    @media (max-width: (576px - 1px)) {
+        padding-left: var(--enjanga-bs-container-gutter-x);
+        padding-right: var(--enjanga-bs-container-gutter-x);
+    }
+}

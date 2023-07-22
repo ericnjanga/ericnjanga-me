@@ -8,8 +8,9 @@ import { Article4Component } from './article4/article4.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: '6-keys-captivate-attention-your-web-visitors-hero-section', component: Article1Component },
-    { path: 'web-design-mistake-1-ignoring-your-ideal-customers', component: Article2Component },
+    { path: 'grab-your-visitors-attention-with-a-captivating-banner', component: Article1Component },
+    { path: 'Is-your-website-built-for-your-ideal-customers', component: Article2Component },
+    { path: '6-reasons-why-your-website-loading-speed-matters', component: Article3Component },
 ];
 
 @NgModule({
@@ -21,3 +22,5 @@ const routes: Routes = [
 export class BlogRoutingModule {
 
 }
+
+

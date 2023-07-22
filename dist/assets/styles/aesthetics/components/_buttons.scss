@@ -50,8 +50,31 @@
         color: var(--enjanga-clr-btn-scrollToSection);
         border: 1px solid var(--enjanga-clr-btn-scrollToSection);
         background-color: var(--enjanga-clr-btn-scrollToSection-bg);
+        transition: all 0.3s;
+
         svg {
+            transition: all 0.3s;
             fill: var(--enjanga-clr-btn-scrollToSection);
+        }
+
+        &:hover {
+            background-color: var(--enjanga-clr-btn-primary-bg-hover);
+            border: 1px solid var(--enjanga-clr-btn-primary);
+            color: var(--enjanga-clr-btn-primary);
+            svg {
+                fill: var(--enjanga-clr-btn-primary);
+            }
+        }
+    }
+}
+
+
+
+@layer links {
+    a.paragraph-link {
+        color: var(--enjanga-clr-link);
+        &:hover {
+            text-decoration: none;
         }
     }
 }

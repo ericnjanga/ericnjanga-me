@@ -1,6 +1,9 @@
 
 
 :root {
+    // layout container (bootstrap)
+    --enjanga-bs-container-gutter-x: 25px;
+
     // Testimonial
     --enjanga-testimonial-item-display: block;
     --enjanga-testimonial-item-grid-template-columns: 1fr auto;
@@ -15,7 +18,7 @@
 
     // Mission section
     --enjanga-mission-section-display: grid;
-    --enjanga-mission-section-row-gap: 20px;
+    --enjanga-mission-section-row-gap: 30px;
     --enjanga-mission-section-column-gap: 20px;
     --enjanga-mission-section-template-columns: 1fr;
 
@@ -76,7 +79,7 @@
     --enjanga-footer-text-align: left;
     --enjanga-footer-container-width: 80%;
     --enjanga-footer-txtWrapMargW: auto;
-    --enjanga-section-spacing-y: 40px;
+    --enjanga-section-spacing-y: 60px;
     --enjanga-footer-txtWrap-display: grid;
     --enjanga-footer-txtWrap-grid-template: auto;
     --enjanga-footer-txtWrap-gap: 20px;
@@ -107,6 +110,10 @@
 
     // Image stage
     --enjanga-img-stage-margin-top: 10px;
+
+
+    // Article page
+    --enjanga-article-bottom-spacing: 30px;
 
 }
 
