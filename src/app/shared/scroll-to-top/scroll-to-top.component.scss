@@ -3,7 +3,8 @@
         position: fixed;
         bottom: 30px;
         right: 10px;
-        background-color: var(--enjanga-clr-scrolltop-btn-bg);
+        background-size: cover;;
+        background-image: url(./../../../assets/img/july2023/scroll-to-top-button-min.png);
         border: none;
         border-radius: var(--enjanga-btn-border-radius);
         width: 40px;
