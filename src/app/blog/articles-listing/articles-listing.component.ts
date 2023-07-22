@@ -14,6 +14,12 @@ export class ArticlesListingComponent {
     // This needs to go in a service
     this.lisdtOfArticles = [
       {
+        title: '6 reasons why your website must load fast',
+        link: '/blog/web-design-mistake-1-ignoring-your-ideal-customers',
+        img: './../../../assets/img/july2023/article-3-tmb-min.png',
+        text: 'Your website must be built around a solid understanding of who your ideal customer is. Overlooking such an important fact almost certainly guarantees failure. In this article, I explain why by sharing a personal story of defeat, growth, and redemption.'
+      },
+      {
         title: 'Web Design Mistake #1: Ignoring your ideal customers',
         link: '/blog/web-design-mistake-1-ignoring-your-ideal-customers',
         img: './../../../assets/img/july2023/article-2-tmb-min.png',
