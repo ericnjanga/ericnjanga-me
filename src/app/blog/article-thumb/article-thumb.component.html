@@ -1,12 +1,17 @@
-<article class="entry-thumb" [ngClass]="{'entry-thumb--prominent': isProminent}">
+<article class="entry-thumb" [ngClass]="{'entry-thumb--prominent': isProminent, 'entry-thumb--hero': isHero}">
     <a [routerLink]="link">
-        <img class="entry__img main-character img-fluid" [src]="img" alt="">
-        <div>
+        <img *ngIf="!isHero" class="entry__img main-character img-fluid" [src]="img" alt="">
+        <div class="entry-thumb__txtwrapper">
             <header class="entry__header" appFadeInSection>
-                <h3 class="entry-title">{{title}}</h3>
+                <h3 class="entry-title">
+                    <span *ngIf="isHero" class="entry-title__label pill accent900 pre-title fs-8 rounded-1">Latest</span>
+                    <span class="entry-title__text">{{title}}</span>
+                </h3>
                 <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="m242-246-42-42 412-412H234v-60h480v480h-60v-378L242-246Z"/></svg>
             </header>
             <p *ngIf="text!==''" appFadeInSection class="entry__text">{{text}}</p>
         </div>
+        <div *ngIf="isHero" class="entry-thumb--hero--overlay"></div>
+        <span *ngIf="isHero" class="entry-thumb--hero--imgframe" [style.background-image]="'url('+img+')'"></span>
     </a>
 </article>

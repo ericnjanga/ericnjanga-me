@@ -11,4 +11,5 @@ export class ArticleThumbComponent {
   @Input() img: string = '';
   @Input() text: string = '';
   @Input() isProminent = false;
+  @Input() isHero = false;
 }

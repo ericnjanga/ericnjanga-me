@@ -3,6 +3,8 @@
 
 @layer articles-listing {
     .wrapper {
+        // border: 4px solid blue;
+
         display: var(--enjanga-blog-grid-display);
         grid-column-gap: var(--enjanga-blog-grid-column-gap);
         grid-row-gap: var(--enjanga-blog-grid-row-gap);

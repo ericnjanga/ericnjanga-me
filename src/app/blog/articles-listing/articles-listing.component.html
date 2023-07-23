@@ -1,13 +1,25 @@
-<div class="wrapper">
-  <ng-container *ngIf="displayFirstThree; else displayAll">
+<!-- For home page (blog section) -->
+<!-- (Display only the first 3 items)-->
+<ng-container *ngIf="displayFirstThree; else displayAll">
+  <div class="wrapper">
     <app-article-thumb *ngFor="let article of lisdtOfArticles | slice:0:3; let isFirst = first" [img]="article.img"
-      [link]="article.link" [text]="article.text" [title]="article.title"
-      [isProminent]="isFirst"></app-article-thumb>
-  </ng-container>
+      [link]="article.link" [text]="article.text" [title]="article.title" [isProminent]="isFirst"></app-article-thumb>
+  </div>
+</ng-container>
 
-  <ng-template #displayAll>
-    <app-article-thumb *ngFor="let article of lisdtOfArticles; let isFirst = first" [img]="article.img"
-      [link]="article.link" [text]="article.text" [title]="article.title"
-      [isProminent]="isFirst"></app-article-thumb>
-  </ng-template>
-</div>
+
+<!-- For blog page -->
+<!-- (Display only the first item as prominent and the rest of items normally) -->
+<ng-template #displayAll>
+  <div>
+    <app-article-thumb 
+      [isHero]="true"
+      [img]="lisdtOfArticles[0].img"
+      [link]="lisdtOfArticles[0].link" [text]="lisdtOfArticles[0].text" [title]="lisdtOfArticles[0].title"></app-article-thumb>
+  </div>
+
+  <div class="wrapper">
+    <app-article-thumb *ngFor="let article of lisdtOfArticles | slice:1;" [img]="article.img"
+      [link]="article.link" [text]="article.text" [title]="article.title"></app-article-thumb>
+  </div>
+</ng-template>
