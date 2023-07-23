@@ -21,6 +21,18 @@
 
 
 @layer hero {
+    .hero {
+        a.accent {
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+@layer hero {
     .hero-featured-img-wrapper {
         position: relative;
 

@@ -11,7 +11,11 @@ const routes: Routes = [
     { path: 'grab-your-visitors-attention-with-a-captivating-banner', component: Article1Component },
     { path: 'Is-your-website-built-for-your-ideal-customers', component: Article2Component },
     { path: '6-reasons-why-your-website-loading-speed-matters', component: Article3Component },
+    { path: 'why-mobile-responsiveness-is-good-for-business', component: Article4Component },
 ];
+
+
+
 
 @NgModule({
     imports: [

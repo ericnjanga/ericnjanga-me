@@ -10,4 +10,5 @@ export class ArticleThumbComponent {
   @Input() link: string = '';
   @Input() img: string = '';
   @Input() text: string = '';
+  @Input() isProminent = false;
 }

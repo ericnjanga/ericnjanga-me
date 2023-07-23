@@ -1,4 +1,4 @@
-<article class="entry-thumb">
+<article class="entry-thumb" [ngClass]="{'entry-thumb--prominent': isProminent}">
     <a [routerLink]="link">
         <img class="entry__img main-character img-fluid" [src]="img" alt="">
         <div>

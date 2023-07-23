@@ -15,9 +15,9 @@ export class ArticlesListingComponent {
     // This needs to go in a service
     this.lisdtOfArticles = [
       {
-        title: 'Mobile responsiveness is good for business',
-        link: '/blog/6-reasons-why-your-website-loading-speed-matters',
-        img: './../../../assets/img/july2023/article-3-tmb-min.png',
+        title: 'Why Mobile Responsiveness is good for business',
+        link: '/blog/why-mobile-responsiveness-is-good-for-business',
+        img: './../../../assets/img/july2023/article-4-tmb-min.png',
         text: 'Online visitors have no time to waste, a website that takes more than 2 seconds to load is probably missing out.'
       },
       {

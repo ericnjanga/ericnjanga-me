@@ -1,45 +1,138 @@
 
 @layer article-thumb {
-    .entry-thumb {
-        a,
-        .entry__img,
-        .entry__header,
-        .entry__text {
-            margin-bottom: 0;
-            transition: all 0.3s;
-            border-radius: var(--enjanga-btn-border-radius);
-        }
-        svg {
-            $dim: 30px;
-            height: $dim;
-            border-radius: $dim;
-            transition: all 0.3s;
+    .entry-thumb--prominent {
+        // border: 5px solid turquoise;
+        .entry__img {
+            @media (max-width: (992px - 1px)) {
+                margin-bottom: 10px;
+            }
         }
     }
 }
 
 
+
+
+// Bottom separator
+@layer article-thumb {
+    .entry-thumb::after {
+        $width: 150px;
+        display: block;
+        content: '';
+        position: absolute;
+        left: 50%;
+        width: #{$width};
+        margin-left: -#{$width/2};
+        height: 1px;
+        background-color: #999;
+        bottom: -15px;
+
+        @media (min-width: 768px) {
+            bottom: -20px;
+        }
+
+        @media (min-width: (992px - 1px)) {
+            display: none;
+        }
+    }
+}
+
+
+
 @layer article-thumb {
     .entry-thumb {
-        // Don't display the image on smaller screens
+        position: relative;
+
+        a,
+        .entry__header,
+        .entry__text,
+        .entry__img,
+        svg {
+            transition: all 0.3s;
+        }
+
+        a,
+        .entry__header,
+        .entry__text,
+        .entry__img {
+            border-radius: var(--enjanga-btn-border-radius);
+        }
+
+        a,
+        .entry__header,
+        .entry__text {
+            margin-bottom: 0;
+        }
+        svg {
+            $dim: 30px;
+            height: $dim;
+            border-radius: $dim;
+            opacity: 0.4;
+        }
+    }
+
+    // -> (not for prominent articles)
+    .entry-thumb:not(.entry-thumb--prominent) {
+        .entry__img {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+
+@layer article-thumb {
+    .entry-thumb {
+        .entry__header {
+            @media (max-width: (992px - 1px)) {
+                margin-top: 0;
+            }
+            @media (min-width: 992px) and (max-width: (1200px - 1px)) {
+                margin-top: 35px;
+            }
+        }
+        a {
+            .entry__header {
+                color: var(--enjanga-clr-small-block-title);
+                &:hover {
+                    color: var(--enjanga-clr-article-thumb-hover-text);
+
+                    svg {
+                        opacity: 1;
+                        fill: var(--enjanga-clr-article-thumb-hover-svg);
+                        background-color: var(--enjanga-clr-article-thumb-hover-text);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@layer article-thumb {
+    // -> (not for prominent articles)
+    // Don't display the image on smaller screens
+    .entry-thumb:not(.entry-thumb--prominent) {
         .entry__img {
             display: none;
             @media (min-width: 992px) {
                 display: block;
             }
         }
+    }
 
-        .entry__header {
-            @media (max-width: (992px - 1px)) {
-                margin-top: 0;
-            }
-        }
+    .entry-thumb {
         // Reduce spacing between title and paragraph
         .entry__text {
             margin-top: 0;
         }
     }
 }
+
+
 
 @layer article-thumb {
     .entry__header,
@@ -63,16 +156,6 @@
                     opacity: 0.5!important;
                 }
             }
-            .entry__header {
-                &:hover {
-                    color: var(--enjanga-clr-article-thumb-hover-text);
-
-                    svg {
-                        fill: var(--enjanga-clr-article-thumb-hover-svg);
-                        background-color: var(--enjanga-clr-article-thumb-hover-text);
-                    }
-                }
-            }
             .entry__text {
                 color: var(--enjanga-clr-small-block-p);
                 &:hover {
@@ -91,9 +174,6 @@
                 padding: 7px;
             }
 
-            .entry__header {
-                color: var(--enjanga-clr-small-block-title);
-            }
             p {
                 color: var(--enjanga-clr-small-block-p);
             }

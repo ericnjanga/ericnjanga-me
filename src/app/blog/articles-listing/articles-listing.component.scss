@@ -1,4 +1,6 @@
 
+
+
 @layer articles-listing {
     .wrapper {
         display: var(--enjanga-blog-grid-display);
@@ -20,9 +22,8 @@
             --enjanga-blog-grid-display-template-col: 1fr 1fr 1fr;
         }
 
-    
-        // @media (min-width: 992px) {
-        //     --enjanga-blog-grid-row-gap: 20px;
-        // }
+        @media (min-width: 768px) {
+            --enjanga-blog-grid-row-gap: 40px;
+        }
     }
 }
