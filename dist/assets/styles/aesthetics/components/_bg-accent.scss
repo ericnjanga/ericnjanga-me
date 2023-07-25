@@ -15,6 +15,9 @@
             @media (min-width: 1200px) {
                 margin-bottom: 60px;
             }
+            @media (min-width: 992px) {
+                --enjanga-section-header-size1-width: 45ch;
+            }
             @media (min-width: 768px) and (max-width: (1200px - 1px)) {
                 margin-bottom: 30px;
             }
@@ -48,8 +51,11 @@
     @layer pre-title {
         .pill {
             padding: 3px 12px;
-            &.accent {
+            &.accent100 {
                 background-color: var(--enjanga-clr-txt-util-pill-accent100);
+            }
+            &.accent900 {
+                background-color: var(--enjanga-clr-txt-util-pill-accent900);
             }
             &.primary {
                 background-color: var(--enjanga-clr-txt-util-pill-primary);

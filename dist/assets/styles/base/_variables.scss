@@ -11,6 +11,7 @@
 
         // Text utilities
         --enjanga-clr-txt-util-pill-accent100: #E8E6BF;
+        --enjanga-clr-txt-util-pill-accent900: #FFF114;
         --enjanga-clr-txt-util-pill-primary: #BFE8C7;
 
 
@@ -88,6 +89,9 @@
         --enjanga-clr-article-thumb-hover-svg: #FFF114;
         --enjanga-clr-article-blockquote-border: #2B8A3F;
 
+        --enjanga-clr-article-thumb-hero-title: #fff;
+        --enjanga-clr-article-thumb-hero-text: #BAE3DF;
+
         // Scroll top
         --enjanga-clr-scrolltop-btn-bg: #003A34; //  #E4ECEB; // #2B8A3F; // 
         --enjanga-clr-scrolltop-svg: #fff; // #003A34; //  // #003A34;
@@ -161,7 +165,6 @@
 
     /* Font faces */
     --enjanga-font-family-headings: 'Kanit', sans-serif;
-    // --enjanga-font-family-body: 'Montserrat', sans-serif;
     --enjanga-font-family-body: 'Open Sans', sans-serif;
 }
 

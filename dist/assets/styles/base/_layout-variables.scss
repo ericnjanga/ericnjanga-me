@@ -25,7 +25,7 @@
     // Blog
     --enjanga-blog-grid-display: grid;
     --enjanga-blog-grid-column-gap: 20px;
-    --enjanga-blog-grid-row-gap: 25px;
+    --enjanga-blog-grid-row-gap: 30px;
     --enjanga-blog-grid-display-template-col: 1fr;
 
     // Global layout
@@ -114,6 +114,11 @@
 
     // Article page
     --enjanga-article-bottom-spacing: 30px;
+
+
+    // Article thumb 
+    --enjanga-clr-article-thumb-hero-height: 300px;
+    --enjanga-clr-article-thumb-hero-margin-bottom: 30px;
 
 }
 
