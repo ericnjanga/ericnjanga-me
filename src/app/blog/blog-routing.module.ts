@@ -12,10 +12,10 @@ const routes: Routes = [
     { path: 'Is-your-website-built-for-your-ideal-customers', component: Article2Component },
     { path: '6-reasons-why-your-website-loading-speed-matters', component: Article3Component },
     { path: 'why-mobile-responsiveness-is-good-for-business', component: Article4Component },
+
+    // Add a wildcard route for unmatched paths (optional)
+    { path: '**', redirectTo: '/' }, 
 ];
-
-
-
 
 @NgModule({
     imports: [
@@ -26,5 +26,3 @@ const routes: Routes = [
 export class BlogRoutingModule {
 
 }
-
-

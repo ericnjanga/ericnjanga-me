@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ArticleThumb } from './../models/article';
+import { ArticleService } from '../services/article.service';
 
 @Component({
   selector: 'app-articles-listing',
@@ -10,34 +11,10 @@ export class ArticlesListingComponent {
   lisdtOfArticles: ArticleThumb[] = [];
   @Input() displayFirstThree = false;
 
+  constructor(private articleService: ArticleService) { }
+
   ngOnInit(): void {
     // [Blog]
-    // This needs to go in a service
-    this.lisdtOfArticles = [
-      {
-        title: 'Why Mobile Responsiveness is good for business',
-        link: '/blog/why-mobile-responsiveness-is-good-for-business',
-        img: './../../../assets/img/july2023/article-4-tmb-min.png',
-        text: 'Online visitors have no time to waste, a website that takes more than 2 seconds to load is probably missing out.'
-      },
-      {
-        title: '6 reasons why your website loading speed matters',
-        link: '/blog/6-reasons-why-your-website-loading-speed-matters',
-        img: './../../../assets/img/july2023/article-3-tmb-min.png',
-        text: 'Online visitors have no time to waste, a website that takes more than 2 seconds to load is probably missing out.'
-      },
-      {
-        title: 'Is your website built for your ideal customers?',
-        link: '/blog/Is-your-website-built-for-your-ideal-customers',
-        img: './../../../assets/img/july2023/article-2-tmb-min.png',
-        text: 'Building your website around a solid knowledge of your ideal customers is a blessing for your business.'
-      },
-      {
-        title: 'Grab your visitors\' attention with a captivating banner',
-        link: '/blog/grab-your-visitors-attention-with-a-captivating-banner',
-        img: './../../../assets/img/july2023/article-1-tmb-min.png',
-        text: 'A website banner is the first thing visitors see. Visitors\' decision to stay may depend on its attractiveness.'
-      }
-    ];
+    this.lisdtOfArticles = this.articleService.getArticles();
   }
 }

@@ -25,6 +25,28 @@
             margin-left: 5px;
         }
     }
+    .btn-square {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--enjanga-clr-testimonial-img-bg);
+        width: 30px;
+        height: 30px;
+        border-radius: var(--enjanga-btn-border-radius);
+        background-color: transparent;
+
+        &:hover {
+            background-color: var(--enjanga-clr-footer-link);
+        }
+
+        &:focus {
+            background-color: var(--enjanga-clr-footer-link);
+            box-shadow: 0px 0px 3px 0px var(--enjanga-clr-testimonial-img-bg);
+        }
+        &:active {
+            background-color: var(--enjanga-clr-nav-bg);
+        }
+    }
     .btn-primary {
         color: var(--enjanga-clr-btn-primary);
         background-color: var(--enjanga-clr-btn-primary-bg);

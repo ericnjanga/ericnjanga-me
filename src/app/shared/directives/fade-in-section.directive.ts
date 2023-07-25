@@ -32,7 +32,8 @@ export class FadeInSectionDirective implements OnInit {
     this.renderer.setStyle(this.elementRef.nativeElement, 'opacity', '0'); // Hide the element initially
   }
 
-  fadeIn() { console.log('---fadeIn');
+  fadeIn() { 
+    // console.log('---fadeIn');
     const factory = this.animationBuilder.build([
       style({ opacity: 0 }),
       animate('1500ms ease-in', style({ opacity: 1 }))

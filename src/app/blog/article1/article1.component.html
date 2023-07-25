@@ -1,11 +1,10 @@
+
 <header class="hero pb-0">
     <div class="container">
         <div class="row">
             <div class="text-wrapper">
                 <div class="col">
-                    <h1>
-                        Grab your visitors' attention with a captivating banner
-                    </h1>
+                    <h1>{{article?.title}}</h1>
                 </div>
                 <div class="col">
                     <button class="btn-scrollToSection btn-hero" (click)="scrollToSection()">
@@ -88,14 +87,9 @@
         </section>
 
 
-        <section class="entry-article-footer">
-            <span class="pill primary pre-title fs-8 rounded-1">Next article</span>
-            <h3>
-                <a routerLink="/blog/Is-your-website-built-for-your-ideal-customers">
-                    Is your website built for your ideal customers?
-                </a>
-            </h3>
-        </section>
+        <app-article-carousel 
+            [current]="article"
+            class="entry-article-footer"></app-article-carousel>
         
         <footer class="">
             <app-box-book-consultation></app-box-book-consultation>

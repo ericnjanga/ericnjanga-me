@@ -1,0 +1,23 @@
+<section class="article-carousel">
+
+    <nav>
+        <span class="article-carousel__pill "> <!-- pill primary pre-title fs-8 rounded-1 -->
+            <span>{{article?.id}}</span> / {{total}}
+        </span>
+
+        <button class="btn-square btn-left" (click)="loadPrevious()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M359-242 120-481l239-239 43 43-166 166h604v60H236l166 166-43 43Z"/></svg>
+        </button>
+        <button class="btn-square btn-right" (click)="loadNext()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="m702-301-43-42 106-106H120v-60h646L660-615l42-42 178 178-178 178Z"/></svg>
+        </button>
+    </nav>
+
+    <a [routerLink]="article?.link">
+        <h3 class="article-carousel__title">{{article?.title}}</h3>
+        <div class="article-carousel__info">
+            <img class="img-fluid" [src]="article?.img" alt="">
+            <p>{{article?.text}}</p>
+        </div>
+    </a>
+</section>

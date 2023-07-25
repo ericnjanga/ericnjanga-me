@@ -1,0 +1,80 @@
+
+
+@layer article-carousel {
+    .article-carousel {
+        padding: var(--enjanga-article-carousel-padding);
+        background-color: var(--enjanga-clr-box-light-accent-bg);
+        border-radius: var(--enjanga-btn-border-radius);
+
+        nav {
+            display: flex;
+            margin-bottom: 15px;
+            // flex-direction: row-reverse;
+            gap: 10px;
+
+            .article-carousel__pill {
+                opacity: 0.6;
+                font-size: 0.9rem;
+                margin-right: auto;
+            }
+        }
+
+        .article-carousel__title {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: var(--enjanga-clr-small-block-title);
+            text-decoration: none;
+
+            .article-carousel__title,
+            img,
+            p {
+                transition: all 0.3s;
+            }
+
+            &:hover {
+                .article-carousel__title {
+                    &:hover {
+                        text-decoration: underline;
+                        color: var(--enjanga-clr-article-thumb-hover-text);
+                    }
+                }
+                img {
+                    &:hover {
+                        opacity: 0.5!important;
+                    }
+                }
+                p {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .article-carousel__info {
+        display: var(--enjanga-article-carousel-info-display);
+        gap: var(--enjanga-article-carousel-info-gap);
+        grid-template-columns: var(--enjanga-article-carousel-info-display-template-col);
+
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+
+            --enjanga-article-carousel-info-p-margin-top: 20px;
+            // --enjanga-article-carousel-info-p-font-size: 1rem;
+            // --enjanga-article-carousel-info-p-line-height: 1.4rem;
+        }
+
+        img {
+            border-radius: var(--enjanga-btn-border-radius);
+        }
+
+        p {
+            margin-top: var(--enjanga-article-carousel-info-p-margin-top);
+            font-size: var(--enjanga-article-carousel-info-p-font-size);
+            line-height: var(--enjanga-article-carousel-info-p-line-height);
+            opacity: 0.8;
+        }
+    }
+}

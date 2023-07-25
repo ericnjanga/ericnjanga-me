@@ -42,24 +42,6 @@
     }
 }
 
-@layer blog-entry {
-    .entry-article-footer {
-        padding: 10px;
-        background-color: var(--enjanga-clr-box-light-accent-bg);
-        border-radius: var(--enjanga-btn-border-radius);
-
-        a {
-            color: var(--enjanga-clr-small-block-title);
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-                color: var(--enjanga-clr-article-thumb-hover-text);
-            }
-        }
-    }
-}
-
 
 @layer blog-entry {
     .entry-article-text-wrapper {
@@ -146,6 +128,7 @@
         }
         .entry-article-end,
         .entry-article-footer {
+            display: block;
             margin-bottom: var(--enjanga-article-bottom-spacing);
 
             @media (min-width: 992px) {
