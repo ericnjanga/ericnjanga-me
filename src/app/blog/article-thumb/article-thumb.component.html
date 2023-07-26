@@ -11,7 +11,7 @@
             </header>
             <p *ngIf="text!==''" appFadeInSection class="entry__text">{{text}}</p>
         </div>
-        <div *ngIf="isHero" class="entry-thumb--hero--overlay"></div>
+        <!-- <div *ngIf="isHero" class="entry-thumb--hero--overlay"></div> -->
         <span *ngIf="isHero" class="entry-thumb--hero--imgframe" [style.background-image]="'url('+img+')'"></span>
     </a>
 </article>
