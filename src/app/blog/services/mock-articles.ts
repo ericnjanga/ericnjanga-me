@@ -5,6 +5,13 @@ import { ArticleThumb } from './../models/article';
 export const lisdtOfArticles: ArticleThumb[] = [
 
   {
+    id: 5,
+    title: 'Why an intuitive experience is helps a business grow',
+    link: '/blog/why-an-intuitive-experience-is-helps-a-business-grow',
+    img: './../../../assets/img/july2023/article-5-tmb-min.png',
+    text: 'Mobile Responsiveness is key to the success of any modern website, especially when we expect a wide usage.'
+  },
+  {
     id: 4,
     title: 'Why Mobile Responsiveness is good for business',
     link: '/blog/why-mobile-responsiveness-is-good-for-business',

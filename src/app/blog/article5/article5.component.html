@@ -1,1 +1,209 @@
-<p>article5 works!</p>
+<header class="hero pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="text-wrapper">
+                <div class="col">
+                    <h1>{{article?.title}}</h1>
+                </div>
+                <div class="col">
+                    <button class="btn-scrollToSection btn-hero" (click)="scrollToSection()">
+                        Read now
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="M480-80 200-360l42-42 208 208v-686h60v686l208-208 42 42L480-80Z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<figure class="hero-featured-img-wrapper text-center">
+    <div class="container">
+        <img class="main-character img-fluid" [src]="article?.img" alt="">
+    </div>
+    <div id="section-article"></div>
+</figure>
+
+<main class="article-page container entry-article section-spacing-marg-y-top section-spacing-marg-y-bottom">
+    <div class="entry-article-text-wrapper">
+        <article>
+            <h2>Acheving goals effortlessly</h2>
+            <p>An intuitive web experience refers to a user interface and interaction design that is easy to understand, navigate, and use without the need for extensive instructions or guidance. In other words, it is a user-friendly web experience that allows users to achieve their goals and complete tasks effortlessly.</p>
+
+
+
+            <div>
+                Key characteristics of an intuitive web experience include:
+
+Clear and Consistent Navigation: The website's navigation should be clear, logically organized, and consistent across pages. Users should be able to find what they need quickly and predictably.
+
+Minimal Learning Curve: Users should be able to interact with the website intuitively, without the need for extensive learning or prior knowledge. Familiar design patterns and conventions contribute to a low learning curve.
+
+User-Focused Design: The design and layout should prioritize the needs and preferences of the target users. User research and testing can help identify pain points and preferences.
+
+Efficient Interactions: Intuitive web experiences minimize the number of steps required to complete tasks, reducing user frustration and increasing efficiency.
+
+Responsive and Mobile-Friendly: An intuitive web experience is responsive, adapting seamlessly to various devices and screen sizes, ensuring usability on desktops, laptops, tablets, and smartphones.
+
+Clear Call-to-Action (CTA): CTA elements should be distinct and prominent, guiding users to the desired actions or conversions.
+
+Feedback and Error Handling: The website should provide informative feedback to users when actions are performed and transparently handle errors with clear error messages and corrective instructions.
+
+Readable and Scannable Content: Content should be well-organized, easy to read, and scannable to facilitate quick comprehension.
+
+Visual Hierarchy: The design should use visual cues like color, size, and placement to establish a clear hierarchy of information, guiding users' attention and decision-making.
+
+Accessibility: An intuitive web experience is accessible to all users, including those with disabilities, by adhering to accessibility guidelines and standards.
+
+Overall, an intuitive web experience fosters a positive user experience, encourages user engagement, and ultimately leads to higher user satisfaction and achievement of website goals, such as conversions, sign-ups, or purchases.
+            </div>
+
+
+            <br><br><br>
+
+            <h2>An intuitive website is good for business</h2>
+
+
+            <div>
+                An intuitive website is good for business for several reasons:
+
+Improved User Experience: An intuitive website makes it easier for users to navigate, find information, and complete tasks. A positive user experience increases customer satisfaction and encourages repeat visits.
+
+Higher Conversion Rates: When users can quickly and easily find what they need, they are more likely to convert, whether that means making a purchase, signing up for a newsletter, or filling out a contact form.
+
+Reduced Bounce Rates: An intuitive website reduces the chances of users leaving your site immediately after arriving (bounce rate). This leads to increased engagement and more time spent on your site.
+
+Competitive Advantage: In a competitive market, an intuitive website sets your business apart and positions you as a user-focused brand, increasing your chances of attracting and retaining customers.
+
+Positive Brand Perception: A well-designed and intuitive website enhances your brand's credibility and reputation. Users are more likely to trust and engage with a website that provides a seamless experience.
+
+Increased Customer Loyalty: Intuitive websites foster a sense of loyalty among customers. Satisfied users are more likely to return and recommend your business to others.
+
+Better Search Engine Ranking: User experience is an important factor in search engine rankings. Search engines prioritize websites that offer a positive experience, leading to improved visibility in search results.
+
+Mobile-Friendly: An intuitive website is often mobile-responsive, catering to the growing number of users accessing the web via smartphones and tablets. This expands your reach to a broader audience.
+
+Cost-Effectiveness: An intuitive website reduces the need for customer support and assistance, as users can find what they need on their own. This can lead to cost savings for your business.
+
+Adapting to User Needs: An intuitive website takes into account user preferences, feedback, and behavior, allowing you to continuously improve and optimize your online presence.
+
+In summary, an intuitive website positively impacts various aspects of your business, from customer satisfaction and engagement to conversion rates and brand perception. It helps you stand out in a competitive market, build customer loyalty, and achieve your business goals effectively.
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <br>
+
+            <h2>Keeping the user-friendliness across device sizes</h2>
+            <p>The goal of mobile responsiveness is to ensure that the content and layout of a website remain user-friendly and visually appealing across a wide range of devices, including smartphones, tablets, laptops, and desktop computers.</p>
+
+            <br>
+
+            <figure>
+                <a routerLink="/case-studies/transformation-and-realignment-of-a-website-with-corporate-strategy" class="link-img-wrapper">
+                    <img class="img-fluid" src="./../../../assets/img/july2023/case-study-1-poster-min.png" alt="">
+                </a>
+                <figcaption>My work for a life insurance company's corporate website. I'm adapting the content to user's context, and keep the layout user-friendly regardless on screen size variations.
+
+                    <a class="paragraph-link" routerLink="/case-studies/transformation-and-realignment-of-a-website-with-corporate-strategy">Read case study</a>
+                </figcaption>
+            </figure>
+
+            <br>
+
+            <h2>Fitting the display to the user context</h2>
+            <p>I look at devices from the perspective of what the user wants to achieve, and make consequential adjustments:</p>
+            <ol>
+                <li><b>Mobile users</b> love to check the content, and scan for key information, therefore the content should be restricted to the strict essential.</li>
+                <li><b>Table users</b>  love to immerse themselves in an experience without becoming overly interactive, therefore the content should offer more possibilities while taking care not to overwhelm them.</li>
+                <li><b>Desktop users</b> want the full experience, and have space for management, therefore the full content should be reveled to them</li>
+            </ol>
+
+            <br>
+
+            <figure>
+                <a routerLink="/case-studies/transformation-and-realignment-of-a-website-with-corporate-strategy" class="link-img-wrapper">
+                    <img class="img-fluid" src="./../../../assets/img/july2023/case-study-1-stage3-off.png" alt="">
+                </a>
+                <figcaption>During the design process, I paid careful attention not to overwhelm mobile and tablet users and only disclosed the most essential information (Same project for a life insurance company's corporate website).
+
+
+                    <a class="paragraph-link" routerLink="/case-studies/transformation-and-realignment-of-a-website-with-corporate-strategy">Read case study</a>
+                </figcaption>
+            </figure>
+
+
+
+
+            <br>
+
+            <blockquote class="blockquote">
+                A good mobile responsive experience adapts the website layout, content and exprience to users' device sizes (phone, tablet, and desktop).
+            </blockquote>
+
+            <br>
+            <br>
+
+            <h2>Mobile responsiveness is excellent for business</h2>
+            <p>With more people using smartphones to browse the web, a mobile-friendly site ensures that your business is accessible to a broader range of potential customers:</p>
+            <ol>
+                <li><b>Enhanced User Experience:</b> A mobile-responsive website provides a seamless experience for visitors on various devices, which leads to higher engagement and customer satisfaction</li>
+                <li><b>Increased Mobile Traffic:</b> Mobile devices account for a significant portion of internet traffic. Having a mobile-responsive website allows you to tap into this growing mobile audience. </li>
+                <li><b>Better Search Engine Rankings:</b> Search engines, particularly Google, prioritize mobile-friendly websites in their search results. Improved visibility in search results can lead to more organic traffic and potential customers.</li>
+                <li><b>Competitive Advantage:</b> In today's competitive digital market, having a mobile-responsive website sets your business apart from competitors who may not have optimized their sites for mobile devices.</li>
+                <li><b>Higher Conversion Rates:</b>  ...</li>
+                <li><b>Fast Web Hosting Provider Selection:</b> Websites with Mobile-responsiveness done right are more likely to convert visitors into customers. Simplifying the user journey on mobile can significantly impact your business's bottom line.</li>
+            </ol>
+
+            <br>
+
+            <blockquote class="blockquote">
+                By adapting to the mobile-first world, businesses can better connect with their target audience and drive growth in an increasingly mobile-driven market.
+            </blockquote>
+
+
+            <br>
+            <br>
+
+
+            <div class="takeaway">
+                <h2>Takeaway</h2>
+                <p>In summary, mobile responsiveness adapts the website layout, content and exprience to users' device sizes. It is crutial for business because it :</p>
+                <ul>
+                    <li>👍🏾 Allows to reach a broader audience</li>
+                    <li>👍🏾 Improves search engine rankings</li>
+                    <li>👍🏾 Helps gain a competitive advantage</li>
+                    <li>👍🏾 Increase customer engagement and conversions</li>
+                </ul>
+            </div>    -->
+        </article>
+
+        <section class="entry-article-end text-center">
+            <span class="fs-8">Thank you for reading</span>
+        </section>
+
+        <app-article-carousel 
+            [current]="article"
+            class="entry-article-footer"></app-article-carousel>
+
+
+        <footer>
+            <app-box-book-consultation></app-box-book-consultation>
+        </footer>
+    </div>
+</main>
