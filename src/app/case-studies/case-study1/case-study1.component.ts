@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef } from '@angular/core';
 import * as $ from 'jquery';
 import 'lightbox2';
+import { Title } from '@angular/platform-browser';
 
 declare var lightbox: any;
 
@@ -11,7 +12,7 @@ declare var lightbox: any;
 })
 export class CaseStudy1Component implements AfterViewInit {
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private titleService: Title, private elementRef: ElementRef) {}
 
   scrollToSection(sectionId: string) {
     const section = this.elementRef.nativeElement.querySelector(`#${sectionId}`);
@@ -36,10 +37,7 @@ export class CaseStudy1Component implements AfterViewInit {
     // Set the scroll position to 0,0 when the component is initialized. 
     window.scrollTo(0, 0);
 
-
-  console.log('-------', $('h1'));
-
     // Set page title
-    // this.titleService.setTitle('Eric Njanga | About');
+    this.titleService.setTitle('Eric Njanga | Case study | Transformation and realignment of a website with corporate strategy');
   }
 }

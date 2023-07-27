@@ -2,6 +2,7 @@ import { Component, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ArticleThumb } from './../models/article';
 import { ArticleService } from '../services/article.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-article2',
@@ -12,6 +13,7 @@ export class Article2Component {
   article: ArticleThumb | undefined;
 
   constructor(
+    private titleService: Title,
     private elementRef: ElementRef,
     private articleService: ArticleService,
     private activatedRoute: ActivatedRoute // Add ActivatedRoute to the constructor
@@ -30,6 +32,9 @@ export class Article2Component {
         console.error('Article not found:', linkToFind);
       }
     });
+
+    // Set page title
+    this.titleService.setTitle(`Eric Njanga | ${this.article?.title}`);
   }
 
   // This should be in a service
