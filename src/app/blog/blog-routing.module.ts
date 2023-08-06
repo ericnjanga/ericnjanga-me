@@ -6,6 +6,7 @@ import { Article2Component } from './article2/article2.component';
 import { Article3Component } from './article3/article3.component';
 import { Article4Component } from './article4/article4.component';
 import { Article5Component } from './article5/article5.component';
+import { Article6Component } from './article6/article6.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
     { path: 'Is-your-website-built-for-your-ideal-customers', component: Article2Component },
     { path: '6-reasons-why-your-website-loading-speed-matters', component: Article3Component },
     { path: 'why-mobile-responsiveness-is-good-for-business', component: Article4Component },
-    { path: 'why-an-intuitive-experience-is-helps-a-business-grow', component: Article5Component },
+    { path: 'why-an-intuitive-experience-helps-a-business-grow', component: Article5Component },
+    { path: 'an-engaging-website-is-good-for-business-here-is-why', component: Article6Component },
 
     // Add a wildcard route for unmatched paths (optional)
     { path: '**', redirectTo: '/' }, 

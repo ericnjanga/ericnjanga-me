@@ -1,1 +1,84 @@
-<p>article6 works!</p>
+<header class="hero pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="text-wrapper">
+                <div class="col">
+                    <h1>{{article?.title}}</h1>
+                </div>
+                <div class="col">
+                    <button class="btn-scrollToSection btn-hero" (click)="scrollToSection()">
+                        Read now
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="M480-80 200-360l42-42 208 208v-686h60v686l208-208 42 42L480-80Z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<figure class="hero-featured-img-wrapper text-center">
+    <div class="container">
+        <img class="main-character img-fluid" [src]="article?.img" alt="">
+    </div>
+    <div id="section-article"></div>
+</figure>
+
+<main class="article-page container entry-article section-spacing-marg-y-top section-spacing-marg-y-bottom">
+    <div class="entry-article-text-wrapper">
+        <article>
+            <h2>What is an engaging website?</h2>
+            <p>An engaging website is one that captivates and holds the attention of its visitors, encouraging them to interact with the content, explore various pages, and stay on the site for an extended period. An engaging website goes beyond just providing information; it creates an immersive and enjoyable user experience that keeps visitors coming back for more. Here are some key characteristics of an engaging website:</p>
+
+            <ul>
+                <li><b>Clear and Intuitive Navigation:</b> The website should have a user-friendly and intuitive navigation system that allows visitors to find what they're looking for quickly and easily.</li> 
+                <li><b>Compelling Visuals:</b> Engaging websites use high-quality images, videos, and graphics to capture the attention of visitors and support the content.</li> 
+                <li><b>Responsive Design:</b> An engaging website is designed to be responsive and adapt to different devices and screen sizes, ensuring a seamless experience for users on desktops, laptops, tablets, and smartphones.</li> 
+                <li><b>Relevant and Valuable Content:</b> The website should offer relevant and valuable content that meets the needs and interests of the target audience. This includes informative articles, engaging blog posts, and multimedia content.</li> 
+                <li><b>Interactive Elements:</b> Engaging websites incorporate interactive elements such as quizzes, polls, surveys, sliders, and forms that encourage user participation and interaction.</li> 
+                <li><b>Call-to-Action (CTA):</b> Effective CTAs guide visitors to take specific actions, such as signing up for a newsletter, making a purchase, or contacting the business.</li> 
+            </ul>
+
+            <br>
+
+            <p>Overall, an engaging website strives to create a positive user experience, build trust with visitors, and encourage them to take action, whether it's making a purchase, signing up for a newsletter, or reaching out for more information.</p>
+
+
+
+
+            <br><br><br>
+ 
+ 
+
+            <h2>An engaging website is great for business</h2>
+            <p>An engaging website is essential for business success because it can bring numerous benefits that directly impact the growth and profitability of the company. Here are some reasons why an engaging website is good for business:</p>
+            <ul>
+                <li><b>Increased User Interaction:</b> An engaging website encourages visitors to interact with the content, leading to longer visit durations and more page views. This increased engagement can improve the chances of converting visitors into leads or customers.</li> 
+                <li><b>Higher Conversion Rates:</b> Engaging websites are more effective at guiding users towards taking desired actions, such as making a purchase, signing up for a service, or filling out a contact form. This can result in higher conversion rates and increased revenue for the business.</li> 
+                <li><b>Improved User Experience:</b> A well-designed and engaging website provides a positive user experience, making it more likely for visitors to have a favorable perception of the brand. Satisfied users are more likely to return to the website and become loyal customers.</li> 
+                <li><b>Enhanced Brand Perception:</b> An engaging website can elevate the brand's image and credibility. It showcases the business as professional, trustworthy, and customer-centric, leading to a more positive perception among potential customers.</li> 
+                <li><b>Competitive Advantage:</b> In a competitive online marketplace, an engaging website can set your business apart from competitors. A captivating website experience can attract more visitors and keep them coming back, giving your business a competitive edge.</li> 
+            </ul>
+
+
+
+            <br><br><br>
+
+            <h2>Takeaway</h2>
+            <p>...</p>
+ 
+        </article>
+
+        <section class="entry-article-end text-center">
+            <span class="fs-8">Thank you for reading</span>
+        </section>
+
+        <app-article-carousel 
+            [current]="article"
+            class="entry-article-footer"></app-article-carousel>
+
+
+        <footer>
+            <app-box-book-consultation></app-box-book-consultation>
+        </footer>
+    </div>
+</main>

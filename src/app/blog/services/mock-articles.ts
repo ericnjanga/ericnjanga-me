@@ -5,9 +5,16 @@ import { ArticleThumb } from './../models/article';
 export const lisdtOfArticles: ArticleThumb[] = [
 
   {
+    id: 6,
+    title: 'An engaging website is good for business. Here is why!',
+    link: '/blog/an-engaging-website-is-good-for-business-here-is-why',
+    img: './../../../assets/img/july2023/article-5-tmb-min.png',
+    text: 'Mobile Responsiveness is key to the success of any modern website, especially when we expect a wide usage.'
+  },
+  {
     id: 5,
-    title: 'Why an intuitive experience is helps a business grow',
-    link: '/blog/why-an-intuitive-experience-is-helps-a-business-grow',
+    title: 'Why an intuitive experience helps a business grow',
+    link: '/blog/why-an-intuitive-experience-helps-a-business-grow',
     img: './../../../assets/img/july2023/article-5-tmb-min.png',
     text: 'Mobile Responsiveness is key to the success of any modern website, especially when we expect a wide usage.'
   },

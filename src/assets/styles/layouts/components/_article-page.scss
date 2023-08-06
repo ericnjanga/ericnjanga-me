@@ -1,0 +1,95 @@
+
+$sidebar-width: 410px;
+$main-content-gap: 100px;
+$top-bar-height: 96px;
+
+$case-study-hero-height-l1: 900px;
+$case-study-hero-height-l2: 1050px;
+$case-study-hero-height-l3: 1270px;
+
+$isdebar-left1: 20px;
+$isdebar-left2: 74px;
+
+
+
+@layer article-page {
+    // Default state, not yet sticky
+    .sticky-sidebar {
+        .sidebar {
+            position: absolute;
+            left: $isdebar-left1;
+            z-index: 12;
+
+            // Hide sidebar on small screens (FOR NOW)
+            display: none;
+            @media (min-width: 992px) {
+                display: block;
+                top: $case-study-hero-height-l1;
+            }
+            @media (min-width: 1200px) {
+                top: $case-study-hero-height-l2;
+                left: $isdebar-left2;
+            }
+            @media (min-width: 1400px) {
+                top: $case-study-hero-height-l3;
+                left: $isdebar-left2;
+            }
+
+
+        }
+    }
+
+    // Sticky ...
+    .sidebar.sticky {
+        position: fixed;
+        top: $top-bar-height + 4px;
+        z-index: 10;
+    }
+}
+
+
+
+@layer article-page {
+    .article-page__section-link {
+        height: $top-bar-height;
+    }
+}
+
+
+@layer article-page {
+    .article-page__main-content {
+        display: flex;
+        border: 4px solid red;
+        gap: $main-content-gap;
+
+        .central-content {
+            border: 4px solid purple;
+
+        }
+    }
+
+    .case-study__sidebar {
+        width: $sidebar-width;
+        border: 4px solid green;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+        }
+    }
+}
+
+
+
+@layer article-page {
+    .article-page__main-content {
+        .central-content {
+            margin-left: auto;
+            // margin-left: $sidebar-width + $main-content-gap;
+            border: 4px solid purple;
+
+        }
+    }
+}

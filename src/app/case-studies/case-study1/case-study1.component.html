@@ -1,287 +1,290 @@
-<header class="hero page-case-study">
-    <div class="container">
-        <div class="text-wrapper">
-            <h1>
-                Transformation and realignment of a website with corporate strategy
-            </h1>
-            <button class="btn-scrollToSection btn-hero" (click)="scrollToSection('section-article')">
-                Skip to text
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="M480-80 200-360l42-42 208 208v-686h60v686l208-208 42 42L480-80Z"/></svg>
-            </button>
+
+<div class="sticky-sidebar">
+    
+    <header class="hero page-case-study">
+        <div class="container">
+            <div class="text-wrapper">
+                <h1>
+                    Transformation and realignment of a website with corporate strategy
+                </h1>
+                <button class="btn-scrollToSection btn-hero" (click)="scrollToSection('intro')">
+                    Skip to text
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="M480-80 200-360l42-42 208 208v-686h60v686l208-208 42 42L480-80Z"/></svg>
+                </button>
+            </div>
+
+            <div class="hero-img-wrapper" appFadeInSection>
+                <img class="img-fluid img-stage" src="./../../../assets/img/july2023/case-study-1-poster-min.png" alt="">
+            </div>
         </div>
-
-        <div class="hero-img-wrapper" appFadeInSection>
-            <img class="img-fluid img-stage" src="./../../../assets/img/july2023/case-study-1-poster-min.png" alt="">
-        </div>
-    </div>
-</header>
+    </header>
 
 
 
+    <aside class="sidebar case-study__sidebar" [ngClass]="{ 'sticky': isSticky }">
+        <ul>
+            <li>
+                <button (click)="scrollToSection('intro')">
+                    Introduction and Overview
+                </button>
+            </li>
+            <li>
+                <button (click)="scrollToSection('client-overview')">
+                    Client Background
+                </button>
+            </li>
+            <li>
+                <button (click)="scrollToSection('process')">
+                    Process, Challenges and Solutions
+                </button>
+            </li>
+            <li>
+                <button (click)="scrollToSection('ux')">
+                    User Experience and Visual Design
+                </button>
+            </li>
+            <li>
+                <button (click)="scrollToSection('responsiveness')">
+                    Responsive Design and Interactions
+                </button>
+            </li>
+            <li>
+                <button (click)="scrollToSection('dev')">
+                    Development and Technology
+                </button>
+            </li>
+            <li>
+                <button (click)="scrollToSection('results')">
+                    Results and Outcomes
+                </button>
+            </li>
+            <li>
+                <button (click)="scrollToSection('testimonials')">
+                    Testimonials
+                </button>
+            </li>
+            <li>
+                <button (click)="scrollToSection('conclusion')">
+                    Conclusion
+                </button>
+            </li>
+        </ul>
+    </aside>
 
 
-<main class="container page-case-study bx-container">
+    <main class="container article-page__main-content bx-container">
 
-    <div id="section-article"></div>
-    <section class="section-spacing-marg-y-top">
-        <div class="small-block">
-            <header>
-                <span class="pill accent100 pre-title fs-8 rounded-1">Project discovery</span>
-                <h2 class="block-title">Misalignment with business objectives and stagnant growth</h2>
-            </header>
-            <div appFadeInSection>
-                <p class="block-p">“Over time, my website grew to become disorganized, with things scattered all over the place. 
-                    The mobile experience was horrendous; it was an absolute mess.”</p>
+
+        <div class="central-content entry-article-text-wrapper">
+            <section class="">         
+                <div id="intro" class="article-page__section-link"></div>
+                <div>
+                    <header>
+                        <!-- <span class="pill accent100 pre-title fs-8 rounded-1">Introduction</span> -->
+                        <h2 class="block-title">Introduction</h2>
+                    </header>
+                    <div appFadeInSection>
+                        <p class="block-p">“Over time, my website grew to become disorganized, with things scattered all over the place. The mobile experience was horrendous; it was an absolute mess.” It is in such words that Viren described the situation of his website, with a little bit of frustration in his eyes.</p>
+                    </div>
+                </div>
+            
+                <!-- <span class="light-box-link-hidden">
+                    <a data-lightbox="before-transformation" data-title="csdvdsvds" href="./../../../assets/img/july2023/before-about.png">
+                        ####2
+                    </a> 
+                    <a data-lightbox="before-transformation" data-title="csdvdsvds" href="./../../../assets/img/july2023/before-awards.png">
+                        ####2
+                    </a> 
+                    <a data-lightbox="before-transformation" data-title="csdvdsvds" href="./../../../assets/img/july2023/before-blog.png">
+                        ####2
+                    </a>
+                    <a data-lightbox="before-transformation" data-title="csdvdsvds" href="./../../../assets/img/july2023/before-contact.png">
+                        ####2
+                    </a>
+                </span> -->
+                <!-- <a 
+                    appFadeInSection
+                    class="lightbox-img-wrapper"
+                    data-lightbox="before-transformation" 
+                    data-title="csdvdsvds" href="./../../../assets/img/july2023/before-home.png">
+
+                    <span class="light-box-link-hidden">cdcdsds</span>
+                    
+
+                    <img 
+                        class="img-fluid img-stage img-stage1" 
+                        src="./../../../assets/img/july2023/case-study-1-stage1-off.png" 
+                        alt=""
+                    >
+                </a> -->
+            </section>
+
+
+            <section class="">
+                <div id="client-overview" class="article-page__section-link"></div>
+                <header>
+                    <!-- <span class="pill accent100 pre-title fs-8 rounded-1">User/customer studies</span> -->
+                    <h2 class="block-title">Client Background</h2>
+                </header>
+                <div appFadeInSection>
+                    <p class="block-p mb-0">Karma Financial is a private Life Insurance broker located in the city of Toronto, Canada. They help business owners to take charge of their financial well-being, prepare for retirement, and confidently build legacy wealth.
+                    </p>
+                    <!-- <p class="block-p mb-0">I create user-centric solutions, therefore I start by summarizing everything I learn about target customers inside a persona. Because I want the solution to appeal to users, I will base all my future design decisions on this persona.</p> -->
+                </div>
+
+                <!-- <img 
+                    appFadeInSection
+                    class="img-fluid img-stage img-stage2" 
+                    src="./../../../assets/img/july2023/case-study-1-stage2-off.png" 
+                    alt=""
+                > -->
+            </section>
         
-                <p class="block-p fs-8 mb-0">Viren Parmar (CEO of Karma Financial)</p>
+            <section>
+                <div id="process" class="article-page__section-link"></div>
+                <header>
+                    <span class="pill accent100 pre-title fs-8 rounded-1">Prototype creation</span>
+                    <h2 class="block-title">Tailoring the solutions to match business requirements</h2>
+                </header>
+                
+                <div appFadeInSection>
+                    <p class="block-p">Creating a prototype is essential, as it allows me to visualize and test the website before it gets developed. I sketch and test the website navigation, information architecture, and many key features.</p>
+                    <p class="block-p mb-0">It is during this time that I test user flows, which are steps users take to accomplish specific tasks or goals within the website (subscribing to a newsletter, buying a product, or booking a consultation).</p>
+                </div>
+
+                <!-- <span class="light-box-link-hidden">
+                    <a data-lightbox="prototyping" data-title="csdvdsvds" href="./../../../assets/img/july2023/Prototype - Home - Mobile.png">
+                        ####2
+                    </a> 
+                    <a data-lightbox="prototyping" data-title="csdvdsvds" href="./../../../assets/img/july2023/Prototype - Home - Tablet.png">
+                        ####2
+                    </a> 
+                    <a data-lightbox="prototyping" data-title="csdvdsvds" href="./../../../assets/img/july2023/Prototype - About.png">
+                        ####2
+                    </a> 
+                </span>
+                <a 
+                    appFadeInSection
+                    class="lightbox-img-wrapper"
+                    data-lightbox="prototyping" 
+                    data-title="csdvdsvds" href="./../../../assets/img/july2023/Prototype - Home.png">
+
+                    <span class="light-box-link-hidden">cdcdsds</span>
+                    
+
+                    <img 
+                    class="img-fluid img-stage img-stage3" 
+                    src="./../../../assets/img/july2023/case-study-1-stage3-off.png" 
+                    alt=""
+                >
+                </a> -->
+            </section>
+
+            <br><br><br><br>
+
+            <div class="video-embed-container">
+                <iframe src="https://www.youtube.com/embed/HF_0pHCSzp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <!-- <br><br><br><br>
         
-                <!-- <footer>
-                    <a class="btn btn-secondary btn-small" (click)="scrollToSection('customer-studies')">How I’m studying customers</a>
-                    <a class="btn btn-primary btn-small">Slideshow</a>
-                </footer> -->
-            </div>
-        </div>
 
+            <section class="section-spacing-marg-y-top" id="accessibility">
+                <header>
+                    <span class="pill accent100 pre-title fs-8 rounded-1">Accessibility</span>
+                    <h2 class="block-title">Making the solution accessible to users</h2>
+                </header>
+                
+                <div appFadeInSection>
+                    <p class="block-p mb-0">I compare design colors, visual contrasts, typefaces, and font sizes against <a target="_blank" href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Accessibility Guidelines</a> to ensure the content is perceivable, operable, understandable, and robust for all users, including those with disabilities.</p>
+                </div>
 
- 
+                <span class="light-box-link-hidden">
+                    <a data-lightbox="accessibility" data-title="csdvdsvds" href="./../../../assets/img/july2023/Final - Home - Mobile - light theme.png">
+                        ####2
+                    </a> 
+                    <a data-lightbox="accessibility" data-title="csdvdsvds" href="./../../../assets/img/july2023/Final - Home - Tablet - light theme.png">
+                        ####2
+                    </a> 
+                    <a data-lightbox="accessibility" data-title="csdvdsvds" href="./../../../assets/img/july2023/Final - About - light theme.jpg">
+                        ####2
+                    </a> 
+                </span>
+                <a 
+                    appFadeInSection
+                    class="lightbox-img-wrapper"
+                    data-lightbox="accessibility" 
+                    data-title="csdvdsvds" href="./../../../assets/img/july2023/Final - Home - Desktop - light theme.jpg">
 
-        <span class="light-box-link-hidden">
-            <a data-lightbox="before-transformation" data-title="csdvdsvds" href="./../../../assets/img/july2023/before-about.png">
-                ####2
-            </a> 
-            <a data-lightbox="before-transformation" data-title="csdvdsvds" href="./../../../assets/img/july2023/before-awards.png">
-                ####2
-            </a> 
-            <a data-lightbox="before-transformation" data-title="csdvdsvds" href="./../../../assets/img/july2023/before-blog.png">
-                ####2
-            </a>
-            <a data-lightbox="before-transformation" data-title="csdvdsvds" href="./../../../assets/img/july2023/before-contact.png">
-                ####2
-            </a>
-        </span>
-        <a 
-            appFadeInSection
-            class="lightbox-img-wrapper"
-            data-lightbox="before-transformation" 
-            data-title="csdvdsvds" href="./../../../assets/img/july2023/before-home.png">
+                    <span class="light-box-link-hidden">cdcdsds</span>
+                    
 
-            <span class="light-box-link-hidden">cdcdsds</span>
-             
-
-            <img 
-                class="img-fluid img-stage img-stage1" 
-                src="./../../../assets/img/july2023/case-study-1-stage1-off.png" 
-                alt=""
-            >
-        </a>
-    </section>
-
-
-    <section class="section-spacing-marg-y-top" id="customer-studies">
-        <div class="small-block">
-            <header>
-                <span class="pill accent100 pre-title fs-8 rounded-1">User/customer studies</span>
-                <h2 class="block-title">Putting customers at the center of the new solution</h2>
-            </header>
+                    <img 
+                    class="img-fluid img-stage img-stage3" 
+                    src="./../../../assets/img/july2023/case-study-1-stage4-off.png" 
+                    alt=""
+                >
+                </a>
+            </section>
             
-            <div appFadeInSection>
-                <p class="block-p mb-0">I create user-centric solutions, therefore I start by summarizing everything I learn about target customers inside a persona. Because I want the solution to appeal to users, I will base all my future design decisions on this persona.</p>
-        
-                <!-- <footer>
-                    <a class="btn btn-secondary btn-small" (click)="scrollToSection('a-tailored-solution')">How I’m creating the solution</a>
-                    <a class="btn btn-primary btn-small">Slideshow</a>
-                </footer> -->
-            </div>
-        </div>
 
-        <img 
-            appFadeInSection
-            class="img-fluid img-stage img-stage2" 
-            src="./../../../assets/img/july2023/case-study-1-stage2-off.png" 
-            alt=""
-        >
-    </section>
-    
+            <section class="section-spacing-marg-y-top" id="user-preferrences">
+                <header>
+                    <span class="pill accent100 pre-title fs-8 rounded-1">User preferences</span>
+                    <h2 class="block-title">Anticipating users’ preferences</h2>
+                </header>
+                
+                <div appFadeInSection>
+                    <p class="block-p mb-0">The final step of the design process consists in enhancing the experience for readability, eye comfort, and aesthetics in different lighting conditions or personal preferences. This allows the website to cater to users’ preferences for light or dark mode and further enhances customers’ browsing experience. </p>
+                </div>
 
-    <section class="section-spacing-marg-y-top" id="a-tailored-solution">
-        <div class="small-block">
-            <header>
-                <span class="pill accent100 pre-title fs-8 rounded-1">Prototype creation</span>
-                <h2 class="block-title">Tailoring the solutions to match business requirements</h2>
-            </header>
+                <span class="light-box-link-hidden">
+                    <a data-lightbox="preference" data-title="csdvdsvds" href="./../../../assets/img/july2023/Preference - Home - Mobile - light theme.png">
+                        ####2
+                    </a> 
+                    <a data-lightbox="preference" data-title="csdvdsvds" href="./../../../assets/img/july2023/Preference - Home - Tablet - light theme.png">
+                        ####2
+                    </a> 
+                    <a data-lightbox="preference" data-title="csdvdsvds" href="./../../../assets/img/july2023/Preference - About - dark theme.png">
+                        ####2
+                    </a> 
+                </span>
+                <a 
+                    appFadeInSection
+                    class="lightbox-img-wrapper"
+                    data-lightbox="preference" 
+                    data-title="csdvdsvds" href="./../../../assets/img/july2023/Preference - Home - dark theme.jpg">
+
+                    <span class="light-box-link-hidden">cdcdsds</span>
+                    
+
+                    <img 
+                    class="img-fluid img-stage img-stage3" 
+                    src="./../../../assets/img/july2023/case-study-1-stage5-off.png" 
+                    alt=""
+                >
+                </a>
+            </section>
             
-            <div appFadeInSection>
-                <p class="block-p">Creating a prototype is essential, as it allows me to visualize and test the website before it gets developed. I sketch and test the website navigation, information architecture, and many key features.</p>
-                <p class="block-p mb-0">It is during this time that I test user flows, which are steps users take to accomplish specific tasks or goals within the website (subscribing to a newsletter, buying a product, or booking a consultation).</p>
-                <!-- <footer>
-                    <a class="btn btn-secondary btn-small" (click)="scrollToSection('accessibility')">How I’m making the solution accessible</a>
-                    <a class="btn btn-primary btn-small">Slideshow</a>
-                </footer> -->
-            </div>
+
+            <section class="section-spacing-marg-y-top" id="user-preferrences">
+                <header>
+                    <span class="pill accent100 pre-title fs-8 rounded-1">Website Development</span>
+                    <h2 class="block-title">Coding the website’s user interface</h2>
+                </header>
+                
+                <div appFadeInSection class="mb-20">
+                    <p class="block-p mb-0">During the development process, I create a custom WordPress theme with the most up-to-date UI technologies, making the code light, <a class="paragraph-link" routerLink="/blog/6-reasons-why-your-website-loading-speed-matters">fast</a>, and <a class="paragraph-link" routerLink="why-mobile-responsiveness-is-good-for-business">responsive</a>, ensuring a seamless experience across mobile, table, and desktop. </p>
+                </div>
+            </section> -->
+
+
+            <footer>
+                <app-box-book-consultation></app-box-book-consultation>
+            </footer>
         </div>
 
-
-        <span class="light-box-link-hidden">
-            <a data-lightbox="prototyping" data-title="csdvdsvds" href="./../../../assets/img/july2023/Prototype - Home - Mobile.png">
-                ####2
-            </a> 
-            <a data-lightbox="prototyping" data-title="csdvdsvds" href="./../../../assets/img/july2023/Prototype - Home - Tablet.png">
-                ####2
-            </a> 
-            <a data-lightbox="prototyping" data-title="csdvdsvds" href="./../../../assets/img/july2023/Prototype - About.png">
-                ####2
-            </a> 
-        </span>
-        <a 
-            appFadeInSection
-            class="lightbox-img-wrapper"
-            data-lightbox="prototyping" 
-            data-title="csdvdsvds" href="./../../../assets/img/july2023/Prototype - Home.png">
-
-            <span class="light-box-link-hidden">cdcdsds</span>
-             
-
-            <img 
-            class="img-fluid img-stage img-stage3" 
-            src="./../../../assets/img/july2023/case-study-1-stage3-off.png" 
-            alt=""
-        >
-        </a>
-    </section>
+    </main>
 
 
-
-
-
-    <br><br><br><br>
-
-
-
-
-    <div class="video-embed-container">
-        <iframe src="https://www.youtube.com/embed/HF_0pHCSzp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-
-
-
-
-
-    <br><br><br><br>
-
-
-
-
-
-
-
-
-    
-
-    <section class="section-spacing-marg-y-top" id="accessibility">
-        <div class="small-block">
-            <header>
-                <span class="pill accent100 pre-title fs-8 rounded-1">Accessibility</span>
-                <h2 class="block-title">Making the solution accessible to users</h2>
-            </header>
-            
-            <div appFadeInSection>
-                <p class="block-p mb-0">I compare design colors, visual contrasts, typefaces, and font sizes against <a target="_blank" href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Accessibility Guidelines</a> to ensure the content is perceivable, operable, understandable, and robust for all users, including those with disabilities.</p>
-
-                <!-- <footer>
-                    <a class="btn btn-secondary btn-small" (click)="scrollToSection('user-preferrences')">User preferrences</a>
-                    <a class="btn btn-primary btn-small">Slideshow</a>
-                </footer> -->
-            </div>
-        </div>
-
-
-        <span class="light-box-link-hidden">
-            <a data-lightbox="accessibility" data-title="csdvdsvds" href="./../../../assets/img/july2023/Final - Home - Mobile - light theme.png">
-                ####2
-            </a> 
-            <a data-lightbox="accessibility" data-title="csdvdsvds" href="./../../../assets/img/july2023/Final - Home - Tablet - light theme.png">
-                ####2
-            </a> 
-            <a data-lightbox="accessibility" data-title="csdvdsvds" href="./../../../assets/img/july2023/Final - About - light theme.jpg">
-                ####2
-            </a> 
-        </span>
-        <a 
-            appFadeInSection
-            class="lightbox-img-wrapper"
-            data-lightbox="accessibility" 
-            data-title="csdvdsvds" href="./../../../assets/img/july2023/Final - Home - Desktop - light theme.jpg">
-
-            <span class="light-box-link-hidden">cdcdsds</span>
-             
-
-            <img 
-            class="img-fluid img-stage img-stage3" 
-            src="./../../../assets/img/july2023/case-study-1-stage4-off.png" 
-            alt=""
-        >
-        </a>
-    </section>
-    
-
-    <section class="section-spacing-marg-y-top" id="user-preferrences">
-        <div class="small-block">
-            <header>
-                <span class="pill accent100 pre-title fs-8 rounded-1">User preferences</span>
-                <h2 class="block-title">Anticipating users’ preferences</h2>
-            </header>
-            
-            <div appFadeInSection>
-                <p class="block-p mb-0">The final step of the design process consists in enhancing the experience for readability, eye comfort, and aesthetics in different lighting conditions or personal preferences. This allows the website to cater to users’ preferences for light or dark mode and further enhances customers’ browsing experience. </p>
-            </div>
-        </div>
-
-
-        <span class="light-box-link-hidden">
-            <a data-lightbox="preference" data-title="csdvdsvds" href="./../../../assets/img/july2023/Preference - Home - Mobile - light theme.png">
-                ####2
-            </a> 
-            <a data-lightbox="preference" data-title="csdvdsvds" href="./../../../assets/img/july2023/Preference - Home - Tablet - light theme.png">
-                ####2
-            </a> 
-            <a data-lightbox="preference" data-title="csdvdsvds" href="./../../../assets/img/july2023/Preference - About - dark theme.png">
-                ####2
-            </a> 
-        </span>
-        <a 
-            appFadeInSection
-            class="lightbox-img-wrapper"
-            data-lightbox="preference" 
-            data-title="csdvdsvds" href="./../../../assets/img/july2023/Preference - Home - dark theme.jpg">
-
-            <span class="light-box-link-hidden">cdcdsds</span>
-             
-
-            <img 
-            class="img-fluid img-stage img-stage3" 
-            src="./../../../assets/img/july2023/case-study-1-stage5-off.png" 
-            alt=""
-        >
-        </a>
-    </section>
-    
-
-    <section class="section-spacing-marg-y-top" id="user-preferrences">
-        <div class="small-block">
-            <header>
-                <span class="pill accent100 pre-title fs-8 rounded-1">Website Development</span>
-                <h2 class="block-title">Coding the website’s user interface</h2>
-            </header>
-            
-            <div appFadeInSection class="mb-20">
-                <p class="block-p mb-0">During the development process, I create a custom WordPress theme with the most up-to-date UI technologies, making the code light, <a class="paragraph-link" routerLink="/blog/6-reasons-why-your-website-loading-speed-matters">fast</a>, and <a class="paragraph-link" routerLink="why-mobile-responsiveness-is-good-for-business">responsive</a>, ensuring a seamless experience across mobile, table, and desktop. </p>
-            </div>
-        </div>
-    </section>
-
-
-    <footer>
-        <app-box-book-consultation></app-box-book-consultation>
-    </footer>
-
-</main>
+</div>
