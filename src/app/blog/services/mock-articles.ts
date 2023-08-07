@@ -5,18 +5,25 @@ import { ArticleThumb } from './../models/article';
 export const lisdtOfArticles: ArticleThumb[] = [
 
   {
+    id: 7,
+    title: 'What engages users best: Stock images, real images, or no images?',
+    link: '/blog/what-engages-users-best-Stock-images-real-images-or-no-images',
+    img: './../../../assets/img/August2023/article7-stock-image-platform-1.png',
+    text: '...'
+  },
+  {
     id: 6,
     title: 'An engaging website is good for business. Here is why!',
     link: '/blog/an-engaging-website-is-good-for-business-here-is-why',
     img: './../../../assets/img/july2023/article-5-tmb-min.png',
-    text: 'Mobile Responsiveness is key to the success of any modern website, especially when we expect a wide usage.'
+    text: '...'
   },
   {
     id: 5,
     title: 'Why an intuitive experience helps a business grow',
     link: '/blog/why-an-intuitive-experience-helps-a-business-grow',
     img: './../../../assets/img/july2023/article-5-tmb-min.png',
-    text: 'Mobile Responsiveness is key to the success of any modern website, especially when we expect a wide usage.'
+    text: '...'
   },
   {
     id: 4,

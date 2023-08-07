@@ -17,6 +17,16 @@ import { Article8Component } from './article8/article8.component';
 import { Article9Component } from './article9/article9.component';
 import { Article10Component } from './article10/article10.component';
 import { ArticleCarouselComponent } from './article-carousel/article-carousel.component';
+import { Article11Component } from './article11/article11.component';
+import { Article12Component } from './article12/article12.component';
+import { Article13Component } from './article13/article13.component';
+import { Article14Component } from './article14/article14.component';
+import { Article15Component } from './article15/article15.component';
+import { Article16Component } from './article16/article16.component';
+import { Article17Component } from './article17/article17.component';
+import { Article18Component } from './article18/article18.component';
+import { Article19Component } from './article19/article19.component';
+import { Article20Component } from './article20/article20.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +43,17 @@ import { ArticleCarouselComponent } from './article-carousel/article-carousel.co
     Article8Component,
     Article9Component,
     Article10Component,
-    ArticleCarouselComponent
+    ArticleCarouselComponent,
+    Article11Component,
+    Article12Component,
+    Article13Component,
+    Article14Component,
+    Article15Component,
+    Article16Component,
+    Article17Component,
+    Article18Component,
+    Article19Component,
+    Article20Component
   ],
   imports: [
     CommonModule,
